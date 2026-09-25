@@ -42,6 +42,24 @@ function renderEvents(state, events = []) {
       list.append(item);
     });
     panel.append(list);
+    return;
+  }
+
+  if (state === 'empty') {
+    panel.append(node('span', 'state-symbol', '○'));
+    panel.append(node('h3', '', 'Nothing on the calendar yet'));
+    panel.append(node('p', '', 'Check back later for new community events.'));
+    return;
+  }
+
+  if (state === 'error') {
+    panel.append(node('span', 'state-symbol', '!'));
+    panel.append(node('h3', '', 'We could not load the events'));
+    panel.append(node('p', '', 'The connection might be interrupted. Please try again.'));
+    const retry = node('button', 'retry-button', 'Retry loading');
+    retry.type = 'button';
+    retry.addEventListener('click', showLoadingThenReady);
+    panel.append(retry);
   }
 }
 
@@ -59,6 +77,7 @@ function initializeEventHub() {
       const state = control.dataset.state;
       if (state === 'loading') showLoadingThenReady();
       if (state === 'ready') { requestToken += 1; renderEvents('ready', SAMPLE_EVENTS); }
+      if (state === 'empty' || state === 'error') { requestToken += 1; renderEvents(state); }
     });
   });
   showLoadingThenReady();
