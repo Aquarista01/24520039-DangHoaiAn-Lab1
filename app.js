@@ -1,3 +1,5 @@
+import { initializeEventHub } from './events.js';
+
 const themeToggle = document.querySelector('#theme-toggle');
 const themeIcon = document.querySelector('#theme-icon');
 const contactForm = document.querySelector('#contact-form');
@@ -28,3 +30,5 @@ contactForm.addEventListener('submit', (event) => {
   formFeedback.textContent = 'Form validated. This local demo did not send a message.';
   contactForm.reset();
 });
+
+initializeEventHub();
