@@ -1,18 +1,24 @@
-# Lab 1 - Task decomposition
+# Lab 1 - Work Breakdown Structure (WBS) and task decomposition
 
 Student: Dang Hoai An (24520039)
 
-This document defines the contracts before implementation. Each code stage is committed separately.
+The original task contracts were recorded in the first Git commit, before implementation. The table below makes the WBS, output, and verification for each slice explicit. Each code stage was committed separately.
 
-| Task | Contract | Isolated verification |
-| --- | --- | --- |
-| T-01 | One `h1`; no `div`; skip link targets `#main`; header, nav, main, sections, footer. | Inspect DOM landmarks; Tab activates skip link. |
-| T-02A | CSS tokens in `:root`; universal border-box reset; color pairs meet 4.5:1. | Inspect computed styles at 375px. |
-| T-02B | Project and skills grids use `repeat(auto-fit, minmax(min(100%, 280px), 1fr))`. | 375px and desktop widths without overflow. |
-| T-02C | Button `#theme-toggle` has `aria-pressed`; persist `theme` as `light` or `dark`. | Toggle twice and reload, check storage and console. |
-| T-03A | `#event-status` initially shows CSS skeleton; reduced motion stops animation. | Select Loading and check live region. |
-| T-03B | Ready state renders supplied events using DOM nodes and `textContent`. | Select Live and inspect cards and badges. |
-| T-03C | Empty and Error have messages; Error includes keyboard-operable Retry. | Select Empty/Error, then Retry. |
+## Work Breakdown Structure (WBS)
+
+| WBS | Task | Work package and contract | Output | Isolated verification |
+| --- | --- | --- | --- | --- |
+| 1.1 | Spec | Define component contracts, state machine, and checks before coding. | `TASK_DECOMPOSITION.md`, `project-rules.md` | First `docs(spec)` commit precedes implementation commits. |
+| 2.1 | T-01 | Build semantic DOM: one `h1`, zero `div`, skip link to `#main`, header, nav, main, sections, footer. | `index.html` | Inspect DevTools landmarks; Tab to and activate the skip link. |
+| 3.1 | T-02A | Define CSS custom properties in `:root`, universal border-box reset, and accessible color pairs. | `styles.css` | Inspect computed styles and verify text contrast of at least 4.5:1. |
+| 3.2 | T-02B | Build responsive skills and project grids using `repeat(auto-fit, minmax(min(100%, 280px), 1fr))`. | `styles.css` | Check desktop and 375px viewport; no horizontal scrolling. |
+| 3.3 | T-02C | Make `#theme-toggle` keyboard accessible with `aria-pressed`; persist `theme` as `light` or `dark`. | `app.js` | Toggle twice, reload, inspect localStorage and console. |
+| 4.1 | T-03A | Show a CSS shimmer skeleton in `#event-status`; respect reduced motion. | `styles.css` | Select Loading; inspect skeleton and live region. |
+| 4.2 | T-03B | Render the Live state from event data using DOM nodes and `textContent`. | `events.js` | Select Live; inspect event cards and metadata. |
+| 4.3 | T-03C | Show Empty and Error messages; provide a keyboard operable Retry action. | `events.js` | Select Empty and Error, then activate Retry with Enter. |
+| 5.1 | Review | Check the separate work packages and record verification limits. | `AI_WORKFLOW.md`, Git history, submission screenshots | Review task-specific commits and the evidence in the report. |
+
+The task IDs follow the three exercises in the slides. WBS 1 and 5 record planning and review; WBS 2-4 cover the implementation. The original planning commit contains the task contracts, and this later documentation update adds the explicit WBS labels and outputs.
 
 ## DOM and data contract
 
