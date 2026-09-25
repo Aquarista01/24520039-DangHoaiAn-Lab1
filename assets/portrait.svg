@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="660" viewBox="0 0 580 660" role="img" aria-label="Student at laptop illustration">
+ <rect width="580" height="660" rx="28" fill="#e3b486"/><circle cx="478" cy="95" r="124" fill="#f3d2ad" opacity=".64"/><circle cx="101" cy="497" r="137" fill="#b16b57" opacity=".55"/>
+ <path d="M23 546c62-153 149-224 250-213 139 16 204 114 278 224v103H23Z" fill="#284a47"/><path d="M129 631c35-136 110-216 207-239 95-22 151 55 201 178v90H129Z" fill="#426962"/>
+ <path d="M191 244c-8-73 36-143 118-156 84-14 149 43 151 117 0 55-18 109-52 139l-47 59-131-13-33-70Z" fill="#252b31"/>
+ <ellipse cx="310" cy="247" rx="105" ry="133" fill="#b77a5c"/><path d="M203 244c24-24 27-92 51-110 48 22 99 18 174 9 24-31-53-85-117-80-84 7-129 81-108 181Z" fill="#252b31"/>
+ <path d="M257 247h21m82 0h21" stroke="#322d2b" stroke-width="7" stroke-linecap="round"/><path d="M295 309c23 16 40 16 61-2" fill="none" stroke="#7d443b" stroke-width="6" stroke-linecap="round"/>
+ <path d="M268 362v45c32 43 67 43 98 0v-47" fill="#b77a5c"/><path d="M226 390c36 13 56 31 92 31 39 0 63-20 93-32 42 8 85 53 111 97l-32 134H132l-29-128c23-53 67-91 123-102Z" fill="#f6ead7"/>
+ <path d="M148 439c-29 23-47 51-54 88l-14 67h420l-16-64c-14-38-40-68-77-91" fill="none" stroke="#284a47" stroke-width="23" stroke-linecap="round"/>
+ <rect x="65" y="499" width="451" height="135" rx="13" fill="#253d3c"/><rect x="81" y="514" width="419" height="104" rx="4" fill="#304f4b"/><path d="M65 625h451l20 20H45Z" fill="#203737"/><circle cx="289" cy="563" r="16" fill="#e9b877"/><path d="m285 562 6-7 5 7-7 6Z" fill="#304f4b"/>
+ <path d="M80 102h67m-34-34v68" stroke="#fff2dc" opacity=".7" stroke-width="4" stroke-linecap="round"/><circle cx="490" cy="410" r="7" fill="#fff2dc"/>
+</svg>
