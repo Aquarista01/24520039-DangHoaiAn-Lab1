@@ -8,3 +8,13 @@
 - Mobile first: verify 375px before desktop.
 - Preserve keyboard access and visible focus.
 - Keep changes focused and inspect the Git diff before committing.
+
+## Homework rebuild workflow
+
+- Work on hw-atomic-rebuild from Lab 1 baseline 8aa4676.
+- One isolated work package per chat turn; stop after its implementation, checks and commit.
+- Read its contract in TASK_DECOMPOSITION.md before modifying application code.
+- Do not generate a finished homework package in one turn.
+- Preserve the existing main branch and its history.
+- Record actual results in DEVELOPMENT_LOG.md; distinguish assistant and student checks.
+- Do not label unperformed checks as passed or reuse old scores as new evidence.
