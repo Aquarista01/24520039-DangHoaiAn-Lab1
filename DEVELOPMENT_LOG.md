@@ -93,3 +93,27 @@ Not performed: authenticated M3 Preview header verification, student-run browser
 - GitHub reported the Vercel status as success. GitHub deployment metadata identifies Preview deployment 6903234727 for that exact source commit.
 - Requested https://24520039-xvu10l5np-aquarista.vercel.app/ without following redirects: HTTP 302 to Vercel SSO; no portfolio CSP header accessible. Recorded `headerVerified: false` and the authentication block in verification/hw1-m3/vercel-preview.json.
 - This follow-up commit records online evidence only; application code is unchanged from 2f038e4. The authenticated online header check remains pending.
+
+## Task 6.4 - HW1 M4: optimize assets and verify Lighthouse
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Baseline: e24f36a. Scope: actual mobile/desktop Lighthouse audit and early module discovery.
+
+Student-provided update:
+- The user reported that the Vercel M3 check was OK and requested the next step. No raw header capture or checked URL was provided. This is recorded as a student-reported result; the assistant's earlier anonymous HTTP check is retained unchanged.
+
+Actions actually performed by the assistant:
+- Re-read project rules and M4 contract; confirmed remote branch at e24f36a, main at 66fe05a.
+- Ran fresh Lighthouse 13.5.0 against the rebuild source with enforced CSP response headers. Both baseline profiles already scored 100/100/100/100, CLS 0; inspected the measured network dependency tree before editing.
+- Added one modulepreload link for events.js in index.html to remove late discovery through app.js. No JS/CSS/image/CSP changes.
+- Ran one after audit per profile with the same official Lighthouse presets: both again had raw category scores exactly 1.0, zero run warnings, TBT 0 and CLS 0. Recorded the actual LCP and request-chain measurements without claiming universal speedup from one run.
+- Added a focused preload regression check at 375/1440px, light/dark, with enforced CSP.
+- The first test-tool assertion incorrectly expected Resource Timing initiatorType to be link; a second CDP check incorrectly expected parser. Chromium reported script/about:client. Corrected the check to use actual early request timing and one request, retained initiator data for inspection, then ran the final script successfully in all four contexts. These were test-tool assumptions, not application errors.
+- Saved all four complete LHR JSON reports, both summaries and the passing preload check. No earlier homework scores were reused; no audit category was skipped and no repeated best-score selection was performed.
+- Inspected the application diff: exactly one modulepreload line. Kept all M1/M2 evidence and M3 raw audit/anonymous-response JSON unchanged.
+
+Evidence: verification/hw1-m4/README.md, audit.mjs, verify-preload.mjs, before/after-mobile.json, before/after-desktop.json, before/after-summary.json, preload-check.json.
+
+Limits: local lab runs by the assistant, not Vercel Lighthouse results or student Lighthouse runs. M3 online confirmation is student-reported. Existing main/production remain preserved.
+
+This turn ends after the isolated M4 commit. The next package is HW2 planning in a separate turn; HW2 implementation is not started here.

@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-07T06:36:14.342Z",
+  "tester": "Assistant browser regression checks for the added modulepreload",
+  "browser": "153.0.8010.0",
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "moduleRequests": [
+        "http://127.0.0.1:5520/events.js"
+      ],
+      "initiators": [
+        {
+          "type": "script",
+          "url": "about:client",
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      ],
+      "errors": [],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5520/events.js",
+          "initiatorType": "script",
+          "startTime": 25.100000000093132,
+          "responseEnd": 43.199999999953434
+        }
+      ],
+      "appResource": [
+        {
+          "name": "http://127.0.0.1:5520/app.js",
+          "startTime": 25.100000000093132,
+          "responseEnd": 43.300000000046566
+        }
+      ],
+      "events": "3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City",
+      "violations": [],
+      "overflow": false,
+      "h1": 1,
+      "divs": 0,
+      "earlyDiscovery": true,
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "moduleRequests": [
+        "http://127.0.0.1:5520/events.js"
+      ],
+      "initiators": [
+        {
+          "type": "script",
+          "url": "about:client",
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      ],
+      "errors": [],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5520/events.js",
+          "initiatorType": "script",
+          "startTime": 9.399999999906868,
+          "responseEnd": 18.800000000046566
+        }
+      ],
+      "appResource": [
+        {
+          "name": "http://127.0.0.1:5520/app.js",
+          "startTime": 9.5,
+          "responseEnd": 19.899999999906868
+        }
+      ],
+      "events": "3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City",
+      "violations": [],
+      "overflow": false,
+      "h1": 1,
+      "divs": 0,
+      "earlyDiscovery": true,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "moduleRequests": [
+        "http://127.0.0.1:5520/events.js"
+      ],
+      "initiators": [
+        {
+          "type": "script",
+          "url": "about:client",
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      ],
+      "errors": [],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5520/events.js",
+          "initiatorType": "script",
+          "startTime": 11.100000000093132,
+          "responseEnd": 19
+        }
+      ],
+      "appResource": [
+        {
+          "name": "http://127.0.0.1:5520/app.js",
+          "startTime": 11.200000000186265,
+          "responseEnd": 19.200000000186265
+        }
+      ],
+      "events": "3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City",
+      "violations": [],
+      "overflow": false,
+      "h1": 1,
+      "divs": 0,
+      "earlyDiscovery": true,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "moduleRequests": [
+        "http://127.0.0.1:5520/events.js"
+      ],
+      "initiators": [
+        {
+          "type": "script",
+          "url": "about:client",
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      ],
+      "errors": [],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5520/events.js",
+          "initiatorType": "script",
+          "startTime": 11.300000000046566,
+          "responseEnd": 22.100000000093132
+        }
+      ],
+      "appResource": [
+        {
+          "name": "http://127.0.0.1:5520/app.js",
+          "startTime": 11.400000000139698,
+          "responseEnd": 22.300000000046566
+        }
+      ],
+      "events": "3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City",
+      "violations": [],
+      "overflow": false,
+      "h1": 1,
+      "divs": 0,
+      "earlyDiscovery": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

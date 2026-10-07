@@ -1,0 +1,606 @@
+{
+  "date": "2026-10-07T06:32:03.208Z",
+  "phase": "before",
+  "baselineCommit": "e24f36a",
+  "tester": "Assistant local Lighthouse lab runs; no student Lighthouse run recorded",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "profile": "mobile",
+      "fetchTime": "2026-10-07T06:31:50.049Z",
+      "requestedUrl": "http://127.0.0.1:5510/",
+      "finalDisplayedUrl": "http://127.0.0.1:5510/",
+      "lighthouseVersion": "13.5.0",
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.0 Safari/537.36",
+        "benchmarkIndex": 2032,
+        "credits": {
+          "axe-core": "4.14.0"
+        }
+      },
+      "configSettings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "score": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "rawScores": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": 1000.5,
+        "largest-contentful-paint": 1227.1999999999998,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1000.5
+      },
+      "findings": [
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 19 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5510/styles.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 11163,
+                "wastedBytes": 11163
+              },
+              {
+                "url": "http://127.0.0.1:5510/events.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3630,
+                "wastedBytes": 3630
+              },
+              {
+                "url": "http://127.0.0.1:5510/assets/portrait.svg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 2229,
+                "wastedBytes": 2229
+              },
+              {
+                "url": "http://127.0.0.1:5510/app.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 2191,
+                "wastedBytes": 2191
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 19213
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 5 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 3 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 3,
+              "uncompressedResponseBytes": 5450,
+              "wastedBytes": 5450
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "scoreDisplayMode": "numeric",
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "6F070EFD30D9A491156DD9B269F733AF": {
+                      "url": "http://127.0.0.1:5510/",
+                      "navStartToEndTime": 21,
+                      "transferSize": 8583,
+                      "isLongest": true,
+                      "children": {
+                        "74.3": {
+                          "url": "http://127.0.0.1:5510/app.js",
+                          "navStartToEndTime": 42,
+                          "transferSize": 2191,
+                          "isLongest": true,
+                          "children": {
+                            "74.5": {
+                              "url": "http://127.0.0.1:5510/events.js",
+                              "navStartToEndTime": 88,
+                              "transferSize": 3630,
+                              "isLongest": true,
+                              "children": {}
+                            }
+                          }
+                        },
+                        "74.2": {
+                          "url": "http://127.0.0.1:5510/styles.css",
+                          "navStartToEndTime": 41,
+                          "transferSize": 11163,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 88
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 150 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5510/styles.css",
+                "totalBytes": 11163,
+                "wastedMs": 153
+              }
+            ]
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "profile": "desktop",
+      "fetchTime": "2026-10-07T06:31:57.381Z",
+      "requestedUrl": "http://127.0.0.1:5510/",
+      "finalDisplayedUrl": "http://127.0.0.1:5510/",
+      "lighthouseVersion": "13.5.0",
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.0 Safari/537.36",
+        "benchmarkIndex": 2471,
+        "credits": {
+          "axe-core": "4.14.0"
+        }
+      },
+      "configSettings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "score": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "rawScores": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": 332.41312500000004,
+        "largest-contentful-paint": 366.49575000000004,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 332.41312500000004
+      },
+      "findings": [
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 19 KiB",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "Request"
+              },
+              {
+                "key": "cacheLifetimeMs",
+                "valueType": "ms",
+                "label": "Cache TTL",
+                "displayUnit": "duration"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size",
+                "displayUnit": "kb",
+                "granularity": 1
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5510/styles.css",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 11163,
+                "wastedBytes": 11163
+              },
+              {
+                "url": "http://127.0.0.1:5510/events.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 3630,
+                "wastedBytes": 3630
+              },
+              {
+                "url": "http://127.0.0.1:5510/assets/portrait.svg",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 2229,
+                "wastedBytes": 2229
+              },
+              {
+                "url": "http://127.0.0.1:5510/app.js",
+                "cacheLifetimeMs": 0,
+                "totalBytes": 2191,
+                "wastedBytes": 2191
+              }
+            ],
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "skipSumming": [
+              "cacheLifetimeMs"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "wastedBytes": 19213
+            }
+          }
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 5 KiB",
+          "details": {
+            "type": "checklist",
+            "items": {
+              "noRedirects": {
+                "label": "Avoids redirects",
+                "value": true
+              },
+              "serverResponseIsFast": {
+                "label": "Server responds quickly (observed 2 ms)",
+                "value": true
+              },
+              "usesCompression": {
+                "label": "No compression applied",
+                "value": false
+              }
+            },
+            "debugData": {
+              "type": "debugdata",
+              "redirectDuration": 0,
+              "serverResponseTime": 2,
+              "uncompressedResponseBytes": 5450,
+              "wastedBytes": 5450
+            }
+          }
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "scoreDisplayMode": "numeric",
+          "details": {
+            "type": "list",
+            "items": [
+              {
+                "type": "list-section",
+                "value": {
+                  "type": "network-tree",
+                  "chains": {
+                    "1D1AFCD62FF96FB9F1496B4091343C6F": {
+                      "url": "http://127.0.0.1:5510/",
+                      "navStartToEndTime": 17,
+                      "transferSize": 8583,
+                      "isLongest": true,
+                      "children": {
+                        "122.3": {
+                          "url": "http://127.0.0.1:5510/app.js",
+                          "navStartToEndTime": 98,
+                          "transferSize": 2191,
+                          "isLongest": true,
+                          "children": {
+                            "122.5": {
+                              "url": "http://127.0.0.1:5510/events.js",
+                              "navStartToEndTime": 111,
+                              "transferSize": 3630,
+                              "isLongest": true,
+                              "children": {}
+                            }
+                          }
+                        },
+                        "122.2": {
+                          "url": "http://127.0.0.1:5510/styles.css",
+                          "navStartToEndTime": 59,
+                          "transferSize": 11163,
+                          "children": {}
+                        }
+                      }
+                    }
+                  },
+                  "longestChain": {
+                    "duration": 111
+                  }
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnected origins",
+                "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+                "value": {
+                  "type": "text",
+                  "value": "no origins were preconnected"
+                }
+              },
+              {
+                "type": "list-section",
+                "title": "Preconnect candidates",
+                "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+                "value": {
+                  "type": "text",
+                  "value": "No additional origins are good candidates for preconnecting"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "scoreDisplayMode": "metricSavings",
+          "displayValue": "Est savings of 40 ms",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://127.0.0.1:5510/styles.css",
+                "totalBytes": 11163,
+                "wastedMs": 68
+              }
+            ]
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "allCategories100": true
+}

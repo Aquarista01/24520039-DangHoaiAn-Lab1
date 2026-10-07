@@ -49,6 +49,8 @@ Kiểm tra header CSP thực tế trên deployment M3 còn chờ truy cập Prev
 
 Sau khi publish commit `2f038e4`, đã kiểm tra deployment Preview thực tế của chính commit này: Vercel báo success; GET https://24520039-xvu10l5np-aquarista.vercel.app/ trả HTTP 302 tới Vercel SSO. Kết quả được lưu trong `vercel-preview.json`, với `headerVerified: false`. Redirect đăng nhập chưa phải bằng chứng header của portfolio.
 
+Cập nhật từ sinh viên ngày 07/10/2026: người dùng báo đã kiểm tra trên Vercel và OK, rồi yêu cầu tiếp tục M4. Chưa cung cấp URL kiểm tra hoặc bản chụp raw headers. Ghi nhận đây là kết quả do sinh viên báo; giữ nguyên bằng chứng HTTP anonymous đã bị chặn của assistant.
+
 Nếu mở Preview bằng tài khoản được cấp quyền: DevTools → Network → reload → chọn request Document của portfolio → Response Headers. Kiểm tra `content-security-policy` chứa `frame-ancestors 'none'`, không chứa unsafe-inline/unsafe-eval; kiểm tra Console và các tương tác sau reload. Ghi kết quả mới kèm URL, commit và thời điểm; không ghi là sinh viên đã kiểm tra nếu chưa có bằng chứng.
 
 ## Chạy lại local
