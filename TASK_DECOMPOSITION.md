@@ -66,3 +66,71 @@ Planning was committed before application changes. M1-M4 have isolated implement
 | M2 | Implemented; automated checks passed | verification/hw1-m2/README.md, before.json, after.json; 20 configurations / 160 checks; student/browser diversity checks pending |
 | M3 | Local checks passed; student reports Vercel check OK on 7 Oct 2026 | verification/hw1-m3/README.md; assistant's earlier anonymous Preview check remains recorded as blocked |
 | M4 | Implemented; local mobile/desktop Lighthouse all four categories 100 | verification/hw1-m4/README.md; full before/after LHRs; preload-check.json |
+
+## Homework 2 - Drum Kit Engine (contract-first)
+
+Source requirements: Lab 1 slide page 23 (keyboard example) and page 24 (four mandatory architectural steps). This plan starts after HW1 commit `4c1a65b` on `hw-atomic-rebuild`. No HW2 application files or audio assets are added in the planning task.
+
+The implementation will live at `homework/drum-kit/`. The nine-pad mapping below follows the existing main reference `66fe05a`; this branch will implement and verify its own four steps. Existing main and production are preserved.
+
+| WBS | Work package | Contract and boundary | Application files allowed | Actual acceptance checks to run in that step | Planned atomic commit |
+| --- | --- | --- | --- | --- | --- |
+| 7 | HW2 planning | Specify DOM, audio, keyboard and queue contracts before application changes | None; planning documents only | Four steps present; unique binding/path table; application diff empty | docs(spec): define HW2 contract and atomic milestones |
+| 7.1 | Step 1: HTML data-sound contract | Semantic page, native pad buttons; key and sound mapping owned by HTML; responsive styling; no JavaScript implementation or script tag yet | homework/drum-kit/index.html, homework/drum-kit/styles.css | Parse all nine button contracts; one h1, zero divs, visible names and kbd; unique data-key values and same-origin relative sound paths; 375px and desktop overflow/focus/axe check; no JS file in this commit | feat(drum): define HTML data-sound contract |
+| 7.2 | Step 2: independent polyphonic audio | External audio module and click adapter; each accepted hit creates its own Audio instance, including repeated hits on one pad; handle play failure; do not add keydown or recorder behavior | homework/drum-kit/audio.js, app.js, index.html (external module tag only), sounds/*.wav | All nine files load/decode; click pads; repeated same-pad and mixed-pad hits overlap; denied/failed playback yields accessible feedback and no unhandled rejection; real laptop listening check, especially Kick/Low tom | feat(audio): implement independent polyphonic playback |
+| 7.3 | Step 3: keyboard adapter | keydown + event.key; normalize case; skip event.repeat, modifier/composition input and editable targets; dispatch through the same pad activation path as click; no keyCode/keypress/switch-case sound map | homework/drum-kit/keyboard.js, app.js | Lower/upper-case bindings; one hit for held mapped key; unknown/modifier/editable keys do nothing; Tab/Enter/Space still operate native controls; temporarily change a binding in HTML, reload and prove JS needs no edit | feat(drum): add keydown repeat-safe bindings |
+| 7.4 | Step 4: FIFO beat recorder | Timestamp live input hits in arrival order; replay with original spacing; keep replay hits out of the recording queue; explicit state and cancellation; no array mutation during replay | homework/drum-kit/recorder.js, app.js, index.html (wire the recorder contract), styles.css (state styles only) | Record A-S-A and inspect increasing relative times/order; replay same sequence and spacing within documented tolerance; stop cancels pending replay callbacks; rapid start/stop/clear and empty replay; replay does not add hits; keyboard-accessible controls; queue/time bounds | feat(recorder): implement timestamped FIFO beat tape |
+
+Evidence scripts, task-specific reports and DEVELOPMENT_LOG.md/status updates accompany their corresponding work package. They do not expand its application scope. Each step is a separate chat turn, checked and committed before the next step. Portfolio navigation integration and final cross-homework review will be their own later work package; do not mix those changes into the four steps above.
+
+### HTML pad contract
+
+Each pad is `button[type="button"].drum-pad` with:
+- `data-key`: one unique lowercase character.
+- `data-sound`: relative same-origin WAV URL; the engine reads this attribute, rather than defining its own sound-path table.
+- Visible sound name and `kbd` key label; accessible name includes both.
+- A stable pad element for transient visual feedback; animation respects reduced motion.
+
+| Key | Visible sound | data-sound (relative to the drum page) |
+| --- | --- | --- |
+| a | Kick | sounds/kick.wav |
+| s | Snare | sounds/snare.wav |
+| d | Clap | sounds/clap.wav |
+| f | Closed hat | sounds/hat.wav |
+| g | Open hat | sounds/open-hat.wav |
+| h | Low tom | sounds/tom.wav |
+| j | Rimshot | sounds/rim.wav |
+| k | Shaker | sounds/shaker.wav |
+| l | Crash | sounds/crash.wav |
+
+Step 1 defines these paths; Step 2 supplies and tests the files. A data-sound attribute does not itself request audio. Do not report audio playback as passed in Step 1.
+
+Recorder DOM contract: `#record-btn`, `#stop-btn`, `#replay-btn`, `#clear-btn`; state label `#tape-state`; count `#beat-count`; ordered list `#beat-list`; polite live status `#record-status`. Step 1 supplies the markup, with Stop/Replay/Clear initially disabled. Step 4 implements their behavior. No inline onclick/style/script, no div containers, one h1, and external local CSS.
+
+### Audio and activation contracts
+
+- The audio boundary is `playPad(pad) -> Promise<boolean>`: read pad.dataset.sound, start one independent Audio voice, resolve true if playback starts, or false with accessible failure feedback. Missing files and denied playback must not cause uncaught errors.
+- Click handling is an adapter. Keyboard handling is a separate adapter added only in Step 3. Both use a shared activation entry point; neither holds a duplicate sound map.
+- Step 4 adds `activatePad(pad, source)` behavior with `source` equal to live or replay. Capture the input timestamp synchronously at activation, before awaiting audio. The queue records input intent; a later audio failure is reported separately, and is not falsely logged as successful sound playback.
+- Keyboard bindings are derived from the HTML contract at initialization. Changing data-key and the visible kbd label, then reloading, must not require editing the engine or keyboard module. Keep the live-defense procedure small enough to demonstrate within the slide's three-minute window.
+- Reuse the existing local WAV assets selectively in Step 2, after checking the nine files and the corrected Kick/Low tom versions at the frozen main reference. Do not copy a completed HW2 folder or its old tests as new implementation evidence.
+
+### FIFO queue and recorder state contract
+
+- In-memory queue: `{ key, at }[]`; `at` is milliseconds relative to the recording start from performance.now(). Append live input hits in arrival order. Equal timestamp values retain insertion order.
+- States: idle, recording, replaying. Start Record from idle clears the previous queue and sets the time origin. Stop Recording returns to idle and retains the tape. Replay is available only from idle with a nonempty tape; Record/Clear are disabled during replay. Stop Replay cancels all pending callbacks and returns to idle. Clear is available only from idle and resets tape, count and list.
+- Capture both click and keyboard live hits. Replay uses a snapshot of the queue and the same audio activation path with source=replay, so it cannot re-record itself.
+- Playback scheduling uses each recorded offset from one replay time origin, not repeated equal intervals. Maintain a cancellation token/timer registry so callbacks from an old replay cannot fire after Stop or a new session. Manual live hits during replay may sound, but are not appended to the tape.
+- Bounds: at most 256 hits or 120 seconds per take. On either limit, stop recording, retain the captured tape and explain the limit in the live status. An empty queue cannot replay.
+- Recorded keys are valid under the current page contract; a page reload starts a fresh in-memory session. Render the list with DOM nodes/textContent, never innerHTML.
+- Verification records actual ordering and timing tolerance, plus browser environment. Browser timer scheduling can vary; distinguish automated timing checks from a student listening test. Do not claim that a headless test proves audibility on laptop speakers.
+
+### HW2 milestone status
+
+| Work package | Status | Evidence |
+| --- | --- | --- |
+| Planning | Documented before implementation | This WBS and documentation-only diff |
+| Step 1 | Not started | Pending HTML/CSS contract commit and checks |
+| Step 2 | Not started | Pending audio engine, asset checks and laptop listening |
+| Step 3 | Not started | Pending keyboard adapter and rebinding test |
+| Step 4 | Not started | Pending FIFO/state/cancellation tests |

@@ -117,3 +117,21 @@ Evidence: verification/hw1-m4/README.md, audit.mjs, verify-preload.mjs, before/a
 Limits: local lab runs by the assistant, not Vercel Lighthouse results or student Lighthouse runs. M3 online confirmation is student-reported. Existing main/production remain preserved.
 
 This turn ends after the isolated M4 commit. The next package is HW2 planning in a separate turn; HW2 implementation is not started here.
+
+## Task 7 - HW2 contract and atomic milestone planning
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 4c1a65b. Scope: planning documents only.
+
+Actions actually performed by the assistant:
+- Read the repository rules and existing WBS, and confirmed remote rebuild at 4c1a65b and main at 66fe05a.
+- Re-read the supplied slide text: page 23 requires keydown/event.key/repeat handling and HTML-owned sound paths; page 24 requires HTML contract before JS, independent polyphonic audio, keyboard adapter and timestamped FIFO recorder as separate steps.
+- Inspected only the nine pad bindings and recorder DOM IDs in the existing main reference to preserve the naming contract. No completed engine/recorder implementation was copied into this branch.
+- Specified four isolated implementation commits, their allowed application files and their acceptance checks.
+- Defined the audio and shared activation boundaries, the recorder queue/state/cancellation rules and the three-minute HTML key-rebinding demonstration.
+- Included a real student laptop listening check for Step 2, especially Kick and Low tom, because the user previously reported those sounds as inaudible. Automated audio checks will be recorded separately.
+- Checked that this turn changes only TASK_DECOMPOSITION.md and DEVELOPMENT_LOG.md; no HW2 page, JS, CSS, audio asset or old audit result is added.
+
+Not performed: HW2 implementation, browser tests, audio playback, laptop listening, recorder timing tests or any new student test. All four implementation steps remain not started.
+
+The next turn handles Step 1 only: semantic HTML data-sound contract and its CSS, checks and commit. It must not create an audio engine, keydown listener or recorder implementation yet.
