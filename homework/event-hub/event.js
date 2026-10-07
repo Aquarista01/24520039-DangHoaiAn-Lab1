@@ -14,3 +14,5 @@ const stopCountdown = startCountdown(EVENT.startsAt, (parts) => {
   }
 });
 window.addEventListener('pagehide', stopCountdown);
+
+import './registration.js';
