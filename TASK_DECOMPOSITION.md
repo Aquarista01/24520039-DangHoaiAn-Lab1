@@ -38,7 +38,7 @@ Run `python3 -m http.server 5500` from this directory; open `http://localhost:55
 
 This rebuild starts from the completed Lab 1 commit `8aa4676`. Branch: `hw-atomic-rebuild`. The existing main branch is preserved. The current implementation at main commit `66fe05a` can be used as a reference; this branch records its own work and checks.
 
-The current task is planning only. None of the checks below has been performed for this rebuild yet. Do not copy previous audit scores into the new verification log.
+Planning was committed before application changes. M1 now has its own implementation and fresh verification; M2-M4 are pending. Do not copy previous audit scores into the new verification log. Each implementation commit includes its task-specific evidence and log/status updates; these do not broaden its application code scope.
 
 | WBS | Milestone | Component contract | Allowed files | Acceptance checks | Planned atomic commit |
 | --- | --- | --- | --- | --- | --- |
@@ -61,8 +61,8 @@ The current task is planning only. None of the checks below has been performed f
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| Planning | Ready for review | Documentation diff; app files unchanged from baseline |
-| M1 | Not started | Pending |
+| Planning | Published as c62400a | Documentation-only commit; app files unchanged from baseline |
+| M1 | Implemented; automated checks passed | verification/hw1-m1/README.md, before.json, after.json; manual screen-reader/user checks pending |
 | M2 | Not started | Pending |
 | M3 | Not started | Pending |
 | M4 | Not started | Pending |

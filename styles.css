@@ -8,6 +8,7 @@
   --accent: #a34f2d;
   --accent-contrast: #fffdf8;
   --line: #c5c9bb;
+  --control-line: #65746f;
   --focus: #7140b0;
   --button: #244743;
   --button-text: #fffdf8;
@@ -31,7 +32,7 @@ main:focus { outline: none; }
     color-scheme: dark;
     --bg: #142522; --surface: #203531; --surface-soft: #29433d;
     --ink: #f7f3e7; --muted: #d0ded5; --accent: #f3b486;
-    --accent-contrast: #192826; --line: #527169; --focus: #dfbbff;
+    --accent-contrast: #192826; --line: #527169; --control-line: #92ada4; --focus: #dfbbff;
     --button: #e7b58b; --button-text: #172521;
     --skeleton-base: #314a42; --skeleton-highlight: #456257;
     --shadow: 0 14px 40px rgb(0 0 0 / 18%);
@@ -41,7 +42,7 @@ main:focus { outline: none; }
   color-scheme: dark;
   --bg: #142522; --surface: #203531; --surface-soft: #29433d;
   --ink: #f7f3e7; --muted: #d0ded5; --accent: #f3b486;
-  --accent-contrast: #192826; --line: #527169; --focus: #dfbbff;
+  --accent-contrast: #192826; --line: #527169; --control-line: #92ada4; --focus: #dfbbff;
   --button: #e7b58b; --button-text: #172521;
   --skeleton-base: #314a42; --skeleton-highlight: #456257;
   --shadow: 0 14px 40px rgb(0 0 0 / 18%);
@@ -57,7 +58,7 @@ main:focus { outline: none; }
 .nav-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .3rem 1.35rem; list-style: none; padding: 0; margin: 0; }
 .nav-links a { display: inline-block; padding: .5rem .1rem; font-size: .86rem; font-weight: 650; text-decoration: none; }
 .nav-links a:hover, .text-link:hover, .card-footer a:hover, .site-footer a:hover { text-decoration: underline; text-underline-offset: .3em; }
-.theme-toggle { border: 1px solid var(--line); border-radius: 999px; padding: .45rem .85rem; color: var(--ink); background: var(--surface); font-weight: 700; white-space: nowrap; }
+.theme-toggle { border: 1px solid var(--control-line); border-radius: 999px; padding: .45rem .85rem; color: var(--ink); background: var(--surface); font-weight: 700; white-space: nowrap; }
 .theme-toggle:hover { background: var(--surface-soft); }
 
 .hero { display: grid; grid-template-columns: 1fr; align-items: center; gap: 2.3rem; padding-block: 4rem 5rem; }
@@ -98,7 +99,7 @@ h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
 
 .demo-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; padding: 0; border: 0; }
 .demo-controls legend { width: 100%; margin-bottom: .7rem; font-size: .86rem; font-weight: 750; }
-.demo-controls button, .retry-button { border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: .6rem .9rem; border-radius: .4rem; font-weight: 700; }
+.demo-controls button, .retry-button { border: 1px solid var(--control-line); background: var(--surface); color: var(--ink); padding: .6rem .9rem; border-radius: .4rem; font-weight: 700; }
 .demo-controls button:hover, .retry-button:hover { background: var(--surface-soft); }
 .demo-controls button[aria-pressed="true"] { border-color: var(--button); background: var(--button); color: var(--button-text); }
 .event-status { min-height: 240px; margin-top: 1.3rem; padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: .7rem; }
@@ -120,7 +121,7 @@ h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
 .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .form-field { min-width: 0; }
 .form-field label { display: block; margin-bottom: .45rem; font-weight: 750; }
-.form-field input, .form-field textarea { width: 100%; padding: .8rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--surface); color: var(--ink); }
+.form-field input, .form-field textarea { width: 100%; padding: .8rem; border: 1px solid var(--control-line); border-radius: .35rem; background: var(--surface); color: var(--ink); }
 .form-field input:focus, .form-field textarea:focus { border-color: var(--focus); }
 .form-field small { display: block; margin-top: .4rem; color: var(--muted); }
 .full-width, .form-actions { grid-column: 1 / -1; }
