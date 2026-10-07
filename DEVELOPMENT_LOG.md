@@ -370,3 +370,23 @@ Actions actually performed by the assistant:
 Evidence: verification/hw3-step5/README.md, validation-check.mjs/validation-result.json, browser-fixture.mjs, browser-check.mjs/browser-result.json, regression.mjs/regression-result.json and lifecycle-check.mjs/lifecycle-result.json. Scripts explicitly reuse the earlier QA-only observer and derive regression cases; prior evidence is unchanged. All results are assistant local checks, not a student capture, hosted-header test, full accessibility certification or live defense. No failed application run was observed in this package; invalid input/fault injection is not counted as an AI defect.
 
 This is the fifth isolated HW3 application package. The mandatory AI_FAILURE_AUDIT.md remains the next separate 8.6 package; final portfolio integration, cross-homework review and merge remain later work. Main/production and real Git history are preserved.
+
+## Task 8.6 - Mandatory AI failure audit
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting application commit: c9a30f2. Scope: AI_FAILURE_AUDIT.md, audit evidence notes/helper/result and milestone/log documentation only.
+
+Student-provided update:
+- At 17:38 the user reported OK after the Step 5 whitespace-name/correction Preview request, without a raw input/form capture. Earlier reports remain unchanged.
+
+Actions actually performed by the assistant:
+- Read project rules and the 8.6 evidence policy. Reopened historical M1/M2/recorder/countdown JSON, method notes and the corresponding old/fixed Git source rather than inventing defects or rerunning old suites as new evidence.
+- Wrote AI_FAILURE_AUDIT.md with four distinct actual AI-assisted application defect categories: visible link/accessibility-name mismatch, optional storage resilience, transient drum-pad feedback contrast and rendering-overhead countdown scheduling. Stated the cross-Lab/homework scope and that only the fourth entry originated in HW3. Every entry has description/trigger, diagnostic method, cause, actual fix commit, before/after evidence and a lesson.
+- Preserved actual historical result timestamps and distinctions between native browser checks and virtual/injected cases. Counted storage read/write variants together and repeated assertion/theme/viewport observations once. Excluded deliberate fault injections, not-yet-implemented features and test-selector/scroll/schema helper errors. No prior double-submit/XSS defect is claimed.
+- Verified the first uncommitted faulty countdown module against its saved SHA-256 120b71a130c4e77e78976780009017e25516082791d8acb6f013a8e3a2aab2a6. Clearly identified the static 6b8a607 parent as lacking countdown code, rather than falsely labeling it the defective implementation. Linked d976694's corrected formula and the historical 45/46 to 47/47 boundary checks.
+- Ran a fresh read-only evidence/source checker: 30/30 checks passed for report source links, fix ancestry, exact recorded failure/pass/audit counts, source changes, before/after dates and the cited latest Step 5 totals. Hashes of linked historical JSON are saved in verification/hw3-audit/result.json. Corrected the helper's handling of list-valued detail records and output self-reference during preparation; these helper issues are not application defects.
+- Reviewed the report/diff and checked whitespace. Confirmed this package contains no application source changes and historical evidence is untouched. The five HW3 implementation commits remain separate from planning and this documentation commit.
+
+Evidence: AI_FAILURE_AUDIT.md and verification/hw3-audit/README.md, check-evidence.py, result.json. The current check validates stored evidence/source integrity; it is not a browser/application suite rerun, student laptop capture, hosted-header test, full WCAG certification or live-defense result.
+
+This turn ends after the isolated audit documentation commit. Next is portfolio homework navigation integration, followed by a separate final cross-homework review and integration/merge. Main/production and all real Git history remain preserved.
