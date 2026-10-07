@@ -302,3 +302,28 @@ Evidence: verification/hw3-step2/README.md, model-check.mjs, before-boundary-fix
 Not performed: form FSM/service, concurrent request lifecycle, independent validation/XSS checks or AI_FAILURE_AUDIT.md authoring. Main/production and existing history remain preserved.
 
 This turn ends after the isolated 8.2 implementation commit. The next package is 8.3: local registration state machine, safe receipt and success/error transport with its own checks.
+
+## Task 8.3 - HW3 local registration state machine
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: d976694. Application scope: registration.js, registration-service.js, app initializer and form state/feedback HTML/CSS only.
+
+Student-provided update:
+- At 15:48 the user reported OK after the countdown/tab-switch Preview request. Recorded as student-reported, without a raw countdown or tab capture; earlier local reports are unchanged.
+
+Actions actually performed by the assistant:
+- Read project-rules.md and the FSM/service contract; confirmed rebuild at d976694 and main at 66fe05a.
+- Added a native-validating controller with idle/submitting/success/error states, synchronous basic state rejection before service invocation/await, frozen entry-time data and simulation choice, safe text-only receipt, retry preserving input, successful Reset and pending Reset rejection. Native errors are visible/associated and clear when corrected.
+- Added a deterministic 600ms local service with immutable receipt, success/error simulation, optional abort signal and timer/listener settlement cleanup. It sends/persists no data. The controller does not yet wire Cancel, abort/deadline or page recovery; these remain the next isolated package.
+- Initialized the controller independently of countdown validity. Moved the polite atomic form status outside aria-busy and added visible status focus/state styling. Verified focus moves to an enabled status/Reset/Retry target; sample event/venue/privacy disclosures remain visible.
+- Ran 13/13 production-service checks with native Promise/AbortController and a replaced virtual timeout scheduler, restored afterwards. Covered snapshots, success/error, early/in-flight abort, cleanup, obsolete settlement and invalid payload types; these are not real elapsed waits.
+- Ran fresh native Chromium 153.0.8010.0 under repository CSP header/meta. The final audit passed 144/144 UI assertions across 375/1440px light/dark and 12/12 labeled isolated integration checks. All 20 axe 4.14.0 state audits had zero violations and incomplete items. Normal cases used the actual 600ms service with recorded elapsed waits, no transport mock.
+- Checked native required/minlength/email errors, valid corrections, keyboard Tab/skip link, actual pending loading/disabled state, safe literal/multiline receipt, success/Reset, simulated error with retained values and native Enter retry. Expanded the focus checks to verify viewport visibility after Enter and Reset; they passed without an application change. No normal request/navigation/persistence/runtime/CSP error or unhandled rejection occurred; countdown stayed active.
+- Isolated actual-controller tests injected deferred/throwing/rejected/re-entrant transports to verify the basic guards, snapshot, retry and idempotent dispose. A separate bad-countdown page still completed registration; JavaScript-disabled fallback remained safe and explanatory. Fixture counters do not appear in product code.
+- Inspected mobile/desktop light/dark success/error screenshots and the focused source diff; no clipped/overlapping labels or receipt text were seen. Checked whitespace. Countdown module and all earlier homework code/reports remain unchanged.
+
+Evidence: verification/hw3-step3/README.md, service-check.mjs, service-result.json, audit.mjs and result.json. The reports record actual timestamps, elapsed waits, native/injected boundaries and observations. These are assistant checks, not student Preview, hosted-header or live-defense results.
+
+Not performed: explicit request lock/generation/deadline, controller Cancel or page lifecycle recovery, independent normalization/hostile-payload execution or AI_FAILURE_AUDIT.md authoring. The existing basic state guard and safe rendering are present from the first async stage. Main/production and real Git history remain preserved.
+
+This turn ends after the isolated 8.3 implementation commit. Next is 8.4: concurrency/request lifecycle hardening and cancellation, with its own checks.

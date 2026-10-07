@@ -1,0 +1,2958 @@
+{
+  "date": "2026-10-07T09:01:06.050Z",
+  "tester": "Assistant: fresh local browser checks for HW3 Step 3",
+  "baseline": "d9766945b3983b199a7a737d9f38e8b6b5e46651",
+  "browser": "153.0.8010.0",
+  "delivery": "Local HTTP under repository CSP header/meta; four native-service UI configurations and labeled isolated injected-service cases",
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "clock": "Native Date.now/setTimeout and real local service; no normal transport mocks",
+      "checks": [
+        {
+          "name": "initial idle, enabled fields/Register/Reset and disabled Cancel",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and strict local module wiring",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic feedback outside busy form",
+          "passed": true
+        },
+        {
+          "name": "countdown remains active alongside idle form",
+          "passed": true
+        },
+        {
+          "name": "idle: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#reset-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "empty native validation stays idle, focuses name and shows messages",
+          "passed": true
+        },
+        {
+          "name": "native invalid submission does not navigate",
+          "passed": true
+        },
+        {
+          "name": "invalid: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "short typed name and malformed email fail native constraints",
+          "passed": true
+        },
+        {
+          "name": "valid correction clears field errors and invalid attributes",
+          "passed": true
+        },
+        {
+          "name": "valid submit synchronously enters Submitting/busy",
+          "passed": true
+        },
+        {
+          "name": "pending fields/Register/Reset disabled, Cancel reserved for next slice",
+          "passed": true
+        },
+        {
+          "name": "pending focus moves to visible status outside busy form",
+          "passed": true
+        },
+        {
+          "name": "submitting: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "submitting audit completed during actual pending state",
+          "passed": true
+        },
+        {
+          "name": "real local service success after expected 600ms timer",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 644
+          }
+        },
+        {
+          "name": "success shows exact text-only receipt and interest label",
+          "passed": true,
+          "detail": [
+            "Đặng Hoài An",
+            "an@example.com",
+            "Design and code",
+            "I <3 code\nLet’s learn together."
+          ]
+        },
+        {
+          "name": "success disables repeat registration, enables/focuses Reset",
+          "passed": true
+        },
+        {
+          "name": "success feedback explicitly discloses no send/save",
+          "passed": true
+        },
+        {
+          "name": "success has no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "success: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "Reset returns Idle, clears input/receipt and focuses visible name",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "busy": "false",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": false,
+            "submitText": "Register",
+            "resetDisabled": false,
+            "cancelDisabled": true,
+            "status": "Ready to try a local demo registration.",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "attendee-name",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "selected simulation reaches Error with retryable feedback",
+          "passed": true
+        },
+        {
+          "name": "Error retains entered values and checked simulation",
+          "passed": true
+        },
+        {
+          "name": "Error re-enables fields/Retry/Reset and focuses Retry",
+          "passed": true
+        },
+        {
+          "name": "error: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Enter brings pending focus target into viewport",
+          "passed": true,
+          "detail": {
+            "state": "submitting",
+            "label": "Submitting",
+            "busy": "true",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "Đặng Hoài An",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "an@example.com",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "both",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "I <3 code\nLet’s learn together.",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": true,
+            "submitText": "Working…",
+            "resetDisabled": true,
+            "cancelDisabled": true,
+            "status": "Trying your local demo registration…",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "registration-status",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "native Enter retry succeeds after unchecking fault without retyping",
+          "passed": true
+        },
+        {
+          "name": "keyboard retry completion keeps Reset focus in viewport",
+          "passed": true
+        },
+        {
+          "name": "second Reset remains usable after error/retry cycle",
+          "passed": true
+        },
+        {
+          "name": "countdown still active after all form states",
+          "passed": true
+        },
+        {
+          "name": "normal workflow makes no outgoing registration request or navigation",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/",
+              "method": "GET",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/styles.css",
+              "method": "GET",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/app.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/countdown.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration-service.js",
+              "method": "GET",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "normal workflow does not persist form entries",
+          "passed": true
+        },
+        {
+          "name": "normal page has no runtime/failed request/CSP/unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": [],
+            "violations": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "state": "idle",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "invalid",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "submitting",
+          "observedState": "submitting",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "success",
+          "observedState": "success",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "error",
+          "observedState": "error",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "clock": "Native Date.now/setTimeout and real local service; no normal transport mocks",
+      "checks": [
+        {
+          "name": "initial idle, enabled fields/Register/Reset and disabled Cancel",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and strict local module wiring",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic feedback outside busy form",
+          "passed": true
+        },
+        {
+          "name": "countdown remains active alongside idle form",
+          "passed": true
+        },
+        {
+          "name": "idle: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#reset-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "empty native validation stays idle, focuses name and shows messages",
+          "passed": true
+        },
+        {
+          "name": "native invalid submission does not navigate",
+          "passed": true
+        },
+        {
+          "name": "invalid: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "short typed name and malformed email fail native constraints",
+          "passed": true
+        },
+        {
+          "name": "valid correction clears field errors and invalid attributes",
+          "passed": true
+        },
+        {
+          "name": "valid submit synchronously enters Submitting/busy",
+          "passed": true
+        },
+        {
+          "name": "pending fields/Register/Reset disabled, Cancel reserved for next slice",
+          "passed": true
+        },
+        {
+          "name": "pending focus moves to visible status outside busy form",
+          "passed": true
+        },
+        {
+          "name": "submitting: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "submitting audit completed during actual pending state",
+          "passed": true
+        },
+        {
+          "name": "real local service success after expected 600ms timer",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 653
+          }
+        },
+        {
+          "name": "success shows exact text-only receipt and interest label",
+          "passed": true,
+          "detail": [
+            "Đặng Hoài An",
+            "an@example.com",
+            "Design and code",
+            "I <3 code\nLet’s learn together."
+          ]
+        },
+        {
+          "name": "success disables repeat registration, enables/focuses Reset",
+          "passed": true
+        },
+        {
+          "name": "success feedback explicitly discloses no send/save",
+          "passed": true
+        },
+        {
+          "name": "success has no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "success: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "Reset returns Idle, clears input/receipt and focuses visible name",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "busy": "false",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": false,
+            "submitText": "Register",
+            "resetDisabled": false,
+            "cancelDisabled": true,
+            "status": "Ready to try a local demo registration.",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "attendee-name",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "selected simulation reaches Error with retryable feedback",
+          "passed": true
+        },
+        {
+          "name": "Error retains entered values and checked simulation",
+          "passed": true
+        },
+        {
+          "name": "Error re-enables fields/Retry/Reset and focuses Retry",
+          "passed": true
+        },
+        {
+          "name": "error: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Enter brings pending focus target into viewport",
+          "passed": true,
+          "detail": {
+            "state": "submitting",
+            "label": "Submitting",
+            "busy": "true",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "Đặng Hoài An",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "an@example.com",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "both",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "I <3 code\nLet’s learn together.",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": true,
+            "submitText": "Working…",
+            "resetDisabled": true,
+            "cancelDisabled": true,
+            "status": "Trying your local demo registration…",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "registration-status",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "native Enter retry succeeds after unchecking fault without retyping",
+          "passed": true
+        },
+        {
+          "name": "keyboard retry completion keeps Reset focus in viewport",
+          "passed": true
+        },
+        {
+          "name": "second Reset remains usable after error/retry cycle",
+          "passed": true
+        },
+        {
+          "name": "countdown still active after all form states",
+          "passed": true
+        },
+        {
+          "name": "normal workflow makes no outgoing registration request or navigation",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/",
+              "method": "GET",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/styles.css",
+              "method": "GET",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/app.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/countdown.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration-service.js",
+              "method": "GET",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "normal workflow does not persist form entries",
+          "passed": true
+        },
+        {
+          "name": "normal page has no runtime/failed request/CSP/unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": [],
+            "violations": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "state": "idle",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "invalid",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "submitting",
+          "observedState": "submitting",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "success",
+          "observedState": "success",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "error",
+          "observedState": "error",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "clock": "Native Date.now/setTimeout and real local service; no normal transport mocks",
+      "checks": [
+        {
+          "name": "initial idle, enabled fields/Register/Reset and disabled Cancel",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and strict local module wiring",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic feedback outside busy form",
+          "passed": true
+        },
+        {
+          "name": "countdown remains active alongside idle form",
+          "passed": true
+        },
+        {
+          "name": "idle: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#reset-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "empty native validation stays idle, focuses name and shows messages",
+          "passed": true
+        },
+        {
+          "name": "native invalid submission does not navigate",
+          "passed": true
+        },
+        {
+          "name": "invalid: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "short typed name and malformed email fail native constraints",
+          "passed": true
+        },
+        {
+          "name": "valid correction clears field errors and invalid attributes",
+          "passed": true
+        },
+        {
+          "name": "valid submit synchronously enters Submitting/busy",
+          "passed": true
+        },
+        {
+          "name": "pending fields/Register/Reset disabled, Cancel reserved for next slice",
+          "passed": true
+        },
+        {
+          "name": "pending focus moves to visible status outside busy form",
+          "passed": true
+        },
+        {
+          "name": "submitting: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "submitting audit completed during actual pending state",
+          "passed": true
+        },
+        {
+          "name": "real local service success after expected 600ms timer",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 651
+          }
+        },
+        {
+          "name": "success shows exact text-only receipt and interest label",
+          "passed": true,
+          "detail": [
+            "Đặng Hoài An",
+            "an@example.com",
+            "Design and code",
+            "I <3 code\nLet’s learn together."
+          ]
+        },
+        {
+          "name": "success disables repeat registration, enables/focuses Reset",
+          "passed": true
+        },
+        {
+          "name": "success feedback explicitly discloses no send/save",
+          "passed": true
+        },
+        {
+          "name": "success has no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "success: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "Reset returns Idle, clears input/receipt and focuses visible name",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "busy": "false",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": false,
+            "submitText": "Register",
+            "resetDisabled": false,
+            "cancelDisabled": true,
+            "status": "Ready to try a local demo registration.",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "attendee-name",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "selected simulation reaches Error with retryable feedback",
+          "passed": true
+        },
+        {
+          "name": "Error retains entered values and checked simulation",
+          "passed": true
+        },
+        {
+          "name": "Error re-enables fields/Retry/Reset and focuses Retry",
+          "passed": true
+        },
+        {
+          "name": "error: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Enter brings pending focus target into viewport",
+          "passed": true,
+          "detail": {
+            "state": "submitting",
+            "label": "Submitting",
+            "busy": "true",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "Đặng Hoài An",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "an@example.com",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "both",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "I <3 code\nLet’s learn together.",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": true,
+            "submitText": "Working…",
+            "resetDisabled": true,
+            "cancelDisabled": true,
+            "status": "Trying your local demo registration…",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "registration-status",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "native Enter retry succeeds after unchecking fault without retyping",
+          "passed": true
+        },
+        {
+          "name": "keyboard retry completion keeps Reset focus in viewport",
+          "passed": true
+        },
+        {
+          "name": "second Reset remains usable after error/retry cycle",
+          "passed": true
+        },
+        {
+          "name": "countdown still active after all form states",
+          "passed": true
+        },
+        {
+          "name": "normal workflow makes no outgoing registration request or navigation",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/",
+              "method": "GET",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/styles.css",
+              "method": "GET",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/app.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/countdown.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration-service.js",
+              "method": "GET",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "normal workflow does not persist form entries",
+          "passed": true
+        },
+        {
+          "name": "normal page has no runtime/failed request/CSP/unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": [],
+            "violations": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "state": "idle",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "invalid",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "submitting",
+          "observedState": "submitting",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "success",
+          "observedState": "success",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "error",
+          "observedState": "error",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "clock": "Native Date.now/setTimeout and real local service; no normal transport mocks",
+      "checks": [
+        {
+          "name": "initial idle, enabled fields/Register/Reset and disabled Cancel",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and strict local module wiring",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic feedback outside busy form",
+          "passed": true
+        },
+        {
+          "name": "countdown remains active alongside idle form",
+          "passed": true
+        },
+        {
+          "name": "idle: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#reset-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#submit-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "empty native validation stays idle, focuses name and shows messages",
+          "passed": true
+        },
+        {
+          "name": "native invalid submission does not navigate",
+          "passed": true
+        },
+        {
+          "name": "invalid: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "short typed name and malformed email fail native constraints",
+          "passed": true
+        },
+        {
+          "name": "valid correction clears field errors and invalid attributes",
+          "passed": true
+        },
+        {
+          "name": "valid submit synchronously enters Submitting/busy",
+          "passed": true
+        },
+        {
+          "name": "pending fields/Register/Reset disabled, Cancel reserved for next slice",
+          "passed": true
+        },
+        {
+          "name": "pending focus moves to visible status outside busy form",
+          "passed": true
+        },
+        {
+          "name": "submitting: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "submitting audit completed during actual pending state",
+          "passed": true
+        },
+        {
+          "name": "real local service success after expected 600ms timer",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 659
+          }
+        },
+        {
+          "name": "success shows exact text-only receipt and interest label",
+          "passed": true,
+          "detail": [
+            "Đặng Hoài An",
+            "an@example.com",
+            "Design and code",
+            "I <3 code\nLet’s learn together."
+          ]
+        },
+        {
+          "name": "success disables repeat registration, enables/focuses Reset",
+          "passed": true
+        },
+        {
+          "name": "success feedback explicitly discloses no send/save",
+          "passed": true
+        },
+        {
+          "name": "success has no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "success: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "Reset returns Idle, clears input/receipt and focuses visible name",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "busy": "false",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "",
+                "disabled": false,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": false,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": false,
+            "submitText": "Register",
+            "resetDisabled": false,
+            "cancelDisabled": true,
+            "status": "Ready to try a local demo registration.",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "attendee-name",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "selected simulation reaches Error with retryable feedback",
+          "passed": true
+        },
+        {
+          "name": "Error retains entered values and checked simulation",
+          "passed": true
+        },
+        {
+          "name": "Error re-enables fields/Retry/Reset and focuses Retry",
+          "passed": true
+        },
+        {
+          "name": "error: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Enter brings pending focus target into viewport",
+          "passed": true,
+          "detail": {
+            "state": "submitting",
+            "label": "Submitting",
+            "busy": "true",
+            "fields": [
+              {
+                "id": "attendee-name",
+                "value": "Đặng Hoài An",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-email",
+                "value": "an@example.com",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-interest",
+                "value": "both",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "attendee-note",
+                "value": "I <3 code\nLet’s learn together.",
+                "disabled": true,
+                "invalid": null
+              },
+              {
+                "id": "simulate-error",
+                "value": "on",
+                "checked": false,
+                "disabled": true,
+                "invalid": null
+              }
+            ],
+            "submitDisabled": true,
+            "submitText": "Working…",
+            "resetDisabled": true,
+            "cancelDisabled": true,
+            "status": "Trying your local demo registration…",
+            "statusOutsideBusy": true,
+            "summaryHidden": true,
+            "receipt": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "focus": "registration-status",
+            "focusInViewport": true,
+            "overflow": false,
+            "formErrors": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "violations": []
+          }
+        },
+        {
+          "name": "native Enter retry succeeds after unchecking fault without retyping",
+          "passed": true
+        },
+        {
+          "name": "keyboard retry completion keeps Reset focus in viewport",
+          "passed": true
+        },
+        {
+          "name": "second Reset remains usable after error/retry cycle",
+          "passed": true
+        },
+        {
+          "name": "countdown still active after all form states",
+          "passed": true
+        },
+        {
+          "name": "normal workflow makes no outgoing registration request or navigation",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/",
+              "method": "GET",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/styles.css",
+              "method": "GET",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/app.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/countdown.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration.js",
+              "method": "GET",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:43503/homework/event-hub/registration-service.js",
+              "method": "GET",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "normal workflow does not persist form entries",
+          "passed": true
+        },
+        {
+          "name": "normal page has no runtime/failed request/CSP/unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": [],
+            "violations": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "state": "idle",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "invalid",
+          "observedState": "idle",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "submitting",
+          "observedState": "submitting",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "success",
+          "observedState": "success",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        },
+        {
+          "state": "error",
+          "observedState": "error",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [],
+          "passes": [
+            "aria-allowed-attr",
+            "aria-allowed-role",
+            "aria-conditional-attr",
+            "aria-deprecated-role",
+            "aria-hidden-body",
+            "aria-hidden-focus",
+            "aria-prohibited-attr",
+            "aria-required-attr",
+            "aria-roles",
+            "aria-valid-attr-value",
+            "aria-valid-attr",
+            "autocomplete-valid",
+            "button-name",
+            "bypass",
+            "color-contrast",
+            "definition-list",
+            "dlitem",
+            "document-title",
+            "duplicate-id-aria",
+            "empty-heading",
+            "form-field-multiple-labels",
+            "heading-order",
+            "html-has-lang",
+            "html-lang-valid",
+            "label-title-only",
+            "label",
+            "landmark-banner-is-top-level",
+            "landmark-contentinfo-is-top-level",
+            "landmark-main-is-top-level",
+            "landmark-no-duplicate-banner",
+            "landmark-no-duplicate-contentinfo",
+            "landmark-no-duplicate-main",
+            "landmark-one-main",
+            "landmark-unique",
+            "link-name",
+            "list",
+            "listitem",
+            "meta-viewport-large",
+            "meta-viewport",
+            "nested-interactive",
+            "page-has-heading-one",
+            "region",
+            "select-name",
+            "skip-link",
+            "tabindex",
+            "target-size"
+          ]
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "integration": [
+    {
+      "name": "isolated invalid direct submit calls no transport",
+      "passed": true
+    },
+    {
+      "name": "basic synchronous Submitting guard rejects direct second call",
+      "passed": true,
+      "detail": {
+        "second": false,
+        "calls": 1,
+        "state": "submitting",
+        "frozen": true
+      }
+    },
+    {
+      "name": "pending Reset is rejected and entry-time payload/error choice is retained",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "retained": "Đặng Hoài An",
+        "pendingName": "Đặng Hoài An",
+        "simulation": false
+      }
+    },
+    {
+      "name": "deferred success renders original snapshot despite later DOM edit",
+      "passed": true
+    },
+    {
+      "name": "Success guards direct repeat submit until Reset",
+      "passed": true
+    },
+    {
+      "name": "synchronous transport throw becomes useful retryable Error",
+      "passed": true
+    },
+    {
+      "name": "rejected Promise is handled and keeps input for retry",
+      "passed": true
+    },
+    {
+      "name": "synchronous service re-entry hits existing state guard",
+      "passed": true
+    },
+    {
+      "name": "basic idempotent dispose ignores future completion and blocks new submit",
+      "passed": true
+    },
+    {
+      "name": "isolated faults/re-entry have no page error or unhandled rejection",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "invalid countdown metadata does not prevent actual form success",
+      "passed": true
+    },
+    {
+      "name": "no-JavaScript fallback retains local privacy/help and disabled Submit",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Cancel, request token/abort/timeout/pagehide recovery are the next package.",
+    "Independent normalization and hostile-payload execution checks are a later package.",
+    "No student, hosted-header or live-defense check is claimed."
+  ]
+}

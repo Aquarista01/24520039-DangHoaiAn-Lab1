@@ -94,6 +94,10 @@ h3 { font-size: 1.2rem; }
 .form-controls .primary { background: var(--button); color: var(--button-text); border-color: var(--button); }
 .form-controls button:disabled { color: var(--muted); background: var(--soft); border-color: var(--control-line); border-style: dashed; cursor: default; }
 .state-label { margin-top: 1rem; color: var(--muted); font-size: .8rem; }
+#registration-status:focus { outline: 3px solid var(--focus); outline-offset: 4px; }
+form[data-state="submitting"] #form-state,
+form[data-state="success"] #form-state,
+form[data-state="error"] #form-state { color: var(--accent); }
 .receipt { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .receipt dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .5rem 1rem; font-size: .9rem; }
 .receipt dt { color: var(--muted); }

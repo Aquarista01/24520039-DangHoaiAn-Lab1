@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-07T08:53:07.120Z",
+  "tester": "Assistant: production local service contract checks",
+  "baseline": "d9766945b3983b199a7a737d9f38e8b6b5e46651",
+  "method": "Native Promise/AbortController with replaced global timeout scheduler, restored after tests. Virtual dispatch, not real elapsed 600ms.",
+  "checks": [
+    {
+      "name": "service schedules exactly one 600ms local attempt",
+      "passed": true
+    },
+    {
+      "name": "success returns frozen entry-time snapshot",
+      "passed": true,
+      "detail": {
+        "name": "Đặng Hoài An",
+        "email": "an@example.com",
+        "interest": "both",
+        "note": "I <3 code"
+      }
+    },
+    {
+      "name": "success releases timer and abort listener",
+      "passed": true
+    },
+    {
+      "name": "abort after success cannot alter settled receipt",
+      "passed": true
+    },
+    {
+      "name": "selected simulation gives deterministic rejection",
+      "passed": true
+    },
+    {
+      "name": "error releases timer and abort listener",
+      "passed": true
+    },
+    {
+      "name": "pre-aborted signal rejects without scheduling/listening",
+      "passed": true
+    },
+    {
+      "name": "in-flight service abort cancels timer and removes listener",
+      "passed": true
+    },
+    {
+      "name": "obsolete callback cannot settle an already rejected service",
+      "passed": true
+    },
+    {
+      "name": "invalid payload type null rejects without timer",
+      "passed": true
+    },
+    {
+      "name": "invalid payload type {} rejects without timer",
+      "passed": true
+    },
+    {
+      "name": "invalid payload type {\"name\":\"Đặng Hoài An\",\"email\":\"an@example.com\",\"interest\":\"both\",\"note\":123} rejects without timer",
+      "passed": true
+    },
+    {
+      "name": "optional signal omitted still completes safely",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

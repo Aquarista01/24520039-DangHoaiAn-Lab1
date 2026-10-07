@@ -1,4 +1,5 @@
 import {startCountdown} from './countdown.js';
+import {createRegistration} from './registration.js';
 
 const target = document.querySelector('#event-start');
 const status = document.querySelector('#countdown-status');
@@ -47,3 +48,7 @@ function onVisibility() {
 window.addEventListener('pagehide', pause);
 window.addEventListener('pageshow', () => { if (!active) resume(); });
 resume();
+
+const form = document.querySelector('#registration-form');
+const summary = document.querySelector('#registration-summary');
+if (form && summary) createRegistration({form, summary});
