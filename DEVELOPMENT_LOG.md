@@ -327,3 +327,25 @@ Evidence: verification/hw3-step3/README.md, service-check.mjs, service-result.js
 Not performed: explicit request lock/generation/deadline, controller Cancel or page lifecycle recovery, independent normalization/hostile-payload execution or AI_FAILURE_AUDIT.md authoring. The existing basic state guard and safe rendering are present from the first async stage. Main/production and real Git history remain preserved.
 
 This turn ends after the isolated 8.3 implementation commit. Next is 8.4: concurrency/request lifecycle hardening and cancellation, with its own checks.
+
+## Task 8.4 - HW3 concurrency and request lifecycle
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: d97b7e3. Application scope: registration.js, app lifecycle and Cancel/Reset HTML wiring only.
+
+Student-provided update:
+- At 16:07 the user reported OK after the Step 3 success/error/retry Preview request, without a raw form-state capture. At 16:57 they said they had paused while busy and asked to resume the same package. Earlier verification reports remain unchanged.
+
+Actions actually performed by the assistant:
+- Re-read project rules and the Step 4 lifecycle contract; resumed from a clean d97b7e3 worktree.
+- Added a synchronous in-flight lock before validation/callbacks/await, request generation/current-token guards, per-request AbortController, a cancellation race and a 5000ms monotonic deadline. Checked elapsed time again at response/rejection to handle delayed timeout dispatch. Old settlement/finally/timeout cannot render over or unlock a newer request.
+- Enabled and focused Cancel while pending; cancellation retains input and returns Idle. Programmatic Reset aborts/invalidates pending work and clears inputs/receipt; native Reset remains disabled while submitting. Timeout preserves data with useful retry feedback. All owned deadline timers are cleared on settlement/cancellation/dispose.
+- Wired pagehide/pageshow to idempotent suspend/resume. Pending work aborts/settles and becomes a preserved retryable Error, with six form/control listeners detached while paused and restored once on resume. Nonpending state/success receipt survive restore. Dispose aborts, removes listeners and blocks entry. Countdown, service and CSS are unchanged.
+- Ran fresh native Chromium 153.0.8010.0 checks under repository CSP header/meta: 188/188 assertions across 375/1440px light/dark passed. All 24 axe 4.14.0 audits reported zero violations/incomplete items. Normal cases execute the actual local service with a test-only call/signal observer; measured initial success waits were 647/642/643/640ms.
+- Verified keyboard cancellation and a 700ms no-late-receipt wait, rapid click/requestSubmit/submit-event one-attempt behavior, normal success/error/Reset/retry, actual service abort timer/listener cleanup, preserved interrupted data and successful restored retry. Twenty synthetic lifecycle cycles per configuration preserve receipt and never duplicate listeners. No normal outgoing request/navigation/persistence/runtime/CSP error or unhandled rejection occurred; countdown remained active.
+- Ran 25/25 isolated production-controller contract checks with explicit virtual clocks and injected deferred/non-cooperating/throwing/rejected/reentrant transports. Verified validation-time lock, DOM/UI bypass resistance, payload/error-choice snapshots, cancelled-call settlement, immediate retry, obsolete success/error/finally/deadline, pending Reset, exact 4999/5000ms boundary, elapsed-deadline guards, cleanup and 50 suspend/resume cycles. No leaked timer/listener or unhandled late rejection was observed.
+- Inspected mobile light success and dark error screenshots, reviewed the focused source diff and checked whitespace. Added no product counters or independent validator/XSS implementation. All prior homework code/evidence stays preserved.
+
+Evidence: verification/hw3-step4/README.md, instrument.mjs, audit.mjs, result.json, contract-check.mjs and contract-result.json. Native elapsed waits are separate from virtual deadline advances. Lifecycle persisted events are synthetic; no actual BFCache/background suspension, student Preview, hosted-header or live-defense result is claimed.
+
+This turn ends after the isolated 8.4 commit. Next is 8.5: independent input normalization/bounds and hostile-payload DOM checks. AI_FAILURE_AUDIT.md and final integration/merge remain later packages; main/production and real history are preserved.

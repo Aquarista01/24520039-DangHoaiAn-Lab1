@@ -91,9 +91,10 @@
           </fieldset>
           <menu class="form-controls" aria-label="Registration controls">
             <li><button id="submit-btn" class="primary" type="submit" disabled>Register</button></li>
-            <li><button id="cancel-btn" type="button" disabled>Cancel</button></li>
-            <li><button id="reset-btn" type="reset" disabled>Reset</button></li>
+            <li><button id="cancel-btn" type="button" aria-describedby="controls-hint" disabled>Cancel</button></li>
+            <li><button id="reset-btn" type="reset" aria-describedby="controls-hint" disabled>Reset</button></li>
           </menu>
+          <p id="controls-hint" class="hint">Cancel keeps your entries. Reset clears them.</p>
           <p class="state-label">Form state: <strong id="form-state">Idle</strong></p>
         </form>
         <p id="registration-status" class="status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">Enable JavaScript to try a local demo registration. Nothing is sent or saved.</p>

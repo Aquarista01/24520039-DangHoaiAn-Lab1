@@ -51,4 +51,8 @@ resume();
 
 const form = document.querySelector('#registration-form');
 const summary = document.querySelector('#registration-summary');
-if (form && summary) createRegistration({form, summary});
+if (form && summary) {
+  const registration = createRegistration({form, summary});
+  window.addEventListener('pagehide', () => registration.suspend());
+  window.addEventListener('pageshow', () => registration.resume());
+}
