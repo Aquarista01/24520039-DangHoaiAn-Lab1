@@ -1,4 +1,5 @@
 import { previewRegistration } from './registration-service.js';
+import { collectRegistration } from './validation.js';
 
 const form = document.querySelector('#registration-form');
 const button = document.querySelector('#submit-btn');
@@ -22,13 +23,15 @@ function transition(next, message) {
   badge.dataset.state = state;
   status.textContent = message;
 }
-form.addEventListener('input', () => {
+form.addEventListener('input', (event) => {
+  if (typeof event.target.setCustomValidity === 'function') event.target.setCustomValidity('');
   if (state === 'success' || state === 'error') transition('idle', 'Ready for a new preview.');
 });
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  if (state === 'submitting' || !form.reportValidity()) return;
-  const data = Object.freeze({ name: form.elements.name.value, email: form.elements.email.value, interest: form.elements.interest.value, note: form.elements.note.value });
+  if (state === 'submitting') return;
+  const data = collectRegistration(form);
+  if (!data) return;
   const fail = document.querySelector('#simulate-error').checked;
   transition('submitting', 'Submitting your local preview. Please wait.');
   pending = new AbortController();
