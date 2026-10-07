@@ -158,3 +158,27 @@ Evidence: verification/hw2-step1/README.md, audit.mjs, initial-harness-check.jso
 Not performed: audio playback or asset loading, laptop listening, letter-key adapter, recording/replay, student checks or Vercel preview verification. Pads and Record have no application behavior at this static stage. Main/production and earlier evidence remain preserved.
 
 This turn ends after the isolated Step 1 commit. The next package is Step 2: independent polyphonic audio and click adapter, in a separate turn.
+
+## Task 7.2 - HW2 Step 2: independent polyphonic audio
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 6ed1d97. Scope: audio engine, click adapter, external module tag and nine local WAV assets.
+
+Actions actually performed by the assistant:
+- Re-read project rules and the Step 2 contract. Confirmed remote rebuild at 6ed1d97 and main at 66fe05a.
+- Implemented audio.js independently of click/letter-key/recorder adapters. Each accepted hit reads data-sound and creates a fresh native Audio voice; voices are released on ended/error. The engine returns true when playback starts, or false for caught pre-start failure, with polite textContent feedback.
+- Added app.js with a shared activation entry point, transient feedback and native button click listeners only. No letter-key listener, sound-path map or recorder behavior was added.
+- Added exactly one external module tag to the Step 1 HTML; did not change its pad contracts, recorder markup or CSS.
+- Selectively copied only the nine WAV files from frozen main 66fe05a, including the corrected Kick/Low tom. Verified byte equality, Git blobs and SHA256 values rather than copying old reports or completed HW2 source.
+- Ran actual PCM/FFT measurements. The first test wrongly assumed 44,100 Hz; preserved initial-assets-check.json, inspected the real 22,050 Hz headers and corrected that assertion without modifying the assets. All nine assets then passed: valid mono PCM16, nonzero signal, no clipped samples. Kick/Low tom band-energy fractions were 22.82%/38.01% at 250–4000 Hz; this is signal evidence, not a student audibility result.
+- Ran native Chromium playback/decode tests under enforced CSP at 375/1440px in light/dark. The first overlap assertion used Locator.click, whose stability wait spaced repeated hits too slowly for three simultaneous 420ms Kicks. Preserved initial-browser-check.json and replaced that input cadence with real rapid mouse clicks at pad centers. No application change was needed. The test now checks simultaneous native playing events and subsequent natural completion, rather than requiring a just-started voice's clock to already be positive.
+- The corrected audit passed. Added a focused direct-engine check to verify true resolution and that a temporary DOM sound-path change is read immediately; then ran the final full audit: 84/84 normal assertions and 6/6 failure/recovery cases passed. Normal playback was not mocked.
+- All nine sounds loaded/decoded/played; repeated same-pad and mixed-pad hits overlapped; native Enter/Space still activated the click adapter. Letter keys and recorder behavior remained absent. Axe had zero violations in all four configurations; no overflow or normal runtime/network/CSP errors occurred.
+- Failure tests covered injected play denial, real missing-file HTTP 404, corrupt WAV/native decode failure, injected constructor failure, missing data-sound and an injected post-start error event. Feedback was accessible, caught pre-start engine calls resolved false, and the next real hit recovered without unhandled rejection. Expected fault-case console/network errors are recorded separately.
+- Reviewed the focused diff; Step 1 CSS and its historical report remain byte-for-byte unchanged.
+
+Evidence: verification/hw2-step2/README.md, assets.py, assets.json, initial-assets-check.json, audit.mjs, result.json and initial-browser-check.json. Timestamps and tester are recorded in the new reports.
+
+Not performed: student laptop listening, authenticated Vercel audio testing, letter-key adapter or recorder implementation. The student Kick/Low tom listening check is explicitly pending; headless events do not prove speaker audibility. Main/production remain preserved.
+
+This turn ends after the isolated Step 2 commit. Step 3 adds the repeat-safe letter-key adapter in a separate turn.
