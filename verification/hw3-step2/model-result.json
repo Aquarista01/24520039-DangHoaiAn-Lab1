@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-07T08:35:52.537Z",
+  "tester": "Assistant: deterministic production countdown checks",
+  "baseline": "6b8a60725ff21ed6fccd60d8fe6a010205570104",
+  "method": "Injected virtual clock and asynchronous-equivalent queued timeout scheduler; not real elapsed waits or student checks.",
+  "checks": [
+    {
+      "name": "1250ms rounds upward to two seconds without early start",
+      "passed": true
+    },
+    {
+      "name": "first timeout is the exact 250ms absolute boundary",
+      "passed": true
+    },
+    {
+      "name": "before fractional boundary no premature tick",
+      "passed": true
+    },
+    {
+      "name": "at fractional boundary displays one second",
+      "passed": true
+    },
+    {
+      "name": "one millisecond before target is still running",
+      "passed": true
+    },
+    {
+      "name": "exact target yields zero, terminal status and no timer",
+      "passed": true
+    },
+    {
+      "name": "terminal event never continues scheduling",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 1ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 999ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 1000ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 1001ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 59999ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 60000ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 3600000ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 86400000ms",
+      "passed": true
+    },
+    {
+      "name": "decomposition and ceil boundary at 90061000ms",
+      "passed": true
+    },
+    {
+      "name": "target/past 0ms clamps to zero and stops",
+      "passed": true
+    },
+    {
+      "name": "target/past 1ms clamps to zero and stops",
+      "passed": true
+    },
+    {
+      "name": "target/past 86400000ms clamps to zero and stops",
+      "passed": true
+    },
+    {
+      "name": "invalid target null is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"bad date\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T02:00:00\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T09:00:00+07:00\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-02-30T02:00:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-02-29T02:00:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-13-21T02:00:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T24:00:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T02:60:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T02:00:60Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \"2026-11-21T02:00:00.1Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "invalid target \" 2026-11-21T02:00:00Z\" is reported without ticks/timers",
+      "passed": true
+    },
+    {
+      "name": "valid round-trip UTC 2028-02-29T02:00:00Z",
+      "passed": true
+    },
+    {
+      "name": "valid round-trip UTC 2026-11-21T02:00:00.250Z",
+      "passed": true
+    },
+    {
+      "name": "valid round-trip UTC 0000-01-01T00:00:00Z",
+      "passed": true
+    },
+    {
+      "name": "delayed callback recomputes 37s instead of subtracting one",
+      "passed": true
+    },
+    {
+      "name": "delayed callback reschedules on the next absolute 250ms boundary",
+      "passed": true
+    },
+    {
+      "name": "after delayed recovery next value is 36s on target boundary",
+      "passed": true
+    },
+    {
+      "name": "callback delayed past start immediately reaches terminal zero",
+      "passed": true
+    },
+    {
+      "name": "device-clock correction backward is recomputed",
+      "passed": true
+    },
+    {
+      "name": "idempotent stop cancels timer ID zero and blocks stale callbacks",
+      "passed": true
+    },
+    {
+      "name": "50 start/stop sessions leave no timers or obsolete updates",
+      "passed": true
+    },
+    {
+      "name": "7ms render overhead does not accumulate timer drift",
+      "passed": true,
+      "detail": [
+        {
+          "remaining": 10000,
+          "seconds": 10
+        },
+        {
+          "remaining": 9000,
+          "seconds": 9
+        },
+        {
+          "remaining": 8000,
+          "seconds": 8
+        },
+        {
+          "remaining": 7000,
+          "seconds": 7
+        },
+        {
+          "remaining": 6000,
+          "seconds": 6
+        },
+        {
+          "remaining": 5000,
+          "seconds": 5
+        },
+        {
+          "remaining": 4000,
+          "seconds": 4
+        },
+        {
+          "remaining": 3000,
+          "seconds": 3
+        },
+        {
+          "remaining": 2000,
+          "seconds": 2
+        },
+        {
+          "remaining": 1000,
+          "seconds": 1
+        }
+      ]
+    },
+    {
+      "name": "render overhead crossing a second boundary schedules immediate correction",
+      "passed": true,
+      "detail": {
+        "scheduledDelay": 0
+      }
+    },
+    {
+      "name": "immediate overhead correction emits current one-second value",
+      "passed": true
+    },
+    {
+      "name": "nonfinite clock reports unavailable and owns no timer",
+      "passed": true
+    },
+    {
+      "name": "later nonfinite clock cleans up instead of rescheduling forever",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -277,3 +277,28 @@ Evidence: verification/hw3-step1/README.md, audit.mjs and result.json; exact tim
 Not performed: countdown execution, form controller/transport, concurrency/lifecycle, independent sanitization/XSS checks, AI_FAILURE_AUDIT.md authoring or a new student test. Main/production and Git history remain preserved.
 
 This turn ends after the isolated 8.1 implementation commit. The next package is 8.2: absolute UTC countdown and its own timing/lifecycle checks.
+
+## Task 8.2 - HW3 absolute UTC countdown
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 6b8a607. Application scope: countdown.js, app.js and countdown/module wiring in index.html only.
+
+Student-provided update:
+- At 15:31 the user reported OK after the Event Hub Preview/Tab check request. Recorded as student-reported, without a raw screenshot or keyboard capture. Earlier verification JSON is unchanged.
+
+Actions actually performed by the assistant:
+- Read project-rules.md and the countdown/lifecycle contract; confirmed remote rebuild at 6b8a607 and main at 66fe05a.
+- Added an independent startCountdown module with injected/default clock/scheduler, explicit-Z UTC validation and round-trip rejection of calendar rollover, absolute remaining-time calculation, positive ceil semantics, decomposed values, distinct running/started/invalid/unavailable statuses and idempotent timer cleanup.
+- Added an external app adapter that reads the sole HTML datetime, safely updates non-live numeric slots, deduplicates polite status text, pauses on pagehide, restarts on pageshow and replaces the timer on visible resynchronization. The unrelated static form stays editable with disabled controls; countdown faults do not throw into its initialization.
+- The first deterministic run passed 45/46 checks and found a real rendering-overhead boundary defect: 1250ms remaining plus 300ms render scheduled a 950ms wait instead of immediate correction from 2 to 1. Preserved before-boundary-fix.json with the actual failure and exact failing source/SHA-256. Fixed scheduling against the boundary of the emitted value, clamped to 0..1000ms, then added the resulting-value assertion.
+- Re-ran all production-module tests: 47/47 passed. Covered exact/fractional/past boundaries, valid/invalid UTC dates, delayed/backward/nonfinite time, stale callbacks, ID-zero cancellation, 50 sessions and non-accumulating render overhead. This uses virtual time, not real elapsed waits.
+- Ran the fresh Chromium 153.0.8010.0 local audit under repository CSP header/meta: 68/68 normal checks across 375/1440px light/dark, plus 21/21 integration checks passed. Four axe 4.14.0 audits reported zero violations and incomplete items. No normal runtime/network/CSP error occurred.
+- Native normal cases measured real waits of 3158/3156/3156/3155ms, with countdown values matching absolute current time within one displayed second and no ordinary-tick status announcements. Twenty synthetic restore/visibility cycles per configuration retained one active timer/listener and zero while paused.
+- Virtual browser checks confirmed the same epoch under Asia/Ho_Chi_Minh, UTC and America/Los_Angeles, exact/fractional/start/past behavior, timer clamping, restoration after elapsed pause and visibility/clock resync. Invalid metadata/repair reload and JavaScript-disabled fallback also passed.
+- Inspected 375px light and 1440px dark screenshots with active countdown numbers; labels/columns fit without overflow. Reviewed the focused application diff and whitespace check; CSS/form contract, other homework code and prior reports remain unchanged.
+
+Evidence: verification/hw3-step2/README.md, model-check.mjs, before-boundary-fix.json, model-result.json, audit.mjs and result.json. Native waits are distinguished from virtual clock advances; page lifecycle/visibility signals are synthetic, not claims of actual BFCache entry or operating-system suspension. These are assistant checks, not a student countdown/live-defense or Vercel header test.
+
+Not performed: form FSM/service, concurrent request lifecycle, independent validation/XSS checks or AI_FAILURE_AUDIT.md authoring. Main/production and existing history remain preserved.
+
+This turn ends after the isolated 8.2 implementation commit. The next package is 8.3: local registration state machine, safe receipt and success/error transport with its own checks.
