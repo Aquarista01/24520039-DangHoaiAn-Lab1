@@ -1,0 +1,2705 @@
+{
+  "date": "2026-10-07T11:47:02.270Z",
+  "tester": "Assistant: fresh local native Chromium audio and fault checks",
+  "browser": "153.0.8010.0",
+  "baseline": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "delivery": "Local HTTP with enforced repository CSP header and page meta",
+  "instrumentation": "Constructor observer returns real native HTMLAudioElement objects. Normal play/decode is not mocked. Fault injection is labeled separately.",
+  "limits": [
+    "Headless playback events/decoded signal do not prove audibility on student speakers; student reported Preview OK; no raw listening capture was supplied.",
+    "Keyboard and recorder behavior are checked by separate final suites."
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "nine WAV files load and decode in Chromium",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "source": "sounds/kick.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.42,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "s",
+              "source": "sounds/snare.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.3,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "d",
+              "source": "sounds/clap.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.22997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "f",
+              "source": "sounds/hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.1,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "g",
+              "source": "sounds/open-hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.44997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "h",
+              "source": "sounds/tom.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.4,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "j",
+              "source": "sounds/rim.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.12997732426303854,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "k",
+              "source": "sounds/shaker.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.18,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "l",
+              "source": "sounds/crash.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.9,
+              "sampleRate": 44100,
+              "nonzero": true
+            }
+          ]
+        },
+        {
+          "name": "click a starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.01305,
+            "duration": 0.42,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click s starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.009865,
+            "duration": 0.3,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click d starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.006959,
+            "duration": 0.229977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click f starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.003461,
+            "duration": 0.1,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click g starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.000812,
+            "duration": 0.449977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click h starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.4,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click j starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.129977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click k starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.18,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click l starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.011756,
+            "duration": 0.9,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "three repeated Kick hits overlap as distinct voices",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0.006935,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0.006929,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0.006932,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              }
+            ],
+            "playingEvents": [
+              {
+                "id": 9,
+                "type": "playing",
+                "at": 1702.2999999998137,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 11,
+                "type": "playing",
+                "at": 1703.2999999998137,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 10,
+                "type": "playing",
+                "at": 1704.7000000001863,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "Crash, Snare and Low tom overlap",
+          "passed": true,
+          "detail": [
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.9,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.3,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.4,
+              "readyState": 4,
+              "native": true
+            }
+          ]
+        },
+        {
+          "name": "all normal voices finish naturally",
+          "passed": true
+        },
+        {
+          "name": "transient visual feedback clears",
+          "passed": true
+        },
+        {
+          "name": "independent playPad resolves true and reads the current DOM sound path",
+          "passed": true,
+          "detail": {
+            "result": true,
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "count": 16
+          }
+        },
+        {
+          "name": "completed letter-key adapter adds exactly one native voice",
+          "passed": true
+        },
+        {
+          "name": "native focused button Enter/Space activates click adapter",
+          "passed": true
+        },
+        {
+          "name": "completed recorder starts/stops an empty take without adding audio hits",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, local external module and no overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "live": "polite",
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "normal playback has no runtime errors, HTTP failures or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "consoleErrors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "zero axe violations after playback",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 152.29999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 1
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 218.59999999962747,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 285,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 3
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 351.70000000018626,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 4
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 419.09999999962747,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 5
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 486.29999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 6
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 548.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 6
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 552.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 6
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 594.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 4
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 594.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 619.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 5
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 640.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 4
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 685.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 5
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 780.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 896.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 3
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 965.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 2
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 989,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 1662.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 1702.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 1703.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 1704.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 2219.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 2219.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 2219.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 2253.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 2254.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 3
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 2254.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 2637.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 2753.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 3241.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 3256,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 1
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 3636.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 0
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 3703.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 18,
+          "type": "playing",
+          "at": 3704.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 17,
+          "type": "playing",
+          "at": 3705.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 4216.799999999814,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 18,
+          "type": "ended",
+          "at": 4216.799999999814,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 17,
+          "type": "ended",
+          "at": 4216.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "nine WAV files load and decode in Chromium",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "source": "sounds/kick.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.42,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "s",
+              "source": "sounds/snare.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.3,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "d",
+              "source": "sounds/clap.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.22997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "f",
+              "source": "sounds/hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.1,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "g",
+              "source": "sounds/open-hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.44997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "h",
+              "source": "sounds/tom.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.4,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "j",
+              "source": "sounds/rim.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.12997732426303854,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "k",
+              "source": "sounds/shaker.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.18,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "l",
+              "source": "sounds/crash.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.9,
+              "sampleRate": 44100,
+              "nonzero": true
+            }
+          ]
+        },
+        {
+          "name": "click a starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.011922,
+            "duration": 0.42,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click s starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.008408,
+            "duration": 0.3,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click d starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.005494,
+            "duration": 0.229977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click f starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.003132,
+            "duration": 0.1,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click g starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.449977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click h starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.4,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click j starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.129977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click k starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.18,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click l starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.010628,
+            "duration": 0.9,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "three repeated Kick hits overlap as distinct voices",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0.011898,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              }
+            ],
+            "playingEvents": [
+              {
+                "id": 9,
+                "type": "playing",
+                "at": 1673.2000000001863,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 11,
+                "type": "playing",
+                "at": 1675,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 10,
+                "type": "playing",
+                "at": 1676,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "Crash, Snare and Low tom overlap",
+          "passed": true,
+          "detail": [
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.9,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.3,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.4,
+              "readyState": 4,
+              "native": true
+            }
+          ]
+        },
+        {
+          "name": "all normal voices finish naturally",
+          "passed": true
+        },
+        {
+          "name": "transient visual feedback clears",
+          "passed": true
+        },
+        {
+          "name": "independent playPad resolves true and reads the current DOM sound path",
+          "passed": true,
+          "detail": {
+            "result": true,
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "count": 16
+          }
+        },
+        {
+          "name": "completed letter-key adapter adds exactly one native voice",
+          "passed": true
+        },
+        {
+          "name": "native focused button Enter/Space activates click adapter",
+          "passed": true
+        },
+        {
+          "name": "completed recorder starts/stops an empty take without adding audio hits",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, local external module and no overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "live": "polite",
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "normal playback has no runtime errors, HTTP failures or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "consoleErrors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "zero axe violations after playback",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 141.09999999962747,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 1
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 206.90000000037253,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 273.29999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 3
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 340.20000000018626,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 4
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 407,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 5
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 472.90000000037253,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 6
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 544.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 6
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 548.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 6
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 583,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 4
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 583.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 606.9000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 5
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 629.4000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 4
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 672.9000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 5
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 768.9000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 885.4000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 3
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 954.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 2
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 977.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 1651.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 1673.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 1675,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 1676,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 2185.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 2
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 2208.4000000003725,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 2208.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 2259.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 3
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 2259.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 2259.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 2649.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 2765.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 3253.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 3277.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 1
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 3671.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 0
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 3755.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 17,
+          "type": "playing",
+          "at": 3759.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 18,
+          "type": "playing",
+          "at": 3760.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 4275.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 17,
+          "type": "ended",
+          "at": 4275.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 18,
+          "type": "ended",
+          "at": 4275.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "nine WAV files load and decode in Chromium",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "source": "sounds/kick.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.42,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "s",
+              "source": "sounds/snare.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.3,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "d",
+              "source": "sounds/clap.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.22997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "f",
+              "source": "sounds/hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.1,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "g",
+              "source": "sounds/open-hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.44997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "h",
+              "source": "sounds/tom.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.4,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "j",
+              "source": "sounds/rim.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.12997732426303854,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "k",
+              "source": "sounds/shaker.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.18,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "l",
+              "source": "sounds/crash.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.9,
+              "sampleRate": 44100,
+              "nonzero": true
+            }
+          ]
+        },
+        {
+          "name": "click a starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.010056,
+            "duration": 0.42,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click s starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.000044,
+            "duration": 0.3,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click d starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.229977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click f starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.1,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click g starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.449977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click h starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.011747,
+            "duration": 0.4,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click j starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.008463,
+            "duration": 0.129977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click k starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.005009,
+            "duration": 0.18,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click l starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.002454,
+            "duration": 0.9,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "three repeated Kick hits overlap as distinct voices",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0.013759,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              }
+            ],
+            "playingEvents": [
+              {
+                "id": 9,
+                "type": "playing",
+                "at": 1730.3999999994412,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 10,
+                "type": "playing",
+                "at": 1733,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 11,
+                "type": "playing",
+                "at": 1734.2999999998137,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "Crash, Snare and Low tom overlap",
+          "passed": true,
+          "detail": [
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.9,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.3,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.4,
+              "readyState": 4,
+              "native": true
+            }
+          ]
+        },
+        {
+          "name": "all normal voices finish naturally",
+          "passed": true
+        },
+        {
+          "name": "transient visual feedback clears",
+          "passed": true
+        },
+        {
+          "name": "independent playPad resolves true and reads the current DOM sound path",
+          "passed": true,
+          "detail": {
+            "result": true,
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "count": 16
+          }
+        },
+        {
+          "name": "completed letter-key adapter adds exactly one native voice",
+          "passed": true
+        },
+        {
+          "name": "native focused button Enter/Space activates click adapter",
+          "passed": true
+        },
+        {
+          "name": "completed recorder starts/stops an empty take without adding audio hits",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, local external module and no overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "live": "polite",
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "normal playback has no runtime errors, HTTP failures or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "consoleErrors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "zero axe violations after playback",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 150.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 1
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 226.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 298.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 3
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 364.79999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 4
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 431.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 5
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 497.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 6
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 564,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 7
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 569.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 6
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 627.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 5
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 627.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 5
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 632.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 5
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 638.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 4
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 697.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 5
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 778.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 894.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 3
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 987.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 1
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 987.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 1683.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 1730.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 1733,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 1734.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 2241.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 2
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 2264.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 2264.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 2314.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 2316.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 3
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 2316.7000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 2705.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 2821.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 3309.2999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 3335.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 1
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 3727.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 0
+        },
+        {
+          "id": 17,
+          "type": "playing",
+          "at": 3798.2000000001863,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 18,
+          "type": "playing",
+          "at": 3800.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 3801,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 17,
+          "type": "ended",
+          "at": 4331,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 18,
+          "type": "ended",
+          "at": 4331.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 4331.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "nine WAV files load and decode in Chromium",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "source": "sounds/kick.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.42,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "s",
+              "source": "sounds/snare.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.3,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "d",
+              "source": "sounds/clap.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.22997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "f",
+              "source": "sounds/hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.1,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "g",
+              "source": "sounds/open-hat.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.44997732426303855,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "h",
+              "source": "sounds/tom.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.4,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "j",
+              "source": "sounds/rim.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.12997732426303854,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "k",
+              "source": "sounds/shaker.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.18,
+              "sampleRate": 44100,
+              "nonzero": true
+            },
+            {
+              "key": "l",
+              "source": "sounds/crash.wav",
+              "status": 200,
+              "channels": 1,
+              "duration": 0.9,
+              "sampleRate": 44100,
+              "nonzero": true
+            }
+          ]
+        },
+        {
+          "name": "click a starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.006802,
+            "duration": 0.42,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click s starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.003682,
+            "duration": 0.3,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click d starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.000511,
+            "duration": 0.229977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click f starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.1,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click g starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.449977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click h starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0,
+            "duration": 0.4,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click j starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.011647,
+            "duration": 0.129977,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click k starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.008819,
+            "duration": 0.18,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "click l starts a new native Audio with its HTML path",
+          "passed": true,
+          "detail": {
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+            "paused": false,
+            "ended": false,
+            "currentTime": 0.006123,
+            "duration": 0.9,
+            "readyState": 4,
+            "native": true
+          }
+        },
+        {
+          "name": "three repeated Kick hits overlap as distinct voices",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              },
+              {
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false,
+                "currentTime": 0,
+                "duration": 0.42,
+                "readyState": 4,
+                "native": true
+              }
+            ],
+            "playingEvents": [
+              {
+                "id": 9,
+                "type": "playing",
+                "at": 1705.699999999255,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 10,
+                "type": "playing",
+                "at": 1708.7999999998137,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 11,
+                "type": "playing",
+                "at": 1709.3999999994412,
+                "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "Crash, Snare and Low tom overlap",
+          "passed": true,
+          "detail": [
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.9,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.3,
+              "readyState": 4,
+              "native": true
+            },
+            {
+              "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+              "paused": false,
+              "ended": false,
+              "currentTime": 0,
+              "duration": 0.4,
+              "readyState": 4,
+              "native": true
+            }
+          ]
+        },
+        {
+          "name": "all normal voices finish naturally",
+          "passed": true
+        },
+        {
+          "name": "transient visual feedback clears",
+          "passed": true
+        },
+        {
+          "name": "independent playPad resolves true and reads the current DOM sound path",
+          "passed": true,
+          "detail": {
+            "result": true,
+            "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+            "count": 16
+          }
+        },
+        {
+          "name": "completed letter-key adapter adds exactly one native voice",
+          "passed": true
+        },
+        {
+          "name": "native focused button Enter/Space activates click adapter",
+          "passed": true
+        },
+        {
+          "name": "completed recorder starts/stops an empty take without adding audio hits",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, local external module and no overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "live": "polite",
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "normal playback has no runtime errors, HTTP failures or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "consoleErrors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "zero axe violations after playback",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 146.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 1
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 207.29999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 273.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 3
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 339.79999999981374,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 4
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 407.69999999925494,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 5
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 476.59999999962747,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 6
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 540.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 7
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 541.6999999992549,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/hat.wav",
+          "active": 6
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 602.6999999992549,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 5
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 602.6999999992549,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/clap.wav",
+          "active": 5
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 607.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 5
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 634.6999999992549,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 4
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 674,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 5
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 750.8999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/rim.wav",
+          "active": 4
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 867.0999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/shaker.wav",
+          "active": 3
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 959.6999999992549,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/open-hat.wav",
+          "active": 2
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 983,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 1656.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 1705.699999999255,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 1708.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 1709.3999999994412,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 2236.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 2237,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 2237,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 2289.199999999255,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 2293.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 3
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 2293.5,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 3
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 2678.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 2
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 2794.199999999255,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/tom.wav",
+          "active": 1
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 3281.7999999998137,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/crash.wav",
+          "active": 0
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 3297.399999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 1
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 3676.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/snare.wav",
+          "active": 0
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 3746.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 18,
+          "type": "playing",
+          "at": 3747.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 17,
+          "type": "playing",
+          "at": 3748.899999999441,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 3
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 4280.5999999996275,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 18,
+          "type": "ended",
+          "at": 4280.699999999255,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        },
+        {
+          "id": 17,
+          "type": "ended",
+          "at": 4280.699999999255,
+          "source": "http://127.0.0.1:38589/homework/drum-kit/sounds/kick.wav",
+          "active": 0
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "failureCases": [
+    {
+      "kind": "denied",
+      "method": "Injected failure branch; real native playback restored for recovery",
+      "result": false,
+      "failure": {
+        "status": "Playback blocked for Kick. Allow sound in your browser and click the pad again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [],
+        "badResponses": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "missing",
+      "method": "Real missing-file HTTP 404",
+      "result": false,
+      "failure": {
+        "status": "Could not play Kick. Check the sound file and try again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:38589/homework/drum-kit/sounds/absent.wav",
+            "status": 404
+          },
+          {
+            "url": "http://127.0.0.1:38589/homework/drum-kit/sounds/absent.wav",
+            "status": 404
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "kind": "corrupt",
+      "method": "HTTP route returns invalid WAV; native decoder rejects",
+      "result": false,
+      "failure": {
+        "status": "Could not play Kick. Check the sound file and try again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [],
+        "badResponses": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "constructor",
+      "method": "Injected failure branch; real native playback restored for recovery",
+      "result": false,
+      "failure": {
+        "status": "Could not play Kick. Check the sound file and try again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [],
+        "badResponses": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "missing-contract",
+      "method": "DOM contract field removed",
+      "result": false,
+      "failure": {
+        "status": "Could not play Kick. Check the sound file and try again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [],
+        "badResponses": []
+      },
+      "passed": true
+    },
+    {
+      "kind": "late-error",
+      "method": "Injected failure branch; real native playback restored for recovery",
+      "result": null,
+      "failure": {
+        "status": "Could not play Kick. Check the sound file and try again.",
+        "live": "polite",
+        "unhandled": [],
+        "violations": []
+      },
+      "recovery": {
+        "unhandled": [],
+        "violations": [],
+        "status": "Playing Kick."
+      },
+      "runtime": {
+        "errors": [],
+        "consoleErrors": [],
+        "badResponses": []
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

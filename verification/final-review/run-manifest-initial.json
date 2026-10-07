@@ -1,0 +1,87 @@
+{
+  "started": "2026-10-07T11:44:01.884704+00:00",
+  "results": [
+    {
+      "script": "audio-assets.py",
+      "scriptSha256": "6c51bc9192fe7de2e55f5b01da6cfdb35938e082c520612334324d48d9526898",
+      "started": "2026-10-07T11:44:01.884746+00:00",
+      "elapsedSeconds": 0.15528,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"assets\": [\n    {\n      \"name\": \"kick\",\n      \"durationSeconds\": 0.42,\n      \"rms\": 0.1464250944178252,\n      \"energyFraction250To4000Hz\": 0.22816094881059207,\n      \"passed\": true\n    },\n    {\n      \"name\": \"snare\",\n      \"durationSeconds\": 0.3,\n      \"rms\": 0.11180371057971673,\n      \"energyFraction250To4000Hz\": 0.2597641801110624,\n      \"passed\": true\n    },\n    {\n      \"name\": \"clap\",\n      \"durationSeconds\": 0.22997732426303855,\n      \"rms\": 0.06573534922795432,\n      \"energyFraction250To4000Hz\": 0.06299872267610977,\n      \"passed\": true\n    },\n    {\n      \"name\": \"hat\",\n      \"durationSeconds\": 0.1,\n      \"rms\": 0.06313002171193997,\n      \"energyFraction250To4000Hz\": 0.06670509243814611,\n      \"passed\": true\n    },\n    {\n      \"name\": \"open-hat\",\n      \"durationSeconds\": 0.44997732426303855,\n      \"rms\": 0.07653102073816469,\n      \"energyFraction250To4000Hz\": 0.06906625477435972,\n      \"passed\": true\n    },\n    {\n      \"name\": \"tom\",\n      \"durationSeconds\": 0.4,\n      \"rms\": 0.16805648176251728,\n      \"energyFraction250To4000Hz\": 0.3801347624645984,\n      \"passed\": true\n    },\n    {\n      \"name\": \"rim\",\n      \"durationSeconds\": 0.12997732426303854,\n      \"rms\": 0.10026734415918928,\n      \"energyFraction250To4000Hz\": 0.9999956192452935,\n      \"passed\": true\n    },\n    {\n      \"name\": \"shaker\",\n      \"durationSeconds\": 0.18,\n      \"rms\": 0.05205230201598398,\n      \"energyFraction250To4000Hz\": 0.06987794430225758,\n      \"passed\": true\n    },\n    {\n      \"name\": \"crash\",\n      \"durationSeconds\": 0.9,\n      \"rms\": 0.06936130122883283,\n      \"energyFraction250To4000Hz\": 0.16906049374908083,\n      \"passed\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "recorder-model.mjs",
+      "scriptSha256": "e3b653e482afcfe69c37af7730fe8891597481648728e912caf56b5e6bc5b74b",
+      "started": "2026-10-07T11:44:02.040231+00:00",
+      "elapsedSeconds": 0.070046,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 22,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "countdown-model.mjs",
+      "scriptSha256": "e71e46d3b3af4b4251a6af82339e39c18d9729ead12e0162f668c0a98ae665b2",
+      "started": "2026-10-07T11:44:02.110798+00:00",
+      "elapsedSeconds": 0.063423,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 47,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "form-service.mjs",
+      "scriptSha256": "687c3ff970f52c97a279e9a087f9d1d0336beb91d5ca680df78e058872d385f3",
+      "started": "2026-10-07T11:44:02.174677+00:00",
+      "elapsedSeconds": 0.064767,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 13,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "form-validator.mjs",
+      "scriptSha256": "e22deb0314820c5c17dd043e71ede9d85f6b8e79a5a4acde06c29d7f5574834f",
+      "started": "2026-10-07T11:44:02.239758+00:00",
+      "elapsedSeconds": 0.066168,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 86,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "audit-evidence.py",
+      "scriptSha256": "bfcdfba1f8bf6dd2d1797c9ffbf6951c89fe264b66715c3e0b0fe3be64da8d77",
+      "started": "2026-10-07T11:44:02.306166+00:00",
+      "elapsedSeconds": 0.062679,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 30,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "portfolio-a11y.mjs",
+      "scriptSha256": "183910facf13c6e6817d37caf1278273ef9f4894387010ee2d469012f3e6674b",
+      "started": "2026-10-07T11:44:02.369068+00:00",
+      "elapsedSeconds": 8.738539,
+      "exitCode": 0,
+      "console": "{\n  \"phase\": \"after\",\n  \"passed\": true,\n  \"configurations\": 16,\n  \"violations\": [],\n  \"failedContrast\": [],\n  \"incomplete\": [\n    \"color-contrast\"\n  ],\n  \"errors\": [],\n  \"structureOK\": true\n}\n"
+    },
+    {
+      "script": "portfolio-keyboard.mjs",
+      "scriptSha256": "0875e51cefd617b66e0c9a5cd7451b98b0e6092643b22092a1dc42fb9d750cb3",
+      "started": "2026-10-07T11:44:11.107862+00:00",
+      "elapsedSeconds": 40.205504,
+      "exitCode": 0,
+      "console": "after: 375px light normal: 0 failed checks\nafter: 375px light storage-property-denied: 0 failed checks\nafter: 375px light storage-read-denied: 0 failed checks\nafter: 375px light storage-write-denied: 0 failed checks\nafter: 375px light invalid-stored-theme: 0 failed checks\nafter: 375px dark normal: 0 failed checks\nafter: 375px dark storage-property-denied: 0 failed checks\nafter: 375px dark storage-read-denied: 0 failed checks\nafter: 375px dark storage-write-denied: 0 failed checks\nafter: 375px dark invalid-stored-theme: 0 failed checks\nafter: 1440px light normal: 0 failed checks\nafter: 1440px light storage-property-denied: 0 failed checks\nafter: 1440px light storage-read-denied: 0 failed checks\nafter: 1440px light storage-write-denied: 0 failed checks\nafter: 1440px light invalid-stored-theme: 0 failed checks\nafter: 1440px dark normal: 0 failed checks\nafter: 1440px dark storage-property-denied: 0 failed checks\nafter: 1440px dark storage-read-denied: 0 failed checks\nafter: 1440px dark storage-write-denied: 0 failed checks\nafter: 1440px dark invalid-stored-theme: 0 failed checks\n{\n  \"phase\": \"after\",\n  \"cases\": 20,\n  \"checks\": 160,\n  \"passed\": true,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "portfolio-csp.mjs",
+      "scriptSha256": "94cbd4e3712028d3a272125c3e7d1734147197109adcfc83fe314cb570a60f38",
+      "started": "2026-10-07T11:44:51.313685+00:00",
+      "elapsedSeconds": 29.549127,
+      "exitCode": 0,
+      "console": "after: 375px light header-and-meta: 0 failed checks\nafter: 375px light meta-only: 0 failed checks\nafter: 375px dark header-and-meta: 0 failed checks\nafter: 375px dark meta-only: 0 failed checks\nafter: 1440px light header-and-meta: 0 failed checks\nafter: 1440px light meta-only: 0 failed checks\nafter: 1440px dark header-and-meta: 0 failed checks\nafter: 1440px dark meta-only: 0 failed checks\n{\n  \"phase\": \"after\",\n  \"cases\": 8,\n  \"checks\": 108,\n  \"passed\": true,\n  \"failures\": [],\n  \"securityProbes\": {\n    \"inlineExecuted\": false,\n    \"handlerExecuted\": false,\n    \"inlineStyleApplied\": false,\n    \"violations\": [\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-attr\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-attr\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"style-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"style-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"https://example.com/csp-probe.js\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"https://example.com/csp-probe.js\",\n        \"disposition\": \"enforce\"\n      }\n    ],\n    \"passed\": true\n  },\n  \"frameProbe\": {\n    \"errors\": [\n      \"Framing 'http://127.0.0.1:5500/' violates the following Content Security Policy directive: \\\"frame-ancestors 'none'\\\". The request has been blocked.\\n\"\n    ],\n    \"protectedContentPresent\": 0,\n    \"passed\": true\n  }\n}\n"
+    },
+    {
+      "script": "audio-browser.mjs",
+      "scriptSha256": "befd36d49d2834b31c932251ad2f4dc4cf30ef25fa2c56aec3f6c3eece63bcd8",
+      "started": "2026-10-07T11:45:20.863094+00:00",
+      "elapsedSeconds": 34.178373,
+      "exitCode": 1,
+      "console": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 30000ms exceeded.\n    at /workspace/scratch/48c936e647d1/hw-atomic-rebuild/verification/final-review/audio-browser.mjs:130:16 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.19.0\n"
+    }
+  ],
+  "complete": false,
+  "passed": false
+}

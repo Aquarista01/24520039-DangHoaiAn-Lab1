@@ -1,0 +1,1675 @@
+{
+  "date": "2026-10-07T11:49:01.169Z",
+  "tester": "Assistant: fresh local browser checks for HW3 Step 2",
+  "baseline": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "browser": "153.0.8010.0",
+  "delivery": "Local HTTP with repository CSP header and page CSP meta",
+  "sourceChecks": {
+    "files": [
+      "app.js",
+      "countdown.js",
+      "index.html",
+      "registration-service.js",
+      "registration.js",
+      "styles.css",
+      "validation.js"
+    ],
+    "noInlineScript": true
+  },
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "clock": "Native Date.now and real setTimeout, with actual recorded waits; synthetic lifecycle events explicitly labeled",
+      "checks": [
+        {
+          "name": "native clock uses absolute HTML UTC epoch within one displayed second",
+          "passed": true,
+          "detail": {
+            "values": [
+              "44",
+              "14",
+              "11",
+              "19"
+            ],
+            "total": 3852679,
+            "now": 1791373721473,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "one owned timer and one visibility listener",
+          "passed": true
+        },
+        {
+          "name": "running status is useful and not a numeric live announcement",
+          "passed": true
+        },
+        {
+          "name": "native timeout advances countdown over actual elapsed wait",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 3157,
+            "initial": 3852679,
+            "values": [
+              "44",
+              "14",
+              "11",
+              "16"
+            ],
+            "total": 3852676,
+            "now": 1791373724665,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "ordinary ticks do not mutate polite countdown status",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and only external local app module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "overflow": false,
+            "formState": "idle",
+            "buttons": [
+              false,
+              true,
+              false
+            ],
+            "receiptHidden": true
+          }
+        },
+        {
+          "name": "completed form initializes idle with Submit/Reset enabled, Cancel disabled and receipt hidden",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "first Tab reveals skip link with visible focus",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "pagehide cancels owned timeout and visibility listener",
+          "passed": true
+        },
+        {
+          "name": "pagehide has no future numeric update",
+          "passed": true
+        },
+        {
+          "name": "pageshow immediately recomputes and restores exactly one timer/listener",
+          "passed": true
+        },
+        {
+          "name": "20 restore/visibility cycles never duplicate timers/listeners",
+          "passed": true,
+          "detail": [
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            }
+          ]
+        },
+        {
+          "name": "lifecycle recovery does not repeat status announcement",
+          "passed": true
+        },
+        {
+          "name": "normal page has no console/page/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA/best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "clock": "Native Date.now and real setTimeout, with actual recorded waits; synthetic lifecycle events explicitly labeled",
+      "checks": [
+        {
+          "name": "native clock uses absolute HTML UTC epoch within one displayed second",
+          "passed": true,
+          "detail": {
+            "values": [
+              "44",
+              "14",
+              "11",
+              "14"
+            ],
+            "total": 3852674,
+            "now": 1791373726207,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "one owned timer and one visibility listener",
+          "passed": true
+        },
+        {
+          "name": "running status is useful and not a numeric live announcement",
+          "passed": true
+        },
+        {
+          "name": "native timeout advances countdown over actual elapsed wait",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 3155,
+            "initial": 3852674,
+            "values": [
+              "44",
+              "14",
+              "11",
+              "11"
+            ],
+            "total": 3852671,
+            "now": 1791373729380,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "ordinary ticks do not mutate polite countdown status",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and only external local app module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "overflow": false,
+            "formState": "idle",
+            "buttons": [
+              false,
+              true,
+              false
+            ],
+            "receiptHidden": true
+          }
+        },
+        {
+          "name": "completed form initializes idle with Submit/Reset enabled, Cancel disabled and receipt hidden",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "first Tab reveals skip link with visible focus",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "pagehide cancels owned timeout and visibility listener",
+          "passed": true
+        },
+        {
+          "name": "pagehide has no future numeric update",
+          "passed": true
+        },
+        {
+          "name": "pageshow immediately recomputes and restores exactly one timer/listener",
+          "passed": true
+        },
+        {
+          "name": "20 restore/visibility cycles never duplicate timers/listeners",
+          "passed": true,
+          "detail": [
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            }
+          ]
+        },
+        {
+          "name": "lifecycle recovery does not repeat status announcement",
+          "passed": true
+        },
+        {
+          "name": "normal page has no console/page/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA/best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "clock": "Native Date.now and real setTimeout, with actual recorded waits; synthetic lifecycle events explicitly labeled",
+      "checks": [
+        {
+          "name": "native clock uses absolute HTML UTC epoch within one displayed second",
+          "passed": true,
+          "detail": {
+            "values": [
+              "44",
+              "14",
+              "11",
+              "10"
+            ],
+            "total": 3852670,
+            "now": 1791373730937,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "one owned timer and one visibility listener",
+          "passed": true
+        },
+        {
+          "name": "running status is useful and not a numeric live announcement",
+          "passed": true
+        },
+        {
+          "name": "native timeout advances countdown over actual elapsed wait",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 3155,
+            "initial": 3852670,
+            "values": [
+              "44",
+              "14",
+              "11",
+              "06"
+            ],
+            "total": 3852666,
+            "now": 1791373734111,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "ordinary ticks do not mutate polite countdown status",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and only external local app module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "overflow": false,
+            "formState": "idle",
+            "buttons": [
+              false,
+              true,
+              false
+            ],
+            "receiptHidden": true
+          }
+        },
+        {
+          "name": "completed form initializes idle with Submit/Reset enabled, Cancel disabled and receipt hidden",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "first Tab reveals skip link with visible focus",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "pagehide cancels owned timeout and visibility listener",
+          "passed": true
+        },
+        {
+          "name": "pagehide has no future numeric update",
+          "passed": true
+        },
+        {
+          "name": "pageshow immediately recomputes and restores exactly one timer/listener",
+          "passed": true
+        },
+        {
+          "name": "20 restore/visibility cycles never duplicate timers/listeners",
+          "passed": true,
+          "detail": [
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            }
+          ]
+        },
+        {
+          "name": "lifecycle recovery does not repeat status announcement",
+          "passed": true
+        },
+        {
+          "name": "normal page has no console/page/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA/best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "clock": "Native Date.now and real setTimeout, with actual recorded waits; synthetic lifecycle events explicitly labeled",
+      "checks": [
+        {
+          "name": "native clock uses absolute HTML UTC epoch within one displayed second",
+          "passed": true,
+          "detail": {
+            "values": [
+              "44",
+              "14",
+              "11",
+              "05"
+            ],
+            "total": 3852665,
+            "now": 1791373735632,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "one owned timer and one visibility listener",
+          "passed": true
+        },
+        {
+          "name": "running status is useful and not a numeric live announcement",
+          "passed": true
+        },
+        {
+          "name": "native timeout advances countdown over actual elapsed wait",
+          "passed": true,
+          "detail": {
+            "elapsedMs": 3157,
+            "initial": 3852665,
+            "values": [
+              "44",
+              "14",
+              "11",
+              "02"
+            ],
+            "total": 3852662,
+            "now": 1791373738809,
+            "target": 1795226400000,
+            "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+            "timers": 1,
+            "listeners": 1,
+            "changes": 2
+          }
+        },
+        {
+          "name": "ordinary ticks do not mutate polite countdown status",
+          "passed": true
+        },
+        {
+          "name": "one h1/zero divs and only external local app module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "scripts": [
+              {
+                "type": "module",
+                "src": "app.js",
+                "text": ""
+              }
+            ],
+            "inline": false,
+            "overflow": false,
+            "formState": "idle",
+            "buttons": [
+              false,
+              true,
+              false
+            ],
+            "receiptHidden": true
+          }
+        },
+        {
+          "name": "completed form initializes idle with Submit/Reset enabled, Cancel disabled and receipt hidden",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "first Tab reveals skip link with visible focus",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "pagehide cancels owned timeout and visibility listener",
+          "passed": true
+        },
+        {
+          "name": "pagehide has no future numeric update",
+          "passed": true
+        },
+        {
+          "name": "pageshow immediately recomputes and restores exactly one timer/listener",
+          "passed": true
+        },
+        {
+          "name": "20 restore/visibility cycles never duplicate timers/listeners",
+          "passed": true,
+          "detail": [
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            },
+            {
+              "timers": 1,
+              "listeners": 1
+            },
+            {
+              "timers": 0,
+              "listeners": 0
+            }
+          ]
+        },
+        {
+          "name": "lifecycle recovery does not repeat status announcement",
+          "passed": true
+        },
+        {
+          "name": "normal page has no console/page/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA/best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "integration": [
+    {
+      "name": "fixed virtual clock under Asia/Ho_Chi_Minh gives same 86462 seconds",
+      "passed": true,
+      "detail": {
+        "values": [
+          "01",
+          "00",
+          "01",
+          "02"
+        ],
+        "total": 86462,
+        "now": 1795139938750,
+        "target": 1795226400000,
+        "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+        "timers": 1,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "fixed virtual clock under UTC gives same 86462 seconds",
+      "passed": true,
+      "detail": {
+        "values": [
+          "01",
+          "00",
+          "01",
+          "02"
+        ],
+        "total": 86462,
+        "now": 1795139938750,
+        "target": 1795226400000,
+        "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+        "timers": 1,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "fixed virtual clock under America/Los_Angeles gives same 86462 seconds",
+      "passed": true,
+      "detail": {
+        "values": [
+          "01",
+          "00",
+          "01",
+          "02"
+        ],
+        "total": 86462,
+        "now": 1795139938750,
+        "target": 1795226400000,
+        "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+        "timers": 1,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "three browser timezones are invariant at the same epoch",
+      "passed": true,
+      "detail": [
+        {
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "values": [
+            "01",
+            "00",
+            "01",
+            "02"
+          ],
+          "total": 86462,
+          "now": 1795139938750,
+          "target": 1795226400000,
+          "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+          "timers": 1,
+          "listeners": 1,
+          "changes": 2,
+          "display": "21 November 2026 · 09:00"
+        },
+        {
+          "timezoneId": "UTC",
+          "values": [
+            "01",
+            "00",
+            "01",
+            "02"
+          ],
+          "total": 86462,
+          "now": 1795139938750,
+          "target": 1795226400000,
+          "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+          "timers": 1,
+          "listeners": 1,
+          "changes": 2,
+          "display": "21 November 2026 · 09:00"
+        },
+        {
+          "timezoneId": "America/Los_Angeles",
+          "values": [
+            "01",
+            "00",
+            "01",
+            "02"
+          ],
+          "total": 86462,
+          "now": 1795139938750,
+          "target": 1795226400000,
+          "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+          "timers": 1,
+          "listeners": 1,
+          "changes": 2,
+          "display": "21 November 2026 · 09:00"
+        }
+      ]
+    },
+    {
+      "name": "browser at 1250ms remaining shows 2 seconds",
+      "passed": true
+    },
+    {
+      "name": "browser before 250ms boundary remains at 2",
+      "passed": true
+    },
+    {
+      "name": "browser at 1000ms remaining shows 1 second",
+      "passed": true
+    },
+    {
+      "name": "browser one millisecond before start still shows 1",
+      "passed": true
+    },
+    {
+      "name": "browser exact start shows zero, announces once and stops timer",
+      "passed": true,
+      "detail": {
+        "values": [
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "total": 0,
+        "now": 1795226400000,
+        "target": 1795226400000,
+        "status": "The workshop start time has arrived.",
+        "timers": 0,
+        "listeners": 1,
+        "changes": 3
+      }
+    },
+    {
+      "name": "browser past event stays at zero without numeric/status churn",
+      "passed": true
+    },
+    {
+      "name": "virtual browser timer clamping recomputes 37s after 23750ms skip",
+      "passed": true,
+      "detail": {
+        "values": [
+          "00",
+          "00",
+          "00",
+          "37"
+        ],
+        "total": 37,
+        "now": 1795226363750,
+        "target": 1795226400000,
+        "status": "Counting down to the workshop. Event time is shown in Vietnam time.",
+        "timers": 1,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "restored virtual page immediately accounts for time while paused",
+      "passed": true
+    },
+    {
+      "name": "synthetic visible signal immediately resynchronizes corrected clock",
+      "passed": true
+    },
+    {
+      "name": "invalid HTML target 2026-02-30T02:00:00Z gives useful status and no timer",
+      "passed": true,
+      "detail": {
+        "values": [
+          "--",
+          "--",
+          "--",
+          "--"
+        ],
+        "total": null,
+        "now": 1791373740819,
+        "target": 1772416800000,
+        "status": "The event time is unavailable. Please check the event details.",
+        "timers": 0,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "invalid target 2026-02-30T02:00:00Z leaves unrelated form usable",
+      "passed": true
+    },
+    {
+      "name": "invalid HTML target 2026-11-21T02:00:00 gives useful status and no timer",
+      "passed": true,
+      "detail": {
+        "values": [
+          "--",
+          "--",
+          "--",
+          "--"
+        ],
+        "total": null,
+        "now": 1791373740918,
+        "target": 1795201200000,
+        "status": "The event time is unavailable. Please check the event details.",
+        "timers": 0,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "invalid target 2026-11-21T02:00:00 leaves unrelated form usable",
+      "passed": true
+    },
+    {
+      "name": "invalid HTML target nonsense gives useful status and no timer",
+      "passed": true,
+      "detail": {
+        "values": [
+          "--",
+          "--",
+          "--",
+          "--"
+        ],
+        "total": null,
+        "now": 1791373740993,
+        "target": null,
+        "status": "The event time is unavailable. Please check the event details.",
+        "timers": 0,
+        "listeners": 1,
+        "changes": 2
+      }
+    },
+    {
+      "name": "invalid target nonsense leaves unrelated form usable",
+      "passed": true
+    },
+    {
+      "name": "corrected HTML target reload recovers without module error",
+      "passed": true
+    },
+    {
+      "name": "JavaScript-disabled fallback shows event time/help and disabled form",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Native clock/waits apply only to the four normal cases.",
+    "Timezone/boundary/clamping checks use Playwright virtual clock; lifecycle and visibility events are synthetic, not actual browser suspension or BFCache navigation.",
+    "Local assistant checks; no student live defense or Vercel header check.",
+    "Completed form behavior is checked by the separate final form suites."
+  ]
+}

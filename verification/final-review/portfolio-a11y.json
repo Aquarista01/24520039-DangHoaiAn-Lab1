@@ -1,0 +1,3527 @@
+{
+  "date": "2026-10-07T11:44:11.048Z",
+  "phase": "after",
+  "url": "http://127.0.0.1:5500/",
+  "tester": "Assistant automated checks; no student checks recorded",
+  "browser": "153.0.8010.0",
+  "axeVersion": "4.14.0",
+  "audits": [
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "activeState": "loading",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "activeState": "ready",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "activeState": "empty",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".state-symbol"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "activeState": "error",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "retry-button",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(255, 253, 248)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "activeState": "loading",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "activeState": "ready",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "activeState": "empty",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".state-symbol"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "activeState": "error",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "retry-button",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(32, 53, 49)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "activeState": "loading",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "activeState": "ready",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "activeState": "empty",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".state-symbol"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "activeState": "error",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#f5f2ea",
+        "surface": "#fffdf8",
+        "surface-soft": "#ebe8dd",
+        "ink": "#1c302f",
+        "muted": "#465b58",
+        "accent": "#a34f2d",
+        "focus": "#7140b0",
+        "button": "#244743",
+        "button-text": "#fffdf8",
+        "line": "#c5c9bb",
+        "control-line": "#65746f"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(36, 71, 67)",
+          "background": "rgb(36, 71, 67)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "retry-button",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(255, 253, 248)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(101, 116, 111)",
+          "background": "rgb(255, 253, 248)",
+          "outside": "rgb(245, 242, 234)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#theme-icon"
+            ],
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "activeState": "loading",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "activeState": "ready",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "activeState": "empty",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".state-symbol"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "activeState": "error",
+      "h1": 1,
+      "divs": 0,
+      "overflow": false,
+      "tokens": {
+        "bg": "#142522",
+        "surface": "#203531",
+        "surface-soft": "#29433d",
+        "ink": "#f7f3e7",
+        "muted": "#d0ded5",
+        "accent": "#f3b486",
+        "focus": "#dfbbff",
+        "button": "#e7b58b",
+        "button-text": "#172521",
+        "line": "#527169",
+        "control-line": "#92ada4"
+      },
+      "controls": [
+        {
+          "selector": "#theme-toggle",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Loading",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Live data",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Empty",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "Error",
+          "border": "rgb(231, 181, 139)",
+          "background": "rgb(231, 181, 139)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "retry-button",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(32, 53, 49)"
+        },
+        {
+          "selector": "#contact-name",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-email",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        },
+        {
+          "selector": "#contact-message",
+          "border": "rgb(146, 173, 164)",
+          "background": "rgb(32, 53, 49)",
+          "outside": "rgb(20, 37, 34)"
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".text-link > span[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "theme": "light",
+      "foreground": "ink",
+      "background": "bg",
+      "ratio": 12.405106964281304,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.651551199612788,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "ink",
+      "background": "surface-soft",
+      "ratio": 11.313198150709475,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "muted",
+      "background": "bg",
+      "ratio": 6.4778984635476675,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 7.12878678077061,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "muted",
+      "background": "surface-soft",
+      "ratio": 5.907707940714001,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "accent",
+      "background": "bg",
+      "ratio": 5.054797135617625,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "accent",
+      "background": "surface",
+      "ratio": 5.562694630464072,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "accent",
+      "background": "surface-soft",
+      "ratio": 4.609869287829552,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "button-text",
+      "background": "button",
+      "ratio": 10.040824115362177,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "bg",
+      "ratio": 6.129616758382746,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "surface",
+      "ratio": 6.745510317001495,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "surface-soft",
+      "ratio": 5.5900823084527955,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "bg",
+      "ratio": 14.36766569616341,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 11.720677823889574,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "surface-soft",
+      "ratio": 9.635371201771774,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "muted",
+      "background": "bg",
+      "ratio": 11.454762397777806,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 9.344425354315504,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "muted",
+      "background": "surface-soft",
+      "ratio": 7.681894196644534,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "accent",
+      "background": "bg",
+      "ratio": 8.868273414632833,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "accent",
+      "background": "surface",
+      "ratio": 7.2344511450340985,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "accent",
+      "background": "surface-soft",
+      "ratio": 5.947320050160192,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "button-text",
+      "background": "button",
+      "ratio": 8.601647010085834,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "bg",
+      "ratio": 9.631886811970405,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "surface",
+      "ratio": 7.857382301804358,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "surface-soft",
+      "ratio": 6.459421228847713,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "Loading",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "Live data",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "Empty",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "Error",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "retry-button",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(255, 253, 248)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.825367753719852,
+      "fillVsOutside": 1,
+      "ratio": 4.825367753719852,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "Loading",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "loading",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "Live data",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "ready",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "Empty",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "empty",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "Error",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "retry-button",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(32, 53, 49)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 5.409076018445249,
+      "fillVsOutside": 1,
+      "ratio": 5.409076018445249,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "state": "error",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "Loading",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "Live data",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "Empty",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "Error",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "#theme-toggle",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "Loading",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "Live data",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "Empty",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "Error",
+      "border": "rgb(36, 71, 67)",
+      "background": "rgb(36, 71, 67)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 1,
+      "borderVsOutside": 9.124054500424535,
+      "fillVsOutside": 9.124054500424535,
+      "ratio": 9.124054500424535,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "retry-button",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(255, 253, 248)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.825367753719852,
+      "fillVsOutside": 1,
+      "ratio": 4.825367753719852,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-name",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-email",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-message",
+      "border": "rgb(101, 116, 111)",
+      "background": "rgb(255, 253, 248)",
+      "outside": "rgb(245, 242, 234)",
+      "borderVsInside": 4.825367753719852,
+      "borderVsOutside": 4.384791314307668,
+      "fillVsOutside": 1.1004783142072405,
+      "ratio": 4.384791314307668,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "Loading",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "loading",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "Live data",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "ready",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "Empty",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "Error",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "empty",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "#theme-toggle",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "Loading",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "Live data",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "Empty",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "Error",
+      "border": "rgb(231, 181, 139)",
+      "background": "rgb(231, 181, 139)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 1,
+      "borderVsOutside": 8.637880074839325,
+      "fillVsOutside": 8.637880074839325,
+      "ratio": 8.637880074839325,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "retry-button",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(32, 53, 49)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 5.409076018445249,
+      "fillVsOutside": 1,
+      "ratio": 5.409076018445249,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-name",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-email",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "state": "error",
+      "control": "#contact-message",
+      "border": "rgb(146, 173, 164)",
+      "background": "rgb(32, 53, 49)",
+      "outside": "rgb(20, 37, 34)",
+      "borderVsInside": 5.409076018445249,
+      "borderVsOutside": 6.630657128016299,
+      "fillVsOutside": 1.2258391461693996,
+      "ratio": 6.630657128016299,
+      "minimum": 3
+    }
+  ],
+  "errors": []
+}

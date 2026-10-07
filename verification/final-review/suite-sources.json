@@ -1,0 +1,113 @@
+{
+  "baseline": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "suites": [
+    {
+      "source": "verification/hw1-m1/audit.mjs",
+      "target": "portfolio-a11y.mjs",
+      "originalSha256": "fa7b52b753758e431843744e0f449b6d86b6a9a48872ba12aa3bf01fb855f406",
+      "derivedSha256": "183910facf13c6e6817d37caf1278273ef9f4894387010ee2d469012f3e6674b"
+    },
+    {
+      "source": "verification/hw1-m2/audit.mjs",
+      "target": "portfolio-keyboard.mjs",
+      "originalSha256": "2695b3a02eaf9fc1be0b21283b1390e0ade453e3185ed0239ccb05b332506b19",
+      "derivedSha256": "0875e51cefd617b66e0c9a5cd7451b98b0e6092643b22092a1dc42fb9d750cb3"
+    },
+    {
+      "source": "verification/hw1-m3/audit.mjs",
+      "target": "portfolio-csp.mjs",
+      "originalSha256": "416d57c5709ac04cb178eb3b065de36ff6ae472c6113d16c939190e136612597",
+      "derivedSha256": "94cbd4e3712028d3a272125c3e7d1734147197109adcfc83fe314cb570a60f38"
+    },
+    {
+      "source": "verification/hw1-m4/audit.mjs",
+      "target": "portfolio-lighthouse.mjs",
+      "originalSha256": "785ed912c13fa8c94556c53f3f3e17159970188c69a92fdcf89b7ebef061014c",
+      "derivedSha256": "ef2adaf5e86fa69b90a84228fc1f785c08e3aefd97c91862b51215e5d693cf96"
+    },
+    {
+      "source": "verification/hw2-step2/assets.py",
+      "target": "audio-assets.py",
+      "originalSha256": "3daea890e95875ec1e68ec1b2f3d4dabe1acbe5633c6294e16d60f7cd88b19ef",
+      "derivedSha256": "6c51bc9192fe7de2e55f5b01da6cfdb35938e082c520612334324d48d9526898"
+    },
+    {
+      "source": "verification/hw2-step2/audit.mjs",
+      "target": "audio-browser.mjs",
+      "originalSha256": "d805caf2f1592402283594f3629a67b22c1eed59fee20e6febd8909524cd3b66",
+      "derivedSha256": "2914be345e80eb1b2507cfb49726d4c786a44d444a30c2793e3c0aeeaa13cb4f"
+    },
+    {
+      "source": "verification/hw2-step3/audit.mjs",
+      "target": "drum-keyboard.mjs",
+      "originalSha256": "a8a58f3af70c9479ddc31bbfc5320b380c75d2f6eed14858d76bb598e85e8aaa",
+      "derivedSha256": "731675e87449870dbc868ccb142a0473fa86ac6c5d023a4313c84b8b34182113"
+    },
+    {
+      "source": "verification/hw2-step4/model-check.mjs",
+      "target": "recorder-model.mjs",
+      "originalSha256": "4aa787150d5007427ba94b9456e2323591ce2c728e619f5287d836e4c518574c",
+      "derivedSha256": "e3b653e482afcfe69c37af7730fe8891597481648728e912caf56b5e6bc5b74b"
+    },
+    {
+      "source": "verification/hw2-step4/audit.mjs",
+      "target": "recorder-browser.mjs",
+      "originalSha256": "ae096ca84f9f69c64aa9d2d4c3be0723d9359c2dae27919e4f74c29694b3f1d3",
+      "derivedSha256": "6559ab90ebde8d50d16e93a2e9e713b0e249e9b77cb8940247f7164b65a935d2"
+    },
+    {
+      "source": "verification/hw3-step2/model-check.mjs",
+      "target": "countdown-model.mjs",
+      "originalSha256": "c34cb70a4ed77cde31606487feaaffd4be24a9f3d37bfee9d518f3b3b21e6ecc",
+      "derivedSha256": "e71e46d3b3af4b4251a6af82339e39c18d9729ead12e0162f668c0a98ae665b2"
+    },
+    {
+      "source": "verification/hw3-step2/audit.mjs",
+      "target": "countdown-browser.mjs",
+      "originalSha256": "133ad97eb7bd9bc1fb90f8ca8269ef885b1f49113df2e972fcdc190bd5114033",
+      "derivedSha256": "36e42edb19349141d925df07f2fb4e5079da3240e15cce4e804a529ce0dc798b"
+    },
+    {
+      "source": "verification/hw3-step3/service-check.mjs",
+      "target": "form-service.mjs",
+      "originalSha256": "59ef701bf18ebfa62e46655f26a9bcaa8120b8d5a72e7d56959d580d6d2f0fe4",
+      "derivedSha256": "687c3ff970f52c97a279e9a087f9d1d0336beb91d5ca680df78e058872d385f3"
+    },
+    {
+      "source": "verification/hw3-step5/validation-check.mjs",
+      "target": "form-validator.mjs",
+      "originalSha256": "b0933707c4aef0363f547a2ac40c917f9abd8ba67a57e71d602ce7f7a2e64d4d",
+      "derivedSha256": "e22deb0314820c5c17dd043e71ede9d85f6b8e79a5a4acde06c29d7f5574834f"
+    },
+    {
+      "source": "verification/hw3-step5/browser-check.mjs",
+      "target": "form-input.mjs",
+      "originalSha256": "ba18959345da47c73d4ad6ba7a95cd8b76126cd80689c19a348d4ab43987014e",
+      "derivedSha256": "f2673919f3c640be089e67758f925c909313c4bc3a18c4b28aa49f2af0151260"
+    },
+    {
+      "source": "verification/hw3-step5/regression.mjs",
+      "target": "form-native.mjs",
+      "originalSha256": "b090d942f6130255073b1d4b1f164b496592b87e9f52befcb6b9c00f5b719301",
+      "derivedSha256": "0a212852a9fb3c19bf34f707e818178e3bae315a79b275697f2ff8c4c5306de6"
+    },
+    {
+      "source": "verification/hw3-step5/lifecycle-check.mjs",
+      "target": "form-lifecycle.mjs",
+      "originalSha256": "dfe88ca958c7f11dc48b6c8a09e6ff984f42c8d35126b00250ae98379bbb80e3",
+      "derivedSha256": "a8bcfecd0a140b2ea3ab883dc193661099b935d01d83c785e174ae7a834526aa"
+    },
+    {
+      "source": "verification/hw3-audit/check-evidence.py",
+      "target": "audit-evidence.py",
+      "originalSha256": "3cf8d68f8f0523d4a508cd570d9871e8ee115629479316712018cb2b48f31e4d",
+      "derivedSha256": "bfcdfba1f8bf6dd2d1797c9ffbf6951c89fe264b66715c3e0b0fe3be64da8d77"
+    },
+    {
+      "source": "verification/homework-navigation/audit.mjs",
+      "target": "navigation.mjs",
+      "originalSha256": "61df3e6a0a41d6c849d541c2ff4a0779b6020d9f439b74164dfd189dcea7ee7d",
+      "derivedSha256": "1a72b3bc1d4e12c294395463d805ceb892decfb43f640510a7ebd660a160e60c"
+    }
+  ]
+}

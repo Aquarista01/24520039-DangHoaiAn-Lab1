@@ -411,3 +411,26 @@ Actions actually performed by the assistant:
 Evidence: verification/homework-navigation/README.md, audit.mjs and result.json. The local server/browser helper is QA-only and is not in the product module graph. These are assistant local checks, not student Preview/listening, hosted headers or a live defense.
 
 This turn ends after the isolated navigation commit on hw-atomic-rebuild. Next is the final cross-homework review after student confirmation, then separate publication/handoff. Preserve the separate homework branch and original main/history.
+
+## Task 10 - Final cross-homework review
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Reviewed application commit: 7ac14ab. Scope: fresh review suites/evidence and final status documentation only; application source/assets and earlier evidence are unchanged.
+
+Student-provided update:
+- At 18:38 the user reported “Ok rồi, bạn làm đi” after the final Preview request. Recorded as general student-reported OK, with no raw listening/recorder/form/Lighthouse/header capture or timed live defense.
+- Before this review the user separately authorized main cleanup: commit 712f494 restored Lab's current runtime from 8aa4676 while retaining the old main ancestry/history. The Homework branch was not merged or deleted.
+
+Actions actually performed by the assistant:
+- Read project rules/WBS and used the current integrated branch as the review source. Derived fresh script copies from milestone suites with every adaptation in prepare.py and original/derived SHA-256 in suite-sources.json. Kept original reports/dates intact. Added a sequential runner with script hashes, real start/elapsed times and console results to avoid port/timing contention.
+- Ran 18 final suites plus a separate branch/source/host checker: 1,398/1,398 assertions passed. Rechecked portfolio keyboard/storage (160), CSP normal configurations (108 plus two separate security-probe groups), native audio/fault recovery (90), drum keys/HTML rebinding (182), recorder model/native integration (22+98), countdown model/native/virtual integration (47+89), service/validator (13+86), form input/native/lifecycle (130+188+25), navigation (89), historical audit integrity (30) and branch/source integrity (41).
+- Rechecked all nine actual unchanged PCM assets, with nonzero signal/no clipping, and 158 portfolio contrast measurements. Native polyphony and trusted key/click inputs work; recorder dispatch timing errors were -0.4ms to +0.9ms under ±100ms tolerance. This observes native Audio dispatch, not speaker output latency or actual student audibility. HTML-only A→Q rebinding took about 236ms/266ms in the automated fixture, not a timed student defense.
+- Recorded 97 zero-violation axe executions: 92 structured audit records plus four audio and one capped-recorder checks. Twenty root audits retain icon/glyph contrast incomplete items. All form/countdown/recorder structured audits have no violations; no universal WCAG certification is claimed.
+- Ran fresh Lighthouse 13.5.0 after other browser work: mobile and official desktop profiles each achieved raw 1.0 in performance/accessibility/best-practices/SEO. Saved both complete LHR JSON and exact configuration/environment/metrics. Mobile LCP 911.946ms, desktop LCP 250.723ms; both TBT 0 and CLS 0. These are local enforced-header runs, not deployed Preview measurements.
+- Preserved initial QA mistakes rather than converting them into application defects: old audio-stage assumptions caused a voice-count timeout; old keyboard-stage assumptions expected Idle after Record (four failed checks); host checker initially used avatar.svg instead of the actual portrait.svg. Exact failed source/output remain saved. Corrected the suite expectations/path and resumed only failed/pending suites; passing earlier runs were retained only with matching script hashes. No application fix was needed.
+- Confirmed reviewed application files still match 7ac14ab, original suite hashes remain unchanged, remote main is 712f494 and the Homework branch is separate. Main's six Lab runtime blobs equal 8aa4676; current main has no homework directory and the previous main commit remains an ancestor. Fresh anonymous Preview request returned HTTP 302 to Vercel SSO; production returned HTTP 200 with exact original Lab HTML. No Preview app headers are claimed from the redirect.
+- Reviewed the focused evidence/documentation diff and whitespace. Recorded actual counts separately from nine file measurements, 158 contrasts, CSP probe groups, Lighthouse categories and axe executions to avoid double-counting them as assertions.
+
+Evidence: verification/final-review/README.md, summary.json, run-manifest.json, suite-sources.json, original/derived scripts, full Lighthouse JSON, all fresh result JSON and preserved failed QA attempts. Native waits, virtual clocks, injected transports and synthetic lifecycle events keep their actual provenance. No real BFCache/background suspension or laptop measurement is claimed.
+
+This isolated review commit ends WBS 10. WBS 11 publication/handoff remains separate: accessible Homework deployment and actual application headers, shared AI conversation URL and required submission captures. Keep main and Homework separate; preserve real history.

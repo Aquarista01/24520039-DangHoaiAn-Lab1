@@ -1,0 +1,2115 @@
+{
+  "date": "2026-10-07T11:48:40.988Z",
+  "tester": "Assistant: fresh local native Chromium recorder integration",
+  "browser": "153.0.8010.0",
+  "baseline": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "timingToleranceMs": 100,
+  "timingMethod": "Compare native Audio constructor dispatch times to recorded input offsets from the trusted Replay click; audio output/decoding latency is not measured as beat timing",
+  "limits": [
+    "Normal native playback is observed, not mocked; delayed/denied integration cases are labeled.",
+    "120-second and stale-callback boundaries use the separate deterministic virtual-clock model checks.",
+    "Student reported the final Preview OK on 7 October; no raw recorder capture or timed live defense was supplied."
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "idle empty tape and initial control states",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "No take recorded yet.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "axe initial: zero violations",
+          "passed": true
+        },
+        {
+          "name": "mixed keyboard/click A-S-A recorded in FIFO arrival order",
+          "passed": true,
+          "detail": {
+            "state": "recording",
+            "label": "Recording",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 155.8999999994412,
+                "text": "A — 0.156 s"
+              },
+              {
+                "key": "s",
+                "at": 362.09999999962747,
+                "text": "S — 0.362 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Recording. 3 hits.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "recording locks Record/Replay/Clear and enables Stop",
+          "passed": true
+        },
+        {
+          "name": "axe recording: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Stop retains tape and enables idle actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 155.8999999994412,
+                "text": "A — 0.156 s"
+              },
+              {
+                "key": "s",
+                "at": 362.09999999962747,
+                "text": "S — 0.362 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": false,
+              "clear": false
+            },
+            "message": "Take saved. Replay it or record a new one.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe saved: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Replay locks mutation controls and makes Stop available",
+          "passed": true,
+          "detail": {
+            "state": "replaying",
+            "label": "Replaying",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 155.8999999994412,
+                "text": "A — 0.156 s"
+              },
+              {
+                "key": "s",
+                "at": 362.09999999962747,
+                "text": "S — 0.362 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Replaying. Stop cancels the remaining hits.",
+            "focused": "stop-btn"
+          }
+        },
+        {
+          "name": "axe replaying: zero violations",
+          "passed": true
+        },
+        {
+          "name": "replay dispatch order and offsets within 100ms tolerance",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "expectedMs": 155.8999999994412,
+              "actualMs": 155.70000000018626,
+              "errorMs": -0.19999999925494194
+            },
+            {
+              "key": "s",
+              "expectedMs": 362.09999999962747,
+              "actualMs": 362.5,
+              "errorMs": 0.40000000037252903
+            },
+            {
+              "key": "a",
+              "expectedMs": 699.8999999994412,
+              "actualMs": 699.5,
+              "errorMs": -0.39999999944120646
+            }
+          ]
+        },
+        {
+          "name": "replay does not append hits or alter the queue",
+          "passed": true
+        },
+        {
+          "name": "manual live hit during replay sounds without recording itself",
+          "passed": true
+        },
+        {
+          "name": "Stop replay cancels all remaining callbacks and retains tape",
+          "passed": true
+        },
+        {
+          "name": "Clear resets count/list and disables empty actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Tape cleared. Ready for a new take.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe cleared: zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Record moves focus to enabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Stop retains the hit and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "Tab reaches Replay, skipping disabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Space starts Replay and focuses Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Clear empties tape and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "five rapid Record/Stop/Clear sessions leave idle empty state",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, polite status and no horizontal overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "inline": false,
+            "violations": [],
+            "unhandled": [],
+            "live": "polite"
+          }
+        },
+        {
+          "name": "normal recording/replay has no runtime/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "axeResults": [
+        {
+          "name": "initial",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "recording",
+          "before": "recording",
+          "after": "recording",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "saved",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "replaying",
+          "before": "replaying",
+          "after": "replaying",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "cleared",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "timing": [
+        {
+          "key": "a",
+          "expectedMs": 155.8999999994412,
+          "actualMs": 155.70000000018626,
+          "errorMs": -0.19999999925494194
+        },
+        {
+          "key": "s",
+          "expectedMs": 362.09999999962747,
+          "actualMs": 362.5,
+          "errorMs": 0.40000000037252903
+        },
+        {
+          "key": "a",
+          "expectedMs": 699.8999999994412,
+          "actualMs": 699.5,
+          "errorMs": -0.39999999944120646
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 582.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 782.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 1067.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 1178.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 1179.5999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 1694.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 1909.0999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 2116.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 2438.0999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 2456.899999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 2507.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 2971.899999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 3033.0999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 3174.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 3380.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 3529.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 3692,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 3719.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 3761.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 4248.899999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 4459.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 4992.200000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 5650.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 5716.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 5815,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 5916.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 6015.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 6111.5999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 6115.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 6177.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 6199.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 6292.399999999441,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 6408.5999999996275,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 6501.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "idle empty tape and initial control states",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "No take recorded yet.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "axe initial: zero violations",
+          "passed": true
+        },
+        {
+          "name": "mixed keyboard/click A-S-A recorded in FIFO arrival order",
+          "passed": true,
+          "detail": {
+            "state": "recording",
+            "label": "Recording",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.29999999981374,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 359.3999999994412,
+                "text": "S — 0.359 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Recording. 3 hits.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "recording locks Record/Replay/Clear and enables Stop",
+          "passed": true
+        },
+        {
+          "name": "axe recording: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Stop retains tape and enables idle actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.29999999981374,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 359.3999999994412,
+                "text": "S — 0.359 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": false,
+              "clear": false
+            },
+            "message": "Take saved. Replay it or record a new one.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe saved: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Replay locks mutation controls and makes Stop available",
+          "passed": true,
+          "detail": {
+            "state": "replaying",
+            "label": "Replaying",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.29999999981374,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 359.3999999994412,
+                "text": "S — 0.359 s"
+              },
+              {
+                "key": "a",
+                "at": 699.8999999994412,
+                "text": "A — 0.700 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Replaying. Stop cancels the remaining hits.",
+            "focused": "stop-btn"
+          }
+        },
+        {
+          "name": "axe replaying: zero violations",
+          "passed": true
+        },
+        {
+          "name": "replay dispatch order and offsets within 100ms tolerance",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "expectedMs": 154.29999999981374,
+              "actualMs": 155.20000000018626,
+              "errorMs": 0.900000000372529
+            },
+            {
+              "key": "s",
+              "expectedMs": 359.3999999994412,
+              "actualMs": 360.1000000005588,
+              "errorMs": 0.7000000011175871
+            },
+            {
+              "key": "a",
+              "expectedMs": 699.8999999994412,
+              "actualMs": 700,
+              "errorMs": 0.10000000055879354
+            }
+          ]
+        },
+        {
+          "name": "replay does not append hits or alter the queue",
+          "passed": true
+        },
+        {
+          "name": "manual live hit during replay sounds without recording itself",
+          "passed": true
+        },
+        {
+          "name": "Stop replay cancels all remaining callbacks and retains tape",
+          "passed": true
+        },
+        {
+          "name": "Clear resets count/list and disables empty actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Tape cleared. Ready for a new take.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe cleared: zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Record moves focus to enabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Stop retains the hit and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "Tab reaches Replay, skipping disabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Space starts Replay and focuses Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Clear empties tape and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "five rapid Record/Stop/Clear sessions leave idle empty state",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, polite status and no horizontal overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "inline": false,
+            "violations": [],
+            "unhandled": [],
+            "live": "polite"
+          }
+        },
+        {
+          "name": "normal recording/replay has no runtime/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "axeResults": [
+        {
+          "name": "initial",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "recording",
+          "before": "recording",
+          "after": "recording",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "saved",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "replaying",
+          "before": "replaying",
+          "after": "replaying",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "cleared",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "timing": [
+        {
+          "key": "a",
+          "expectedMs": 154.29999999981374,
+          "actualMs": 155.20000000018626,
+          "errorMs": 0.900000000372529
+        },
+        {
+          "key": "s",
+          "expectedMs": 359.3999999994412,
+          "actualMs": 360.1000000005588,
+          "errorMs": 0.7000000011175871
+        },
+        {
+          "key": "a",
+          "expectedMs": 699.8999999994412,
+          "actualMs": 700,
+          "errorMs": 0.10000000055879354
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 472.70000000018626,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 673.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 961.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 1082.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 1083.6000000005588,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 1611.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 1814.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 2019.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 2331.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 2360.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 2401.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 2888.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 2955.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 3098.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 3302.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 3446,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 3631.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 3644.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 3678.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 4165.800000000745,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 4361.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 4885.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 5572,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 5605,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 5706.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 5804.800000000745,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 5904.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 5977,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 6005.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 6093,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 6093.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 6185.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 6278.800000000745,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 6394.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "idle empty tape and initial control states",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "No take recorded yet.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "axe initial: zero violations",
+          "passed": true
+        },
+        {
+          "name": "mixed keyboard/click A-S-A recorded in FIFO arrival order",
+          "passed": true,
+          "detail": {
+            "state": "recording",
+            "label": "Recording",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.40000000037253,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 361,
+                "text": "S — 0.361 s"
+              },
+              {
+                "key": "a",
+                "at": 701.9000000003725,
+                "text": "A — 0.702 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Recording. 3 hits.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "recording locks Record/Replay/Clear and enables Stop",
+          "passed": true
+        },
+        {
+          "name": "axe recording: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Stop retains tape and enables idle actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.40000000037253,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 361,
+                "text": "S — 0.361 s"
+              },
+              {
+                "key": "a",
+                "at": 701.9000000003725,
+                "text": "A — 0.702 s"
+              }
+            ],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": false,
+              "clear": false
+            },
+            "message": "Take saved. Replay it or record a new one.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe saved: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Replay locks mutation controls and makes Stop available",
+          "passed": true,
+          "detail": {
+            "state": "replaying",
+            "label": "Replaying",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.40000000037253,
+                "text": "A — 0.154 s"
+              },
+              {
+                "key": "s",
+                "at": 361,
+                "text": "S — 0.361 s"
+              },
+              {
+                "key": "a",
+                "at": 701.9000000003725,
+                "text": "A — 0.702 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Replaying. Stop cancels the remaining hits.",
+            "focused": "stop-btn"
+          }
+        },
+        {
+          "name": "axe replaying: zero violations",
+          "passed": true
+        },
+        {
+          "name": "replay dispatch order and offsets within 100ms tolerance",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "expectedMs": 154.40000000037253,
+              "actualMs": 155.09999999962747,
+              "errorMs": 0.6999999992549419
+            },
+            {
+              "key": "s",
+              "expectedMs": 361,
+              "actualMs": 361,
+              "errorMs": 0
+            },
+            {
+              "key": "a",
+              "expectedMs": 701.9000000003725,
+              "actualMs": 702,
+              "errorMs": 0.09999999962747097
+            }
+          ]
+        },
+        {
+          "name": "replay does not append hits or alter the queue",
+          "passed": true
+        },
+        {
+          "name": "manual live hit during replay sounds without recording itself",
+          "passed": true
+        },
+        {
+          "name": "Stop replay cancels all remaining callbacks and retains tape",
+          "passed": true
+        },
+        {
+          "name": "Clear resets count/list and disables empty actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Tape cleared. Ready for a new take.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe cleared: zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Record moves focus to enabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Stop retains the hit and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "Tab reaches Replay, skipping disabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Space starts Replay and focuses Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Clear empties tape and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "five rapid Record/Stop/Clear sessions leave idle empty state",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, polite status and no horizontal overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "inline": false,
+            "violations": [],
+            "unhandled": [],
+            "live": "polite"
+          }
+        },
+        {
+          "name": "normal recording/replay has no runtime/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "axeResults": [
+        {
+          "name": "initial",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "recording",
+          "before": "recording",
+          "after": "recording",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "saved",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "replaying",
+          "before": "replaying",
+          "after": "replaying",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "cleared",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "timing": [
+        {
+          "key": "a",
+          "expectedMs": 154.40000000037253,
+          "actualMs": 155.09999999962747,
+          "errorMs": 0.6999999992549419
+        },
+        {
+          "key": "s",
+          "expectedMs": 361,
+          "actualMs": 361,
+          "errorMs": 0
+        },
+        {
+          "key": "a",
+          "expectedMs": 701.9000000003725,
+          "actualMs": 702,
+          "errorMs": 0.09999999962747097
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 471.79999999981374,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 671.1000000005588,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 960.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 1073.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 1074.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 1587.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 1799.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 2006.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 2330.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 2351.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 2401.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 2864.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 2923.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 3062.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 3269.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 3421.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 3584.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 3612,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 3654,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 4141.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 4368.299999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 4885.200000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 5617.299999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 5674,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 5789.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 5888.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 6005.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 6068.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 6117.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 6122.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 6161.700000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 6278,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 6393.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 6510,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "idle empty tape and initial control states",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "No take recorded yet.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "axe initial: zero violations",
+          "passed": true
+        },
+        {
+          "name": "mixed keyboard/click A-S-A recorded in FIFO arrival order",
+          "passed": true,
+          "detail": {
+            "state": "recording",
+            "label": "Recording",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.79999999981374,
+                "text": "A — 0.155 s"
+              },
+              {
+                "key": "s",
+                "at": 364.70000000018626,
+                "text": "S — 0.365 s"
+              },
+              {
+                "key": "a",
+                "at": 682.5,
+                "text": "A — 0.682 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Recording. 3 hits.",
+            "focused": ""
+          }
+        },
+        {
+          "name": "recording locks Record/Replay/Clear and enables Stop",
+          "passed": true
+        },
+        {
+          "name": "axe recording: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Stop retains tape and enables idle actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.79999999981374,
+                "text": "A — 0.155 s"
+              },
+              {
+                "key": "s",
+                "at": 364.70000000018626,
+                "text": "S — 0.365 s"
+              },
+              {
+                "key": "a",
+                "at": 682.5,
+                "text": "A — 0.682 s"
+              }
+            ],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": false,
+              "clear": false
+            },
+            "message": "Take saved. Replay it or record a new one.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe saved: zero violations",
+          "passed": true
+        },
+        {
+          "name": "Replay locks mutation controls and makes Stop available",
+          "passed": true,
+          "detail": {
+            "state": "replaying",
+            "label": "Replaying",
+            "count": 3,
+            "beats": [
+              {
+                "key": "a",
+                "at": 154.79999999981374,
+                "text": "A — 0.155 s"
+              },
+              {
+                "key": "s",
+                "at": 364.70000000018626,
+                "text": "S — 0.365 s"
+              },
+              {
+                "key": "a",
+                "at": 682.5,
+                "text": "A — 0.682 s"
+              }
+            ],
+            "buttons": {
+              "record": true,
+              "stop": false,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Replaying. Stop cancels the remaining hits.",
+            "focused": "stop-btn"
+          }
+        },
+        {
+          "name": "axe replaying: zero violations",
+          "passed": true
+        },
+        {
+          "name": "replay dispatch order and offsets within 100ms tolerance",
+          "passed": true,
+          "detail": [
+            {
+              "key": "a",
+              "expectedMs": 154.79999999981374,
+              "actualMs": 155.5,
+              "errorMs": 0.7000000001862645
+            },
+            {
+              "key": "s",
+              "expectedMs": 364.70000000018626,
+              "actualMs": 364.29999999981374,
+              "errorMs": -0.40000000037252903
+            },
+            {
+              "key": "a",
+              "expectedMs": 682.5,
+              "actualMs": 682.5,
+              "errorMs": 0
+            }
+          ]
+        },
+        {
+          "name": "replay does not append hits or alter the queue",
+          "passed": true
+        },
+        {
+          "name": "manual live hit during replay sounds without recording itself",
+          "passed": true
+        },
+        {
+          "name": "Stop replay cancels all remaining callbacks and retains tape",
+          "passed": true
+        },
+        {
+          "name": "Clear resets count/list and disables empty actions",
+          "passed": true,
+          "detail": {
+            "state": "idle",
+            "label": "Idle",
+            "count": 0,
+            "beats": [],
+            "buttons": {
+              "record": false,
+              "stop": true,
+              "replay": true,
+              "clear": true
+            },
+            "message": "Tape cleared. Ready for a new take.",
+            "focused": "record-btn"
+          }
+        },
+        {
+          "name": "axe cleared: zero violations",
+          "passed": true
+        },
+        {
+          "name": "keyboard Record moves focus to enabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Stop retains the hit and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "Tab reaches Replay, skipping disabled Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Space starts Replay and focuses Stop",
+          "passed": true
+        },
+        {
+          "name": "keyboard Clear empties tape and returns focus to Record",
+          "passed": true
+        },
+        {
+          "name": "five rapid Record/Stop/Clear sessions leave idle empty state",
+          "passed": true
+        },
+        {
+          "name": "semantic structure, polite status and no horizontal overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "inline": false,
+            "violations": [],
+            "unhandled": [],
+            "live": "polite"
+          }
+        },
+        {
+          "name": "normal recording/replay has no runtime/network/CSP errors",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "axeResults": [
+        {
+          "name": "initial",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "recording",
+          "before": "recording",
+          "after": "recording",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "saved",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "replaying",
+          "before": "replaying",
+          "after": "replaying",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "cleared",
+          "before": "idle",
+          "after": "idle",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "timing": [
+        {
+          "key": "a",
+          "expectedMs": 154.79999999981374,
+          "actualMs": 155.5,
+          "errorMs": 0.7000000001862645
+        },
+        {
+          "key": "s",
+          "expectedMs": 364.70000000018626,
+          "actualMs": 364.29999999981374,
+          "errorMs": -0.40000000037252903
+        },
+        {
+          "key": "a",
+          "expectedMs": 682.5,
+          "actualMs": 682.5,
+          "errorMs": 0
+        }
+      ],
+      "mediaEvents": [
+        {
+          "id": 0,
+          "type": "playing",
+          "at": 605.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "playing",
+          "at": 818.6000000005588,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 0,
+          "type": "ended",
+          "at": 1095.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 2,
+          "type": "playing",
+          "at": 1191.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 1,
+          "type": "ended",
+          "at": 1211.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 2,
+          "type": "ended",
+          "at": 1721.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 3,
+          "type": "playing",
+          "at": 1925.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "playing",
+          "at": 2133.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 3,
+          "type": "ended",
+          "at": 2441.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 5,
+          "type": "playing",
+          "at": 2452.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 4,
+          "type": "ended",
+          "at": 2511.2000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 5,
+          "type": "ended",
+          "at": 2975.7000000001863,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 6,
+          "type": "playing",
+          "at": 3031.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "playing",
+          "at": 3174.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "playing",
+          "at": 3383.7999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 6,
+          "type": "ended",
+          "at": 3532.9000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/tom.wav"
+        },
+        {
+          "id": 7,
+          "type": "ended",
+          "at": 3695.2999999998137,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 9,
+          "type": "playing",
+          "at": 3702.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 8,
+          "type": "ended",
+          "at": 3765.100000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 9,
+          "type": "ended",
+          "at": 4229.299999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "playing",
+          "at": 4441.799999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 10,
+          "type": "ended",
+          "at": 4972.600000000559,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 11,
+          "type": "playing",
+          "at": 5712,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 12,
+          "type": "playing",
+          "at": 5750.799999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 13,
+          "type": "playing",
+          "at": 5851.200000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "playing",
+          "at": 5968.299999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "playing",
+          "at": 6067,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 12,
+          "type": "ended",
+          "at": 6133.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "playing",
+          "at": 6173.200000000186,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 11,
+          "type": "ended",
+          "at": 6226.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/kick.wav"
+        },
+        {
+          "id": 13,
+          "type": "ended",
+          "at": 6226.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 14,
+          "type": "ended",
+          "at": 6342.4000000003725,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 15,
+          "type": "ended",
+          "at": 6458.5,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        },
+        {
+          "id": 16,
+          "type": "ended",
+          "at": 6551.299999999814,
+          "source": "http://127.0.0.1:40439/homework/drum-kit/sounds/snare.wav"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "integrationChecks": [
+    {
+      "name": "input timestamp/queue precedes a delayed 320ms play promise",
+      "method": "Native play starts normally; only promise resolution is deliberately delayed",
+      "immediate": {
+        "resolved": false,
+        "count": 1,
+        "at": 13
+      },
+      "passed": true
+    },
+    {
+      "name": "failed audio remains an input-intent hit with separate failure feedback",
+      "method": "Injected play denial; actual native audio was tested in normal cases",
+      "passed": true
+    },
+    {
+      "name": "UI retains exactly 256 input hits, auto-stops and ignores hit 257",
+      "method": "Injected denied audio avoids a 257-voice playback stress test; exercises real activation/recorder/DOM",
+      "passed": true,
+      "count": 256,
+      "state": "idle"
+    },
+    {
+      "name": "populated capped list is bounded and keyboard-scrollable at 375px",
+      "passed": true,
+      "scroll": {
+        "scrollTop": 610,
+        "height": 256,
+        "total": 6552,
+        "focused": true
+      }
+    },
+    {
+      "name": "capped-list axe and error handling",
+      "passed": true,
+      "violations": [],
+      "runtime": {
+        "errors": [],
+        "badResponses": []
+      }
+    },
+    {
+      "name": "reload starts a fresh in-memory session",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

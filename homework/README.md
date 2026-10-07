@@ -14,3 +14,6 @@ The instructor permits the Lab and homework in one repository when homework uses
 Run `python3 -m http.server 5500` from the repository root. Open the portfolio's Homework section, choose a demo and use its back link to return. Both demos are static local coursework; workshop registration sends/saves nothing, and drum takes exist only in memory.
 
 [Task decomposition](../TASK_DECOMPOSITION.md), [development log](../DEVELOPMENT_LOG.md) and [AI failure audit](../AI_FAILURE_AUDIT.md) link the real milestones and distinguish assistant local tests from student-reported Preview checks. This navigation package does not replace any older evidence or claim a fresh full application, Lighthouse, audio-listening or hosted-header audit.
+
+
+[Final cross-homework review](../verification/final-review/README.md) now records fresh final checks and Lighthouse measurements on application head 7ac14ab. Main's authorized cleanup at 712f494 restored the Lab current tree while preserving history; the Homework branch stays separate. WBS 11 handoff remains pending, including assessor-accessible Homework hosting, app response headers, the shared AI conversation URL and required captures. Production currently serves the original Lab rather than HW1.

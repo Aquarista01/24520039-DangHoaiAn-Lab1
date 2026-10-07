@@ -1,0 +1,151 @@
+{
+  "started": "2026-10-07T11:44:01.884704+00:00",
+  "results": [
+    {
+      "script": "audio-assets.py",
+      "scriptSha256": "6c51bc9192fe7de2e55f5b01da6cfdb35938e082c520612334324d48d9526898",
+      "started": "2026-10-07T11:44:01.884746+00:00",
+      "elapsedSeconds": 0.15528,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"assets\": [\n    {\n      \"name\": \"kick\",\n      \"durationSeconds\": 0.42,\n      \"rms\": 0.1464250944178252,\n      \"energyFraction250To4000Hz\": 0.22816094881059207,\n      \"passed\": true\n    },\n    {\n      \"name\": \"snare\",\n      \"durationSeconds\": 0.3,\n      \"rms\": 0.11180371057971673,\n      \"energyFraction250To4000Hz\": 0.2597641801110624,\n      \"passed\": true\n    },\n    {\n      \"name\": \"clap\",\n      \"durationSeconds\": 0.22997732426303855,\n      \"rms\": 0.06573534922795432,\n      \"energyFraction250To4000Hz\": 0.06299872267610977,\n      \"passed\": true\n    },\n    {\n      \"name\": \"hat\",\n      \"durationSeconds\": 0.1,\n      \"rms\": 0.06313002171193997,\n      \"energyFraction250To4000Hz\": 0.06670509243814611,\n      \"passed\": true\n    },\n    {\n      \"name\": \"open-hat\",\n      \"durationSeconds\": 0.44997732426303855,\n      \"rms\": 0.07653102073816469,\n      \"energyFraction250To4000Hz\": 0.06906625477435972,\n      \"passed\": true\n    },\n    {\n      \"name\": \"tom\",\n      \"durationSeconds\": 0.4,\n      \"rms\": 0.16805648176251728,\n      \"energyFraction250To4000Hz\": 0.3801347624645984,\n      \"passed\": true\n    },\n    {\n      \"name\": \"rim\",\n      \"durationSeconds\": 0.12997732426303854,\n      \"rms\": 0.10026734415918928,\n      \"energyFraction250To4000Hz\": 0.9999956192452935,\n      \"passed\": true\n    },\n    {\n      \"name\": \"shaker\",\n      \"durationSeconds\": 0.18,\n      \"rms\": 0.05205230201598398,\n      \"energyFraction250To4000Hz\": 0.06987794430225758,\n      \"passed\": true\n    },\n    {\n      \"name\": \"crash\",\n      \"durationSeconds\": 0.9,\n      \"rms\": 0.06936130122883283,\n      \"energyFraction250To4000Hz\": 0.16906049374908083,\n      \"passed\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "recorder-model.mjs",
+      "scriptSha256": "e3b653e482afcfe69c37af7730fe8891597481648728e912caf56b5e6bc5b74b",
+      "started": "2026-10-07T11:44:02.040231+00:00",
+      "elapsedSeconds": 0.070046,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 22,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "countdown-model.mjs",
+      "scriptSha256": "e71e46d3b3af4b4251a6af82339e39c18d9729ead12e0162f668c0a98ae665b2",
+      "started": "2026-10-07T11:44:02.110798+00:00",
+      "elapsedSeconds": 0.063423,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 47,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "form-service.mjs",
+      "scriptSha256": "687c3ff970f52c97a279e9a087f9d1d0336beb91d5ca680df78e058872d385f3",
+      "started": "2026-10-07T11:44:02.174677+00:00",
+      "elapsedSeconds": 0.064767,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 13,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "form-validator.mjs",
+      "scriptSha256": "e22deb0314820c5c17dd043e71ede9d85f6b8e79a5a4acde06c29d7f5574834f",
+      "started": "2026-10-07T11:44:02.239758+00:00",
+      "elapsedSeconds": 0.066168,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 86,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "audit-evidence.py",
+      "scriptSha256": "bfcdfba1f8bf6dd2d1797c9ffbf6951c89fe264b66715c3e0b0fe3be64da8d77",
+      "started": "2026-10-07T11:44:02.306166+00:00",
+      "elapsedSeconds": 0.062679,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 30,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "portfolio-a11y.mjs",
+      "scriptSha256": "183910facf13c6e6817d37caf1278273ef9f4894387010ee2d469012f3e6674b",
+      "started": "2026-10-07T11:44:02.369068+00:00",
+      "elapsedSeconds": 8.738539,
+      "exitCode": 0,
+      "console": "{\n  \"phase\": \"after\",\n  \"passed\": true,\n  \"configurations\": 16,\n  \"violations\": [],\n  \"failedContrast\": [],\n  \"incomplete\": [\n    \"color-contrast\"\n  ],\n  \"errors\": [],\n  \"structureOK\": true\n}\n"
+    },
+    {
+      "script": "portfolio-keyboard.mjs",
+      "scriptSha256": "0875e51cefd617b66e0c9a5cd7451b98b0e6092643b22092a1dc42fb9d750cb3",
+      "started": "2026-10-07T11:44:11.107862+00:00",
+      "elapsedSeconds": 40.205504,
+      "exitCode": 0,
+      "console": "after: 375px light normal: 0 failed checks\nafter: 375px light storage-property-denied: 0 failed checks\nafter: 375px light storage-read-denied: 0 failed checks\nafter: 375px light storage-write-denied: 0 failed checks\nafter: 375px light invalid-stored-theme: 0 failed checks\nafter: 375px dark normal: 0 failed checks\nafter: 375px dark storage-property-denied: 0 failed checks\nafter: 375px dark storage-read-denied: 0 failed checks\nafter: 375px dark storage-write-denied: 0 failed checks\nafter: 375px dark invalid-stored-theme: 0 failed checks\nafter: 1440px light normal: 0 failed checks\nafter: 1440px light storage-property-denied: 0 failed checks\nafter: 1440px light storage-read-denied: 0 failed checks\nafter: 1440px light storage-write-denied: 0 failed checks\nafter: 1440px light invalid-stored-theme: 0 failed checks\nafter: 1440px dark normal: 0 failed checks\nafter: 1440px dark storage-property-denied: 0 failed checks\nafter: 1440px dark storage-read-denied: 0 failed checks\nafter: 1440px dark storage-write-denied: 0 failed checks\nafter: 1440px dark invalid-stored-theme: 0 failed checks\n{\n  \"phase\": \"after\",\n  \"cases\": 20,\n  \"checks\": 160,\n  \"passed\": true,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "portfolio-csp.mjs",
+      "scriptSha256": "94cbd4e3712028d3a272125c3e7d1734147197109adcfc83fe314cb570a60f38",
+      "started": "2026-10-07T11:44:51.313685+00:00",
+      "elapsedSeconds": 29.549127,
+      "exitCode": 0,
+      "console": "after: 375px light header-and-meta: 0 failed checks\nafter: 375px light meta-only: 0 failed checks\nafter: 375px dark header-and-meta: 0 failed checks\nafter: 375px dark meta-only: 0 failed checks\nafter: 1440px light header-and-meta: 0 failed checks\nafter: 1440px light meta-only: 0 failed checks\nafter: 1440px dark header-and-meta: 0 failed checks\nafter: 1440px dark meta-only: 0 failed checks\n{\n  \"phase\": \"after\",\n  \"cases\": 8,\n  \"checks\": 108,\n  \"passed\": true,\n  \"failures\": [],\n  \"securityProbes\": {\n    \"inlineExecuted\": false,\n    \"handlerExecuted\": false,\n    \"inlineStyleApplied\": false,\n    \"violations\": [\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-attr\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-attr\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"style-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"style-src-elem\",\n        \"blockedURI\": \"inline\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"https://example.com/csp-probe.js\",\n        \"disposition\": \"enforce\"\n      },\n      {\n        \"directive\": \"script-src-elem\",\n        \"blockedURI\": \"https://example.com/csp-probe.js\",\n        \"disposition\": \"enforce\"\n      }\n    ],\n    \"passed\": true\n  },\n  \"frameProbe\": {\n    \"errors\": [\n      \"Framing 'http://127.0.0.1:5500/' violates the following Content Security Policy directive: \\\"frame-ancestors 'none'\\\". The request has been blocked.\\n\"\n    ],\n    \"protectedContentPresent\": 0,\n    \"passed\": true\n  }\n}\n"
+    },
+    {
+      "script": "audio-browser.mjs",
+      "scriptSha256": "2914be345e80eb1b2507cfb49726d4c786a44d444a30c2793e3c0aeeaa13cb4f",
+      "started": "2026-10-07T11:46:41.103414+00:00",
+      "elapsedSeconds": 21.217273,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"cases\": [\n    {\n      \"width\": 375,\n      \"theme\": \"light\",\n      \"checks\": 21,\n      \"failures\": []\n    },\n    {\n      \"width\": 375,\n      \"theme\": \"dark\",\n      \"checks\": 21,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"light\",\n      \"checks\": 21,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"dark\",\n      \"checks\": 21,\n      \"failures\": []\n    }\n  ],\n  \"failureCases\": [\n    {\n      \"kind\": \"denied\",\n      \"passed\": true,\n      \"result\": false,\n      \"failure\": \"Playback blocked for Kick. Allow sound in your browser and click the pad again.\"\n    },\n    {\n      \"kind\": \"missing\",\n      \"passed\": true,\n      \"result\": false,\n      \"failure\": \"Could not play Kick. Check the sound file and try again.\"\n    },\n    {\n      \"kind\": \"corrupt\",\n      \"passed\": true,\n      \"result\": false,\n      \"failure\": \"Could not play Kick. Check the sound file and try again.\"\n    },\n    {\n      \"kind\": \"constructor\",\n      \"passed\": true,\n      \"result\": false,\n      \"failure\": \"Could not play Kick. Check the sound file and try again.\"\n    },\n    {\n      \"kind\": \"missing-contract\",\n      \"passed\": true,\n      \"result\": false,\n      \"failure\": \"Could not play Kick. Check the sound file and try again.\"\n    },\n    {\n      \"kind\": \"late-error\",\n      \"passed\": true,\n      \"result\": null,\n      \"failure\": \"Could not play Kick. Check the sound file and try again.\"\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "drum-keyboard.mjs",
+      "scriptSha256": "731675e87449870dbc868ccb142a0473fa86ac6c5d023a4313c84b8b34182113",
+      "started": "2026-10-07T11:47:55.920925+00:00",
+      "elapsedSeconds": 16.942631,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"cases\": [\n    {\n      \"width\": 375,\n      \"theme\": \"light\",\n      \"checks\": 45,\n      \"failures\": []\n    },\n    {\n      \"width\": 375,\n      \"theme\": \"dark\",\n      \"checks\": 45,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"light\",\n      \"checks\": 45,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"dark\",\n      \"checks\": 45,\n      \"failures\": []\n    }\n  ],\n  \"rebindings\": [\n    {\n      \"width\": 375,\n      \"elapsedMs\": 235.9436510000014,\n      \"passed\": true\n    },\n    {\n      \"width\": 1440,\n      \"elapsedMs\": 266.4740100000017,\n      \"passed\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "recorder-browser.mjs",
+      "scriptSha256": "6559ab90ebde8d50d16e93a2e9e713b0e249e9b77cb8940247f7164b65a935d2",
+      "started": "2026-10-07T11:48:12.863883+00:00",
+      "elapsedSeconds": 28.162523,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"cases\": [\n    {\n      \"width\": 375,\n      \"theme\": \"light\",\n      \"checks\": 23,\n      \"failures\": []\n    },\n    {\n      \"width\": 375,\n      \"theme\": \"dark\",\n      \"checks\": 23,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"light\",\n      \"checks\": 23,\n      \"failures\": []\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"dark\",\n      \"checks\": 23,\n      \"failures\": []\n    }\n  ],\n  \"integrationChecks\": [\n    {\n      \"name\": \"input timestamp/queue precedes a delayed 320ms play promise\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"failed audio remains an input-intent hit with separate failure feedback\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"UI retains exactly 256 input hits, auto-stops and ignores hit 257\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"populated capped list is bounded and keyboard-scrollable at 375px\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"capped-list axe and error handling\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"reload starts a fresh in-memory session\",\n      \"passed\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "countdown-browser.mjs",
+      "scriptSha256": "36e42edb19349141d925df07f2fb4e5079da3240e15cce4e804a529ce0dc798b",
+      "started": "2026-10-07T11:48:41.026877+00:00",
+      "elapsedSeconds": 20.188122,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"browser\": \"153.0.8010.0\",\n  \"cases\": [\n    {\n      \"width\": 375,\n      \"theme\": \"light\",\n      \"checks\": 17,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 375,\n      \"theme\": \"dark\",\n      \"checks\": 17,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"light\",\n      \"checks\": 17,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"dark\",\n      \"checks\": 17,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    }\n  ],\n  \"integrationChecks\": 21,\n  \"integrationFailures\": []\n}\n"
+    },
+    {
+      "script": "form-input.mjs",
+      "scriptSha256": "f2673919f3c640be089e67758f925c909313c4bc3a18c4b28aa49f2af0151260",
+      "started": "2026-10-07T11:49:01.215340+00:00",
+      "elapsedSeconds": 32.345848,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 130,\n  \"audits\": 16,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "form-native.mjs",
+      "scriptSha256": "0a212852a9fb3c19bf34f707e818178e3bae315a79b275697f2ff8c4c5306de6",
+      "started": "2026-10-07T11:49:33.561506+00:00",
+      "elapsedSeconds": 21.273411,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"cases\": [\n    {\n      \"width\": 375,\n      \"theme\": \"light\",\n      \"checks\": 47,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 375,\n      \"theme\": \"dark\",\n      \"checks\": 47,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"light\",\n      \"checks\": 47,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    },\n    {\n      \"width\": 1440,\n      \"theme\": \"dark\",\n      \"checks\": 47,\n      \"failures\": [],\n      \"axeViolations\": 0,\n      \"axeIncomplete\": 0\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "form-lifecycle.mjs",
+      "scriptSha256": "a8bcfecd0a140b2ea3ab883dc193661099b935d01d83c785e174ae7a834526aa",
+      "started": "2026-10-07T11:49:54.835368+00:00",
+      "elapsedSeconds": 0.52459,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 25,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "navigation.mjs",
+      "scriptSha256": "1a72b3bc1d4e12c294395463d805ceb892decfb43f640510a7ebd660a160e60c",
+      "started": "2026-10-07T11:49:55.360316+00:00",
+      "elapsedSeconds": 11.69223,
+      "exitCode": 0,
+      "console": "{\n  \"passed\": true,\n  \"checks\": 89,\n  \"audits\": 12,\n  \"failures\": []\n}\n"
+    },
+    {
+      "script": "portfolio-lighthouse.mjs",
+      "scriptSha256": "ef2adaf5e86fa69b90a84228fc1f785c08e3aefd97c91862b51215e5d693cf96",
+      "started": "2026-10-07T11:50:07.052870+00:00",
+      "elapsedSeconds": 16.340856,
+      "exitCode": 0,
+      "console": "Running after Lighthouse mobile with enforced response headers\n{\"phase\":\"after\",\"profile\":\"mobile\",\"scores\":{\"performance\":100,\"accessibility\":100,\"best-practices\":100,\"seo\":100},\"metrics\":{\"first-contentful-paint\":911.9459999999999,\"largest-contentful-paint\":911.9459999999999,\"total-blocking-time\":0,\"cumulative-layout-shift\":0,\"speed-index\":911.9459999999999}}\nRunning after Lighthouse desktop with enforced response headers\n{\"phase\":\"after\",\"profile\":\"desktop\",\"scores\":{\"performance\":100,\"accessibility\":100,\"best-practices\":100,\"seo\":100},\"metrics\":{\"first-contentful-paint\":245.723,\"largest-contentful-paint\":250.723,\"total-blocking-time\":0,\"cumulative-layout-shift\":0,\"speed-index\":245.723}}\n"
+    }
+  ],
+  "complete": true,
+  "passed": true
+}

@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-07T11:46:15.756867+00:00",
+  "startingHomeworkHead": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "mainHead": "712f4945faabd38e42f24bc50c7002baeadae47a",
+  "labBaseline": "8aa4676e8f691b39e1e599c7335b9e70d628a2b9",
+  "repository": "https://github.com/Aquarista01/24520039-DangHoaiAn-Lab1",
+  "checks": [
+    {
+      "name": "remote HW starting head is expected reviewed source",
+      "passed": true,
+      "detail": {
+        "refs/heads/hw-atomic-rebuild": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+        "refs/heads/main": "712f4945faabd38e42f24bc50c7002baeadae47a"
+      }
+    },
+    {
+      "name": "remote main retains authorized Lab cleanup commit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local review starts from same HW head",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: app.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: assets/favicon.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: assets/portrait.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: events.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/app.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/audio.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/keyboard.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/recorder.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/clap.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/crash.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/hat.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/kick.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/open-hat.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/rim.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/shaker.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/snare.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/sounds/tom.wav",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/drum-kit/styles.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/app.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/countdown.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/registration-service.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/registration.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/styles.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: homework/event-hub/validation.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: styles.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reviewed application unchanged: vercel.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: styles.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: app.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: events.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: assets/portrait.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "main Lab runtime equals original baseline: assets/favicon.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current main tree has no homework directory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "HW1 is on distinct branch; HW2/HW3 additionally have own directories",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cleanup preserved previous main history",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": true,
+  "applicationSha256": {
+    "app.js": "615fdecf0b4ecddad157e7908c1a0fa99adc36472db1e4c5ed81a7c12a0dbd52",
+    "assets/favicon.svg": "c26867bfce0370d6e4cba8e5ffa9919b963b47ddbef1e32c9eeb5eeb42c95a44",
+    "assets/portrait.svg": "014dd4cfababf899e1eafb34ae326b05761f19d1753a0906abb8c6ca170bb3ac",
+    "events.js": "4f4465de686e96ebf9f10d71ef9bfb41b6315741eba5023872ab9ecd5afbaff5",
+    "homework/drum-kit/app.js": "4d5caf8e54ff605977e6334254989fbee2f1fb169701764fd19b8dcd484d0a50",
+    "homework/drum-kit/audio.js": "0d1a86467f9b344870326e2375aa6800492668187d963fcce6e47348c19095e4",
+    "homework/drum-kit/index.html": "962419bb834d38c9a95b1c78eac860721542700b9b54504958d9c2083d67034d",
+    "homework/drum-kit/keyboard.js": "657e34b3ab297f2584d0f0a2d1999c3eaccb8dfbca27dd49976097a5202e9c9c",
+    "homework/drum-kit/recorder.js": "825473edb26161c033d8614437582d1537a15a5b5f5bab18c616b222b4ec0b31",
+    "homework/drum-kit/sounds/clap.wav": "54e02e3c27757f5bb9d803b134a8dad7b0ecd9335ab1084c5d336fcbde9b5a06",
+    "homework/drum-kit/sounds/crash.wav": "3bcd97ab015054dbb9761d8775fbf77cfa986e89b6bdea9aa4b93a8c9d320d9f",
+    "homework/drum-kit/sounds/hat.wav": "51dccefefaddac2f13e5476f7aca77b7a292272599e46a98a21c08c1831bb173",
+    "homework/drum-kit/sounds/kick.wav": "97c6e1efcea4d2ac9d20b29663953a7424fbbb512dc5a777bfee6f726382e715",
+    "homework/drum-kit/sounds/open-hat.wav": "d70f8ca1e4d3c1f71c8d5777e2ef31e5bc2e88055c85ad6b633d4ecd36b377fe",
+    "homework/drum-kit/sounds/rim.wav": "9cbf012b84f82693681c41760e9bb25f619a5ca78191f6789ac3768a08bd1449",
+    "homework/drum-kit/sounds/shaker.wav": "23712d8087fbaa94910f4842ac6e8579b793c450cf422186b4fc241c557775ff",
+    "homework/drum-kit/sounds/snare.wav": "85586498ecf63d07a5a2b5509bcd3c0e82dcccfd1572bf20a89dfd50ec6efe79",
+    "homework/drum-kit/sounds/tom.wav": "27a4690684a1c8259d2073c3eb91ce9e9cff0e96d224112e937eca914d0237ed",
+    "homework/drum-kit/styles.css": "4e8eeb3ea4d325e377fb56777aab72804c309b7da52b28ca3aee69a0702c9870",
+    "homework/event-hub/app.js": "6b83630998bd52bcad37cfcdbacd642aa7270099b7170699d5120d1c6227df12",
+    "homework/event-hub/countdown.js": "b119e0edc89bbd69107646f6aa9fbba19c43e9f9ac6890010d997c1c6dbe9afe",
+    "homework/event-hub/index.html": "b6756f9115d3d0d21855ff4eaa858fb69daf27d02a949c660474de78cb532457",
+    "homework/event-hub/registration-service.js": "b922ee835662eb62b499b078dcc9bf2b9f1415572887f97fd095e933f3b4c946",
+    "homework/event-hub/registration.js": "e0ef00f529f382cbe1f64d4e19e3ced94a68a081e0404c5e44ac2db20e746de1",
+    "homework/event-hub/styles.css": "de8cfbf1484dadf21de5549da4b29f30e2cae18c3f05c086e8db18cec2031cb7",
+    "homework/event-hub/validation.js": "0c9657af0c7c692a4102cc46e0db3387df39f8b912c735e2e3d67e306017f594",
+    "index.html": "ffaf9779d3bfcf726a83a43215801883318b296a6dad119198efc7fcee3488ca",
+    "styles.css": "73fe8007151306da1539ad9e9503de914a3ccd0b5b591c98b18aa9f2ce476d22",
+    "vercel.json": "eb7271af91dcafa268476f71c0406b03f4a5cdcf21461dc98d89c03d69735d6c"
+  },
+  "hosted": {
+    "preview": {
+      "url": "https://24520039-8lc11t8jq-aquarista.vercel.app/",
+      "status": 302,
+      "redirectOriginAndPath": "https://vercel.com/sso-api",
+      "applicationHeaderVerified": false,
+      "applicationCsp": null,
+      "bodySha256": null,
+      "matchesOriginalLabHtml": false,
+      "interpretation": "Redirect response is not an app response; authentication headers are not HW CSP evidence."
+    },
+    "production": {
+      "url": "https://24520039.vercel.app/",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "applicationHeaderVerified": false,
+      "applicationCsp": null,
+      "bodySha256": "e4eb65094d0badda7a1aa4135801c104c5533c78c4385f6e3a96bbe797df21e6",
+      "matchesOriginalLabHtml": true,
+      "interpretation": "Production is the original Lab; it is not the separate Homework deployment."
+    }
+  },
+  "studentReported": {
+    "time": "2026-10-07 18:38 Asia/Ho_Chi_Minh",
+    "message": "Ok rồi, bạn làm đi",
+    "scope": "General OK after the final Preview check request; no raw listening, recorder/form capture, Lighthouse or response-header artifact supplied."
+  },
+  "limits": [
+    "This review preserves real history; the earlier one-shot commit can still be inspected in history.",
+    "Local enforced CSP tests do not certify Preview response headers.",
+    "Hosted access observations do not certify all interactive app behavior."
+  ]
+}

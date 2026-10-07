@@ -1,0 +1,987 @@
+{
+  "date": "2026-10-07T11:44:02.299Z",
+  "tester": "Assistant: independent validator golden cases in Node",
+  "baseline": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "node": "v24.19.0",
+  "checks": [
+    {
+      "name": "Vietnamese NFC and collapsed name whitespace",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: O’Connor",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "O’Connor",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: Jean-Luc",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Jean-Luc",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: 李小龍",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "李小龍",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: محمد علي",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "محمد علي",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: D’Arcy",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "D’Arcy",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "ordinary Unicode name: Anne O'Brien",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Anne O'Brien",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "name removes non-whitespace controls",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "name line breaks separate words",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "An Nguyễn",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "meaningless/short name \"\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \" \\t\\n \"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"A\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"\\u0000A\\u0007\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"'--\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"12\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"😀😀\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "meaningless/short name \"́̀\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Enter a name with at least 2 characters and a letter."
+        }
+      }
+    },
+    {
+      "name": "name lower boundary 2",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "name upper boundary 80",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "name 81 rejected without truncation",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Keep your name within 80 characters."
+        }
+      }
+    },
+    {
+      "name": "name UTF-16 80 boundary",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "A😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀B",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "name UTF-16 81 rejected",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Keep your name within 80 characters."
+        }
+      }
+    },
+    {
+      "name": "email outer spaces trimmed, local case preserved",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An.Smith+Demo@Example.COM",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "single-label domain matches practical native grammar",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "an@localhost",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "email 120 boundary",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@a.co",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "email 121 rejected",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"missing-at\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an @example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example .com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an\\n@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"\\ran@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example.com\\n\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an\\u0000@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@-example.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example-.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@example..com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "bad email \"an@例子.com\"",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Enter a valid email address within 120 characters, without spaces or control characters."
+        }
+      }
+    },
+    {
+      "name": "interest allowlist design",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "design",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "interest allowlist code",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "code",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "interest allowlist both",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "unknown interest ",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Choose Design, Code, or Design and code."
+        }
+      }
+    },
+    {
+      "name": "unknown interest Design",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Choose Design, Code, or Design and code."
+        }
+      }
+    },
+    {
+      "name": "unknown interest both ",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Choose Design, Code, or Design and code."
+        }
+      }
+    },
+    {
+      "name": "unknown interest <script>",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Choose Design, Code, or Design and code."
+        }
+      }
+    },
+    {
+      "name": "unknown interest other",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Choose Design, Code, or Design and code."
+        }
+      }
+    },
+    {
+      "name": "optional empty note",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": ""
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "note NFC/line endings/control removal",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "Hoài\nAn\nOK"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "note internal tab and line break retained",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "A\tB\nC"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "note exact 300",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "note 301 rejected without truncation",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Keep your note within 300 characters."
+        }
+      }
+    },
+    {
+      "name": "note UTF-16 300",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "note UTF-16 302",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Keep your note within 300 characters."
+        }
+      }
+    },
+    {
+      "name": "literal markup <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "<img src=x onerror=\"window.__xss++\">"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "literal markup <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "<svg onload=\"window.__xss++\"></svg>"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "literal markup <script>window.__xss++</script>",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "<script>window.__xss++</script>"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "literal markup \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "\"><button onclick=\"window.__xss++\">Click</button>"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "literal markup <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "<a href=\"javascript:window.__xss++\">Link</a>"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "literal markup &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "data": {
+          "name": "Đặng Hoài An",
+          "email": "An@example.com",
+          "interest": "both",
+          "note": "&lt;img&gt; & \" ' < >"
+        },
+        "errors": {}
+      }
+    },
+    {
+      "name": "non-string name: null",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string name: 42",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string name: [object Object]",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string name: undefined",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "name": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string email: null",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string email: 42",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string email: [object Object]",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string email: undefined",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "email": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string interest: null",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string interest: 42",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string interest: [object Object]",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string interest: undefined",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "interest": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string note: null",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string note: 42",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string note: [object Object]",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "non-string note: undefined",
+      "passed": true,
+      "detail": {
+        "ok": false,
+        "data": null,
+        "errors": {
+          "note": "Please enter a text value."
+        }
+      }
+    },
+    {
+      "name": "invalid raw container null",
+      "passed": true
+    },
+    {
+      "name": "invalid raw container undefined",
+      "passed": true
+    },
+    {
+      "name": "invalid raw container 42",
+      "passed": true
+    },
+    {
+      "name": "invalid raw container [object Object]",
+      "passed": true
+    },
+    {
+      "name": "invalid raw container ",
+      "passed": true
+    },
+    {
+      "name": "result, snapshot and error map immutable",
+      "passed": true
+    },
+    {
+      "name": "attempted snapshot mutation rejected",
+      "passed": true
+    },
+    {
+      "name": "normalization is idempotent",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "policy": "UTF-16 lengths; NFC; trim; name whitespace collapse/control removal and at least one Unicode letter; note CRLF/CR to LF, trim and C0/C1 removal except LF/tab; practical ASCII HTML-email grammar, no full RFC claim; exact interest allowlist. Golden cases are not a claim of universal email/name acceptance."
+}

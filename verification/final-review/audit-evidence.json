@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-07T11:44:02.361067+00:00",
+  "tester": "Assistant: fresh read-only report/evidence/source integrity check",
+  "startingCommit": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "method": "Read original JSON, Git blobs/ancestry and report links; no browser/application suite rerun and no historical evidence modification.",
+  "checks": [
+    {
+      "name": "all report historical/source file links resolve",
+      "passed": true,
+      "detail": [
+        "DEVELOPMENT_LOG.md",
+        "TASK_DECOMPOSITION.md",
+        "verification/hw1-m1/README.md",
+        "verification/hw1-m1/after.json",
+        "verification/hw1-m1/before.json",
+        "verification/hw1-m2/README.md",
+        "verification/hw1-m2/after.json",
+        "verification/hw1-m2/before.json",
+        "verification/hw2-step4/README.md",
+        "verification/hw2-step4/before-feedback-fix.json",
+        "verification/hw2-step4/result.json",
+        "verification/hw3-step2/README.md",
+        "verification/hw3-step2/before-boundary-fix.json",
+        "verification/hw3-step2/model-result.json",
+        "verification/hw3-step2/result.json",
+        "verification/hw3-step5/README.md"
+      ]
+    },
+    {
+      "name": "report integrity-result link targets this checker output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cdc93ec: fix is ancestor of starting application HEAD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "42bd2f6: fix is ancestor of starting application HEAD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a17b2d0: fix is ancestor of starting application HEAD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "d976694: fix is ancestor of starting application HEAD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A1: 16 before configurations each identify four label mismatch nodes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A1: 16 after configurations have zero violations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A1: failing planning HTML matches original baseline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A1: old overriding labels changed in HTML fix",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A2: before exact 20 configurations/160 assertions/54 failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A2: after exact 20 configurations/160 assertions/0 failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A2: after has no uncaught page errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A2: old storage write precedes state update",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A2: fixed state update precedes guarded optional write",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A3: four Recording failures record exact theme ratios",
+      "passed": true,
+      "detail": [
+        {
+          "width": 375,
+          "theme": "light",
+          "state": "recording",
+          "ratio": 1.2
+        },
+        {
+          "width": 375,
+          "theme": "dark",
+          "state": "recording",
+          "ratio": 1.48
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "state": "recording",
+          "ratio": 1.2
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "state": "recording",
+          "ratio": 1.48
+        }
+      ]
+    },
+    {
+      "name": "A3: fix removes only background transition from feedback property",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A3: exact 92 native/6 integration assertions pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A3: 20 normal plus one capped-list audits have zero violations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A4: saved failing source SHA-256 matches actual bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A4: before 45/46 and failed overhead delay 950",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A4: after 47/47 includes zero-delay and one-second correction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A4: saved faulty scheduler differs from committed corrected formula",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A4: static parent has no countdown module (not misattributed)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verification/hw1-m1/before.json: historical dates preserved and before precedes after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verification/hw1-m2/before.json: historical dates preserved and before precedes after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verification/hw2-step4/before-feedback-fix.json: historical dates preserved and before precedes after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verification/hw3-step2/before-boundary-fix.json: historical dates preserved and before precedes after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current cited Step 5 results total 429 passing assertions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current cited Step 5 results contain 40 zero-violation/incomplete audits",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": true,
+  "evidenceSha256": {
+    "verification/hw1-m1/after.json": "3b12f0f6e71bccdc3e5dc56f19e24979c161a5e7594d5f46f4e7bee073794bc9",
+    "verification/hw1-m1/before.json": "6e5c114679531cf9fdfab5a7ff36936272dbc1ef0ad449819070b8d4771872cc",
+    "verification/hw1-m2/after.json": "2bb513fb03bedd20f88e5a05f18c23417d13a66c45306cc03a149aa16082770b",
+    "verification/hw1-m2/before.json": "cf685abe697e4170927794536428e7556ad48c55608e8cbfcaf3fbb3c7301ecb",
+    "verification/hw2-step4/before-feedback-fix.json": "43c7579c6905d5bf0f57ad82daef06a1e9e5ee2a2d897e63672166c91b122d91",
+    "verification/hw2-step4/result.json": "9709f338d295471f29e3dd7c4e7ce1019c78300024b2dec17a7d1cfd2ecced29",
+    "verification/hw3-step2/before-boundary-fix.json": "cc88db80bc6f97031af4471a6fbd59fb21abb14a9307f3af5d2a65f0087300c3",
+    "verification/hw3-step2/model-result.json": "bd5b949031a0277aaa4fb80dc483b75d00fa0067f8588764ae27ce6ce9b43075",
+    "verification/hw3-step2/result.json": "36fbe1d508e7c92d670f01a0f6413d803b5bc2699765843dddc38b72a6b44adb"
+  }
+}

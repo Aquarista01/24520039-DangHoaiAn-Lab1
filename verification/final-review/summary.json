@@ -1,0 +1,955 @@
+{
+  "date": "2026-10-07T11:52:32.587060+00:00",
+  "reviewedApplicationHead": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "passedLocalReview": true,
+  "assertions": [
+    {
+      "suite": "portfolio-keyboard",
+      "date": "2026-10-07T11:44:51.289Z",
+      "passingAssertions": 160,
+      "report": "portfolio-keyboard.json"
+    },
+    {
+      "suite": "portfolio-csp",
+      "date": "2026-10-07T11:45:20.836Z",
+      "passingAssertions": 108,
+      "report": "portfolio-csp.json"
+    },
+    {
+      "suite": "audio-browser",
+      "date": "2026-10-07T11:47:02.270Z",
+      "passingAssertions": 90,
+      "report": "audio-browser.json"
+    },
+    {
+      "suite": "drum-keyboard",
+      "date": "2026-10-07T11:48:12.815Z",
+      "passingAssertions": 182,
+      "report": "drum-keyboard.json"
+    },
+    {
+      "suite": "recorder-model",
+      "date": "2026-10-07T11:44:02.105Z",
+      "passingAssertions": 22,
+      "report": "recorder-model.json"
+    },
+    {
+      "suite": "recorder-browser",
+      "date": "2026-10-07T11:48:40.988Z",
+      "passingAssertions": 98,
+      "report": "recorder-browser.json"
+    },
+    {
+      "suite": "countdown-model",
+      "date": "2026-10-07T11:44:02.167Z",
+      "passingAssertions": 47,
+      "report": "countdown-model.json"
+    },
+    {
+      "suite": "countdown-browser",
+      "date": "2026-10-07T11:49:01.169Z",
+      "passingAssertions": 89,
+      "report": "countdown-browser.json"
+    },
+    {
+      "suite": "form-service",
+      "date": "2026-10-07T11:44:02.234Z",
+      "passingAssertions": 13,
+      "report": "form-service.json"
+    },
+    {
+      "suite": "form-validator",
+      "date": "2026-10-07T11:44:02.299Z",
+      "passingAssertions": 86,
+      "report": "form-validator.json"
+    },
+    {
+      "suite": "form-input",
+      "date": "2026-10-07T11:49:33.523Z",
+      "passingAssertions": 130,
+      "report": "form-input.json"
+    },
+    {
+      "suite": "form-native",
+      "date": "2026-10-07T11:49:54.805Z",
+      "passingAssertions": 188,
+      "report": "form-native.json"
+    },
+    {
+      "suite": "form-lifecycle",
+      "date": "2026-10-07T11:49:55.333Z",
+      "passingAssertions": 25,
+      "report": "form-lifecycle.json"
+    },
+    {
+      "suite": "navigation",
+      "date": "2026-10-07T11:50:07.018Z",
+      "passingAssertions": 89,
+      "report": "navigation.json"
+    },
+    {
+      "suite": "audit-evidence",
+      "date": "2026-10-07T11:44:02.361067+00:00",
+      "passingAssertions": 30,
+      "report": "audit-evidence.json"
+    },
+    {
+      "suite": "branches-and-host",
+      "date": "2026-10-07T11:46:15.756867+00:00",
+      "passingAssertions": 41,
+      "report": "branches-and-host.json"
+    }
+  ],
+  "passingAssertions": 1398,
+  "audioAssets": {
+    "passing": 9,
+    "report": "audio-assets.json"
+  },
+  "accessibility": {
+    "auditsWithStructuredResults": 92,
+    "violations": 0,
+    "auditsWithIncompleteItems": 20,
+    "incompleteItems": [
+      {
+        "index": 64,
+        "items": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\"theme-icon\" aria-hidden=\"true\">☾</span>",
+                "target": [
+                  "#theme-icon"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "target": [
+                  ".text-link > span[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                "target": [
+                  ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                "target": [
+                  ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 67,
+        "items": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "target": [
+                  ".text-link > span[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                "target": [
+                  ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                "target": [
+                  ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 70,
+        "items": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\"theme-icon\" aria-hidden=\"true\">☾</span>",
+                "target": [
+                  "#theme-icon"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "target": [
+                  ".text-link > span[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                "target": [
+                  ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                "target": [
+                  ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 73,
+        "items": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span aria-hidden=\"true\">→</span>",
+                "target": [
+                  ".text-link > span[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                "target": [
+                  ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "messageKey": "nonBmp"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element content contains only non-text characters"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                "target": [
+                  ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 76,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 77,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 78,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".state-symbol"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 79,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 80,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 81,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 82,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".state-symbol"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 83,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 84,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 85,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 86,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".state-symbol"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 87,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#theme-icon"
+              ],
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 88,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 89,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 90,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".state-symbol"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "index": 91,
+        "items": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".text-link > span[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+              ],
+              [
+                ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "additionalAudioAxeRuns": 4,
+    "additionalCappedRecorderAxeRuns": 1,
+    "note": "Audio browser suite records four zero-violation axe checks inside its assertions; recorder capped-list case records one more; they are not duplicated into this structured-audit count. Root glyph contrast requires manual review; zero violations is not full WCAG certification."
+  },
+  "portfolioContrasts": {
+    "checked": 158,
+    "failed": 0
+  },
+  "lighthouse": [
+    {
+      "profile": "mobile",
+      "fetchTime": "2026-10-07T11:50:09.605Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "rawScores": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": 911.9459999999999,
+        "largest-contentful-paint": 911.9459999999999,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 911.9459999999999
+      }
+    },
+    {
+      "profile": "desktop",
+      "fetchTime": "2026-10-07T11:50:15.540Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "rawScores": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": 245.723,
+        "largest-contentful-paint": 250.723,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 245.723
+      }
+    }
+  ],
+  "cspProbeGroups": {
+    "passing": 2,
+    "report": "portfolio-csp.json",
+    "note": "Intentional inline/external/frame violations are test outcomes; normal browsing remains error-free."
+  },
+  "sourceIntegrity": "All original milestone suite files retain their SHA-256; derived suites match preparation manifest. Application files unchanged from reviewedApplicationHead.",
+  "hosted": {
+    "preview": {
+      "url": "https://24520039-8lc11t8jq-aquarista.vercel.app/",
+      "status": 302,
+      "redirectOriginAndPath": "https://vercel.com/sso-api",
+      "applicationHeaderVerified": false,
+      "applicationCsp": null,
+      "bodySha256": null,
+      "matchesOriginalLabHtml": false,
+      "interpretation": "Redirect response is not an app response; authentication headers are not HW CSP evidence."
+    },
+    "production": {
+      "url": "https://24520039.vercel.app/",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "applicationHeaderVerified": false,
+      "applicationCsp": null,
+      "bodySha256": "e4eb65094d0badda7a1aa4135801c104c5533c78c4385f6e3a96bbe797df21e6",
+      "matchesOriginalLabHtml": true,
+      "interpretation": "Production is the original Lab; it is not the separate Homework deployment."
+    }
+  },
+  "studentReported": {
+    "time": "2026-10-07 18:38 Asia/Ho_Chi_Minh",
+    "message": "Ok rồi, bạn làm đi",
+    "scope": "General OK after the final Preview check request; no raw listening, recorder/form capture, Lighthouse or response-header artifact supplied."
+  },
+  "remaining": [
+    "WBS 11 publication/handoff is separate.",
+    "HW Preview redirects anonymous requests to Vercel SSO: app response headers and unauthenticated assessor access remain unverified.",
+    "Student shared AI conversation URL and required submission captures have not been supplied.",
+    "Real timed defense/BFCache/background suspension and laptop audio measurements are not claimed."
+  ],
+  "failedQaAttemptsPreserved": [
+    "run-manifest-initial.json",
+    "audio-suite-initial.mjs",
+    "run-manifest-audio-retry.json",
+    "keyboard-suite-initial.json",
+    "keyboard-suite-initial.mjs",
+    "host-probe-initial.json"
+  ]
+}
