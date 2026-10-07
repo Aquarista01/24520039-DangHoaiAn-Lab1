@@ -38,7 +38,7 @@ Run `python3 -m http.server 5500` from this directory; open `http://localhost:55
 
 This rebuild starts from the completed Lab 1 commit `8aa4676`. Branch: `hw-atomic-rebuild`. The existing main branch is preserved. The current implementation at main commit `66fe05a` can be used as a reference; this branch records its own work and checks.
 
-Planning was committed before application changes. M1 and M2 have their own implementation and fresh verification; M3-M4 are pending. Do not copy previous audit scores into the new verification log. Each implementation commit includes its task-specific evidence and log/status updates; these do not broaden its application code scope.
+Planning was committed before application changes. M1-M3 have isolated implementation and fresh local verification; M3 Vercel header verification and M4 are pending. Do not copy previous audit scores into the new verification log. Each implementation commit includes its task-specific evidence and log/status updates; these do not broaden its application code scope.
 
 | WBS | Milestone | Component contract | Allowed files | Acceptance checks | Planned atomic commit |
 | --- | --- | --- | --- | --- | --- |
@@ -64,5 +64,5 @@ Planning was committed before application changes. M1 and M2 have their own impl
 | Planning | Published as c62400a | Documentation-only commit; app files unchanged from baseline |
 | M1 | Implemented; automated checks passed | verification/hw1-m1/README.md, before.json, after.json; manual screen-reader/user checks pending |
 | M2 | Implemented; automated checks passed | verification/hw1-m2/README.md, before.json, after.json; 20 configurations / 160 checks; student/browser diversity checks pending |
-| M3 | Not started | Pending |
+| M3 | Implemented; local checks passed; Vercel header check pending protected Preview access | verification/hw1-m3/README.md, before.json, after.json; 8 configurations / 108 checks plus enforcement probes |
 | M4 | Not started | Pending |

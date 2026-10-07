@@ -1,0 +1,1571 @@
+{
+  "date": "2026-10-07T06:21:28.875Z",
+  "phase": "after",
+  "baselineCommit": "42bd2f6",
+  "tester": "Assistant automated browser checks; no student checks recorded",
+  "browser": "153.0.8010.0",
+  "headerPolicy": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "delivery": "header-and-meta",
+      "url": "http://127.0.0.1:5500/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "actual HTTP response enforces the configured CSP including frame-ancestors",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "delivery": "meta-only",
+      "url": "http://127.0.0.1:5501/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": null,
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "delivery": "header-and-meta",
+      "url": "http://127.0.0.1:5500/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "actual HTTP response enforces the configured CSP including frame-ancestors",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "delivery": "meta-only",
+      "url": "http://127.0.0.1:5501/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": null,
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "delivery": "header-and-meta",
+      "url": "http://127.0.0.1:5500/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "actual HTTP response enforces the configured CSP including frame-ancestors",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "delivery": "meta-only",
+      "url": "http://127.0.0.1:5501/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": null,
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "delivery": "header-and-meta",
+      "url": "http://127.0.0.1:5500/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "actual HTTP response enforces the configured CSP including frame-ancestors",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5500/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5500/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5500/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5500/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5500/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5500/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5500/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5500/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "delivery": "meta-only",
+      "url": "http://127.0.0.1:5501/",
+      "checks": [
+        {
+          "name": "no inline scripts/styles/event handlers",
+          "passed": true,
+          "actual": {
+            "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+            "inlineScripts": 0,
+            "inlineStyles": 0,
+            "inlineHandlers": []
+          }
+        },
+        {
+          "name": "CSP meta exists before stylesheet/script/image resources",
+          "passed": true,
+          "actual": true
+        },
+        {
+          "name": "meta omits frame-ancestors and matches supported header directives",
+          "passed": true,
+          "actual": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          "name": "policies restrict scripts/styles to self without unsafe-inline/eval",
+          "passed": true,
+          "actual": [
+            "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+          ]
+        },
+        {
+          "name": "local image and external stylesheet load",
+          "passed": true,
+          "actual": {
+            "image": {
+              "loaded": true,
+              "width": 580
+            },
+            "styles": {
+              "display": "grid",
+              "button": "999px"
+            }
+          }
+        },
+        {
+          "name": "local ES modules initialize event hub",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "theme event listener works under enforced CSP",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "all demo state actions and Retry work",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "form listener works under enforced CSP",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "reload initializes modules normally",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "zero application CSP violations",
+          "passed": true,
+          "actual": []
+        },
+        {
+          "name": "all observed requests are same-origin",
+          "passed": true,
+          "actual": [
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:5501/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:5501/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:5501/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:5501/events.js",
+              "type": "script"
+            }
+          ]
+        },
+        {
+          "name": "zero application page/console errors",
+          "passed": true,
+          "actual": {
+            "page": [],
+            "console": []
+          }
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:5501/styles.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:5501/app.js",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:5501/assets/portrait.svg",
+          "type": "image"
+        },
+        {
+          "url": "http://127.0.0.1:5501/events.js",
+          "type": "script"
+        }
+      ],
+      "responseCSP": null,
+      "structure": {
+        "meta": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'",
+        "inlineScripts": 0,
+        "inlineStyles": 0,
+        "inlineHandlers": []
+      },
+      "violations": []
+    }
+  ],
+  "securityProbes": {
+    "inlineExecuted": false,
+    "handlerExecuted": false,
+    "inlineStyleApplied": false,
+    "violations": [
+      {
+        "directive": "script-src-elem",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "script-src-elem",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "script-src-attr",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "script-src-attr",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "style-src-elem",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "style-src-elem",
+        "blockedURI": "inline",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "script-src-elem",
+        "blockedURI": "https://example.com/csp-probe.js",
+        "disposition": "enforce"
+      },
+      {
+        "directive": "script-src-elem",
+        "blockedURI": "https://example.com/csp-probe.js",
+        "disposition": "enforce"
+      }
+    ],
+    "passed": true
+  },
+  "frameProbe": {
+    "errors": [
+      "Framing 'http://127.0.0.1:5500/' violates the following Content Security Policy directive: \"frame-ancestors 'none'\". The request has been blocked.\n"
+    ],
+    "protectedContentPresent": 0,
+    "passed": true
+  },
+  "passed": true,
+  "failures": []
+}

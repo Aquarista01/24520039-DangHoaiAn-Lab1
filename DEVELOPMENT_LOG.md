@@ -65,3 +65,24 @@ Evidence: verification/hw1-m2/README.md, audit.mjs, before.json, after.json. JSO
 Not performed: student laptop or screen-reader checks, Firefox/Safari checks, M3 enforced CSP or M4 Lighthouse. No new focus trap was found in the tested baseline flows; the code fix addresses optional storage disrupting keyboard-operable controls.
 
 This turn ends after the isolated M2 commit. Next work package: M3 in a later turn.
+
+## Task 6.3 - HW1 M3: enforce strict CSP
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Baseline: 42bd2f6. Scope: CSP declaration, enforcement and deployment headers.
+
+Actions actually performed by the assistant:
+- Re-read rules and the M3 contract; confirmed remote rebuild at 42bd2f6, main at 66fe05a.
+- Inspected HTML, JS, CSS and SVG resource references. Baseline had external local scripts/styles and no inline handlers; it lacked CSP meta and Vercel response-header configuration.
+- Consulted official Vercel header configuration and W3C CSP documentation. Kept frame-ancestors exclusively in the HTTP response header.
+- Ran a fresh baseline audit: 8 theme/viewport/delivery configurations. Inline script, handler and style probes executed; framing was allowed because CSP was absent.
+- Added one CSP meta to index.html and a same-origin enforced CSP header in vercel.json. No app.js/styles.css/events.js changes.
+- Ran after audit: 108/108 normal application checks passed; no normal CSP violations or page/console errors; modules, SVG, CSS, theme, event actions, Retry, form and reload worked under enforced policy.
+- Separate injection and framing probes were blocked as expected. Their deliberate violations are recorded separately from normal application results.
+- Improved the audit recorder to retain violations from both the initial document and reload rather than recording only the final document. Baseline had no CSP or violations, so this does not change its findings.
+- Verified the actual M2 Preview deployment via GitHub deployment metadata. An unauthenticated GET returned HTTP 302 to Vercel SSO; no portfolio CSP response could be inspected. M3 remote header verification remains pending access to the protected Preview, rather than being marked passed from local evidence.
+- Inspected the diff; retained M1/M2 source and evidence unchanged.
+
+Evidence: verification/hw1-m3/README.md, audit.mjs, before.json, after.json. Actual test timestamps and tester are in the JSON.
+
+Not performed: authenticated M3 Preview header verification, student-run browser checks, M4 Lighthouse. Main/production and Preview protection settings are preserved. This turn does not implement M4.
