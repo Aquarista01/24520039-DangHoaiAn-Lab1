@@ -4,7 +4,17 @@ const themeToggle = document.querySelector('#theme-toggle');
 const themeIcon = document.querySelector('#theme-icon');
 const contactForm = document.querySelector('#contact-form');
 const formFeedback = document.querySelector('#form-feedback');
-const storedTheme = localStorage.getItem('theme');
+const storedTheme = readStoredTheme();
+
+function readStoredTheme() {
+  try {
+    const value = localStorage.getItem('theme');
+    return value === 'light' || value === 'dark' ? value : null;
+  } catch {
+    // Theme persistence is optional; blocked storage must not stop initialization.
+    return null;
+  }
+}
 
 function updateThemeButton(isDark) {
   themeToggle.setAttribute('aria-pressed', String(isDark));
@@ -20,8 +30,12 @@ updateThemeButton((storedTheme || (matchMedia('(prefers-color-scheme: dark)').ma
 themeToggle.addEventListener('click', () => {
   const nextTheme = themeToggle.getAttribute('aria-pressed') === 'true' ? 'light' : 'dark';
   document.documentElement.dataset.theme = nextTheme;
-  localStorage.setItem('theme', nextTheme);
   updateThemeButton(nextTheme === 'dark');
+  try {
+    localStorage.setItem('theme', nextTheme);
+  } catch {
+    // Keep the current theme and accessible button state when saving is unavailable.
+  }
 });
 
 contactForm.addEventListener('submit', (event) => {

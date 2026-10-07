@@ -1,0 +1,2696 @@
+{
+  "date": "2026-10-07T06:13:03.539Z",
+  "phase": "before",
+  "baselineCommit": "cdc93ec",
+  "tester": "Assistant automated browser checks; no student checks recorded",
+  "url": "http://127.0.0.1:5500/",
+  "browser": "153.0.8010.0",
+  "playwright": "1.62.1",
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "normal",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Tab reaches all 22 targets in document order with visible focus",
+          "passed": true,
+          "actual": [
+            {
+              "selector": ".skip-link",
+              "matches": true,
+              "element": "Skip to content",
+              "visible": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true,
+              "element": "HA.",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true,
+              "element": "About",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Skills",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Projects",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true,
+              "element": "Event hub",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Contact",
+              "visible": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true,
+              "element": "theme-toggle",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Explore my work ↗",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Get in touch →",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true,
+              "element": "Try demo ↗",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true,
+              "element": "Loading",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true,
+              "element": "Live data",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true,
+              "element": "Empty",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true,
+              "element": "Error",
+              "visible": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true,
+              "element": "contact-name",
+              "visible": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true,
+              "element": "contact-email",
+              "visible": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true,
+              "element": "contact-message",
+              "visible": true
+            },
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true,
+              "element": "Preview submission ↗",
+              "visible": true
+            },
+            {
+              "selector": ".site-footer a",
+              "matches": true,
+              "element": "Back to top ↑",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "name": "Shift+Tab returns from footer to skip link without a trap",
+          "passed": true,
+          "actual": [
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true
+            },
+            {
+              "selector": ".skip-link",
+              "matches": true
+            }
+          ]
+        },
+        {
+          "name": "repeated skip-link activation focuses main and bypasses header",
+          "passed": true,
+          "actual": [
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            },
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            }
+          ]
+        },
+        {
+          "name": "Contact navigation activates with Enter",
+          "passed": true,
+          "actual": "#contact"
+        },
+        {
+          "name": "contact anchor leads into first form field",
+          "passed": true,
+          "actual": "contact-name"
+        },
+        {
+          "name": "valid contact form submits with keyboard and local feedback",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "Tab exits form to footer",
+          "passed": true,
+          "actual": "Back to top ↑"
+        },
+        {
+          "name": "Error and Retry reachable using only keyboard",
+          "passed": true,
+          "actual": "Retry loading"
+        },
+        {
+          "name": "Retry activates with Enter and loads events",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "valid theme persists on reload when storage is available",
+          "passed": true,
+          "actual": {
+            "stored": "dark",
+            "value": "dark",
+            "pressed": "true"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage access denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage read denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage write denied",
+            "M2 test: storage write denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "invalid-stored-theme",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "normal",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Tab reaches all 22 targets in document order with visible focus",
+          "passed": true,
+          "actual": [
+            {
+              "selector": ".skip-link",
+              "matches": true,
+              "element": "Skip to content",
+              "visible": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true,
+              "element": "HA.",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true,
+              "element": "About",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Skills",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Projects",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true,
+              "element": "Event hub",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Contact",
+              "visible": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true,
+              "element": "theme-toggle",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Explore my work ↗",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Get in touch →",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true,
+              "element": "Try demo ↗",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true,
+              "element": "Loading",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true,
+              "element": "Live data",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true,
+              "element": "Empty",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true,
+              "element": "Error",
+              "visible": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true,
+              "element": "contact-name",
+              "visible": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true,
+              "element": "contact-email",
+              "visible": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true,
+              "element": "contact-message",
+              "visible": true
+            },
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true,
+              "element": "Preview submission ↗",
+              "visible": true
+            },
+            {
+              "selector": ".site-footer a",
+              "matches": true,
+              "element": "Back to top ↑",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "name": "Shift+Tab returns from footer to skip link without a trap",
+          "passed": true,
+          "actual": [
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true
+            },
+            {
+              "selector": ".skip-link",
+              "matches": true
+            }
+          ]
+        },
+        {
+          "name": "repeated skip-link activation focuses main and bypasses header",
+          "passed": true,
+          "actual": [
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            },
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            }
+          ]
+        },
+        {
+          "name": "Contact navigation activates with Enter",
+          "passed": true,
+          "actual": "#contact"
+        },
+        {
+          "name": "contact anchor leads into first form field",
+          "passed": true,
+          "actual": "contact-name"
+        },
+        {
+          "name": "valid contact form submits with keyboard and local feedback",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "Tab exits form to footer",
+          "passed": true,
+          "actual": "Back to top ↑"
+        },
+        {
+          "name": "Error and Retry reachable using only keyboard",
+          "passed": true,
+          "actual": "Retry loading"
+        },
+        {
+          "name": "Retry activates with Enter and loads events",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "valid theme persists on reload when storage is available",
+          "passed": true,
+          "actual": {
+            "stored": "light",
+            "value": "light",
+            "pressed": "false"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage access denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage read denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "true",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage write denied",
+            "M2 test: storage write denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 375
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "normal",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Tab reaches all 22 targets in document order with visible focus",
+          "passed": true,
+          "actual": [
+            {
+              "selector": ".skip-link",
+              "matches": true,
+              "element": "Skip to content",
+              "visible": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true,
+              "element": "HA.",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true,
+              "element": "About",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Skills",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Projects",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true,
+              "element": "Event hub",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Contact",
+              "visible": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true,
+              "element": "theme-toggle",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Explore my work ↗",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Get in touch →",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true,
+              "element": "Try demo ↗",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true,
+              "element": "Loading",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true,
+              "element": "Live data",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true,
+              "element": "Empty",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true,
+              "element": "Error",
+              "visible": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true,
+              "element": "contact-name",
+              "visible": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true,
+              "element": "contact-email",
+              "visible": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true,
+              "element": "contact-message",
+              "visible": true
+            },
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true,
+              "element": "Preview submission ↗",
+              "visible": true
+            },
+            {
+              "selector": ".site-footer a",
+              "matches": true,
+              "element": "Back to top ↑",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "name": "Shift+Tab returns from footer to skip link without a trap",
+          "passed": true,
+          "actual": [
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true
+            },
+            {
+              "selector": ".skip-link",
+              "matches": true
+            }
+          ]
+        },
+        {
+          "name": "repeated skip-link activation focuses main and bypasses header",
+          "passed": true,
+          "actual": [
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            },
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            }
+          ]
+        },
+        {
+          "name": "Contact navigation activates with Enter",
+          "passed": true,
+          "actual": "#contact"
+        },
+        {
+          "name": "contact anchor leads into first form field",
+          "passed": true,
+          "actual": "contact-name"
+        },
+        {
+          "name": "valid contact form submits with keyboard and local feedback",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "Tab exits form to footer",
+          "passed": true,
+          "actual": "Back to top ↑"
+        },
+        {
+          "name": "Error and Retry reachable using only keyboard",
+          "passed": true,
+          "actual": "Retry loading"
+        },
+        {
+          "name": "Retry activates with Enter and loads events",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "valid theme persists on reload when storage is available",
+          "passed": true,
+          "actual": {
+            "stored": "dark",
+            "value": "dark",
+            "pressed": "true"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage access denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage read denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage write denied",
+            "M2 test: storage write denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "invalid-stored-theme",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "normal",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Tab reaches all 22 targets in document order with visible focus",
+          "passed": true,
+          "actual": [
+            {
+              "selector": ".skip-link",
+              "matches": true,
+              "element": "Skip to content",
+              "visible": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true,
+              "element": "HA.",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true,
+              "element": "About",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Skills",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Projects",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true,
+              "element": "Event hub",
+              "visible": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Contact",
+              "visible": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true,
+              "element": "theme-toggle",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true,
+              "element": "Explore my work ↗",
+              "visible": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true,
+              "element": "Get in touch →",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true,
+              "element": "Explore ↗",
+              "visible": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true,
+              "element": "Try demo ↗",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true,
+              "element": "Loading",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true,
+              "element": "Live data",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true,
+              "element": "Empty",
+              "visible": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true,
+              "element": "Error",
+              "visible": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true,
+              "element": "contact-name",
+              "visible": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true,
+              "element": "contact-email",
+              "visible": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true,
+              "element": "contact-message",
+              "visible": true
+            },
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true,
+              "element": "Preview submission ↗",
+              "visible": true
+            },
+            {
+              "selector": ".site-footer a",
+              "matches": true,
+              "element": "Back to top ↑",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "name": "Shift+Tab returns from footer to skip link without a trap",
+          "passed": true,
+          "actual": [
+            {
+              "selector": "#contact-form button[type=\"submit\"]",
+              "matches": true
+            },
+            {
+              "selector": "#contact-message",
+              "matches": true
+            },
+            {
+              "selector": "#contact-email",
+              "matches": true
+            },
+            {
+              "selector": "#contact-name",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"error\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"empty\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"ready\"]",
+              "matches": true
+            },
+            {
+              "selector": "button[data-state=\"loading\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".card-footer a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".hero-actions a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": "#theme-toggle",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#contact\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#events\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#projects\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#skills\"]",
+              "matches": true
+            },
+            {
+              "selector": ".nav-links a[href=\"#about\"]",
+              "matches": true
+            },
+            {
+              "selector": ".brand",
+              "matches": true
+            },
+            {
+              "selector": ".skip-link",
+              "matches": true
+            }
+          ]
+        },
+        {
+          "name": "repeated skip-link activation focuses main and bypasses header",
+          "passed": true,
+          "actual": [
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            },
+            {
+              "mainFocused": true,
+              "nextLink": true,
+              "hash": "#main"
+            }
+          ]
+        },
+        {
+          "name": "Contact navigation activates with Enter",
+          "passed": true,
+          "actual": "#contact"
+        },
+        {
+          "name": "contact anchor leads into first form field",
+          "passed": true,
+          "actual": "contact-name"
+        },
+        {
+          "name": "valid contact form submits with keyboard and local feedback",
+          "passed": true,
+          "actual": "Form validated. This local demo did not send a message."
+        },
+        {
+          "name": "Tab exits form to footer",
+          "passed": true,
+          "actual": "Back to top ↑"
+        },
+        {
+          "name": "Error and Retry reachable using only keyboard",
+          "passed": true,
+          "actual": "Retry loading"
+        },
+        {
+          "name": "Retry activates with Enter and loads events",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": true,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": true,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "valid theme persists on reload when storage is available",
+          "passed": true,
+          "actual": {
+            "stored": "light",
+            "value": "light",
+            "pressed": "false"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage access denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": false,
+          "actual": ""
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "name": "Switch to dark theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage read denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": true,
+          "actual": "true"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "true",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": false,
+          "actual": [
+            "M2 test: storage write denied",
+            "M2 test: storage write denied"
+          ]
+        }
+      ],
+      "errors": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "checks": [
+        {
+          "name": "initial theme matches system fallback",
+          "passed": false,
+          "actual": "false"
+        },
+        {
+          "name": "event hub initializes despite optional storage failures",
+          "passed": true,
+          "actual": "3 upcoming events\nWorkshop\nBuild for everyone\n\n12 October 2026\nUIT Campus\n\nCommunity\nDesign systems lab\n\n19 October 2026\nOnline\n\nMeetup\nWeb foundations meetup\n\n28 October 2026\nHo Chi Minh City"
+        },
+        {
+          "name": "Enter toggles theme, updates accessibility state and retains focus",
+          "passed": false,
+          "actual": {
+            "value": "dark",
+            "pressed": "true",
+            "name": "Switch to light theme",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "Space toggles back even when storage is unavailable",
+          "passed": false,
+          "actual": {
+            "value": "light",
+            "pressed": "false",
+            "focused": "theme-toggle"
+          }
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true,
+          "actual": 1440
+        },
+        {
+          "name": "zero uncaught page errors",
+          "passed": true,
+          "actual": []
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "passed": false,
+  "failures": [
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "true",
+        "name": "Switch to light theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "true",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "true",
+        "name": "Switch to light theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-property-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-read-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "storage-write-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-property-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage access denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "event hub initializes despite optional storage failures",
+      "passed": false,
+      "actual": ""
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "name": "Switch to dark theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-read-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage read denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "true",
+        "name": "Switch to light theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "true",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "storage-write-denied",
+      "name": "zero uncaught page errors",
+      "passed": false,
+      "actual": [
+        "M2 test: storage write denied",
+        "M2 test: storage write denied"
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "initial theme matches system fallback",
+      "passed": false,
+      "actual": "false"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "Enter toggles theme, updates accessibility state and retains focus",
+      "passed": false,
+      "actual": {
+        "value": "dark",
+        "pressed": "true",
+        "name": "Switch to light theme",
+        "focused": "theme-toggle"
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "invalid-stored-theme",
+      "name": "Space toggles back even when storage is unavailable",
+      "passed": false,
+      "actual": {
+        "value": "light",
+        "pressed": "false",
+        "focused": "theme-toggle"
+      }
+    }
+  ]
+}

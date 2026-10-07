@@ -43,3 +43,25 @@ Evidence: `verification/hw1-m1/README.md`, `before.json`, `after.json`, `audit.m
 Not performed: student-run checks, manual screen-reader evaluation, M2 keyboard/storage checks, enforced CSP checks, Lighthouse checks. Do not infer a full WCAG certification from automated results.
 
 The implementation is isolated to M1. The next work package is M2 in a later chat turn.
+
+## Task 6.2 - HW1 M2: keyboard trap prevention
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Baseline: cdc93ec. Scope: keyboard/focus behavior and optional theme storage.
+
+Actions actually performed by the assistant:
+- Re-read project rules and the M2 contract; confirmed the remote rebuild branch at cdc93ec and main at 66fe05a.
+- Inspected app.js, skip-link markup and focus styles.
+- Recovered a truncated local Chromium executable from the existing compressed browser package. The first browser launch failed before any application audit ran; no test pass was recorded from that attempt.
+- Built a browser check for 375/1440px, light/dark and five storage conditions, including real Tab/Shift+Tab/Enter/Space input.
+- Corrected a test-navigation mistake: the second skip activation initially pressed Shift+Tab only twice, which reached Contact instead of the skip link. Corrected it to return through all eight header targets, then ran the before audit again on unchanged application source.
+- The corrected baseline audit passed normal keyboard navigation and repeated skip-link activation. It reproduced blocked storage initialization failures, failed theme accessibility updates after denied writes, and invalid stored theme mismatch on dark systems.
+- Modified only app.js in application source: validate and guard storage reads; update the theme button before optional persistence; catch write failures.
+- Ran the after audit: 20 configurations, 160 checks passed, zero uncaught page errors, no horizontal overflow. Normal contexts verified all 22 Tab targets, reverse navigation, repeated skip activation, keyboard form submission, Retry and valid theme persistence.
+- Inspected the application diff and recorded source-specific before/after evidence. Kept M1 reports unchanged.
+
+Evidence: verification/hw1-m2/README.md, audit.mjs, before.json, after.json. JSON timestamps come from the real runs; the checks were performed by the assistant, not the student.
+
+Not performed: student laptop or screen-reader checks, Firefox/Safari checks, M3 enforced CSP or M4 Lighthouse. No new focus trap was found in the tested baseline flows; the code fix addresses optional storage disrupting keyboard-operable controls.
+
+This turn ends after the isolated M2 commit. Next work package: M3 in a later turn.
