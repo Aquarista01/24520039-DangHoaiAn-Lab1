@@ -1,4 +1,5 @@
 import {submitRegistration} from './registration-service.js';
+import {validateRegistration} from './validation.js';
 
 export function createRegistration({form, summary, service = submitRegistration}) {
   const fields = [...form.querySelectorAll('input, select, textarea')];
@@ -9,6 +10,7 @@ export function createRegistration({form, summary, service = submitRegistration}
   const stateLabel = form.querySelector('#form-state');
   const interestLabels = new Map([...form.elements.interest.options].map(option => [option.value, option.textContent]));
   const receiptFields = ['name', 'email', 'interest', 'note'];
+  const readInput = () => Object.fromEntries(receiptFields.map(key => [key, form.elements[key].value]));
   let state = 'idle';
   let disposed = false;
   let paused = false;
@@ -39,6 +41,7 @@ export function createRegistration({form, summary, service = submitRegistration}
     for (const key of receiptFields) summary.querySelector(`#receipt-${key}`).textContent = '';
   };
   const clearError = field => {
+    field.setCustomValidity('');
     field.removeAttribute('aria-invalid');
     const error = form.querySelector(`#${field.name}-error`);
     if (error) error.textContent = '';
@@ -72,7 +75,13 @@ export function createRegistration({form, summary, service = submitRegistration}
     status.textContent = 'Please check the required fields and their messages.';
   };
   const onInput = event => {
-    if (event.target.validity?.valid) clearError(event.target);
+    const field = event.target;
+    if (!fields.includes(field)) return;
+    field.setCustomValidity('');
+    const message = validateRegistration(readInput()).errors[field.name];
+    if (message && field.getAttribute('aria-invalid') === 'true') field.setCustomValidity(message);
+    if (field.validity.valid) clearError(field);
+    else if (field.getAttribute('aria-invalid') === 'true') onInvalid({target: field});
     if (state === 'idle' && fields.every(field => field.validity.valid)) status.textContent = 'Ready to try a local demo registration.';
   };
   const submit = async event => {
@@ -83,8 +92,23 @@ export function createRegistration({form, summary, service = submitRegistration}
     const token = ++generation;
     let attempt = null;
     try {
+      for (const field of fields) field.setCustomValidity('');
       if (!form.reportValidity() || token !== generation || disposed || paused) return false;
-      const payload = Object.freeze(Object.fromEntries(receiptFields.map(key => [key, form.elements[key].value])));
+      const validated = validateRegistration(readInput());
+      if (!validated.ok) {
+        for (const key of receiptFields) {
+          const field = form.elements[key];
+          clearError(field);
+          if (validated.errors[key]) {
+            field.setCustomValidity(validated.errors[key]);
+            onInvalid({target: field});
+          }
+        }
+        form.reportValidity();
+        form.elements[receiptFields.find(key => validated.errors[key])].focus();
+        return false;
+      }
+      const payload = validated.data;
       const simulateError = form.querySelector('#simulate-error').checked;
       for (const field of fields) clearError(field);
       clearReceipt();
@@ -100,7 +124,7 @@ export function createRegistration({form, summary, service = submitRegistration}
       if (!isCurrent(attempt) || receipt === cancelled) return false;
       if (performance.now() >= attempt.deadline) { expire(attempt); return false; }
       for (const key of receiptFields) {
-        const value = key === 'interest' ? interestLabels.get(receipt[key]) ?? receipt[key] : receipt[key];
+        const value = key === 'interest' ? interestLabels.get(payload[key]) ?? payload[key] : payload[key];
         summary.querySelector(`#receipt-${key}`).textContent = value || (key === 'note' ? 'No note added.' : '');
       }
       summary.hidden = false;

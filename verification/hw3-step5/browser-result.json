@@ -1,0 +1,1937 @@
+{
+  "date": "2026-10-07T10:31:52.479Z",
+  "tester": "Assistant: native input/hostile string browser checks plus isolated controller bypass checks",
+  "baseline": "eb06711b20a2e2bbf922fb970dc6dbba612ea34d",
+  "browser": "153.0.8010.0",
+  "method": "Normal four-configuration cases use actual app and 600ms transport under strict repository CSP. Hostile strings typed and submitted, receipt DOM and triggered click/mouseover outcomes inspected. Separate bypass fixture removes native constraints/reportValidity and injects immediate altered receipt; it is explicitly synthetic.",
+  "checks": [
+    {
+      "name": "375-light: whitespace name stays Idle and focuses custom error",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "375-light: custom error is described and native-validity linked",
+      "passed": true
+    },
+    {
+      "name": "375-light: name-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-light: correction clears custom validity/error immediately",
+      "passed": true
+    },
+    {
+      "name": "375-light: keyboard retry succeeds after corrected custom error",
+      "passed": true
+    },
+    {
+      "name": "375-light: real service renders exact normalized snapshot",
+      "passed": true,
+      "detail": {
+        "receipt": [
+          "Đặng Hoài An",
+          "An.Smith+Demo@Example.COM",
+          "Design and code",
+          "Hoài\nAn"
+        ],
+        "elapsedMs": 653
+      }
+    },
+    {
+      "name": "375-light: snapshot leaves entered values available until Reset",
+      "passed": true
+    },
+    {
+      "name": "375-light: normalized-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<img src=x onerror=\"window.__xss++\">"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<img src=x onerror=\"window.__xss++\">"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<svg onload=\"window.__xss++\"></svg>"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<svg onload=\"window.__xss++\"></svg>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally <script>window.__xss++</script>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<script>window.__xss++</script>"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog <script>window.__xss++</script>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<script>window.__xss++</script>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "\"><button onclick=\"window.__xss++\">Click</button>"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "\"><button onclick=\"window.__xss++\">Click</button>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<a href=\"javascript:window.__xss++\">Link</a>"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<a href=\"javascript:window.__xss++\">Link</a>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: hostile name/note displayed literally &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "&lt;img&gt; & \" ' < >"
+      ]
+    },
+    {
+      "name": "375-light: no markup events/execution/dialog &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "&lt;img&gt; & \" ' < >"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-light: literal-hostile-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-light: programmatic 301 note rejected with first-error focus",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-note",
+        "errors": [
+          "",
+          "",
+          "",
+          "Keep your note within 300 characters."
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "375-light: note-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-light: correction to 300 clears note error",
+      "passed": true
+    },
+    {
+      "name": "375-light: real exact 300 note accepted without truncation",
+      "passed": true
+    },
+    {
+      "name": "375-light: native and JS exact name 80/email 120 succeed",
+      "passed": true
+    },
+    {
+      "name": "375-light: normalized/hostile/boundary form has no overflow",
+      "passed": true
+    },
+    {
+      "name": "375-light: no navigation or registration requests",
+      "passed": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/styles.css",
+          "method": "GET",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/app.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/countdown.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration-service.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/validation.js",
+          "method": "GET",
+          "type": "script"
+        }
+      ]
+    },
+    {
+      "name": "375-light: no persistence/runtime/CSP/unhandled/dialog",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "dialogs": []
+      }
+    },
+    {
+      "name": "375-dark: whitespace name stays Idle and focuses custom error",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "375-dark: custom error is described and native-validity linked",
+      "passed": true
+    },
+    {
+      "name": "375-dark: name-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-dark: correction clears custom validity/error immediately",
+      "passed": true
+    },
+    {
+      "name": "375-dark: keyboard retry succeeds after corrected custom error",
+      "passed": true
+    },
+    {
+      "name": "375-dark: real service renders exact normalized snapshot",
+      "passed": true,
+      "detail": {
+        "receipt": [
+          "Đặng Hoài An",
+          "An.Smith+Demo@Example.COM",
+          "Design and code",
+          "Hoài\nAn"
+        ],
+        "elapsedMs": 648
+      }
+    },
+    {
+      "name": "375-dark: snapshot leaves entered values available until Reset",
+      "passed": true
+    },
+    {
+      "name": "375-dark: normalized-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<img src=x onerror=\"window.__xss++\">"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<img src=x onerror=\"window.__xss++\">"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<svg onload=\"window.__xss++\"></svg>"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<svg onload=\"window.__xss++\"></svg>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally <script>window.__xss++</script>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<script>window.__xss++</script>"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog <script>window.__xss++</script>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<script>window.__xss++</script>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "\"><button onclick=\"window.__xss++\">Click</button>"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "\"><button onclick=\"window.__xss++\">Click</button>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<a href=\"javascript:window.__xss++\">Link</a>"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<a href=\"javascript:window.__xss++\">Link</a>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: hostile name/note displayed literally &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "&lt;img&gt; & \" ' < >"
+      ]
+    },
+    {
+      "name": "375-dark: no markup events/execution/dialog &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "&lt;img&gt; & \" ' < >"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "375-dark: literal-hostile-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-dark: programmatic 301 note rejected with first-error focus",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-note",
+        "errors": [
+          "",
+          "",
+          "",
+          "Keep your note within 300 characters."
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "375-dark: note-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "375-dark: correction to 300 clears note error",
+      "passed": true
+    },
+    {
+      "name": "375-dark: real exact 300 note accepted without truncation",
+      "passed": true
+    },
+    {
+      "name": "375-dark: native and JS exact name 80/email 120 succeed",
+      "passed": true
+    },
+    {
+      "name": "375-dark: normalized/hostile/boundary form has no overflow",
+      "passed": true
+    },
+    {
+      "name": "375-dark: no navigation or registration requests",
+      "passed": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/styles.css",
+          "method": "GET",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/app.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/countdown.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration-service.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/validation.js",
+          "method": "GET",
+          "type": "script"
+        }
+      ]
+    },
+    {
+      "name": "375-dark: no persistence/runtime/CSP/unhandled/dialog",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "dialogs": []
+      }
+    },
+    {
+      "name": "1440-light: whitespace name stays Idle and focuses custom error",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "1440-light: custom error is described and native-validity linked",
+      "passed": true
+    },
+    {
+      "name": "1440-light: name-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-light: correction clears custom validity/error immediately",
+      "passed": true
+    },
+    {
+      "name": "1440-light: keyboard retry succeeds after corrected custom error",
+      "passed": true
+    },
+    {
+      "name": "1440-light: real service renders exact normalized snapshot",
+      "passed": true,
+      "detail": {
+        "receipt": [
+          "Đặng Hoài An",
+          "An.Smith+Demo@Example.COM",
+          "Design and code",
+          "Hoài\nAn"
+        ],
+        "elapsedMs": 652
+      }
+    },
+    {
+      "name": "1440-light: snapshot leaves entered values available until Reset",
+      "passed": true
+    },
+    {
+      "name": "1440-light: normalized-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<img src=x onerror=\"window.__xss++\">"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<img src=x onerror=\"window.__xss++\">"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<svg onload=\"window.__xss++\"></svg>"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<svg onload=\"window.__xss++\"></svg>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally <script>window.__xss++</script>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<script>window.__xss++</script>"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog <script>window.__xss++</script>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<script>window.__xss++</script>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "\"><button onclick=\"window.__xss++\">Click</button>"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "\"><button onclick=\"window.__xss++\">Click</button>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<a href=\"javascript:window.__xss++\">Link</a>"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<a href=\"javascript:window.__xss++\">Link</a>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: hostile name/note displayed literally &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "&lt;img&gt; & \" ' < >"
+      ]
+    },
+    {
+      "name": "1440-light: no markup events/execution/dialog &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "&lt;img&gt; & \" ' < >"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-light: literal-hostile-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-light: programmatic 301 note rejected with first-error focus",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-note",
+        "errors": [
+          "",
+          "",
+          "",
+          "Keep your note within 300 characters."
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "1440-light: note-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-light: correction to 300 clears note error",
+      "passed": true
+    },
+    {
+      "name": "1440-light: real exact 300 note accepted without truncation",
+      "passed": true
+    },
+    {
+      "name": "1440-light: native and JS exact name 80/email 120 succeed",
+      "passed": true
+    },
+    {
+      "name": "1440-light: normalized/hostile/boundary form has no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440-light: no navigation or registration requests",
+      "passed": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/styles.css",
+          "method": "GET",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/app.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/countdown.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration-service.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/validation.js",
+          "method": "GET",
+          "type": "script"
+        }
+      ]
+    },
+    {
+      "name": "1440-light: no persistence/runtime/CSP/unhandled/dialog",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "dialogs": []
+      }
+    },
+    {
+      "name": "1440-dark: whitespace name stays Idle and focuses custom error",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "1440-dark: custom error is described and native-validity linked",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: name-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: correction clears custom validity/error immediately",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: keyboard retry succeeds after corrected custom error",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: real service renders exact normalized snapshot",
+      "passed": true,
+      "detail": {
+        "receipt": [
+          "Đặng Hoài An",
+          "An.Smith+Demo@Example.COM",
+          "Design and code",
+          "Hoài\nAn"
+        ],
+        "elapsedMs": 648
+      }
+    },
+    {
+      "name": "1440-dark: snapshot leaves entered values available until Reset",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: normalized-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<img src=x onerror=\"window.__xss++\">"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog <img src=x onerror=\"window.__xss++\">",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<img src=x onerror=\"window.__xss++\">"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<svg onload=\"window.__xss++\"></svg>"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog <svg onload=\"window.__xss++\"></svg>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<svg onload=\"window.__xss++\"></svg>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally <script>window.__xss++</script>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<script>window.__xss++</script>"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog <script>window.__xss++</script>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<script>window.__xss++</script>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "\"><button onclick=\"window.__xss++\">Click</button>"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog \"><button onclick=\"window.__xss++\">Click</button>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "\"><button onclick=\"window.__xss++\">Click</button>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "<a href=\"javascript:window.__xss++\">Link</a>"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog <a href=\"javascript:window.__xss++\">Link</a>",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "<a href=\"javascript:window.__xss++\">Link</a>"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: hostile name/note displayed literally &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": [
+        "<svg onload=\"window.__xss++\">An</svg>",
+        "An@example.com",
+        "Design and code",
+        "&lt;img&gt; & \" ' < >"
+      ]
+    },
+    {
+      "name": "1440-dark: no markup events/execution/dialog &lt;img&gt; & \" ' < >",
+      "passed": true,
+      "detail": {
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": [
+          "<svg onload=\"window.__xss++\">An</svg>",
+          "An@example.com",
+          "Design and code",
+          "&lt;img&gt; & \" ' < >"
+        ],
+        "hidden": false,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Demo registration complete. Nothing was sent or saved. Use Reset to try another."
+      }
+    },
+    {
+      "name": "1440-dark: literal-hostile-success axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: programmatic 301 note rejected with first-error focus",
+      "passed": true,
+      "detail": {
+        "state": "idle",
+        "focus": "attendee-note",
+        "errors": [
+          "",
+          "",
+          "",
+          "Keep your note within 300 characters."
+        ],
+        "receipt": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "hidden": true,
+        "unsafeNodes": 0,
+        "descendants": 0,
+        "overflow": false,
+        "xss": 0,
+        "unhandled": [],
+        "csp": [],
+        "status": "Please check the required fields and their messages."
+      }
+    },
+    {
+      "name": "1440-dark: note-error axe zero violations/incomplete",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: correction to 300 clears note error",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: real exact 300 note accepted without truncation",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: native and JS exact name 80/email 120 succeed",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: normalized/hostile/boundary form has no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440-dark: no navigation or registration requests",
+      "passed": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/",
+          "method": "GET",
+          "type": "document"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/styles.css",
+          "method": "GET",
+          "type": "stylesheet"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/app.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/countdown.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/registration-service.js",
+          "method": "GET",
+          "type": "script"
+        },
+        {
+          "url": "http://127.0.0.1:33779/homework/event-hub/validation.js",
+          "method": "GET",
+          "type": "script"
+        }
+      ]
+    },
+    {
+      "name": "1440-dark: no persistence/runtime/CSP/unhandled/dialog",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "dialogs": []
+      }
+    },
+    {
+      "name": "native bypass: empty name cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: spaces name cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: one-letter name cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: punctuation name cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Enter a name with at least 2 characters and a letter.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: 81 name cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-name",
+        "errors": [
+          "Keep your name within 80 characters.",
+          "",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: blank email cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-email",
+        "errors": [
+          "",
+          "Enter a valid email address within 120 characters, without spaces or control characters.",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: malformed email cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-email",
+        "errors": [
+          "",
+          "Enter a valid email address within 120 characters, without spaces or control characters.",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: email newline cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-email",
+        "errors": [
+          "",
+          "Enter a valid email address within 120 characters, without spaces or control characters.",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: 121 email cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-email",
+        "errors": [
+          "",
+          "Enter a valid email address within 120 characters, without spaces or control characters.",
+          "",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: tampered option cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-interest",
+        "errors": [
+          "",
+          "",
+          "Choose Design, Code, or Design and code.",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: empty interest cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-interest",
+        "errors": [
+          "",
+          "",
+          "Choose Design, Code, or Design and code.",
+          ""
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "native bypass: 301 note cannot reach transport",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "calls": 0,
+        "state": "idle",
+        "focus": "attendee-note",
+        "errors": [
+          "",
+          "",
+          "",
+          "Keep your note within 300 characters."
+        ],
+        "receipt": ""
+      }
+    },
+    {
+      "name": "bypassed correction succeeds with immutable normalized payload",
+      "passed": true,
+      "detail": {
+        "payload": {
+          "name": "Đặng Hoài An",
+          "email": "An@Example.COM",
+          "interest": "both",
+          "note": "Hi\nthere"
+        },
+        "frozen": true
+      }
+    },
+    {
+      "name": "render uses validated snapshot despite changed transport response",
+      "passed": true,
+      "detail": {
+        "result": true,
+        "calls": 1,
+        "state": "success",
+        "focus": "reset-btn",
+        "errors": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "receipt": "Đặng Hoài An"
+      }
+    }
+  ],
+  "audits": [
+    {
+      "viewport": "375-light",
+      "state": "name-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-light",
+      "state": "normalized-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-light",
+      "state": "literal-hostile-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-light",
+      "state": "note-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-dark",
+      "state": "name-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-dark",
+      "state": "normalized-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-dark",
+      "state": "literal-hostile-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "375-dark",
+      "state": "note-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-light",
+      "state": "name-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-light",
+      "state": "normalized-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-light",
+      "state": "literal-hostile-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-light",
+      "state": "note-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-dark",
+      "state": "name-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-dark",
+      "state": "normalized-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-dark",
+      "state": "literal-hostile-success",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "viewport": "1440-dark",
+      "state": "note-error",
+      "version": "4.14.0",
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "This is not a full WCAG certification, full RFC email check, actual BFCache or student/hosted Preview check."
+  ]
+}

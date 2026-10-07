@@ -349,3 +349,24 @@ Actions actually performed by the assistant:
 Evidence: verification/hw3-step4/README.md, instrument.mjs, audit.mjs, result.json, contract-check.mjs and contract-result.json. Native elapsed waits are separate from virtual deadline advances. Lifecycle persisted events are synthetic; no actual BFCache/background suspension, student Preview, hosted-header or live-defense result is claimed.
 
 This turn ends after the isolated 8.4 commit. Next is 8.5: independent input normalization/bounds and hostile-payload DOM checks. AI_FAILURE_AUDIT.md and final integration/merge remain later packages; main/production and real history are preserved.
+
+## Task 8.5 - HW3 normalization and safe input/output
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: eb06711. Application scope: independent validation.js and registration.js only.
+
+Student-provided update:
+- At 17:26 the user reported OK after the Step 4 Cancel/retry Preview request, without a raw form capture. Recorded as student-reported; historical test reports are unchanged.
+
+Actions actually performed by the assistant:
+- Read project rules and the 8.5 contract before editing; started from a clean eb06711 worktree.
+- Added independent string-only validation with frozen result/error map/data snapshot; invalid data is null. Normalized Unicode NFC, trimmed inputs, collapsed name whitespace, removed specified name/note C0/C1 characters, retained Vietnamese/ordinary Unicode names and apostrophes/hyphens, normalized note line endings, enforced UTF-16 name 2–80/email 1–120/note 0–300 without truncation and exact design/code/both interest allowlist. Notes preserve literal angle brackets, quotes and entity-looking text. Email rejects raw controls/internal whitespace, preserves case and uses documented practical native-compatible grammar; no full RFC or deliverability claim.
+- Kept native validation first and added independent controller validation before any service attempt. Existing linked error nodes/custom validity report useful errors and focus the first invalid field even when reportValidity is bypassed; corrections and Reset clear errors. The immutable normalized snapshot is sent and rendered with textContent. Transport receipt substitutions do not change displayed submitted values. Typed values stay intact until Reset.
+- Ran 86/86 Node validator golden cases with exact expected values, Unicode names, meaningless/control/type inputs, boundaries, email/interest failures, hostile plain text, immutability and idempotence.
+- Ran fresh Chromium 153.0.8010.0 under repository strict CSP: 130/130 input/output/bypass assertions passed. Four native 375/1440px light/dark configurations use the real 600ms local service. Typed/submitted img/svg/script/event-handler/javascript-URL strings displayed literally, made no receipt child/executable nodes, triggered no execution/dialog/event outcome and no unexpected network/CSP/unhandled error. A separately labeled injected fixture bypassed required/length/type/native-report checks and proved 12 invalid payloads never reach transport; corrected frozen normalization and rendered snapshot passed.
+- Reran the prior UI/lifecycle suites against this implementation, saving fresh reports here: 188/188 native UI regression and 25/25 virtual/injected controller regression checks passed. All 40 axe 4.14.0 audits (16 input/output + 24 existing form states) had zero violations/incomplete items. Cancellation, concurrency, old responses, deadlines, Reset and synthetic lifecycle recovery still work. Virtual clocks/injected transports and synthetic lifecycle events are explicitly distinct from native service elapsed waits and actual BFCache.
+- Checked keyboard correction/retry and field-error focus, exact native/JS length boundaries, no overflow/navigation/persistence/runtime failure and countdown independence. Visually inspected mobile light and desktop dark literal receipt screenshots; text wraps without overlap/clipping. Reviewed the focused application diff and checked whitespace.
+
+Evidence: verification/hw3-step5/README.md, validation-check.mjs/validation-result.json, browser-fixture.mjs, browser-check.mjs/browser-result.json, regression.mjs/regression-result.json and lifecycle-check.mjs/lifecycle-result.json. Scripts explicitly reuse the earlier QA-only observer and derive regression cases; prior evidence is unchanged. All results are assistant local checks, not a student capture, hosted-header test, full accessibility certification or live defense. No failed application run was observed in this package; invalid input/fault injection is not counted as an AI defect.
+
+This is the fifth isolated HW3 application package. The mandatory AI_FAILURE_AUDIT.md remains the next separate 8.6 package; final portfolio integration, cross-homework review and merge remain later work. Main/production and real Git history are preserved.

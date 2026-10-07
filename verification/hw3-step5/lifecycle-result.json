@@ -1,0 +1,382 @@
+{
+  "date": "2026-10-07T10:31:31.910Z",
+  "tester": "Assistant: production controller lifecycle contract in Chromium",
+  "baseline": "eb06711b20a2e2bbf922fb970dc6dbba612ea34d",
+  "browser": "153.0.8010.0",
+  "method": "Playwright virtual timers/performance clock; actual controller with explicitly injected non-cooperating/deferred/throwing/rejected/reentrant transports and synthetic events. Deadline elapsed guards additionally use a labeled performance.now offset before any timer dispatch.",
+  "checks": [
+    {
+      "name": "initial fixture owns six listeners and no request timer",
+      "passed": true
+    },
+    {
+      "name": "lock precedes native invalid callbacks and rejects reentrant validation",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "nested": [
+          false,
+          false,
+          false
+        ],
+        "requests": 0,
+        "state": "idle",
+        "status": "Please check the required fields and their messages.",
+        "name": "",
+        "receipt": "",
+        "hidden": true,
+        "timers": 0,
+        "listeners": 6,
+        "submitDisabled": false,
+        "resetDisabled": false,
+        "cancelDisabled": true,
+        "focus": "attendee-name"
+      }
+    },
+    {
+      "name": "DOM-enabled Submit/false dataset/requestSubmit/direct entry cannot bypass lock",
+      "passed": true,
+      "detail": {
+        "duplicate": false,
+        "requests": 1,
+        "frozen": true,
+        "state": "submitting",
+        "status": "Trying your local demo registration…",
+        "name": "Original A",
+        "receipt": "",
+        "hidden": true,
+        "timers": 1,
+        "listeners": 6,
+        "submitDisabled": false,
+        "resetDisabled": true,
+        "cancelDisabled": false,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "pending payload and simulation are immutable entry-time values",
+      "passed": true,
+      "detail": {
+        "name": "Original A",
+        "simulation": false
+      }
+    },
+    {
+      "name": "Cancel settles an uncooperative old submit and permits immediate new attempt",
+      "passed": true,
+      "detail": {
+        "cancel": true,
+        "oldResult": false,
+        "oldAborted": true,
+        "state": "submitting",
+        "status": "Trying your local demo registration…",
+        "name": "New B",
+        "receipt": "",
+        "hidden": true,
+        "timers": 1,
+        "listeners": 6,
+        "submitDisabled": true,
+        "resetDisabled": true,
+        "cancelDisabled": false,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "old success/finally cannot overwrite B or release its lock/deadline",
+      "passed": true,
+      "detail": {
+        "duplicate": false,
+        "state": "submitting",
+        "status": "Trying your local demo registration…",
+        "name": "New B",
+        "receipt": "",
+        "hidden": true,
+        "timers": 1,
+        "listeners": 6,
+        "submitDisabled": true,
+        "resetDisabled": true,
+        "cancelDisabled": false,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "current B succeeds and releases owned deadline",
+      "passed": true
+    },
+    {
+      "name": "late old rejection cannot overwrite later D success",
+      "passed": true
+    },
+    {
+      "name": "programmatic pending Reset aborts/clears old session and protects new F",
+      "passed": true,
+      "detail": {
+        "reset": true,
+        "cleared": {
+          "state": "idle",
+          "status": "Ready to try a local demo registration.",
+          "name": "",
+          "receipt": "",
+          "hidden": true,
+          "timers": 0,
+          "listeners": 6,
+          "submitDisabled": false,
+          "resetDisabled": false,
+          "cancelDisabled": true,
+          "focus": "attendee-name"
+        },
+        "oldAborted": true,
+        "state": "submitting",
+        "status": "Trying your local demo registration…",
+        "name": "New F",
+        "receipt": "",
+        "hidden": true,
+        "timers": 1,
+        "listeners": 6,
+        "submitDisabled": true,
+        "resetDisabled": true,
+        "cancelDisabled": false,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "synchronous throw releases lock/timer and leaves retryable Error",
+      "passed": true
+    },
+    {
+      "name": "rejected service releases lock/timer without losing input",
+      "passed": true
+    },
+    {
+      "name": "service synchronous re-entry rejects while original succeeds",
+      "passed": true
+    },
+    {
+      "name": "4999ms deadline boundary is still Submitting with one deadline",
+      "passed": true
+    },
+    {
+      "name": "exact 5000ms aborts, settles and gives preserved retryable timeout Error",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "aborted": true,
+        "state": "error",
+        "status": "Registration took too long. Your entries are kept. Try again.",
+        "name": "Timeout",
+        "receipt": "",
+        "hidden": true,
+        "timers": 0,
+        "listeners": 6,
+        "submitDisabled": false,
+        "resetDisabled": false,
+        "cancelDisabled": true,
+        "focus": "submit-btn"
+      }
+    },
+    {
+      "name": "late rejection after timeout cannot change timeout message",
+      "passed": true
+    },
+    {
+      "name": "stale timeout callback cannot abort the new retry",
+      "passed": true
+    },
+    {
+      "name": "current response at 4999ms succeeds and clears timeout",
+      "passed": true
+    },
+    {
+      "name": "elapsed-deadline guard rejects success even before delayed timer dispatch",
+      "passed": true
+    },
+    {
+      "name": "elapsed-deadline guard gives timeout for late failure too",
+      "passed": true
+    },
+    {
+      "name": "suspend is idempotent and aborts/settles/detaches pending session",
+      "passed": true,
+      "detail": {
+        "first": true,
+        "second": false,
+        "result": false,
+        "aborted": true,
+        "state": "error",
+        "status": "Registration was interrupted. Your entries are kept. Try again.",
+        "name": "Interrupted",
+        "receipt": "",
+        "hidden": true,
+        "timers": 0,
+        "listeners": 0,
+        "submitDisabled": true,
+        "resetDisabled": true,
+        "cancelDisabled": true,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "resume is idempotent and restores exactly six listeners/Retry",
+      "passed": true,
+      "detail": {
+        "first": true,
+        "second": false,
+        "state": "error",
+        "status": "Registration was interrupted. Your entries are kept. Try again.",
+        "name": "Interrupted",
+        "receipt": "",
+        "hidden": true,
+        "timers": 0,
+        "listeners": 6,
+        "submitDisabled": false,
+        "resetDisabled": false,
+        "cancelDisabled": true,
+        "focus": "submit-btn"
+      }
+    },
+    {
+      "name": "restored page retries safely despite old page rejection",
+      "passed": true
+    },
+    {
+      "name": "50 suspend/resume cycles preserve success receipt without leaked listeners",
+      "passed": true,
+      "detail": [
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0,
+        6
+      ]
+    },
+    {
+      "name": "dispose aborts/settles once and disables all entry paths with no timers/listeners",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "aborted": true,
+        "reset": false,
+        "cancel": false,
+        "submit": false,
+        "resume": false,
+        "state": "idle",
+        "status": "This demo form is inactive.",
+        "name": "Disposed",
+        "receipt": "",
+        "hidden": true,
+        "timers": 0,
+        "listeners": 0,
+        "submitDisabled": true,
+        "resetDisabled": true,
+        "cancelDisabled": true,
+        "focus": "cancel-btn"
+      }
+    },
+    {
+      "name": "late disposed failure creates no receipt, page error or unhandled rejection",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Virtual 4999/5000ms advances are not real elapsed waits.",
+    "No actual BFCache, student or hosted-header check is claimed.",
+    "Input/hostile-payload checks are recorded separately."
+  ]
+}
