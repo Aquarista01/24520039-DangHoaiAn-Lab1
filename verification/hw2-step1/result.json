@@ -1,0 +1,2142 @@
+{
+  "date": "2026-10-07T06:57:01.255Z",
+  "tester": "Assistant: fresh local Chromium checks for HW2 Step 1",
+  "browser": "153.0.8010.0",
+  "baseline": "005894016998bb031877b873cd3318e2a61a752c",
+  "delivery": "Local HTTP with the repository CSP response header and page CSP meta",
+  "sourceChecks": {
+    "noScriptTag": true,
+    "files": [
+      "index.html",
+      "styles.css"
+    ]
+  },
+  "limits": [
+    "Static HTML/CSS only; no audio, keyboard adapter or recorder behavior exists yet.",
+    "data-sound paths are contract values; WAV files will be supplied in Step 2.",
+    "Local assistant verification; not a student or Vercel preview check."
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "one h1, zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application script or inline handler/style",
+          "passed": true
+        },
+        {
+          "name": "application contains only HTML and CSS",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "nine unique lowercase bindings",
+          "passed": true
+        },
+        {
+          "name": "pad a: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "a",
+            "sound": "sounds/kick.wav",
+            "kbd": "A",
+            "name": "Kick",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/kick.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad s: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "s",
+            "sound": "sounds/snare.wav",
+            "kbd": "S",
+            "name": "Snare",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/snare.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad d: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "d",
+            "sound": "sounds/clap.wav",
+            "kbd": "D",
+            "name": "Clap",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/clap.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad f: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "f",
+            "sound": "sounds/hat.wav",
+            "kbd": "F",
+            "name": "Closed hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/hat.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad g: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "g",
+            "sound": "sounds/open-hat.wav",
+            "kbd": "G",
+            "name": "Open hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/open-hat.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad h: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "h",
+            "sound": "sounds/tom.wav",
+            "kbd": "H",
+            "name": "Low tom",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/tom.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad j: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "j",
+            "sound": "sounds/rim.wav",
+            "kbd": "J",
+            "name": "Rimshot",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/rim.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad k: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "k",
+            "sound": "sounds/shaker.wav",
+            "kbd": "K",
+            "name": "Shaker",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/shaker.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad l: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "l",
+            "sound": "sounds/crash.wav",
+            "kbd": "L",
+            "name": "Crash",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/crash.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "all pad targets at least 44 by 44 CSS pixels",
+          "passed": true
+        },
+        {
+          "name": "unique DOM IDs",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet loaded",
+          "passed": true
+        },
+        {
+          "name": "recorder initial DOM contract",
+          "passed": true,
+          "detail": {
+            "recordDisabled": false,
+            "stopDisabled": true,
+            "replayDisabled": true,
+            "clearDisabled": true,
+            "state": "Idle",
+            "count": "0",
+            "listTag": "OL",
+            "hits": 0,
+            "live": "polite"
+          }
+        },
+        {
+          "name": "polite pad feedback exists",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "text, control borders and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 11.313198150709475
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.12878678077061
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 5.054797135617625
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 5.562694630464072
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 10.040824115362177
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 3.998837989152834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 4.825367753719852
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 6.745510317001495
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 6.129616758382746
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "native help opens with Enter without overflow",
+          "passed": true
+        },
+        {
+          "name": "native help closes with Space",
+          "passed": true
+        },
+        {
+          "name": "reduced motion disables pad transition",
+          "passed": true
+        },
+        {
+          "name": "normal page has no errors, failed requests, audio requests or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "audioRequests": [],
+            "violations": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "skip-link",
+          "summary-name",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "one h1, zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application script or inline handler/style",
+          "passed": true
+        },
+        {
+          "name": "application contains only HTML and CSS",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "nine unique lowercase bindings",
+          "passed": true
+        },
+        {
+          "name": "pad a: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "a",
+            "sound": "sounds/kick.wav",
+            "kbd": "A",
+            "name": "Kick",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/kick.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad s: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "s",
+            "sound": "sounds/snare.wav",
+            "kbd": "S",
+            "name": "Snare",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/snare.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad d: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "d",
+            "sound": "sounds/clap.wav",
+            "kbd": "D",
+            "name": "Clap",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/clap.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad f: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "f",
+            "sound": "sounds/hat.wav",
+            "kbd": "F",
+            "name": "Closed hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/hat.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad g: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "g",
+            "sound": "sounds/open-hat.wav",
+            "kbd": "G",
+            "name": "Open hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/open-hat.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad h: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "h",
+            "sound": "sounds/tom.wav",
+            "kbd": "H",
+            "name": "Low tom",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/tom.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad j: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "j",
+            "sound": "sounds/rim.wav",
+            "kbd": "J",
+            "name": "Rimshot",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/rim.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad k: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "k",
+            "sound": "sounds/shaker.wav",
+            "kbd": "K",
+            "name": "Shaker",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/shaker.wav",
+            "width": 96.078125,
+            "height": 108
+          }
+        },
+        {
+          "name": "pad l: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "l",
+            "sound": "sounds/crash.wav",
+            "kbd": "L",
+            "name": "Crash",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/crash.wav",
+            "width": 96.0625,
+            "height": 108
+          }
+        },
+        {
+          "name": "all pad targets at least 44 by 44 CSS pixels",
+          "passed": true
+        },
+        {
+          "name": "unique DOM IDs",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet loaded",
+          "passed": true
+        },
+        {
+          "name": "recorder initial DOM contract",
+          "passed": true,
+          "detail": {
+            "recordDisabled": false,
+            "stopDisabled": true,
+            "replayDisabled": true,
+            "clearDisabled": true,
+            "state": "Idle",
+            "count": "0",
+            "listTag": "OL",
+            "hits": 0,
+            "live": "polite"
+          }
+        },
+        {
+          "name": "polite pad feedback exists",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "text, control borders and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 9.635371201771774
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 9.344425354315504
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 8.868273414632833
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.2344511450340985
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 8.601647010085834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 4.446710000857772
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 5.409076018445249
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 7.857382301804358
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 9.631886811970405
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "native help opens with Enter without overflow",
+          "passed": true
+        },
+        {
+          "name": "native help closes with Space",
+          "passed": true
+        },
+        {
+          "name": "reduced motion disables pad transition",
+          "passed": true
+        },
+        {
+          "name": "normal page has no errors, failed requests, audio requests or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "audioRequests": [],
+            "violations": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "skip-link",
+          "summary-name",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "one h1, zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application script or inline handler/style",
+          "passed": true
+        },
+        {
+          "name": "application contains only HTML and CSS",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "nine unique lowercase bindings",
+          "passed": true
+        },
+        {
+          "name": "pad a: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "a",
+            "sound": "sounds/kick.wav",
+            "kbd": "A",
+            "name": "Kick",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/kick.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad s: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "s",
+            "sound": "sounds/snare.wav",
+            "kbd": "S",
+            "name": "Snare",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/snare.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad d: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "d",
+            "sound": "sounds/clap.wav",
+            "kbd": "D",
+            "name": "Clap",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/clap.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad f: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "f",
+            "sound": "sounds/hat.wav",
+            "kbd": "F",
+            "name": "Closed hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/hat.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad g: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "g",
+            "sound": "sounds/open-hat.wav",
+            "kbd": "G",
+            "name": "Open hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/open-hat.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad h: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "h",
+            "sound": "sounds/tom.wav",
+            "kbd": "H",
+            "name": "Low tom",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/tom.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad j: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "j",
+            "sound": "sounds/rim.wav",
+            "kbd": "J",
+            "name": "Rimshot",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/rim.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad k: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "k",
+            "sound": "sounds/shaker.wav",
+            "kbd": "K",
+            "name": "Shaker",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/shaker.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad l: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "l",
+            "sound": "sounds/crash.wav",
+            "kbd": "L",
+            "name": "Crash",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/crash.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "all pad targets at least 44 by 44 CSS pixels",
+          "passed": true
+        },
+        {
+          "name": "unique DOM IDs",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet loaded",
+          "passed": true
+        },
+        {
+          "name": "recorder initial DOM contract",
+          "passed": true,
+          "detail": {
+            "recordDisabled": false,
+            "stopDisabled": true,
+            "replayDisabled": true,
+            "clearDisabled": true,
+            "state": "Idle",
+            "count": "0",
+            "listTag": "OL",
+            "hits": 0,
+            "live": "polite"
+          }
+        },
+        {
+          "name": "polite pad feedback exists",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "text, control borders and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 11.313198150709475
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.12878678077061
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 5.054797135617625
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 5.562694630464072
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 10.040824115362177
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 3.998837989152834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 4.825367753719852
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 6.745510317001495
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 6.129616758382746
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "native help opens with Enter without overflow",
+          "passed": true
+        },
+        {
+          "name": "native help closes with Space",
+          "passed": true
+        },
+        {
+          "name": "reduced motion disables pad transition",
+          "passed": true
+        },
+        {
+          "name": "normal page has no errors, failed requests, audio requests or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "audioRequests": [],
+            "violations": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "skip-link",
+          "summary-name",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "one h1, zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application script or inline handler/style",
+          "passed": true
+        },
+        {
+          "name": "application contains only HTML and CSS",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "nine unique lowercase bindings",
+          "passed": true
+        },
+        {
+          "name": "pad a: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "a",
+            "sound": "sounds/kick.wav",
+            "kbd": "A",
+            "name": "Kick",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/kick.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad s: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "s",
+            "sound": "sounds/snare.wav",
+            "kbd": "S",
+            "name": "Snare",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/snare.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad d: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "d",
+            "sound": "sounds/clap.wav",
+            "kbd": "D",
+            "name": "Clap",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/clap.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad f: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "f",
+            "sound": "sounds/hat.wav",
+            "kbd": "F",
+            "name": "Closed hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/hat.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad g: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "g",
+            "sound": "sounds/open-hat.wav",
+            "kbd": "G",
+            "name": "Open hat",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/open-hat.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad h: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "h",
+            "sound": "sounds/tom.wav",
+            "kbd": "H",
+            "name": "Low tom",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/tom.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad j: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "j",
+            "sound": "sounds/rim.wav",
+            "kbd": "J",
+            "name": "Rimshot",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/rim.wav",
+            "width": 191.59375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad k: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "k",
+            "sound": "sounds/shaker.wav",
+            "kbd": "K",
+            "name": "Shaker",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/shaker.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "pad l: native button, visible name/key and relative sound",
+          "passed": true,
+          "detail": {
+            "tag": "BUTTON",
+            "type": "button",
+            "key": "l",
+            "sound": "sounds/crash.wav",
+            "kbd": "L",
+            "name": "Crash",
+            "ariaLabel": null,
+            "absoluteSound": "http://127.0.0.1:36329/homework/drum-kit/sounds/crash.wav",
+            "width": 191.609375,
+            "height": 132
+          }
+        },
+        {
+          "name": "all pad targets at least 44 by 44 CSS pixels",
+          "passed": true
+        },
+        {
+          "name": "unique DOM IDs",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet loaded",
+          "passed": true
+        },
+        {
+          "name": "recorder initial DOM contract",
+          "passed": true,
+          "detail": {
+            "recordDisabled": false,
+            "stopDisabled": true,
+            "replayDisabled": true,
+            "clearDisabled": true,
+            "state": "Idle",
+            "count": "0",
+            "listTag": "OL",
+            "hits": 0,
+            "live": "polite"
+          }
+        },
+        {
+          "name": "polite pad feedback exists",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "text, control borders and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 9.635371201771774
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 9.344425354315504
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 8.868273414632833
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.2344511450340985
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 8.601647010085834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 4.446710000857772
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 5.409076018445249
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 7.857382301804358
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 9.631886811970405
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse Tab order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "native help opens with Enter without overflow",
+          "passed": true
+        },
+        {
+          "name": "native help closes with Space",
+          "passed": true
+        },
+        {
+          "name": "reduced motion disables pad transition",
+          "passed": true
+        },
+        {
+          "name": "normal page has no errors, failed requests, audio requests or CSP violations",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "audioRequests": [],
+            "violations": []
+          }
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "skip-link",
+          "summary-name",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

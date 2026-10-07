@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="A nine-pad drum kit and beat tape by Đặng Hoài An.">
+  <title>Drum Kit — Đặng Hoài An</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to drum kit</a>
+  <header class="site-header wrap">
+    <a class="back-link" href="../../index.html">← An's portfolio</a>
+    <p class="eyebrow">Sound lab / 02</p>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <header class="intro">
+      <p class="eyebrow">Nine sounds. Your rhythm.</p>
+      <h1>Find your <em>rhythm.</em></h1>
+      <p class="lead">A little space to make a beat, capture an idea and play it back.</p>
+    </header>
+    <article class="studio" aria-label="Drum studio">
+      <section class="pad-panel" aria-labelledby="pads-heading">
+        <header class="panel-header">
+          <h2 id="pads-heading">Drum pads</h2>
+          <p class="eyebrow">01 — Play</p>
+        </header>
+        <ul class="pad-grid" aria-label="Nine drum sounds">
+          <li><button type="button" class="drum-pad" data-key="a" data-sound="sounds/kick.wav"><kbd>A</kbd><span>Kick</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="s" data-sound="sounds/snare.wav"><kbd>S</kbd><span>Snare</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="d" data-sound="sounds/clap.wav"><kbd>D</kbd><span>Clap</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="f" data-sound="sounds/hat.wav"><kbd>F</kbd><span>Closed hat</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="g" data-sound="sounds/open-hat.wav"><kbd>G</kbd><span>Open hat</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="h" data-sound="sounds/tom.wav"><kbd>H</kbd><span>Low tom</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="j" data-sound="sounds/rim.wav"><kbd>J</kbd><span>Rimshot</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="k" data-sound="sounds/shaker.wav"><kbd>K</kbd><span>Shaker</span></button></li>
+          <li><button type="button" class="drum-pad" data-key="l" data-sound="sounds/crash.wav"><kbd>L</kbd><span>Crash</span></button></li>
+        </ul>
+        <p id="pad-status" class="status" role="status" aria-live="polite" aria-atomic="true">Ready to play.</p>
+        <details class="help">
+          <summary>How to use the kit</summary>
+          <p>Click a pad or use its letter key. Use Tab to move between controls and Enter or Space to activate a focused button.</p>
+          <p>Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.</p>
+        </details>
+      </section>
+      <section class="tape-panel" aria-labelledby="tape-heading">
+        <header class="panel-header">
+          <h2 id="tape-heading">Beat tape</h2>
+          <p class="eyebrow">02 — Capture</p>
+        </header>
+        <dl class="tape-metrics">
+          <dt>State</dt><dd id="tape-state">Idle</dd>
+          <dt>Hits</dt><dd id="beat-count">0</dd>
+        </dl>
+        <menu class="tape-controls" aria-label="Beat tape controls">
+          <li><button id="record-btn" class="primary" type="button">Record</button></li>
+          <li><button id="stop-btn" type="button" disabled>Stop</button></li>
+          <li><button id="replay-btn" type="button" disabled>Replay</button></li>
+          <li><button id="clear-btn" type="button" disabled>Clear</button></li>
+        </menu>
+        <p id="record-status" class="status" role="status" aria-live="polite" aria-atomic="true">No take recorded yet.</p>
+        <ol id="beat-list" class="beat-list" aria-label="Recorded hits in arrival order"></ol>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer wrap">
+    <p>Đặng Hoài An <span aria-hidden="true">/</span> 24520039</p>
+    <p>Make a little noise.</p>
+  </footer>
+</body>
+</html>

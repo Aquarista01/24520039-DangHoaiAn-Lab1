@@ -135,3 +135,26 @@ Actions actually performed by the assistant:
 Not performed: HW2 implementation, browser tests, audio playback, laptop listening, recorder timing tests or any new student test. All four implementation steps remain not started.
 
 The next turn handles Step 1 only: semantic HTML data-sound contract and its CSS, checks and commit. It must not create an audio engine, keydown listener or recorder implementation yet.
+
+## Task 7.1 - HW2 Step 1: HTML data-sound contract
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 0058940. Scope: nine-pad HTML contract and responsive CSS only.
+
+Actions actually performed by the assistant:
+- Re-read project rules and the four-step HW2 contract; confirmed remote rebuild at 0058940 and main at 66fe05a.
+- Created a new semantic drum page from the committed contract, with nine native buttons, unique data-key/data-sound attributes, visible kbd and sound names, one h1 and no divs.
+- Added the recorder DOM IDs, Idle/0/empty initial state and initially disabled Stop/Replay/Clear controls. No recorder behavior was added.
+- Added local CSS with mobile-first three-column pads, stacked panels at 375px, side-by-side panels on desktop, system light/dark colors, visible focus and reduced-motion feedback styling.
+- Included the current strict CSP meta for direct static serving. Existing root files and Vercel header configuration were not modified.
+- Ran a fresh local browser audit. The initial full Tab assertion was invalid because the harness reloaded after skip-link navigation and kept #main. Retained its outcome in initial-harness-check.json; corrected the harness to start that independent sweep with a fresh fragment-free URL. No application change was needed for this test-tool error.
+- Re-ran the corrected audit: 112/112 assertions passed across 375/1440px and light/dark; axe WCAG through 2.2 AA plus best-practice had zero violations and zero incomplete results in each configuration.
+- Verified all nine path/name/key contracts, no application scripts/inline handlers/styles, target sizes, contrast, skip link, forward/reverse Tab focus, native help activation, reduced motion and no horizontal overflow. Normal loading had no WAV requests, failed responses, page/console errors or CSP violations.
+- Visually inspected full-page screenshots for all four configurations. Labels fit; mobile panels stack and desktop panels align without overlap.
+- Inspected the focused diff and updated only this milestone's status and evidence alongside its two application files.
+
+Evidence: verification/hw2-step1/README.md, audit.mjs, initial-harness-check.json and result.json. Actual timestamp/tester/browser are in the report.
+
+Not performed: audio playback or asset loading, laptop listening, letter-key adapter, recording/replay, student checks or Vercel preview verification. Pads and Record have no application behavior at this static stage. Main/production and earlier evidence remain preserved.
+
+This turn ends after the isolated Step 1 commit. The next package is Step 2: independent polyphonic audio and click adapter, in a separate turn.

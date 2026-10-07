@@ -130,7 +130,7 @@ Recorder DOM contract: `#record-btn`, `#stop-btn`, `#replay-btn`, `#clear-btn`; 
 | Work package | Status | Evidence |
 | --- | --- | --- |
 | Planning | Documented before implementation | This WBS and documentation-only diff |
-| Step 1 | Not started | Pending HTML/CSS contract commit and checks |
+| Step 1 | Implemented and locally checked | HTML/CSS only; verification/hw2-step1/result.json: 112/112 checks, four configurations, zero axe violations |
 | Step 2 | Not started | Pending audio engine, asset checks and laptop listening |
 | Step 3 | Not started | Pending keyboard adapter and rebinding test |
 | Step 4 | Not started | Pending FIFO/state/cancellation tests |

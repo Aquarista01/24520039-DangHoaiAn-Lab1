@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-07T06:56:27.181Z",
+  "browser": "153.0.8010.0",
+  "passed": false,
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "failedChecks": [
+        "forward/reverse Tab order and visible focus"
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "failedChecks": [
+        "forward/reverse Tab order and visible focus"
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "failedChecks": [
+        "forward/reverse Tab order and visible focus"
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "failedChecks": [
+        "forward/reverse Tab order and visible focus"
+      ],
+      "axeViolations": 0
+    }
+  ],
+  "diagnosis": "Test harness reloaded after the skip link left #main in the URL. Chromium retained the fragment focus/navigation start position, while the assertion expected a fresh document starting at the skip link. Use a fresh URL without the fragment for the independent full Tab sweep; application code is unchanged."
+}
