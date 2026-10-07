@@ -133,4 +133,87 @@ Recorder DOM contract: `#record-btn`, `#stop-btn`, `#replay-btn`, `#clear-btn`; 
 | Step 1 | Implemented and locally checked | HTML/CSS only; verification/hw2-step1/result.json: 112/112 checks, four configurations, zero axe violations |
 | Step 2 | Assistant checks passed; student-reported prior Preview OK | verification/hw2-step2: 9/9 assets, 84/84 normal browser checks, 6/6 fault/recovery cases; user reported all requested prior Preview checks OK on 7 October at 14:44, without a detailed device/listening capture |
 | Step 3 | Implemented and locally checked | verification/hw2-step3/result.json: 180/180 checks and two HTML-only reload/rebinding checks; student live defense not timed |
-| Step 4 | Implemented and locally checked | verification/hw2-step4: 22 model, 92 normal browser and 6 integration checks; 21 axe audits; student recorder check pending |
+| Step 4 | Locally checked; student-reported recorder Preview OK | verification/hw2-step4: 22 model, 92 normal browser and 6 integration checks; 21 axe audits; user reported OK on 7 October at 15:07, without a raw recorder capture |
+
+## Homework 3 - Resilient landing page and AI failure audit
+
+Source: supplied Lab 1 slide page 25. It requires three functional slices, at least five atomic implementation commits, and AI_FAILURE_AUDIT.md documenting three actual AI-induced defects with diagnostic methods and verified fixes. This plan starts after HW2 commit `a17b2d0` on `hw-atomic-rebuild`. No HW3 application file or audit report is created in this planning package.
+
+Route: `homework/event-hub/`. Only the sample event metadata and form field/DOM naming contract were inspected in frozen main `66fe05a`; no completed countdown/form/service/validation implementation is reused. The page remains a clearly labeled coursework demo. Registration is simulated locally; no email, real booking, database, fetch request or persistent registration storage is introduced.
+
+### Five implementation packages and a separate report
+
+| WBS | Slice / work package | Contract and boundary | Application files allowed | Checks to run in that package | Planned atomic commit |
+| --- | --- | --- | --- | --- | --- |
+| 8 | HW3 planning | Define DOM, UTC clock, form/transport lifecycle, input policy and audit evidence before implementation | None; TASK_DECOMPOSITION.md and DEVELOPMENT_LOG.md only | Five implementation rows correspond to the three slices; exact metadata/interfaces present; no HW3 code/report added | docs(spec): define HW3 atomic milestones |
+| 8.1 | Slice 1A: semantic landing/countdown contract | Static semantic event page, explicit UTC datetime, countdown slots and labeled form/receipt DOM; responsive CSS; no script yet | homework/event-hub/index.html, styles.css | One h1/zero divs, valid dl structure, exact UTC datetime, all labels/unique IDs, native field constraints, disabled static Submit, 375/1440px light/dark overflow/focus/axe | feat(event): define semantic landing and UTC contract |
+| 8.2 | Slice 1B: drift-free UTC countdown | Independent clock module; external app module wires the HTML datetime; recompute from absolute clock, never decrement a stored counter | homework/event-hub/countdown.js, app.js, index.html (module tag and countdown wiring only) | UTC/timezone invariance; invalid/calendar/zone-less timestamps; fractional-second boundary, exact start, past event; delayed timers/background resync; repeated start/stop, pagehide/pageshow, no leaked timers; no every-second live-region spam | feat(countdown): implement absolute UTC clock |
+| 8.3 | Slice 2: form state machine | Idle -> Submitting -> Success/Error; native validation, safe text rendering, deterministic local success/error transport and retry; basic state guard is present from the first async handler | homework/event-hub/registration.js, registration-service.js, app.js, index.html/styles.css (form state wiring only) | Valid success, simulated error/retry, invalid native fields, preserved values after error, disabled/loading controls and busy state, status announcements/focus, no navigation or outgoing registration request | feat(form): implement registration state machine |
+| 8.4 | Slice 3A: double-submit and request lifecycle | Defense beyond disabled UI: synchronous in-flight lock, request generation, AbortController, cancel/timeout/reset/unload handling; obsolete callbacks cannot change a new session | homework/event-hub/registration.js, registration-service.js, app.js, index.html (cancel/reset wiring only) | Rapid double click/Enter/requestSubmit and direct controller re-entry cause one service attempt; delayed promise, cancel then retry, stale success/error ignored; 5-second timeout; timers/listeners cleanup and restored-page recovery; keyboard cancellation | fix(form): guard concurrent submissions and stale responses |
+| 8.5 | Slice 3B: normalization and safe input/output | Independent validation module; normalize and bound a validated snapshot, allowlist interest, reject meaningless input; safe sinks remain textContent/DOM nodes from earlier stages | homework/event-hub/validation.js, registration.js, app.js, index.html (field errors/constraints only) | Whitespace-only name, control characters, Unicode/Vietnamese/apostrophe names, length boundaries, bad email/interest including bypassed native constraints; hostile HTML/SVG/event-handler notes render literally with no created executable nodes; valid correction/retry; axe/keyboard | fix(form): normalize inputs and enforce safe rendering |
+| 8.6 | Mandatory AI failure report | Write evidence-backed descriptions, diagnostics, fixes and lessons for at least three distinct actual defects; do not manufacture broken app stages | AI_FAILURE_AUDIT.md, task-specific verification notes, DEVELOPMENT_LOG.md/status only | Match each defect to failing source/check and fix commit/passing evidence; clearly distinguish new runs from historical reports and application defects from harness errors | docs(audit): document three verified AI-induced defects |
+
+The five application commits, not the planning/report commits, satisfy the minimum-five implementation rule. Each package is one separate chat turn with actual checks and its own commit. Never deliberately introduce duplicate-submit, XSS or timer drift to create an audit example. Evidence scripts/reports and the task log accompany the matching package. Portfolio navigation integration, final cross-homework review and merging into main are later packages; do not mix them into these slices.
+
+### Event and DOM contract
+
+- Sample event: Build for Everyone; sample venue: UIT Campus; startsAt `2026-11-21T02:00:00Z`, displayed event zone `Asia/Ho_Chi_Minh` (21 November 2026, 09:00). This is fixed coursework metadata from the frozen reference, not a claim about an actual UIT event.
+- The source timestamp is `time#event-start[datetime]` in HTML. No separate JS target date or local date parsing. Use one h1 `#event-title`, a skip link to `main#main`, distinct section headings and an outgoing portfolio link.
+- Countdown slots: `#days`, `#hours`, `#minutes`, `#seconds` in valid semantic structure, plus polite `#countdown-status`. Numeric updates are not a per-second live announcement.
+- Form: `#registration-form`; fields `#attendee-name` (name, required, minlength 2, maxlength 80), `#attendee-email` (email, type=email, required, maxlength 120), `#attendee-interest` (interest, required; empty/design/code/both options), `#attendee-note` (note, optional, maxlength 300, visible hint).
+- Demo failure choice: `#simulate-error`, with an explicit local-preview explanation; snapshot this boolean for the current attempt so a later UI change cannot alter an in-flight outcome.
+- Controls: `#submit-btn`, `#cancel-btn`, `#reset-btn`; `#form-state`; polite atomic `#registration-status`; `#privacy-note`; per-field error nodes associated with their input. Submit/Cancel/Reset are disabled in the static contract until the form controller is implemented; fields remain inspectable/editable.
+- Success receipt: `#registration-summary`, initially hidden, with text-only `#receipt-name`, `#receipt-email`, `#receipt-interest`, `#receipt-note`. No raw markup or request-debug details appear in the product flow. A local-preview disclaimer stays visible.
+- Native HTML/CSS/ES6 only; zero divs; no inline handler/style/script; local CSS and, from 8.2 onward, external app module; current strict CSP meta/header; 375px first, system light/dark, visible focus and reduced motion.
+
+### Countdown boundary
+
+- `startCountdown({targetISO, onTick, onStatus, now, schedule, cancel}) -> stop`; defaults use Date.now and timeout scheduling. The independently testable clock does not query form controls.
+- Accept a finite valid UTC ISO timestamp with explicit Z (`YYYY-MM-DDTHH:mm:ssZ` or millisecond form). Reject zone-less input and calendar dates normalized silently by Date.parse; validate by UTC round-trip. The HTML target is the single source of truth.
+- Each tick derives remaining milliseconds from targetEpoch - now(). Convert positive remaining time using ceil(seconds), so the UI does not announce the event started before its actual boundary. Clamp at zero at/after the target; terminal state stops scheduling. Invalid target reports a useful status and starts no timer.
+- Schedule against the absolute clock's next relevant boundary; never subtract one from an old displayed number. Delayed/clamped callbacks and visibility restoration recompute current time immediately. Scheduling overhead must not accumulate drift.
+- Stop is idempotent and cancels owned timers/listeners. App lifecycle must stop on pagehide and reinitialize on pageshow, including a restored page. An invalid countdown must not prevent the unrelated form from initializing.
+- Automated timezone tests use the same epoch under Asia/Ho_Chi_Minh, UTC and America/Los_Angeles; formatted event time stays in the explicit display zone. Record the exact virtual/native clock setup rather than labeling virtual advances as real elapsed waits.
+
+### Form, transport and lifecycle boundary
+
+- The form controller has only idle/submitting/success/error. Valid input from idle/error can begin a submit; success offers Reset for a fresh attempt. Invalid validation never calls the transport. Basic submitting-state rejection and safe output are implemented in 8.3, rather than intentionally leaving defects for 8.4/8.5.
+- `submitRegistration(validatedPayload, {simulateError, signal}) -> Promise<receipt>` is a deterministic local mock, about 600ms per attempt. Payload fields are name/email/interest/note. The service never fetches/sends/stores data. Invalid/aborted attempts reject through handled paths. Transport is injectable for isolated rejection, delayed completion and attempt-count tests; no QA counter is added to the user flow.
+- Slice 3A adds a synchronous in-flight guard before the first await, an attempt token, one AbortController and a 5,000ms deadline. Disabled Submit alone is not treated as the guard. Copy the current data/preview-error choice so later edits cannot mutate the pending request.
+- While submitting: fields and Submit/Reset are disabled, Cancel is available, form aria-busy is true and feedback says submitting. Cancel retains input and returns to idle; Reset from nonpending states clears values/errors/receipt. A programmatic reset/dispose must also invalidate any pending attempt.
+- Success shows a text-only receipt; Error retains input and exposes retry; timeout becomes a useful retryable Error. A stale resolve/reject/finally from a cancelled or older request cannot change new status, controls or receipt. All rejections are handled.
+- Clean up service/deadline timers and listeners on settlement/abort/dispose. Interrupted submissions on pagehide must not stay stuck when pageshow restores the page; recover into a retryable state and reestablish countdown/controller lifecycle safely.
+- State changes keep keyboard focus on an enabled control; validation focuses the first invalid field; do not create a modal or focus trap. Avoid repeatedly announcing the countdown through the form's live region.
+
+### Input policy and safe output
+
+- Independent `validateRegistration(raw) -> {ok, data, errors}`. Its data snapshot is immutable; transport/rendering use that snapshot. Native validity is the first check, but programmatic/bypassed constraints must also be checked by the controller's validator.
+- Normalize Unicode NFC, trim outer whitespace, collapse name whitespace, remove disallowed control characters; reject an empty/short normalized name. Preserve Vietnamese diacritics, apostrophes, hyphens and ordinary Unicode names. Bounds match the form's native string lengths: name 2–80, email 1–120, note at most 300 after normalization; overlength input is rejected, not silently truncated.
+- Email is trimmed, has no whitespace/control/newline injection, and passes the documented practical email check/native type=email validity. Do not claim full RFC address validation or change local-part case. Interest must be exactly design/code/both, even if the DOM option value was tampered with.
+- Notes are plain text: normalize line endings and controls while retaining meaningful text, including literal <, > and quotes. Do not rely on deleting angle brackets as the XSS defense. No input is interpreted as HTML, JavaScript, URL or a style value.
+- All user-derived messages/receipt values go through textContent or created text nodes. Never use innerHTML/outerHTML/insertAdjacentHTML/eval/new Function for user input. Do not pre-HTML-escape values and then display escaped entities through textContent.
+- Tests use malicious img/svg/script/event-handler strings and inspect actual DOM/event outcomes, not just string filtering. Field errors clear when corrected; useful native/custom errors and keyboard focus are checked after failed validation and retry.
+
+### AI failure audit evidence policy
+
+The report covers the AI-assisted Lab 1 baseline and homework rebuild, with exact scope/provenance stated. Three distinct already-observed candidates have before/after evidence:
+
+| Actual defect candidate | Failing evidence/source | Fix and passing evidence |
+| --- | --- | --- |
+| Accessible names omit visible link labels | Baseline/c62400a HTML; verification/hw1-m1/before.json: label-content-name-mismatch on four links | cdc93ec; verification/hw1-m1/after.json |
+| Optional storage exceptions stop unrelated initialization or leave theme accessibility state stale | cdc93ec app.js and verification/hw1-m2/before.json storage-denied cases | 42bd2f6; verification/hw1-m2/after.json; treat related read/write failures as one storage-resilience category |
+| Pad foreground switches before animated background, creating transient low contrast | 18fc999 CSS and verification/hw2-step4/before-feedback-fix.json: Recording contrast 1.20:1 light / 1.48:1 dark | a17b2d0; verification/hw2-step4/result.json: final state audits zero violations |
+
+These are candidate report entries, not a completed report in this planning commit. In 8.6 inspect source/evidence again, identify the diagnostic method and engineering lesson, and add any genuine HW3 defect found during its implementation. Missing not-yet-implemented features, deliberate fault injection and test-harness assumptions are not counted as AI application defects. Do not invent countdown/XSS bugs that the code never had or copy the old main audit as new verification. Historical results retain their actual dates; fresh rechecks, if needed, are labeled separately. Student-reported Preview OK is not an assistant laptop test or timed live defense.
+
+### HW3 milestone status
+
+| Work package | Status | Evidence |
+| --- | --- | --- |
+| Planning | Documented before implementation | This WBS; only planning/log documents changed |
+| 8.1 | Not started | Pending semantic/countdown/form DOM contract |
+| 8.2 | Not started | Pending UTC clock and lifecycle checks |
+| 8.3 | Not started | Pending form state/transport integration |
+| 8.4 | Not started | Pending double-submit/abort/stale-response tests |
+| 8.5 | Not started | Pending independent validation and hostile-input checks |
+| 8.6 | Not started | Pending evidence-backed AI_FAILURE_AUDIT.md |

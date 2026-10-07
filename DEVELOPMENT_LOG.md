@@ -233,3 +233,26 @@ Evidence: verification/hw2-step4/README.md, model-check.mjs, model-result.json, 
 Limits: no student recorder listening/replay check or timed live defense is claimed. Replay timing measures dispatch, not acoustic output latency; already-started sound tails finish naturally after Stop. Main/production and existing Git history remain preserved.
 
 This turn ends after the isolated Step 4 commit. HW2 now has its four separate implementation milestones. The next package is HW3 contract/milestone planning in a separate turn, followed by its required atomic steps; portfolio integration/final merge remain later work.
+
+## Task 8 - HW3 contract and atomic milestone planning
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: a17b2d0. Scope: planning/status/log only.
+
+Student-provided update:
+- At 15:07 the user reported the recorder Preview was OK and asked to continue. Recorded as student-reported; no raw recording/replay/timing capture was supplied. Earlier local test reports are preserved.
+
+Actions actually performed by the assistant:
+- Read repository rules and WBS; confirmed remote rebuild at a17b2d0 and main at 66fe05a.
+- Re-read page 25 of the supplied slide in extracted text and its rendered image: three functional slices, minimum five atomic implementation commits, mandatory three-defect AI_FAILURE_AUDIT.md and live defense of Git history.
+- Inspected only the frozen main HTML's sample event/UTC metadata, field naming/constraints and event-data metadata. Read the old audit to understand its provenance; did not copy its content, completed application modules or old reports into this branch.
+- Defined five separate code packages: semantic/UTC DOM contract; absolute countdown; form state machine; concurrency/request lifecycle; normalization/safe output. Defined a separate evidence-backed report package after them. Planning/report commits are not counted toward the five application commits.
+- Pinned the sample workshop to 2026-11-21T02:00:00Z with explicit Asia/Ho_Chi_Minh display zone and kept registration a clearly described local simulation.
+- Specified countdown parsing/boundary/drift/lifecycle checks and a form/transport contract with safe output/basic state guards from the first async stage, followed by stronger in-flight/abort/token/timeout protection and independent validation. No deliberately unsafe intermediate implementation is requested.
+- Specified safe input policy, native/programmatic validation boundaries, immutable payload snapshots, keyboard/focus feedback and malicious-payload DOM checks.
+- Reviewed actual HW1 M1/M2 and HW2 Step 4 failure evidence/source for three distinct AI-assisted application defect candidates: accessible-name mismatch, optional-storage resilience and transient pad contrast. The future report will use explicit source/fix/evidence provenance; harness errors and missing future features are excluded.
+- Checked that this turn changes only TASK_DECOMPOSITION.md and DEVELOPMENT_LOG.md, with all HW3 application/report stages still not started.
+
+Not performed: HW3 page/clock/form/service/validation implementation, new browser/timing/security test, AI_FAILURE_AUDIT.md authoring or any new student test. All acceptance checks described here are planned, not labeled passed. Main/production and old history remain preserved.
+
+This turn ends after the documentation-only planning commit. The next package is 8.1: semantic landing/countdown/form HTML contract and CSS, in its own turn.
