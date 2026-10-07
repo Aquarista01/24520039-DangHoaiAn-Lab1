@@ -256,3 +256,24 @@ Actions actually performed by the assistant:
 Not performed: HW3 page/clock/form/service/validation implementation, new browser/timing/security test, AI_FAILURE_AUDIT.md authoring or any new student test. All acceptance checks described here are planned, not labeled passed. Main/production and old history remain preserved.
 
 This turn ends after the documentation-only planning commit. The next package is 8.1: semantic landing/countdown/form HTML contract and CSS, in its own turn.
+
+## Task 8.1 - HW3 semantic landing and UTC contract
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 4530734. Application scope: homework/event-hub/index.html and styles.css only.
+
+Actions actually performed by the assistant:
+- Read project-rules.md and the HW3 WBS/DOM contract; confirmed remote rebuild at 4530734 and main at 66fe05a.
+- Created a new semantic static Event Hub page with one h1, no divs, a skip link/back link, valid definition lists, labeled workshop outline and distinct countdown/registration sections.
+- Put the sole target timestamp in time#event-start[datetime] as 2026-11-21T02:00:00Z and displayed 21 November 2026 at 09:00 in the explicit Asia/Ho_Chi_Minh zone. The sample event/venue and local-only registration disclaimer are visible.
+- Added four non-live countdown placeholders, independent polite atomic status nodes, the five labeled form controls with native field bounds/options/autofill, field error IDs, disabled Register/Cancel/Reset controls, initial idle/non-busy state and a hidden empty text-only receipt contract. Added no JavaScript or application script tag.
+- Added mobile-first local CSS with system light/dark colors, stacked mobile/two-column desktop panels, visible keyboard focus, readable text/border contrast, native input/select/checkbox controls and no animation or smooth scrolling.
+- Ran the fresh local Chromium 153.0.8010.0 audit under the repository CSP header plus page CSP meta: 148/148 assertions passed across 375/1440px and light/dark on the first completed run. All four axe 4.14.0 audits had zero violations and zero incomplete items.
+- Verified structural/UTC/form contracts, native short-name/bad-email validation, valid synthetic fields, keyboard checkbox activation, skip-link focus and forward/reverse Tab order, disabled implicit Enter submission, responsive placement, no overflow, contrast and reduced motion. No normal runtime/network/CSP error or data request occurred.
+- Inspected all four full-page screenshots with synthetic form values; no clipped labels, overlapping panels or horizontal overflow were seen. Reviewed the focused code/evidence diff and whitespace check.
+
+Evidence: verification/hw3-step1/README.md, audit.mjs and result.json; exact timestamp/environment/observations in the report. These are assistant checks, not a student Preview result. Screenshots are temporary visual QA; no test values are embedded in the shipped HTML.
+
+Not performed: countdown execution, form controller/transport, concurrency/lifecycle, independent sanitization/XSS checks, AI_FAILURE_AUDIT.md authoring or a new student test. Main/production and Git history remain preserved.
+
+This turn ends after the isolated 8.1 implementation commit. The next package is 8.2: absolute UTC countdown and its own timing/lifecycle checks.

@@ -211,7 +211,7 @@ These are candidate report entries, not a completed report in this planning comm
 | Work package | Status | Evidence |
 | --- | --- | --- |
 | Planning | Documented before implementation | This WBS; only planning/log documents changed |
-| 8.1 | Not started | Pending semantic/countdown/form DOM contract |
+| 8.1 | Implemented and locally checked | HTML/CSS only; verification/hw3-step1/result.json: 148/148 checks across 375/1440px light/dark, zero axe violations/incomplete; student Preview check pending |
 | 8.2 | Not started | Pending UTC clock and lifecycle checks |
 | 8.3 | Not started | Pending form state/transport integration |
 | 8.4 | Not started | Pending double-submit/abort/stale-response tests |

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="Build for Everyone: a sample inclusive web workshop and local registration demo by Đặng Hoài An.">
+  <title>Build for Everyone — Event Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to event</a>
+  <header class="site-header wrap">
+    <a class="back-link" href="../../index.html">← An's portfolio</a>
+    <p class="eyebrow">Event hub / 03</p>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <header class="intro">
+      <p class="eyebrow">A workshop for curious builders</p>
+      <h1 id="event-title">Build for <em>everyone.</em></h1>
+      <p class="lead">Small ideas. Thoughtful interfaces. A space to explore how the web can welcome more people.</p>
+      <dl class="event-details">
+        <dt>When</dt>
+        <dd><time id="event-start" datetime="2026-11-21T02:00:00Z">21 November 2026 · 09:00</time><small>Vietnam time · Asia/Ho_Chi_Minh (UTC+07:00)</small></dd>
+        <dt>Where</dt>
+        <dd>UIT Campus <small>Sample venue</small></dd>
+      </dl>
+      <p class="demo-note">Coursework demo: this is a sample event, not an actual UIT booking.</p>
+    </header>
+    <article class="event-layout" aria-label="Workshop details and registration">
+      <section class="event-panel" aria-labelledby="countdown-heading">
+        <header class="panel-header">
+          <p class="eyebrow">01 — Make time</p>
+          <h2 id="countdown-heading">Until we meet.</h2>
+        </header>
+        <dl class="countdown" aria-label="Time remaining until the workshop">
+          <dt>Days</dt><dd id="days">--</dd>
+          <dt>Hours</dt><dd id="hours">--</dd>
+          <dt>Minutes</dt><dd id="minutes">--</dd>
+          <dt>Seconds</dt><dd id="seconds">--</dd>
+        </dl>
+        <p id="countdown-status" class="status" role="status" aria-live="polite" aria-atomic="true">The countdown is not active yet. The event time is shown above.</p>
+        <section class="workshop-outline" aria-labelledby="workshop-heading">
+          <h3 id="workshop-heading">Bring an idea. Leave with a start.</h3>
+          <ol class="agenda">
+            <li><strong>Notice the details</strong><span>Explore clear labels, useful feedback and keyboard-friendly interfaces.</span></li>
+            <li><strong>Make something small</strong><span>Turn an everyday idea into a simple web experience.</span></li>
+            <li><strong>Learn together</strong><span>Share what worked, ask questions and find the next improvement.</span></li>
+          </ol>
+        </section>
+      </section>
+      <section class="registration-panel" aria-labelledby="registration-heading">
+        <header class="panel-header">
+          <p class="eyebrow">02 — Join the conversation</p>
+          <h2 id="registration-heading">Save a little space.</h2>
+        </header>
+        <p id="privacy-note" class="intro-note">Local demo only. No email is sent, no place is booked and your form entries are not saved.</p>
+        <form id="registration-form" aria-describedby="privacy-note registration-status" aria-busy="false" data-state="idle">
+          <p class="required-note">Fields marked “required” must be filled in.</p>
+          <p class="field">
+            <label for="attendee-name">Full name <span class="optional">(required)</span></label>
+            <input id="attendee-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="name-error">
+            <small id="name-error" class="field-error"></small>
+          </p>
+          <p class="field">
+            <label for="attendee-email">Email <span class="optional">(required)</span></label>
+            <input id="attendee-email" name="email" type="email" required maxlength="120" autocomplete="email" aria-describedby="email-error">
+            <small id="email-error" class="field-error"></small>
+          </p>
+          <p class="field">
+            <label for="attendee-interest">Your interest <span class="optional">(required)</span></label>
+            <select id="attendee-interest" name="interest" required aria-describedby="interest-error">
+              <option value="">Choose an interest</option>
+              <option value="design">Design</option>
+              <option value="code">Code</option>
+              <option value="both">Design and code</option>
+            </select>
+            <small id="interest-error" class="field-error"></small>
+          </p>
+          <p class="field">
+            <label for="attendee-note">A note for us <span class="optional">(optional)</span></label>
+            <textarea id="attendee-note" name="note" rows="3" maxlength="300" aria-describedby="note-hint note-error"></textarea>
+            <small id="note-hint" class="hint">Up to 300 characters. Please use sample details for this demo.</small>
+            <small id="note-error" class="field-error"></small>
+          </p>
+          <fieldset class="preview-options">
+            <legend>Try the demo</legend>
+            <label class="checkbox-label" for="simulate-error"><input id="simulate-error" name="simulate-error" type="checkbox" aria-describedby="simulate-error-hint"><span>Simulate a registration error</span></label>
+            <p id="simulate-error-hint" class="hint">When registration opens, this option lets you try the local error and retry experience.</p>
+          </fieldset>
+          <menu class="form-controls" aria-label="Registration controls">
+            <li><button id="submit-btn" class="primary" type="submit" disabled>Register</button></li>
+            <li><button id="cancel-btn" type="button" disabled>Cancel</button></li>
+            <li><button id="reset-btn" type="reset" disabled>Reset</button></li>
+          </menu>
+          <p class="state-label">Form state: <strong id="form-state">Idle</strong></p>
+          <p id="registration-status" class="status" role="status" aria-live="polite" aria-atomic="true">Registration is not open yet. You can explore the form; nothing is sent.</p>
+        </form>
+        <section id="registration-summary" class="receipt" aria-labelledby="receipt-heading" hidden>
+          <h3 id="receipt-heading">Your demo registration</h3>
+          <dl>
+            <dt>Name</dt><dd id="receipt-name"></dd>
+            <dt>Email</dt><dd id="receipt-email"></dd>
+            <dt>Interest</dt><dd id="receipt-interest"></dd>
+            <dt>Note</dt><dd id="receipt-note"></dd>
+          </dl>
+        </section>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer wrap">
+    <p>Đặng Hoài An <span aria-hidden="true">/</span> 24520039</p>
+    <p>Better together.</p>
+  </footer>
+</body>
+</html>

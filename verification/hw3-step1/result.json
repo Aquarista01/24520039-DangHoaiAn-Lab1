@@ -1,0 +1,2286 @@
+{
+  "date": "2026-10-07T08:26:08.104Z",
+  "tester": "Assistant: fresh local Chromium checks for HW3 Step 1",
+  "browser": "153.0.8010.0",
+  "baseline": "45307349a1762c209604737cb3d1e9ad104b9a37",
+  "delivery": "Local HTTP with repository CSP response header and page CSP meta",
+  "sourceChecks": {
+    "noScriptTag": true,
+    "files": [
+      "index.html",
+      "styles.css"
+    ]
+  },
+  "limits": [
+    "Static HTML/CSS only; no countdown or form controller exists yet.",
+    "No student, Vercel header, live-defense, clock drift, submission or XSS result is claimed.",
+    "Axe and token contrast checks do not by themselves prove full WCAG conformance."
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "one h1 event-title and zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application scripts or inline handlers/styles",
+          "passed": true
+        },
+        {
+          "name": "only two static application files",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "unique IDs",
+          "passed": true
+        },
+        {
+          "name": "all definition lists contain alternating dt/dd pairs",
+          "passed": true,
+          "detail": [
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 4
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "single time source has exact UTC datetime",
+          "passed": true
+        },
+        {
+          "name": "event displays exact Vietnam date/time and explicit zone",
+          "passed": true
+        },
+        {
+          "name": "four non-live countdown placeholders",
+          "passed": true
+        },
+        {
+          "name": "countdown labels align below corresponding numbers",
+          "passed": true
+        },
+        {
+          "name": "all five form controls have visible native labels",
+          "passed": true,
+          "detail": [
+            {
+              "id": "attendee-name",
+              "tag": "INPUT",
+              "type": "text",
+              "name": "name",
+              "required": true,
+              "min": 2,
+              "max": 80,
+              "autocomplete": "name",
+              "labels": [
+                "Full name (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "name-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1544.140625,
+                "width": 302.625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-email",
+              "tag": "INPUT",
+              "type": "email",
+              "name": "email",
+              "required": true,
+              "min": -1,
+              "max": 120,
+              "autocomplete": "email",
+              "labels": [
+                "Email (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "email-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1636.359375,
+                "width": 302.625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-interest",
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "interest",
+              "required": true,
+              "autocomplete": "",
+              "labels": [
+                "Your interest (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "interest-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1728.578125,
+                "width": 302.625,
+                "height": 46
+              }
+            },
+            {
+              "id": "attendee-note",
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "name": "note",
+              "required": false,
+              "min": -1,
+              "max": 300,
+              "autocomplete": "",
+              "labels": [
+                "A note for us (optional)"
+              ],
+              "descriptions": [
+                {
+                  "id": "note-hint",
+                  "exists": true
+                },
+                {
+                  "id": "note-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1820.015625,
+                "width": 302.625,
+                "height": 97.96875
+              }
+            },
+            {
+              "id": "simulate-error",
+              "tag": "INPUT",
+              "type": "checkbox",
+              "name": "simulate-error",
+              "required": false,
+              "min": -1,
+              "max": -1,
+              "autocomplete": "",
+              "labels": [
+                "Simulate a registration error"
+              ],
+              "descriptions": [
+                {
+                  "id": "simulate-error-hint",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 49.984375,
+                "y": 2031.65625,
+                "width": 22,
+                "height": 22
+              }
+            }
+          ]
+        },
+        {
+          "name": "field descriptions and error nodes resolve",
+          "passed": true
+        },
+        {
+          "name": "name native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "email native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "interest native requirement and exact option contract",
+          "passed": true
+        },
+        {
+          "name": "optional note bound and local error checkbox",
+          "passed": true
+        },
+        {
+          "name": "three disabled static controls and native button types",
+          "passed": true
+        },
+        {
+          "name": "idle form is not busy and initially invalid",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic statuses",
+          "passed": true
+        },
+        {
+          "name": "receipt initially hidden and empty",
+          "passed": true
+        },
+        {
+          "name": "visible sample event and local-only privacy disclosures",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet is loaded",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "mobile stacked / desktop adjacent panels",
+          "passed": true
+        },
+        {
+          "name": "text/select targets and buttons at least 44px high",
+          "passed": true
+        },
+        {
+          "name": "text, border and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 13.651551199612788
+            },
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 11.313198150709475
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.12878678077061
+            },
+            {
+              "foreground": "--muted",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 6.4778984635476675
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 5.054797135617625
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 5.562694630464072
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 10.040824115362177
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 4.825367753719852
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 3.998837989152834
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 6.745510317001495
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 6.129616758382746
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse keyboard order and 3px focus outline",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "one-character typed name fails native minlength",
+          "passed": true
+        },
+        {
+          "name": "malformed email fails native type=email",
+          "passed": true
+        },
+        {
+          "name": "valid sample fields satisfy native constraints",
+          "passed": true
+        },
+        {
+          "name": "native error checkbox works with Space",
+          "passed": true
+        },
+        {
+          "name": "disabled submit prevents implicit Enter navigation/request",
+          "passed": true
+        },
+        {
+          "name": "reduced-motion page has no animation or smooth scrolling",
+          "passed": true
+        },
+        {
+          "name": "normal navigation has no runtime/network/CSP error or data request",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "violations": [],
+            "requests": [
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/?keyboard-check=1",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "local response applies exact repository CSP",
+          "passed": true
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "one h1 event-title and zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application scripts or inline handlers/styles",
+          "passed": true
+        },
+        {
+          "name": "only two static application files",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "unique IDs",
+          "passed": true
+        },
+        {
+          "name": "all definition lists contain alternating dt/dd pairs",
+          "passed": true,
+          "detail": [
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 4
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "single time source has exact UTC datetime",
+          "passed": true
+        },
+        {
+          "name": "event displays exact Vietnam date/time and explicit zone",
+          "passed": true
+        },
+        {
+          "name": "four non-live countdown placeholders",
+          "passed": true
+        },
+        {
+          "name": "countdown labels align below corresponding numbers",
+          "passed": true
+        },
+        {
+          "name": "all five form controls have visible native labels",
+          "passed": true,
+          "detail": [
+            {
+              "id": "attendee-name",
+              "tag": "INPUT",
+              "type": "text",
+              "name": "name",
+              "required": true,
+              "min": 2,
+              "max": 80,
+              "autocomplete": "name",
+              "labels": [
+                "Full name (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "name-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1544.140625,
+                "width": 302.625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-email",
+              "tag": "INPUT",
+              "type": "email",
+              "name": "email",
+              "required": true,
+              "min": -1,
+              "max": 120,
+              "autocomplete": "email",
+              "labels": [
+                "Email (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "email-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1636.359375,
+                "width": 302.625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-interest",
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "interest",
+              "required": true,
+              "autocomplete": "",
+              "labels": [
+                "Your interest (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "interest-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1728.578125,
+                "width": 302.625,
+                "height": 46
+              }
+            },
+            {
+              "id": "attendee-note",
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "name": "note",
+              "required": false,
+              "min": -1,
+              "max": 300,
+              "autocomplete": "",
+              "labels": [
+                "A note for us (optional)"
+              ],
+              "descriptions": [
+                {
+                  "id": "note-hint",
+                  "exists": true
+                },
+                {
+                  "id": "note-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 36.1875,
+                "y": 1820.015625,
+                "width": 302.625,
+                "height": 97.96875
+              }
+            },
+            {
+              "id": "simulate-error",
+              "tag": "INPUT",
+              "type": "checkbox",
+              "name": "simulate-error",
+              "required": false,
+              "min": -1,
+              "max": -1,
+              "autocomplete": "",
+              "labels": [
+                "Simulate a registration error"
+              ],
+              "descriptions": [
+                {
+                  "id": "simulate-error-hint",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 49.984375,
+                "y": 2031.65625,
+                "width": 22,
+                "height": 22
+              }
+            }
+          ]
+        },
+        {
+          "name": "field descriptions and error nodes resolve",
+          "passed": true
+        },
+        {
+          "name": "name native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "email native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "interest native requirement and exact option contract",
+          "passed": true
+        },
+        {
+          "name": "optional note bound and local error checkbox",
+          "passed": true
+        },
+        {
+          "name": "three disabled static controls and native button types",
+          "passed": true
+        },
+        {
+          "name": "idle form is not busy and initially invalid",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic statuses",
+          "passed": true
+        },
+        {
+          "name": "receipt initially hidden and empty",
+          "passed": true
+        },
+        {
+          "name": "visible sample event and local-only privacy disclosures",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet is loaded",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "mobile stacked / desktop adjacent panels",
+          "passed": true
+        },
+        {
+          "name": "text/select targets and buttons at least 44px high",
+          "passed": true
+        },
+        {
+          "name": "text, border and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 11.720677823889574
+            },
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 9.635371201771774
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 9.344425354315504
+            },
+            {
+              "foreground": "--muted",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 11.454762397777806
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 8.868273414632833
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.2344511450340985
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 8.601647010085834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 5.409076018445249
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 4.446710000857772
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 7.857382301804358
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 9.631886811970405
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse keyboard order and 3px focus outline",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "one-character typed name fails native minlength",
+          "passed": true
+        },
+        {
+          "name": "malformed email fails native type=email",
+          "passed": true
+        },
+        {
+          "name": "valid sample fields satisfy native constraints",
+          "passed": true
+        },
+        {
+          "name": "native error checkbox works with Space",
+          "passed": true
+        },
+        {
+          "name": "disabled submit prevents implicit Enter navigation/request",
+          "passed": true
+        },
+        {
+          "name": "reduced-motion page has no animation or smooth scrolling",
+          "passed": true
+        },
+        {
+          "name": "normal navigation has no runtime/network/CSP error or data request",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "violations": [],
+            "requests": [
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/?keyboard-check=1",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "local response applies exact repository CSP",
+          "passed": true
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "one h1 event-title and zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application scripts or inline handlers/styles",
+          "passed": true
+        },
+        {
+          "name": "only two static application files",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "unique IDs",
+          "passed": true
+        },
+        {
+          "name": "all definition lists contain alternating dt/dd pairs",
+          "passed": true,
+          "detail": [
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 4
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "single time source has exact UTC datetime",
+          "passed": true
+        },
+        {
+          "name": "event displays exact Vietnam date/time and explicit zone",
+          "passed": true
+        },
+        {
+          "name": "four non-live countdown placeholders",
+          "passed": true
+        },
+        {
+          "name": "countdown labels align below corresponding numbers",
+          "passed": true
+        },
+        {
+          "name": "all five form controls have visible native labels",
+          "passed": true,
+          "detail": [
+            {
+              "id": "attendee-name",
+              "tag": "INPUT",
+              "type": "text",
+              "name": "name",
+              "required": true,
+              "min": 2,
+              "max": 80,
+              "autocomplete": "name",
+              "labels": [
+                "Full name (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "name-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 771.859375,
+                "width": 478.40625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-email",
+              "tag": "INPUT",
+              "type": "email",
+              "name": "email",
+              "required": true,
+              "min": -1,
+              "max": 120,
+              "autocomplete": "email",
+              "labels": [
+                "Email (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "email-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 864.078125,
+                "width": 478.40625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-interest",
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "interest",
+              "required": true,
+              "autocomplete": "",
+              "labels": [
+                "Your interest (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "interest-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 956.296875,
+                "width": 478.40625,
+                "height": 46
+              }
+            },
+            {
+              "id": "attendee-note",
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "name": "note",
+              "required": false,
+              "min": -1,
+              "max": 300,
+              "autocomplete": "",
+              "labels": [
+                "A note for us (optional)"
+              ],
+              "descriptions": [
+                {
+                  "id": "note-hint",
+                  "exists": true
+                },
+                {
+                  "id": "note-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 1047.734375,
+                "width": 478.40625,
+                "height": 97.96875
+              }
+            },
+            {
+              "id": "simulate-error",
+              "tag": "INPUT",
+              "type": "checkbox",
+              "name": "simulate-error",
+              "required": false,
+              "min": -1,
+              "max": -1,
+              "autocomplete": "",
+              "labels": [
+                "Simulate a registration error"
+              ],
+              "descriptions": [
+                {
+                  "id": "simulate-error-hint",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 775.59375,
+                "y": 1238.90625,
+                "width": 22,
+                "height": 22
+              }
+            }
+          ]
+        },
+        {
+          "name": "field descriptions and error nodes resolve",
+          "passed": true
+        },
+        {
+          "name": "name native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "email native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "interest native requirement and exact option contract",
+          "passed": true
+        },
+        {
+          "name": "optional note bound and local error checkbox",
+          "passed": true
+        },
+        {
+          "name": "three disabled static controls and native button types",
+          "passed": true
+        },
+        {
+          "name": "idle form is not busy and initially invalid",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic statuses",
+          "passed": true
+        },
+        {
+          "name": "receipt initially hidden and empty",
+          "passed": true
+        },
+        {
+          "name": "visible sample event and local-only privacy disclosures",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet is loaded",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "mobile stacked / desktop adjacent panels",
+          "passed": true
+        },
+        {
+          "name": "text/select targets and buttons at least 44px high",
+          "passed": true
+        },
+        {
+          "name": "text, border and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 13.651551199612788
+            },
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 11.313198150709475
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.12878678077061
+            },
+            {
+              "foreground": "--muted",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 6.4778984635476675
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 5.054797135617625
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 5.562694630464072
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 10.040824115362177
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 4.825367753719852
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 3.998837989152834
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 6.745510317001495
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 6.129616758382746
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse keyboard order and 3px focus outline",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "one-character typed name fails native minlength",
+          "passed": true
+        },
+        {
+          "name": "malformed email fails native type=email",
+          "passed": true
+        },
+        {
+          "name": "valid sample fields satisfy native constraints",
+          "passed": true
+        },
+        {
+          "name": "native error checkbox works with Space",
+          "passed": true
+        },
+        {
+          "name": "disabled submit prevents implicit Enter navigation/request",
+          "passed": true
+        },
+        {
+          "name": "reduced-motion page has no animation or smooth scrolling",
+          "passed": true
+        },
+        {
+          "name": "normal navigation has no runtime/network/CSP error or data request",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "violations": [],
+            "requests": [
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/?keyboard-check=1",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "local response applies exact repository CSP",
+          "passed": true
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "one h1 event-title and zero divs",
+          "passed": true
+        },
+        {
+          "name": "no application scripts or inline handlers/styles",
+          "passed": true
+        },
+        {
+          "name": "only two static application files",
+          "passed": true,
+          "detail": [
+            "index.html",
+            "styles.css"
+          ]
+        },
+        {
+          "name": "unique IDs",
+          "passed": true
+        },
+        {
+          "name": "all definition lists contain alternating dt/dd pairs",
+          "passed": true,
+          "detail": [
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 4
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            },
+            {
+              "tags": [
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD",
+                "DT",
+                "DD"
+              ],
+              "count": 8
+            }
+          ]
+        },
+        {
+          "name": "single time source has exact UTC datetime",
+          "passed": true
+        },
+        {
+          "name": "event displays exact Vietnam date/time and explicit zone",
+          "passed": true
+        },
+        {
+          "name": "four non-live countdown placeholders",
+          "passed": true
+        },
+        {
+          "name": "countdown labels align below corresponding numbers",
+          "passed": true
+        },
+        {
+          "name": "all five form controls have visible native labels",
+          "passed": true,
+          "detail": [
+            {
+              "id": "attendee-name",
+              "tag": "INPUT",
+              "type": "text",
+              "name": "name",
+              "required": true,
+              "min": 2,
+              "max": 80,
+              "autocomplete": "name",
+              "labels": [
+                "Full name (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "name-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 771.859375,
+                "width": 478.40625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-email",
+              "tag": "INPUT",
+              "type": "email",
+              "name": "email",
+              "required": true,
+              "min": -1,
+              "max": 120,
+              "autocomplete": "email",
+              "labels": [
+                "Email (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "email-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 864.078125,
+                "width": 478.40625,
+                "height": 46.78125
+              }
+            },
+            {
+              "id": "attendee-interest",
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "interest",
+              "required": true,
+              "autocomplete": "",
+              "labels": [
+                "Your interest (required)"
+              ],
+              "descriptions": [
+                {
+                  "id": "interest-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 956.296875,
+                "width": 478.40625,
+                "height": 46
+              }
+            },
+            {
+              "id": "attendee-note",
+              "tag": "TEXTAREA",
+              "type": "textarea",
+              "name": "note",
+              "required": false,
+              "min": -1,
+              "max": 300,
+              "autocomplete": "",
+              "labels": [
+                "A note for us (optional)"
+              ],
+              "descriptions": [
+                {
+                  "id": "note-hint",
+                  "exists": true
+                },
+                {
+                  "id": "note-error",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 761.796875,
+                "y": 1047.734375,
+                "width": 478.40625,
+                "height": 97.96875
+              }
+            },
+            {
+              "id": "simulate-error",
+              "tag": "INPUT",
+              "type": "checkbox",
+              "name": "simulate-error",
+              "required": false,
+              "min": -1,
+              "max": -1,
+              "autocomplete": "",
+              "labels": [
+                "Simulate a registration error"
+              ],
+              "descriptions": [
+                {
+                  "id": "simulate-error-hint",
+                  "exists": true
+                }
+              ],
+              "rect": {
+                "x": 775.59375,
+                "y": 1238.90625,
+                "width": 22,
+                "height": 22
+              }
+            }
+          ]
+        },
+        {
+          "name": "field descriptions and error nodes resolve",
+          "passed": true
+        },
+        {
+          "name": "name native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "email native constraints and autofill",
+          "passed": true
+        },
+        {
+          "name": "interest native requirement and exact option contract",
+          "passed": true
+        },
+        {
+          "name": "optional note bound and local error checkbox",
+          "passed": true
+        },
+        {
+          "name": "three disabled static controls and native button types",
+          "passed": true
+        },
+        {
+          "name": "idle form is not busy and initially invalid",
+          "passed": true
+        },
+        {
+          "name": "independent polite atomic statuses",
+          "passed": true
+        },
+        {
+          "name": "receipt initially hidden and empty",
+          "passed": true
+        },
+        {
+          "name": "visible sample event and local-only privacy disclosures",
+          "passed": true
+        },
+        {
+          "name": "external local stylesheet is loaded",
+          "passed": true
+        },
+        {
+          "name": "no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "mobile stacked / desktop adjacent panels",
+          "passed": true
+        },
+        {
+          "name": "text/select targets and buttons at least 44px high",
+          "passed": true
+        },
+        {
+          "name": "text, border and focus contrast",
+          "passed": true,
+          "detail": [
+            {
+              "foreground": "--ink",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 11.720677823889574
+            },
+            {
+              "foreground": "--ink",
+              "background": "--soft",
+              "minimum": 4.5,
+              "ratio": 9.635371201771774
+            },
+            {
+              "foreground": "--muted",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 9.344425354315504
+            },
+            {
+              "foreground": "--muted",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 11.454762397777806
+            },
+            {
+              "foreground": "--accent",
+              "background": "--bg",
+              "minimum": 4.5,
+              "ratio": 8.868273414632833
+            },
+            {
+              "foreground": "--accent",
+              "background": "--surface",
+              "minimum": 4.5,
+              "ratio": 7.2344511450340985
+            },
+            {
+              "foreground": "--button-text",
+              "background": "--button",
+              "minimum": 4.5,
+              "ratio": 8.601647010085834
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 5.409076018445249
+            },
+            {
+              "foreground": "--control-line",
+              "background": "--soft",
+              "minimum": 3,
+              "ratio": 4.446710000857772
+            },
+            {
+              "foreground": "--focus",
+              "background": "--surface",
+              "minimum": 3,
+              "ratio": 7.857382301804358
+            },
+            {
+              "foreground": "--focus",
+              "background": "--bg",
+              "minimum": 3,
+              "ratio": 9.631886811970405
+            }
+          ]
+        },
+        {
+          "name": "first Tab reveals skip link",
+          "passed": true
+        },
+        {
+          "name": "skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "forward/reverse keyboard order and 3px focus outline",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#simulate-error",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-note",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-interest",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-email",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "#attendee-name",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "one-character typed name fails native minlength",
+          "passed": true
+        },
+        {
+          "name": "malformed email fails native type=email",
+          "passed": true
+        },
+        {
+          "name": "valid sample fields satisfy native constraints",
+          "passed": true
+        },
+        {
+          "name": "native error checkbox works with Space",
+          "passed": true
+        },
+        {
+          "name": "disabled submit prevents implicit Enter navigation/request",
+          "passed": true
+        },
+        {
+          "name": "reduced-motion page has no animation or smooth scrolling",
+          "passed": true
+        },
+        {
+          "name": "normal navigation has no runtime/network/CSP error or data request",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failedResponses": [],
+            "violations": [],
+            "requests": [
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/?keyboard-check=1",
+                "method": "GET",
+                "type": "document"
+              },
+              {
+                "url": "http://127.0.0.1:45443/homework/event-hub/styles.css",
+                "method": "GET",
+                "type": "stylesheet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "local response applies exact repository CSP",
+          "passed": true
+        },
+        {
+          "name": "axe WCAG through 2.2 AA and best-practice: zero violations",
+          "passed": true
+        }
+      ],
+      "axe": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-allowed-role",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "empty-heading",
+          "form-field-multiple-labels",
+          "heading-order",
+          "html-has-lang",
+          "html-lang-valid",
+          "label-title-only",
+          "label",
+          "landmark-banner-is-top-level",
+          "landmark-contentinfo-is-top-level",
+          "landmark-main-is-top-level",
+          "landmark-no-duplicate-banner",
+          "landmark-no-duplicate-contentinfo",
+          "landmark-no-duplicate-main",
+          "landmark-one-main",
+          "landmark-unique",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport-large",
+          "meta-viewport",
+          "nested-interactive",
+          "page-has-heading-one",
+          "region",
+          "select-name",
+          "skip-link",
+          "tabindex",
+          "target-size"
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
