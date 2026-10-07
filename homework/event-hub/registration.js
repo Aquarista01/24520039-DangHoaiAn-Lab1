@@ -40,7 +40,9 @@ form.addEventListener('submit', async (event) => {
     transition('success', `Thanks, ${result.name}. Your preview is complete. No registration was sent or saved.`);
     form.reset();
   } catch (error) {
-    if (error.name !== 'AbortError') transition('error', 'The preview service is unavailable. Your details are kept here; uncheck the error preview and try again.');
+    transition('error', error.name === 'AbortError'
+      ? 'The preview was interrupted. Your details are kept; please try again.'
+      : 'The preview service is unavailable. Your details are kept here; uncheck the error preview and try again.');
   }
 });
 window.addEventListener('pagehide', () => pending?.abort());
