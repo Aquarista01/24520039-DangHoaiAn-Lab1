@@ -8,7 +8,6 @@
   --accent: #a34f2d;
   --accent-contrast: #fffdf8;
   --line: #c5c9bb;
-  --control-line: #65746f;
   --focus: #7140b0;
   --button: #244743;
   --button-text: #fffdf8;
@@ -32,7 +31,7 @@ main:focus { outline: none; }
     color-scheme: dark;
     --bg: #142522; --surface: #203531; --surface-soft: #29433d;
     --ink: #f7f3e7; --muted: #d0ded5; --accent: #f3b486;
-    --accent-contrast: #192826; --line: #527169; --control-line: #92ada4; --focus: #dfbbff;
+    --accent-contrast: #192826; --line: #527169; --focus: #dfbbff;
     --button: #e7b58b; --button-text: #172521;
     --skeleton-base: #314a42; --skeleton-highlight: #456257;
     --shadow: 0 14px 40px rgb(0 0 0 / 18%);
@@ -42,7 +41,7 @@ main:focus { outline: none; }
   color-scheme: dark;
   --bg: #142522; --surface: #203531; --surface-soft: #29433d;
   --ink: #f7f3e7; --muted: #d0ded5; --accent: #f3b486;
-  --accent-contrast: #192826; --line: #527169; --control-line: #92ada4; --focus: #dfbbff;
+  --accent-contrast: #192826; --line: #527169; --focus: #dfbbff;
   --button: #e7b58b; --button-text: #172521;
   --skeleton-base: #314a42; --skeleton-highlight: #456257;
   --shadow: 0 14px 40px rgb(0 0 0 / 18%);
@@ -121,7 +120,7 @@ h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
 .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .form-field { min-width: 0; }
 .form-field label { display: block; margin-bottom: .45rem; font-weight: 750; }
-.form-field input, .form-field textarea { width: 100%; padding: .8rem; border: 1px solid var(--control-line); border-radius: .35rem; background: var(--surface); color: var(--ink); }
+.form-field input, .form-field textarea { width: 100%; padding: .8rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--surface); color: var(--ink); }
 .form-field input:focus, .form-field textarea:focus { border-color: var(--focus); }
 .form-field small { display: block; margin-top: .4rem; color: var(--muted); }
 .full-width, .form-actions { grid-column: 1 / -1; }
@@ -147,9 +146,3 @@ h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
-
-/* HW1 AA controls: distinguish input boundaries and allow touch targets. */
-.theme-toggle, .demo-controls button, .retry-button, .button { min-height: 44px; }
-.nav-links a { min-height: 44px; display: inline-flex; align-items: center; }
-textarea { resize: vertical; }
-[hidden] { display: none !important; }

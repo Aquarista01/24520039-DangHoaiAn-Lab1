@@ -14,6 +14,6 @@ The tasks were split in TASK_DECOMPOSITION.md before implementation. The followi
 | T-03B | Render supplied events safely using textContent and DOM nodes. | Inspected for unescaped innerHTML and checked ready-state cards. |
 | T-03C | Add empty and error views plus a Retry button. | Reviewed cancellation token to prevent stale timers overwriting selected state. |
 
-## Homework verification update
+## Manual browser checks remaining
 
-The earlier Lab 1 source review is retained above as historical context. The homework extension has now been tested in local Chromium. Actual results and deployment limitations are in `homework/CHECKS.md`; observed AI-assisted defects are in `AI_FAILURE_AUDIT.md`. The new WBS was committed before homework implementation. Source inspection is not represented as a Lighthouse or deployed-browser audit.
+The local execution environment's browser cannot open localhost. Before submission, run the project on the student's computer, capture the actual screenshots and add them to the PDF. Check the 375px layout, all four event states and theme persistence in DevTools. Do not describe source inspection as a completed browser or Lighthouse audit.

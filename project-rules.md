@@ -8,8 +8,9 @@
 - Mobile first: verify 375px before desktop.
 - Preserve keyboard access and visible focus.
 - Keep changes focused and inspect the Git diff before committing.
-- Read homework/TASK_DECOMPOSITION.md for HW1-HW3 contracts.
-- Keep audio, recording, countdown, submission service, and DOM binding separate.
-- Clean up timers and audio on lifecycle exits.
-- State clearly when a form uses simulated submission; never claim a real registration.
-- Record actual checks and scores; do not invent AI defects or audit evidence.
+
+## Branch scope
+
+- Main contains the restored Lab 1 snapshot. Homework is assessed separately on hw-atomic-rebuild.
+- The student authorized the current-main cleanup on 7 October 2026; preserve old commits and the separate homework branch.
+- Keep baseline restoration checks distinct from HW1 improvement audits. Do not claim removed current files have disappeared from Git history.

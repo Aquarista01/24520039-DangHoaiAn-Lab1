@@ -1,0 +1,338 @@
+{
+  "date": "2026-10-07T11:23:55.383Z",
+  "tester": "Assistant: fresh baseline equality and local restored-Lab smoke check",
+  "previousMain": "66fe05a243cdc936c427179d445cfb6bfb148642",
+  "restoredBaseline": "8aa4676e8f691b39e1e599c7335b9e70d628a2b9",
+  "preservedHomework": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "browser": "153.0.8010.0",
+  "checks": [
+    {
+      "name": "index.html: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "styles.css: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "app.js: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "events.js: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "assets/favicon.svg: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "assets/portrait.svg: exact Lab baseline blob",
+      "passed": true
+    },
+    {
+      "name": "current main candidate has no Homework application paths or audit",
+      "passed": true
+    },
+    {
+      "name": "README points to separate Homework branch",
+      "passed": true
+    },
+    {
+      "name": "local Homework ref preserved at agreed commit",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "root and Lab event initialization load",
+          "passed": false
+        },
+        {
+          "name": "one h1/zero divs/overflow-free Lab layout",
+          "passed": true
+        },
+        {
+          "name": "no Homework link or section in Lab DOM",
+          "passed": true
+        },
+        {
+          "name": "first Tab shows native skip link and focus outline",
+          "passed": true
+        },
+        {
+          "name": "Enter skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "Lab empty state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab error state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab ready state renders and marks selected control",
+          "passed": false
+        },
+        {
+          "name": "Retry enters busy Loading",
+          "passed": true
+        },
+        {
+          "name": "Retry recovers three Lab events",
+          "passed": false
+        },
+        {
+          "name": "ordinary keyboard theme toggles both ways",
+          "passed": true
+        },
+        {
+          "name": "native contact form completes locally and resets",
+          "passed": true
+        },
+        {
+          "name": "no normal runtime/asset failure",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "homework/drum-kit/: absent Lab route returns 404",
+          "passed": true
+        },
+        {
+          "name": "homework/event-hub/: absent Lab route returns 404",
+          "passed": true
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "root and Lab event initialization load",
+          "passed": false
+        },
+        {
+          "name": "one h1/zero divs/overflow-free Lab layout",
+          "passed": true
+        },
+        {
+          "name": "no Homework link or section in Lab DOM",
+          "passed": true
+        },
+        {
+          "name": "first Tab shows native skip link and focus outline",
+          "passed": true
+        },
+        {
+          "name": "Enter skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "Lab empty state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab error state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab ready state renders and marks selected control",
+          "passed": false
+        },
+        {
+          "name": "Retry enters busy Loading",
+          "passed": true
+        },
+        {
+          "name": "Retry recovers three Lab events",
+          "passed": false
+        },
+        {
+          "name": "ordinary keyboard theme toggles both ways",
+          "passed": true
+        },
+        {
+          "name": "native contact form completes locally and resets",
+          "passed": true
+        },
+        {
+          "name": "no normal runtime/asset failure",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "homework/drum-kit/: absent Lab route returns 404",
+          "passed": true
+        },
+        {
+          "name": "homework/event-hub/: absent Lab route returns 404",
+          "passed": true
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "root and Lab event initialization load",
+          "passed": false
+        },
+        {
+          "name": "one h1/zero divs/overflow-free Lab layout",
+          "passed": true
+        },
+        {
+          "name": "no Homework link or section in Lab DOM",
+          "passed": true
+        },
+        {
+          "name": "first Tab shows native skip link and focus outline",
+          "passed": true
+        },
+        {
+          "name": "Enter skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "Lab empty state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab error state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab ready state renders and marks selected control",
+          "passed": false
+        },
+        {
+          "name": "Retry enters busy Loading",
+          "passed": true
+        },
+        {
+          "name": "Retry recovers three Lab events",
+          "passed": false
+        },
+        {
+          "name": "ordinary keyboard theme toggles both ways",
+          "passed": true
+        },
+        {
+          "name": "native contact form completes locally and resets",
+          "passed": true
+        },
+        {
+          "name": "no normal runtime/asset failure",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "homework/drum-kit/: absent Lab route returns 404",
+          "passed": true
+        },
+        {
+          "name": "homework/event-hub/: absent Lab route returns 404",
+          "passed": true
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "root and Lab event initialization load",
+          "passed": false
+        },
+        {
+          "name": "one h1/zero divs/overflow-free Lab layout",
+          "passed": true
+        },
+        {
+          "name": "no Homework link or section in Lab DOM",
+          "passed": true
+        },
+        {
+          "name": "first Tab shows native skip link and focus outline",
+          "passed": true
+        },
+        {
+          "name": "Enter skip link focuses main",
+          "passed": true
+        },
+        {
+          "name": "Lab empty state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab error state renders and marks selected control",
+          "passed": true
+        },
+        {
+          "name": "Lab ready state renders and marks selected control",
+          "passed": false
+        },
+        {
+          "name": "Retry enters busy Loading",
+          "passed": true
+        },
+        {
+          "name": "Retry recovers three Lab events",
+          "passed": false
+        },
+        {
+          "name": "ordinary keyboard theme toggles both ways",
+          "passed": true
+        },
+        {
+          "name": "native contact form completes locally and resets",
+          "passed": true
+        },
+        {
+          "name": "no normal runtime/asset failure",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failed": []
+          }
+        },
+        {
+          "name": "homework/drum-kit/: absent Lab route returns 404",
+          "passed": true
+        },
+        {
+          "name": "homework/event-hub/: absent Lab route returns 404",
+          "passed": true
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "limits": [
+    "Restored exact baseline behavior, not a fresh HW1 accessibility/CSP/Lighthouse certification.",
+    "Known baseline label/storage defects are fixed on the separate Homework branch, not silently mixed into this Lab restore.",
+    "No student laptop, hosted deployment/header or shared-chat verification claimed by this local report."
+  ]
+}

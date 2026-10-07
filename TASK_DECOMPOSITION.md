@@ -34,28 +34,12 @@ The page uses only semantic HTML containers. Nav links target existing section I
 
 Run `python3 -m http.server 5500` from this directory; open `http://localhost:5500`. Verify narrow and desktop screens, Tab and Enter, theme persistence, and all four event states. Exact measurements and screenshots are recorded in the submission PDF.
 
-## Homework extension
+## Main branch Lab restoration
 
-The initial homework plan was committed at `528ed46` before implementation. Its full subsystem contract remains in `homework/TASK_DECOMPOSITION.md`.
+User authorization: 7 October 2026 at 18:19 (Asia/Ho_Chi_Minh), after the proposal to remove the earlier Homework snapshot from current main with a new commit while keeping its history. This instruction permits changing main and supersedes the earlier unchanged-main plan for this one cleanup package.
 
-| WBS | Work package | Contract / output | Verification |
+| Work package | Contract | Scope | Verification |
 | --- | --- | --- | --- |
-| 1 | Planning | This WBS, project rules, recorded baseline | Planning commit precedes homework code |
-| 2 | HW1: Production portfolio | Root `index.html` | Four focused improvement milestones |
-| 2.1 | Contrast and landmarks | One h1, zero divs, named regions; AA text contrast; control boundaries | Contrast calculation and accessibility audit |
-| 2.2 | Keyboard navigation | Skip link moves focus; no keyboard trap; theme survives unavailable storage | Tab/Enter traversal, storage failure test |
-| 2.3 | Content Security Policy | Self-hosted scripts/styles/assets; no inline handlers; Vercel response headers | Review CSP, load all pages without CSP errors |
-| 2.4 | Performance | Sized local artwork, lightweight assets | Actual Lighthouse reports; no invented scores |
-| 3 | HW2: Drum kit | `homework/drum-kit/index.html` | Four separate subsystem contracts |
-| 3.1 | HTML data contract | Nine native buttons; data-key and data-sound; unique local WAV paths | Each key resolves one button and one audio source |
-| 3.2 | Polyphonic audio | `createAudioEngine`: play(src), stopAll(), activeCount | Overlapping voices; blocked-play errors handled |
-| 3.3 | Input binding | keydown / event.key / event.repeat; ignore input fields and modifiers | Click, keyboard, uppercase, held keys, Space to stop |
-| 3.4 | FIFO recorder | Queue of {key, at}; elapsed monotonic ms; record/stop/replay/clear | FIFO order, timing, bounded queue, replay cancellation |
-| 4 | HW3: Event landing page | `homework/event-hub/index.html` | Minimum five focused commits |
-| 4.1 | Event contract | Explicit UTC ISO timestamp; visible local timezone; labelled demo | Verify UTC/local equivalence |
-| 4.2 | Countdown | Remaining = max(0, target - Date.now()); no incremental subtraction | Delayed timer, elapsed date, visibility resume |
-| 4.3 | Form state machine | idle -> submitting -> success/error; request service isolated | All states including retry |
-| 4.4 | Duplicate prevention | Lock before the first await; immutable submitted snapshot | Burst submits produce one request |
-| 4.5 | Input safety | Trim/NFC/length checks; native validation; textContent-only feedback | Whitespace and hostile markup remain inert |
-| 5 | Review and handoff | AI_FAILURE_AUDIT.md, CHECKS.md, evidence, Git bundle | Report real findings and remaining deployment checks |
+| Main cleanup | Restore the Lab 1 application snapshot at 8aa4676 through a new commit whose parent is current main 66fe05a. Remove later homework applications/assets/evidence and homework-specific audit/config/docs from current main; add explicit README link to the separate hw-atomic-rebuild branch. | Baseline Lab files plus this contract, source-separation rule, cleanup log and verification notes/results | Compare every Lab runtime/asset blob to baseline; no homework directory/current links; root opens and native Lab controls work at 375/1440px light/dark; old HW routes 404; verify branch/history preservation and deployment commit |
 
+No reset/force push, rebase, deletion of old commits, or merge from homework is used. The separate homework branch stays at 7ac14ab. Earlier Homework commits remain in history; this cleanup only changes current main content. Vercel production may automatically serve the restored Lab after main is updated. Restoring this baseline is not a new HW1 accessibility/CSP/performance certification; HW1 fixes and evidence are on the homework branch.
