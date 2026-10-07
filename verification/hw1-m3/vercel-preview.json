@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-07T06:25:27.434006+00:00",
+  "sourceCommit": "2f038e421e8e04c39e5db86d4dbca4e6ce7c5fb5",
+  "tester": "Assistant unauthenticated HTTP check",
+  "status": "blocked_by_preview_authentication",
+  "headerVerified": false,
+  "deploymentId": 6903234727,
+  "environment": "Preview",
+  "deploymentState": "success",
+  "url": "https://24520039-xvu10l5np-aquarista.vercel.app/",
+  "httpStatus": 302,
+  "responseCSP": null,
+  "redirectTargetWithoutQuery": "https://vercel.com/sso-api",
+  "reason": "HTTP redirect to Vercel SSO; portfolio response headers inaccessible without authorized login"
+}

@@ -86,3 +86,10 @@ Actions actually performed by the assistant:
 Evidence: verification/hw1-m3/README.md, audit.mjs, before.json, after.json. Actual test timestamps and tester are in the JSON.
 
 Not performed: authenticated M3 Preview header verification, student-run browser checks, M4 Lighthouse. Main/production and Preview protection settings are preserved. This turn does not implement M4.
+
+### M3 post-publication evidence
+
+- Published source commit `2f038e4` (`fix(security): enforce strict CSP`) on the rebuild branch.
+- GitHub reported the Vercel status as success. GitHub deployment metadata identifies Preview deployment 6903234727 for that exact source commit.
+- Requested https://24520039-xvu10l5np-aquarista.vercel.app/ without following redirects: HTTP 302 to Vercel SSO; no portfolio CSP header accessible. Recorded `headerVerified: false` and the authentication block in verification/hw1-m3/vercel-preview.json.
+- This follow-up commit records online evidence only; application code is unchanged from 2f038e4. The authenticated online header check remains pending.

@@ -47,6 +47,8 @@ GitHub integration đang tự tạo deployment Preview cho nhánh này. Preview 
 
 Kiểm tra header CSP thực tế trên deployment M3 còn chờ truy cập Preview được bảo vệ. Local pass không được ghi thành Vercel pass. Không thay đổi main, deployment production hoặc cấu hình bảo vệ Preview để vượt qua bước này.
 
+Sau khi publish commit `2f038e4`, đã kiểm tra deployment Preview thực tế của chính commit này: Vercel báo success; GET https://24520039-xvu10l5np-aquarista.vercel.app/ trả HTTP 302 tới Vercel SSO. Kết quả được lưu trong `vercel-preview.json`, với `headerVerified: false`. Redirect đăng nhập chưa phải bằng chứng header của portfolio.
+
 Nếu mở Preview bằng tài khoản được cấp quyền: DevTools → Network → reload → chọn request Document của portfolio → Response Headers. Kiểm tra `content-security-policy` chứa `frame-ancestors 'none'`, không chứa unsafe-inline/unsafe-eval; kiểm tra Console và các tương tác sau reload. Ghi kết quả mới kèm URL, commit và thời điểm; không ghi là sinh viên đã kiểm tra nếu chưa có bằng chứng.
 
 ## Chạy lại local
