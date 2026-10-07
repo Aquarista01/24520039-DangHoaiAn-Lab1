@@ -1,0 +1,2502 @@
+{
+  "date": "2026-10-07T10:56:41.719Z",
+  "tester": "Assistant: fresh local native navigation/initialization checks",
+  "baseline": "b470cccf7826da1fe7e16ec9338ce73387060d85",
+  "browser": "153.0.8010.0",
+  "method": "Actual pages under repository CSP; trusted Tab/Enter for both links/back links in four configurations; separate JS-disabled click round trip. No injected transport or virtual clock.",
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "native JavaScript",
+      "checks": [
+        {
+          "name": "portfolio response 200 with expected CSP header",
+          "passed": true
+        },
+        {
+          "name": "portfolio structure: one h1, no div/duplicate IDs/inline code/overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to content\n\n    \n      HA.\n      \n        \n          About\n          Skills\n          Projects\n          Homework\n          Event hub\n          Contact\n        \n      \n      \n        ☾ Theme\n      \n    \n\n    \n      \n        \n           Information Systems · UIT\n          Building the web with purpose.\n          Hi, I’m Hoài An. I turn complex requirements into clear, usable digital experiences — with a soft spot for accessible interfaces and thoughtful details.\n          Explore my work ↗Get in touch →\n          Web Application Development · Lab 1 / 2026\n        \n        \n          \n          ✳ Curious by design. Precise by practice.\n        \n      \n\n      \n        01 / WHAT I DOA practical toolkit.Designing interfaces that are easy to use and easy to maintain.\n        \n          ⌘Front-endSemantic HTML · Responsive CSS · JavaScript ES6+\n          ◈ExperienceAccessibility · Information architecture · Interaction design\n          { }WorkflowGit · Contract-first planning · Browser DevTools\n        \n      \n\n      \n        02 / SELECTED WORKWork in progress.Three slices of one small, deliberately engineered web app.\n        \n          PROJECT / 01Semantic foundationA clear landmark tree, skip navigation, meaningful headings and keyboard-first structure.HTML5Explore ↗\n          PROJECT / 02Adaptive portfolioA mobile-first grid, accessible color tokens and a theme choice that remembers you.CSS + JSExplore ↗\n          PROJECT / 03Resilient event hubOne component, four clear states. Try loading, live, empty and error views below.STATE MODELTry demo ↗\n        \n      \n\n      \n        03 / HOMEWORKSmall builds, big lessons.HW1 is this accessible portfolio. Explore rhythm with HW2, then try a workshop registration with HW3.\n        \n          HOMEWORK / 02Drum kitPlay nine sounds with your keyboard or a click. Record a beat and replay it with its original spacing.AUDIO + REPLAYOpen drum kit ↗\n          HOMEWORK / 03Build for EveryoneWatch the workshop countdown and try a local registration with useful feedback, cancellation and retry.LOCAL DEMOOpen workshop ↗\n        \n      \n\n      \n        04 / INTERACTIVE DEMOThe event hub.Good interfaces explain what is happening, even when there is no data.\n        Preview component stateLoadingLive dataEmptyError\n        3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City\n      \n\n      \n        05 / SAY HELLOLet’s make something useful.Use this local form to see native validation and accessible feedback in action.\n        \n          Your name *\n          Email address *\n          Your message *This demonstration does not send or store your message.\n          Preview submission ↗\n        \n      \n    \n\n    HA. Crafted for the web, with care.© 2026 Đặng Hoài An · 24520039Back to top ↑",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "Homework nav/region and visible HW1 identity exist once",
+          "passed": true
+        },
+        {
+          "name": "two relative homework links stay in the same tab",
+          "passed": true
+        },
+        {
+          "name": "portfolio: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches Homework nav with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Enter activates native Homework hash",
+          "passed": true
+        },
+        {
+          "name": "Tab after anchor jump reaches first homework card link",
+          "passed": true
+        },
+        {
+          "name": "HW2 loads its independent page and source module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/drum-kit/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to drum kit\n  \n    ← An's portfolio\n    Sound lab / 02\n  \n  \n    \n      Nine sounds. Your rhythm.\n      Find your rhythm.\n      A little space to make a beat, capture an idea and play it back.\n    \n    \n      \n        \n          Drum pads\n          01 — Play\n        \n        \n          AKick\n          SSnare\n          DClap\n          FClosed hat\n          GOpen hat\n          HLow tom\n          JRimshot\n          KShaker\n          LCrash\n        \n        Ready to play.\n        \n          How to use the kit\n          Click a pad or use its letter key. Use Tab to move between controls and Enter or Space to activate a focused button.\n          Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.\n        \n      \n      \n        \n          Beat tape\n          02 — Capture\n        \n        \n          StateIdle\n          Hits0\n        \n        Each take holds up to 256 hits or 120 seconds. Times show when you hit each pad.\n        \n          Record\n          Stop\n          Replay\n          Clear\n        \n        No take recorded yet.\n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Make a little noise.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW2 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "drum-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW2 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to drum kit",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW2 back link restores portfolio Homework section",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches workshop card with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Event hub",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Contact",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "☾ Theme",
+                "tag": "BUTTON",
+                "href": null,
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore my work ↗",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Get in touch →",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Try demo ↗",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open drum kit ↗",
+                "tag": "A",
+                "href": "homework/drum-kit/",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open workshop ↗",
+                "tag": "A",
+                "href": "homework/event-hub/",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 loads its independent module/countdown/Idle form",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/event-hub/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to event\n  \n    ← An's portfolio\n    Event hub / 03\n  \n  \n    \n      A workshop for curious builders\n      Build for everyone.\n      Small ideas. Thoughtful interfaces. A space to explore how the web can welcome more people.\n      \n        When\n        21 November 2026 · 09:00Vietnam time · Asia/Ho_Chi_Minh (UTC+07:00)\n        Where\n        UIT Campus Sample venue\n      \n      Coursework demo: this is a sample event, not an actual UIT booking.\n    \n    \n      \n        \n          01 — Make time\n          Until we meet.\n        \n        \n          Days44\n          Hours15\n          Minutes03\n          Seconds28\n        \n        Counting down to the workshop. Event time is shown in Vietnam time.\n        \n          Bring an idea. Leave with a start.\n          \n            Notice the detailsExplore clear labels, useful feedback and keyboard-friendly interfaces.\n            Make something smallTurn an everyday idea into a simple web experience.\n            Learn togetherShare what worked, ask questions and find the next improvement.\n          \n        \n      \n      \n        \n          02 — Join the conversation\n          Save a little space.\n        \n        Local demo only. No email is sent, no place is booked and your form entries are not saved.\n        \n          Fields marked “required” must be filled in.\n          \n            Full name (required)\n            \n            \n          \n          \n            Email (required)\n            \n            \n          \n          \n            Your interest (required)\n            \n              Choose an interest\n              Design\n              Code\n              Design and code\n            \n            \n          \n          \n            A note for us (optional)\n            \n            Up to 300 characters. Please use sample details for this demo.\n            \n          \n          \n            Try the demo\n            Simulate a registration error\n            Turn this on to try the local error and retry experience. Turn it off for a successful demo registration.\n          \n          \n            Register\n            Cancel\n            Reset\n          \n          Cancel keeps your entries. Reset clears them.\n          Form state: Idle\n        \n        Ready to try a local demo registration.\n        \n          Your demo registration\n          \n            Name\n            Email\n            Interest\n            Note\n          \n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Better together.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW3 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "workshop-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW3 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to event",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 back link restores portfolio",
+          "passed": true
+        },
+        {
+          "name": "round trip opens no popup and uses only same-origin asset requests",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:35481/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/audio.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/keyboard.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/recorder.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/countdown.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration-service.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/validation.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "round trip has no failed response/request/runtime/CSP/unhandled",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failures": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "name": "portfolio",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT",
+                "RGAAv4",
+                "RGAA-3.2.1"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span id=\"theme-icon\" aria-hidden=\"true\">☾</span>",
+                  "target": [
+                    "#theme-icon"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span aria-hidden=\"true\">→</span>",
+                  "target": [
+                    ".text-link > span[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                  "target": [
+                    ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                  "target": [
+                    ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "drum-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "workshop-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "mode": "native JavaScript",
+      "checks": [
+        {
+          "name": "portfolio response 200 with expected CSP header",
+          "passed": true
+        },
+        {
+          "name": "portfolio structure: one h1, no div/duplicate IDs/inline code/overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to content\n\n    \n      HA.\n      \n        \n          About\n          Skills\n          Projects\n          Homework\n          Event hub\n          Contact\n        \n      \n      \n        ☀ Theme\n      \n    \n\n    \n      \n        \n           Information Systems · UIT\n          Building the web with purpose.\n          Hi, I’m Hoài An. I turn complex requirements into clear, usable digital experiences — with a soft spot for accessible interfaces and thoughtful details.\n          Explore my work ↗Get in touch →\n          Web Application Development · Lab 1 / 2026\n        \n        \n          \n          ✳ Curious by design. Precise by practice.\n        \n      \n\n      \n        01 / WHAT I DOA practical toolkit.Designing interfaces that are easy to use and easy to maintain.\n        \n          ⌘Front-endSemantic HTML · Responsive CSS · JavaScript ES6+\n          ◈ExperienceAccessibility · Information architecture · Interaction design\n          { }WorkflowGit · Contract-first planning · Browser DevTools\n        \n      \n\n      \n        02 / SELECTED WORKWork in progress.Three slices of one small, deliberately engineered web app.\n        \n          PROJECT / 01Semantic foundationA clear landmark tree, skip navigation, meaningful headings and keyboard-first structure.HTML5Explore ↗\n          PROJECT / 02Adaptive portfolioA mobile-first grid, accessible color tokens and a theme choice that remembers you.CSS + JSExplore ↗\n          PROJECT / 03Resilient event hubOne component, four clear states. Try loading, live, empty and error views below.STATE MODELTry demo ↗\n        \n      \n\n      \n        03 / HOMEWORKSmall builds, big lessons.HW1 is this accessible portfolio. Explore rhythm with HW2, then try a workshop registration with HW3.\n        \n          HOMEWORK / 02Drum kitPlay nine sounds with your keyboard or a click. Record a beat and replay it with its original spacing.AUDIO + REPLAYOpen drum kit ↗\n          HOMEWORK / 03Build for EveryoneWatch the workshop countdown and try a local registration with useful feedback, cancellation and retry.LOCAL DEMOOpen workshop ↗\n        \n      \n\n      \n        04 / INTERACTIVE DEMOThe event hub.Good interfaces explain what is happening, even when there is no data.\n        Preview component stateLoadingLive dataEmptyError\n        3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City\n      \n\n      \n        05 / SAY HELLOLet’s make something useful.Use this local form to see native validation and accessible feedback in action.\n        \n          Your name *\n          Email address *\n          Your message *This demonstration does not send or store your message.\n          Preview submission ↗\n        \n      \n    \n\n    HA. Crafted for the web, with care.© 2026 Đặng Hoài An · 24520039Back to top ↑",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "Homework nav/region and visible HW1 identity exist once",
+          "passed": true
+        },
+        {
+          "name": "two relative homework links stay in the same tab",
+          "passed": true
+        },
+        {
+          "name": "portfolio: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches Homework nav with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Enter activates native Homework hash",
+          "passed": true
+        },
+        {
+          "name": "Tab after anchor jump reaches first homework card link",
+          "passed": true
+        },
+        {
+          "name": "HW2 loads its independent page and source module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/drum-kit/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to drum kit\n  \n    ← An's portfolio\n    Sound lab / 02\n  \n  \n    \n      Nine sounds. Your rhythm.\n      Find your rhythm.\n      A little space to make a beat, capture an idea and play it back.\n    \n    \n      \n        \n          Drum pads\n          01 — Play\n        \n        \n          AKick\n          SSnare\n          DClap\n          FClosed hat\n          GOpen hat\n          HLow tom\n          JRimshot\n          KShaker\n          LCrash\n        \n        Ready to play.\n        \n          How to use the kit\n          Click a pad or use its letter key. Use Tab to move between controls and Enter or Space to activate a focused button.\n          Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.\n        \n      \n      \n        \n          Beat tape\n          02 — Capture\n        \n        \n          StateIdle\n          Hits0\n        \n        Each take holds up to 256 hits or 120 seconds. Times show when you hit each pad.\n        \n          Record\n          Stop\n          Replay\n          Clear\n        \n        No take recorded yet.\n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Make a little noise.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW2 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "drum-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW2 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to drum kit",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW2 back link restores portfolio Homework section",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches workshop card with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Event hub",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Contact",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "☀ Theme",
+                "tag": "BUTTON",
+                "href": null,
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore my work ↗",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Get in touch →",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Try demo ↗",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open drum kit ↗",
+                "tag": "A",
+                "href": "homework/drum-kit/",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open workshop ↗",
+                "tag": "A",
+                "href": "homework/event-hub/",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 loads its independent module/countdown/Idle form",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/event-hub/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to event\n  \n    ← An's portfolio\n    Event hub / 03\n  \n  \n    \n      A workshop for curious builders\n      Build for everyone.\n      Small ideas. Thoughtful interfaces. A space to explore how the web can welcome more people.\n      \n        When\n        21 November 2026 · 09:00Vietnam time · Asia/Ho_Chi_Minh (UTC+07:00)\n        Where\n        UIT Campus Sample venue\n      \n      Coursework demo: this is a sample event, not an actual UIT booking.\n    \n    \n      \n        \n          01 — Make time\n          Until we meet.\n        \n        \n          Days44\n          Hours15\n          Minutes03\n          Seconds25\n        \n        Counting down to the workshop. Event time is shown in Vietnam time.\n        \n          Bring an idea. Leave with a start.\n          \n            Notice the detailsExplore clear labels, useful feedback and keyboard-friendly interfaces.\n            Make something smallTurn an everyday idea into a simple web experience.\n            Learn togetherShare what worked, ask questions and find the next improvement.\n          \n        \n      \n      \n        \n          02 — Join the conversation\n          Save a little space.\n        \n        Local demo only. No email is sent, no place is booked and your form entries are not saved.\n        \n          Fields marked “required” must be filled in.\n          \n            Full name (required)\n            \n            \n          \n          \n            Email (required)\n            \n            \n          \n          \n            Your interest (required)\n            \n              Choose an interest\n              Design\n              Code\n              Design and code\n            \n            \n          \n          \n            A note for us (optional)\n            \n            Up to 300 characters. Please use sample details for this demo.\n            \n          \n          \n            Try the demo\n            Simulate a registration error\n            Turn this on to try the local error and retry experience. Turn it off for a successful demo registration.\n          \n          \n            Register\n            Cancel\n            Reset\n          \n          Cancel keeps your entries. Reset clears them.\n          Form state: Idle\n        \n        Ready to try a local demo registration.\n        \n          Your demo registration\n          \n            Name\n            Email\n            Interest\n            Note\n          \n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Better together.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW3 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "workshop-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW3 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to event",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 back link restores portfolio",
+          "passed": true
+        },
+        {
+          "name": "round trip opens no popup and uses only same-origin asset requests",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:35481/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/audio.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/keyboard.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/recorder.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/countdown.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration-service.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/validation.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "round trip has no failed response/request/runtime/CSP/unhandled",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failures": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "name": "portfolio",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT",
+                "RGAAv4",
+                "RGAA-3.2.1"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span aria-hidden=\"true\">→</span>",
+                  "target": [
+                    ".text-link > span[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                  "target": [
+                    ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                  "target": [
+                    ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "drum-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "workshop-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "mode": "native JavaScript",
+      "checks": [
+        {
+          "name": "portfolio response 200 with expected CSP header",
+          "passed": true
+        },
+        {
+          "name": "portfolio structure: one h1, no div/duplicate IDs/inline code/overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to content\n\n    \n      HA.\n      \n        \n          About\n          Skills\n          Projects\n          Homework\n          Event hub\n          Contact\n        \n      \n      \n        ☾ Theme\n      \n    \n\n    \n      \n        \n           Information Systems · UIT\n          Building the web with purpose.\n          Hi, I’m Hoài An. I turn complex requirements into clear, usable digital experiences — with a soft spot for accessible interfaces and thoughtful details.\n          Explore my work ↗Get in touch →\n          Web Application Development · Lab 1 / 2026\n        \n        \n          \n          ✳ Curious by design. Precise by practice.\n        \n      \n\n      \n        01 / WHAT I DOA practical toolkit.Designing interfaces that are easy to use and easy to maintain.\n        \n          ⌘Front-endSemantic HTML · Responsive CSS · JavaScript ES6+\n          ◈ExperienceAccessibility · Information architecture · Interaction design\n          { }WorkflowGit · Contract-first planning · Browser DevTools\n        \n      \n\n      \n        02 / SELECTED WORKWork in progress.Three slices of one small, deliberately engineered web app.\n        \n          PROJECT / 01Semantic foundationA clear landmark tree, skip navigation, meaningful headings and keyboard-first structure.HTML5Explore ↗\n          PROJECT / 02Adaptive portfolioA mobile-first grid, accessible color tokens and a theme choice that remembers you.CSS + JSExplore ↗\n          PROJECT / 03Resilient event hubOne component, four clear states. Try loading, live, empty and error views below.STATE MODELTry demo ↗\n        \n      \n\n      \n        03 / HOMEWORKSmall builds, big lessons.HW1 is this accessible portfolio. Explore rhythm with HW2, then try a workshop registration with HW3.\n        \n          HOMEWORK / 02Drum kitPlay nine sounds with your keyboard or a click. Record a beat and replay it with its original spacing.AUDIO + REPLAYOpen drum kit ↗\n          HOMEWORK / 03Build for EveryoneWatch the workshop countdown and try a local registration with useful feedback, cancellation and retry.LOCAL DEMOOpen workshop ↗\n        \n      \n\n      \n        04 / INTERACTIVE DEMOThe event hub.Good interfaces explain what is happening, even when there is no data.\n        Preview component stateLoadingLive dataEmptyError\n        3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City\n      \n\n      \n        05 / SAY HELLOLet’s make something useful.Use this local form to see native validation and accessible feedback in action.\n        \n          Your name *\n          Email address *\n          Your message *This demonstration does not send or store your message.\n          Preview submission ↗\n        \n      \n    \n\n    HA. Crafted for the web, with care.© 2026 Đặng Hoài An · 24520039Back to top ↑",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "Homework nav/region and visible HW1 identity exist once",
+          "passed": true
+        },
+        {
+          "name": "two relative homework links stay in the same tab",
+          "passed": true
+        },
+        {
+          "name": "portfolio: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches Homework nav with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Enter activates native Homework hash",
+          "passed": true
+        },
+        {
+          "name": "Tab after anchor jump reaches first homework card link",
+          "passed": true
+        },
+        {
+          "name": "HW2 loads its independent page and source module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/drum-kit/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to drum kit\n  \n    ← An's portfolio\n    Sound lab / 02\n  \n  \n    \n      Nine sounds. Your rhythm.\n      Find your rhythm.\n      A little space to make a beat, capture an idea and play it back.\n    \n    \n      \n        \n          Drum pads\n          01 — Play\n        \n        \n          AKick\n          SSnare\n          DClap\n          FClosed hat\n          GOpen hat\n          HLow tom\n          JRimshot\n          KShaker\n          LCrash\n        \n        Ready to play.\n        \n          How to use the kit\n          Click a pad or use its letter key. Use Tab to move between controls and Enter or Space to activate a focused button.\n          Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.\n        \n      \n      \n        \n          Beat tape\n          02 — Capture\n        \n        \n          StateIdle\n          Hits0\n        \n        Each take holds up to 256 hits or 120 seconds. Times show when you hit each pad.\n        \n          Record\n          Stop\n          Replay\n          Clear\n        \n        No take recorded yet.\n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Make a little noise.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW2 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "drum-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW2 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to drum kit",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW2 back link restores portfolio Homework section",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches workshop card with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Event hub",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Contact",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "☾ Theme",
+                "tag": "BUTTON",
+                "href": null,
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore my work ↗",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Get in touch →",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Try demo ↗",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open drum kit ↗",
+                "tag": "A",
+                "href": "homework/drum-kit/",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open workshop ↗",
+                "tag": "A",
+                "href": "homework/event-hub/",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 loads its independent module/countdown/Idle form",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/event-hub/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to event\n  \n    ← An's portfolio\n    Event hub / 03\n  \n  \n    \n      A workshop for curious builders\n      Build for everyone.\n      Small ideas. Thoughtful interfaces. A space to explore how the web can welcome more people.\n      \n        When\n        21 November 2026 · 09:00Vietnam time · Asia/Ho_Chi_Minh (UTC+07:00)\n        Where\n        UIT Campus Sample venue\n      \n      Coursework demo: this is a sample event, not an actual UIT booking.\n    \n    \n      \n        \n          01 — Make time\n          Until we meet.\n        \n        \n          Days44\n          Hours15\n          Minutes03\n          Seconds22\n        \n        Counting down to the workshop. Event time is shown in Vietnam time.\n        \n          Bring an idea. Leave with a start.\n          \n            Notice the detailsExplore clear labels, useful feedback and keyboard-friendly interfaces.\n            Make something smallTurn an everyday idea into a simple web experience.\n            Learn togetherShare what worked, ask questions and find the next improvement.\n          \n        \n      \n      \n        \n          02 — Join the conversation\n          Save a little space.\n        \n        Local demo only. No email is sent, no place is booked and your form entries are not saved.\n        \n          Fields marked “required” must be filled in.\n          \n            Full name (required)\n            \n            \n          \n          \n            Email (required)\n            \n            \n          \n          \n            Your interest (required)\n            \n              Choose an interest\n              Design\n              Code\n              Design and code\n            \n            \n          \n          \n            A note for us (optional)\n            \n            Up to 300 characters. Please use sample details for this demo.\n            \n          \n          \n            Try the demo\n            Simulate a registration error\n            Turn this on to try the local error and retry experience. Turn it off for a successful demo registration.\n          \n          \n            Register\n            Cancel\n            Reset\n          \n          Cancel keeps your entries. Reset clears them.\n          Form state: Idle\n        \n        Ready to try a local demo registration.\n        \n          Your demo registration\n          \n            Name\n            Email\n            Interest\n            Note\n          \n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Better together.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW3 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "workshop-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW3 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to event",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 back link restores portfolio",
+          "passed": true
+        },
+        {
+          "name": "round trip opens no popup and uses only same-origin asset requests",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:35481/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/audio.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/keyboard.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/recorder.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/countdown.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration-service.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/validation.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "round trip has no failed response/request/runtime/CSP/unhandled",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failures": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "name": "portfolio",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT",
+                "RGAAv4",
+                "RGAA-3.2.1"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span id=\"theme-icon\" aria-hidden=\"true\">☾</span>",
+                  "target": [
+                    "#theme-icon"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span aria-hidden=\"true\">→</span>",
+                  "target": [
+                    ".text-link > span[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                  "target": [
+                    ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                  "target": [
+                    ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "drum-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "workshop-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "mode": "native JavaScript",
+      "checks": [
+        {
+          "name": "portfolio response 200 with expected CSP header",
+          "passed": true
+        },
+        {
+          "name": "portfolio structure: one h1, no div/duplicate IDs/inline code/overflow",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to content\n\n    \n      HA.\n      \n        \n          About\n          Skills\n          Projects\n          Homework\n          Event hub\n          Contact\n        \n      \n      \n        ☀ Theme\n      \n    \n\n    \n      \n        \n           Information Systems · UIT\n          Building the web with purpose.\n          Hi, I’m Hoài An. I turn complex requirements into clear, usable digital experiences — with a soft spot for accessible interfaces and thoughtful details.\n          Explore my work ↗Get in touch →\n          Web Application Development · Lab 1 / 2026\n        \n        \n          \n          ✳ Curious by design. Precise by practice.\n        \n      \n\n      \n        01 / WHAT I DOA practical toolkit.Designing interfaces that are easy to use and easy to maintain.\n        \n          ⌘Front-endSemantic HTML · Responsive CSS · JavaScript ES6+\n          ◈ExperienceAccessibility · Information architecture · Interaction design\n          { }WorkflowGit · Contract-first planning · Browser DevTools\n        \n      \n\n      \n        02 / SELECTED WORKWork in progress.Three slices of one small, deliberately engineered web app.\n        \n          PROJECT / 01Semantic foundationA clear landmark tree, skip navigation, meaningful headings and keyboard-first structure.HTML5Explore ↗\n          PROJECT / 02Adaptive portfolioA mobile-first grid, accessible color tokens and a theme choice that remembers you.CSS + JSExplore ↗\n          PROJECT / 03Resilient event hubOne component, four clear states. Try loading, live, empty and error views below.STATE MODELTry demo ↗\n        \n      \n\n      \n        03 / HOMEWORKSmall builds, big lessons.HW1 is this accessible portfolio. Explore rhythm with HW2, then try a workshop registration with HW3.\n        \n          HOMEWORK / 02Drum kitPlay nine sounds with your keyboard or a click. Record a beat and replay it with its original spacing.AUDIO + REPLAYOpen drum kit ↗\n          HOMEWORK / 03Build for EveryoneWatch the workshop countdown and try a local registration with useful feedback, cancellation and retry.LOCAL DEMOOpen workshop ↗\n        \n      \n\n      \n        04 / INTERACTIVE DEMOThe event hub.Good interfaces explain what is happening, even when there is no data.\n        Preview component stateLoadingLive dataEmptyError\n        3 upcoming eventsWorkshopBuild for everyone12 October 2026UIT CampusCommunityDesign systems lab19 October 2026OnlineMeetupWeb foundations meetup28 October 2026Ho Chi Minh City\n      \n\n      \n        05 / SAY HELLOLet’s make something useful.Use this local form to see native validation and accessible feedback in action.\n        \n          Your name *\n          Email address *\n          Your message *This demonstration does not send or store your message.\n          Preview submission ↗\n        \n      \n    \n\n    HA. Crafted for the web, with care.© 2026 Đặng Hoài An · 24520039Back to top ↑",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "Homework nav/region and visible HW1 identity exist once",
+          "passed": true
+        },
+        {
+          "name": "two relative homework links stay in the same tab",
+          "passed": true
+        },
+        {
+          "name": "portfolio: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches Homework nav with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Enter activates native Homework hash",
+          "passed": true
+        },
+        {
+          "name": "Tab after anchor jump reaches first homework card link",
+          "passed": true
+        },
+        {
+          "name": "HW2 loads its independent page and source module",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/drum-kit/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to drum kit\n  \n    ← An's portfolio\n    Sound lab / 02\n  \n  \n    \n      Nine sounds. Your rhythm.\n      Find your rhythm.\n      A little space to make a beat, capture an idea and play it back.\n    \n    \n      \n        \n          Drum pads\n          01 — Play\n        \n        \n          AKick\n          SSnare\n          DClap\n          FClosed hat\n          GOpen hat\n          HLow tom\n          JRimshot\n          KShaker\n          LCrash\n        \n        Ready to play.\n        \n          How to use the kit\n          Click a pad or use its letter key. Use Tab to move between controls and Enter or Space to activate a focused button.\n          Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.\n        \n      \n      \n        \n          Beat tape\n          02 — Capture\n        \n        \n          StateIdle\n          Hits0\n        \n        Each take holds up to 256 hits or 120 seconds. Times show when you hit each pad.\n        \n          Record\n          Stop\n          Replay\n          Clear\n        \n        No take recorded yet.\n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Make a little noise.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW2 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "drum-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW2 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to drum kit",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW2 back link restores portfolio Homework section",
+          "passed": true
+        },
+        {
+          "name": "native Tab reaches workshop card with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to content",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "HA.",
+                "tag": "A",
+                "href": "#top",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "About",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Skills",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Projects",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Homework",
+                "tag": "A",
+                "href": "#homework",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Event hub",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Contact",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "☀ Theme",
+                "tag": "BUTTON",
+                "href": null,
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore my work ↗",
+                "tag": "A",
+                "href": "#projects",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Get in touch →",
+                "tag": "A",
+                "href": "#contact",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#about",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Explore ↗",
+                "tag": "A",
+                "href": "#skills",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Try demo ↗",
+                "tag": "A",
+                "href": "#events",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open drum kit ↗",
+                "tag": "A",
+                "href": "homework/drum-kit/",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "Open workshop ↗",
+                "tag": "A",
+                "href": "homework/event-hub/",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 loads its independent module/countdown/Idle form",
+          "passed": true,
+          "detail": {
+            "h1": 1,
+            "divs": 0,
+            "duplicateIds": [],
+            "overflow": false,
+            "unsafe": false,
+            "css": [
+              "http://127.0.0.1:35481/homework/event-hub/styles.css"
+            ],
+            "scripts": [
+              {
+                "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+                "type": "module"
+              }
+            ],
+            "focus": "BODY:Skip to event\n  \n    ← An's portfolio\n    Event hub / 03\n  \n  \n    \n      A workshop for curious builders\n      Build for everyone.\n      Small ideas. Thoughtful interfaces. A space to explore how the web can welcome more people.\n      \n        When\n        21 November 2026 · 09:00Vietnam time · Asia/Ho_Chi_Minh (UTC+07:00)\n        Where\n        UIT Campus Sample venue\n      \n      Coursework demo: this is a sample event, not an actual UIT booking.\n    \n    \n      \n        \n          01 — Make time\n          Until we meet.\n        \n        \n          Days44\n          Hours15\n          Minutes03\n          Seconds19\n        \n        Counting down to the workshop. Event time is shown in Vietnam time.\n        \n          Bring an idea. Leave with a start.\n          \n            Notice the detailsExplore clear labels, useful feedback and keyboard-friendly interfaces.\n            Make something smallTurn an everyday idea into a simple web experience.\n            Learn togetherShare what worked, ask questions and find the next improvement.\n          \n        \n      \n      \n        \n          02 — Join the conversation\n          Save a little space.\n        \n        Local demo only. No email is sent, no place is booked and your form entries are not saved.\n        \n          Fields marked “required” must be filled in.\n          \n            Full name (required)\n            \n            \n          \n          \n            Email (required)\n            \n            \n          \n          \n            Your interest (required)\n            \n              Choose an interest\n              Design\n              Code\n              Design and code\n            \n            \n          \n          \n            A note for us (optional)\n            \n            Up to 300 characters. Please use sample details for this demo.\n            \n          \n          \n            Try the demo\n            Simulate a registration error\n            Turn this on to try the local error and retry experience. Turn it off for a successful demo registration.\n          \n          \n            Register\n            Cancel\n            Reset\n          \n          Cancel keeps your entries. Reset clears them.\n          Form state: Idle\n        \n        Ready to try a local demo registration.\n        \n          Your demo registration\n          \n            Name\n            Email\n            Interest\n            Note\n          \n        \n      \n    \n  \n  \n    Đặng Hoài An / 24520039\n    Better together.",
+            "csp": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "HW3 initial layout/CSP/semantic constraints",
+          "passed": true
+        },
+        {
+          "name": "workshop-initial: axe zero violations",
+          "passed": true
+        },
+        {
+          "name": "HW3 native Tab reaches back link with visible focus",
+          "passed": true,
+          "detail": {
+            "found": true,
+            "visibleFocus": true,
+            "trace": [
+              {
+                "text": "Skip to event",
+                "tag": "A",
+                "href": "#main",
+                "target": false,
+                "outline": "solid",
+                "width": "3px"
+              },
+              {
+                "text": "← An's portfolio",
+                "tag": "A",
+                "href": "../../index.html",
+                "target": true,
+                "outline": "solid",
+                "width": "3px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HW3 back link restores portfolio",
+          "passed": true
+        },
+        {
+          "name": "round trip opens no popup and uses only same-origin asset requests",
+          "passed": true,
+          "detail": [
+            {
+              "url": "http://127.0.0.1:35481/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/audio.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/keyboard.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/drum-kit/recorder.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/countdown.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/registration-service.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/homework/event-hub/validation.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/index.html",
+              "type": "document"
+            },
+            {
+              "url": "http://127.0.0.1:35481/styles.css",
+              "type": "stylesheet"
+            },
+            {
+              "url": "http://127.0.0.1:35481/events.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/app.js",
+              "type": "script"
+            },
+            {
+              "url": "http://127.0.0.1:35481/assets/portrait.svg",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "round trip has no failed response/request/runtime/CSP/unhandled",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "failures": []
+          }
+        }
+      ],
+      "audits": [
+        {
+          "name": "portfolio",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "tags": [
+                "cat.color",
+                "wcag2aa",
+                "wcag143",
+                "TTv5",
+                "TT13.c",
+                "EN-301-549",
+                "EN-9.1.4.3",
+                "ACT",
+                "RGAAv4",
+                "RGAA-3.2.1"
+              ],
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "help": "Elements must meet minimum color contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span aria-hidden=\"true\">→</span>",
+                  "target": [
+                    ".text-link > span[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">⌘</span>",
+                  "target": [
+                    ".skill-card:nth-child(1) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                },
+                {
+                  "any": [
+                    {
+                      "id": "color-contrast",
+                      "data": {
+                        "messageKey": "nonBmp"
+                      },
+                      "relatedNodes": [],
+                      "impact": "serious",
+                      "message": "Element content contains only non-text characters"
+                    }
+                  ],
+                  "all": [],
+                  "none": [],
+                  "impact": "serious",
+                  "html": "<span class=\"skill-symbol\" aria-hidden=\"true\">◈</span>",
+                  "target": [
+                    ".skill-card:nth-child(2) > .skill-symbol[aria-hidden=\"true\"]"
+                  ],
+                  "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "drum-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        },
+        {
+          "name": "workshop-initial",
+          "version": "4.14.0",
+          "violations": [],
+          "incomplete": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "mode": "JavaScript disabled",
+      "checks": [
+        {
+          "name": "no-JS portfolio Homework links remain visible",
+          "passed": true
+        },
+        {
+          "name": "no-JS native link opens HW2 semantic page",
+          "passed": true
+        },
+        {
+          "name": "no-JS HW2 back link returns portfolio",
+          "passed": true
+        },
+        {
+          "name": "no-JS HW3 native link exposes safe fallback",
+          "passed": true
+        },
+        {
+          "name": "no-JS HW3 back link returns portfolio",
+          "passed": true
+        }
+      ],
+      "audits": [],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Navigation and initial state only, not a full drum/audio/recorder/registration regression.",
+    "No fresh Lighthouse, hosted-header, student laptop/listening or live-defense result.",
+    "Root axe incomplete icon/glyph items remain explicit, not a full WCAG certification."
+  ]
+}

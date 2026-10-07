@@ -390,3 +390,24 @@ Actions actually performed by the assistant:
 Evidence: AI_FAILURE_AUDIT.md and verification/hw3-audit/README.md, check-evidence.py, result.json. The current check validates stored evidence/source integrity; it is not a browser/application suite rerun, student laptop capture, hosted-header test, full WCAG certification or live-defense result.
 
 This turn ends after the isolated audit documentation commit. Next is portfolio homework navigation integration, followed by a separate final cross-homework review and integration/merge. Main/production and all real Git history remain preserved.
+
+## Task 9 - Portfolio homework navigation and source separation
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: b470ccc. Application scope: index.html only, plus related source-separation documentation and navigation evidence.
+
+Student-provided update:
+- At 17:50 the user acknowledged the audit step and relayed the instructor's rule: Lab and homework may share a repository, but must use a different branch or directory. HW1 already lives at the root of the separate hw-atomic-rebuild branch; HW2/HW3 additionally have dedicated directories. This latest constraint supersedes earlier prospective references to merging homework into main. Keep the homework branch separate for assessment and preserve the original baseline/main/history.
+
+Actions actually performed by the assistant:
+- Read project rules, current source and WBS. Defined the WBS 9 navigation contract and later final-review/publication boundaries before the HTML change; updated the project separation rule.
+- Added a native Homework nav anchor and a separately named section using existing responsive card styles. Visible copy identifies the current portfolio as HW1. Cards link to homework/drum-kit/ and homework/event-hub/ in the same tab; existing back links return to the root portfolio. Adjusted visible section numbering while preserving the Lab four-state component and previously corrected link names.
+- Added explicit branch/directory mapping and review links to root README.md and homework/README.md. No implementation/deployment instructions were added to the product interaction flow.
+- Ran the final fresh native Chromium navigation audit under repository CSP: 89/89 assertions passed (21 each for 375/1440px light/dark, plus five JavaScript-disabled round-trip checks). Twelve axe 4.14.0 audits reported zero violations; portfolio glyph/icon incomplete items remain explicitly recorded, while drum/workshop initial audits had none. No full accessibility certification is claimed.
+- Verified trusted Tab/Enter links and native hashes, visible focus, same-tab independent routes/modules, initial pad/recorder/countdown/form availability, back-link recovery, one h1/zero divs, unique IDs, no inline code/overflow, no popup or failed/runtime/CSP/unhandled requests/errors. JavaScript-disabled links return correctly and retain the workshop's safe fallback.
+- Inspected mobile light and desktop dark section screenshots; shortened the workshop badge so its mobile link/arrow fit cleanly, then refreshed the final suite and mobile inspection. The harness's initial readiness wait assumed the wrong sample title; correcting that wait required no application fix and is not an AI defect.
+- Reviewed the focused diff and checked whitespace. No homework implementation/assets, CSS, existing JS modules, CSP configuration or historical evidence changed. This is navigation verification only; final cross-homework/Lighthouse/audio/registration checks remain WBS 10.
+
+Evidence: verification/homework-navigation/README.md, audit.mjs and result.json. The local server/browser helper is QA-only and is not in the product module graph. These are assistant local checks, not student Preview/listening, hosted headers or a live defense.
+
+This turn ends after the isolated navigation commit on hw-atomic-rebuild. Next is the final cross-homework review after student confirmation, then separate publication/handoff. Preserve the separate homework branch and original main/history.

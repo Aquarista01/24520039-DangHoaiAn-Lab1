@@ -18,3 +18,9 @@
 - Preserve the existing main branch and its history.
 - Record actual results in DEVELOPMENT_LOG.md; distinguish assistant and student checks.
 - Do not label unperformed checks as passed or reuse old scores as new evidence.
+
+## Homework source separation
+
+- Instructor rule relayed by the student on 7 October 2026: same repository is allowed, but homework must use a different branch or directory.
+- Submit HW1's root portfolio from hw-atomic-rebuild; HW2/HW3 additionally live in homework/drum-kit and homework/event-hub.
+- Keep this homework branch separate for assessment and preserve the original Lab baseline/main history. Earlier prospective merge plans are superseded by this user constraint.
