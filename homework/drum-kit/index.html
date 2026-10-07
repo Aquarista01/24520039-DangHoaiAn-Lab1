@@ -45,7 +45,7 @@
           <p>Record captures your hits. Stop finishes a take; Replay plays it back; Clear starts a fresh tape.</p>
         </details>
       </section>
-      <section class="tape-panel" aria-labelledby="tape-heading">
+      <section class="tape-panel" data-state="idle" aria-labelledby="tape-heading" aria-describedby="tape-help">
         <header class="panel-header">
           <h2 id="tape-heading">Beat tape</h2>
           <p class="eyebrow">02 — Capture</p>
@@ -54,6 +54,7 @@
           <dt>State</dt><dd id="tape-state">Idle</dd>
           <dt>Hits</dt><dd id="beat-count">0</dd>
         </dl>
+        <p id="tape-help" class="status">Each take holds up to 256 hits or 120 seconds. Times show when you hit each pad.</p>
         <menu class="tape-controls" aria-label="Beat tape controls">
           <li><button id="record-btn" class="primary" type="button">Record</button></li>
           <li><button id="stop-btn" type="button" disabled>Stop</button></li>

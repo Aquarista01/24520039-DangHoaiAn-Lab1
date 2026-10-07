@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-07T07:49:52.757Z",
+  "tester": "Assistant: deterministic recorder contract checks",
+  "baseline": "18fc999ddeccb695c521e33a89287fd063e1446e",
+  "method": "Injected virtual clock/scheduler exercise the production recorder module without waiting 120 real seconds. Native browser timing is checked separately.",
+  "checks": [
+    {
+      "name": "initial idle/empty and empty replay rejected",
+      "passed": true
+    },
+    {
+      "name": "start recording and invalid transitions rejected",
+      "passed": true
+    },
+    {
+      "name": "FIFO A-S-A with relative millisecond timestamps",
+      "passed": true,
+      "detail": [
+        {
+          "key": "a",
+          "at": 30
+        },
+        {
+          "key": "s",
+          "at": 180
+        },
+        {
+          "key": "a",
+          "at": 260
+        }
+      ]
+    },
+    {
+      "name": "stop retains take and cancels the recording timer",
+      "passed": true
+    },
+    {
+      "name": "snapshot mutation cannot change internal queue",
+      "passed": true
+    },
+    {
+      "name": "replay starts and guards mutation/re-entry",
+      "passed": true
+    },
+    {
+      "name": "initial recorded silence is retained",
+      "passed": true
+    },
+    {
+      "name": "no early second hit",
+      "passed": true
+    },
+    {
+      "name": "replay preserves exact offsets/order and does not self-record",
+      "passed": true,
+      "detail": [
+        {
+          "key": "a",
+          "at": 30
+        },
+        {
+          "key": "s",
+          "at": 180
+        },
+        {
+          "key": "a",
+          "at": 260
+        }
+      ]
+    },
+    {
+      "name": "cancel token blocks old replay callbacks after a new session",
+      "passed": true
+    },
+    {
+      "name": "clear resets tape in idle",
+      "passed": true
+    },
+    {
+      "name": "equal timestamps retain FIFO insertion order",
+      "passed": true
+    },
+    {
+      "name": "255 hits still recording",
+      "passed": true
+    },
+    {
+      "name": "256th hit retained, automatic stop and overflow rejected",
+      "passed": true
+    },
+    {
+      "name": "recording remains open before 120 seconds",
+      "passed": true
+    },
+    {
+      "name": "120-second timer stops and retains queue",
+      "passed": true
+    },
+    {
+      "name": "late input at duration bound is rejected even if timer was delayed",
+      "passed": true
+    },
+    {
+      "name": "invalid keys, nonfinite and backwards timestamps are ignored",
+      "passed": true
+    },
+    {
+      "name": "new recording clears prior take and resets time origin",
+      "passed": true
+    },
+    {
+      "name": "30 rapid sessions leave no stale timers/hits",
+      "passed": true
+    },
+    {
+      "name": "scheduler overhead does not accumulate drift",
+      "passed": true
+    },
+    {
+      "name": "throwing replay adapter returns to idle and retains take",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

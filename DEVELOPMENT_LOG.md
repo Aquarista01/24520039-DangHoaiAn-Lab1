@@ -205,3 +205,31 @@ Evidence: verification/hw2-step3/README.md, audit.mjs, initial-check.json and re
 Not performed: student timed key-rebinding defense, real OS IME composition, authenticated Vercel keyboard testing, student laptop listening or recorder implementation. The Step 2 Kick/Low tom listening result remains pending; the user's latest continuation instruction is not treated as a hearing-test result. Main/production and existing history remain preserved.
 
 This turn ends after the isolated Step 3 commit. Step 4 implements the FIFO beat recorder in a separate turn.
+
+## Task 7.4 - HW2 Step 4: timestamped FIFO beat recorder
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: 18fc999. Scope: recorder module, shared activation/UI wiring and recorder/feedback state styles.
+
+Student-provided update:
+- At 14:44 the user reported that all requested prior Preview checks were OK and asked to continue. Recorded this as a student-reported Preview result; no device details, raw listening capture or timed live-defense result were supplied. Earlier historical reports remain unchanged.
+
+Actions actually performed by the assistant:
+- Read project rules and the Step 4 contract; confirmed remote rebuild at 18fc999 and main at 66fe05a.
+- Added an independent recorder module with idle/recording/replaying states, input-order {key, at} queue, relative performance timestamps, cloned snapshots/replay take, one replay time origin, timer registry/generation cancellation, key/time validation and 256-hit/120-second bounds.
+- Captured the timestamp/queue synchronously at shared live activation before invoking audio. Replay uses source=replay; manual live hits during replay do not mutate the tape. Failed audio remains an input-intent hit with separate accessible audio feedback.
+- Wired Record/Stop/Replay/Clear and safe list rendering, state labels/status, state-dependent disabled controls, enabled-control focus transfer and a bounded keyboard-scrollable ordered list. Added visible limits/help without adding inline handlers/styles or divs.
+- Ran 22 deterministic contract checks against the production module. FIFO/equal timestamps, exact relative offsets, immutable snapshots, transition guards, stop/new-session stale callbacks, clear/reset, cap boundaries, virtual 120-second deadline/delayed timer input, 30 rapid sessions and scheduler-overhead/error handling all passed. The duration boundary uses virtual time, explicitly not a real 120-second student test.
+- The first native browser harness aborted because a generic data-key locator also matched a recorded list item. Recorded initial-check.json and scoped only the test's pad lookup; production adapters already used .drum-pad.
+- The first completed browser audit exposed a real feedback contrast defect inherited from the earlier CSS: pad text switched immediately while background-color transitioned, producing axe ratios of 1.20:1 light and 1.48:1 dark in Recording. Preserved before-feedback-fix.json and removed the background-color transition so foreground/background switch atomically, retaining transform/reduced-motion feedback. This is a real application fix, not a test assumption.
+- Corrected the capped-list test to wait for Chromium's native End scroll animation rather than read scrollTop immediately. No app scrolling fix was needed.
+- Re-ran the final full native audit: 92/92 normal browser assertions across 375/1440px light/dark, plus 6/6 labeled integration checks passed. All 21 axe audits (five states per configuration plus capped list) had zero violations. No normal page/console/network/CSP error or unhandled rejection occurred.
+- Verified mixed keyboard/click A-S-A timestamps/order; replay dispatch within the predeclared ±100ms tolerance (maximum observed absolute error 85.50ms under audit workload); no replay self-recording; manual live hits during replay; cancellation/clear; keyboard focus and five rapid sessions.
+- Deliberately delayed a native play promise by 320ms and proved the input timestamp/queue precedes its resolution. Injected denied play to verify failed-input recording and the real UI 256-hit cap without stressing 257 audible voices; keyboard scrolling/axe and reload reset passed.
+- Inspected 375px/dark empty/capped screenshots and reviewed the focused diff. Audio engine, keyboard adapter, nine WAVs and all prior evidence remain unchanged.
+
+Evidence: verification/hw2-step4/README.md, model-check.mjs, model-result.json, audit.mjs, initial-check.json, before-feedback-fix.json and result.json. Actual timestamps/tester/environment are in the reports.
+
+Limits: no student recorder listening/replay check or timed live defense is claimed. Replay timing measures dispatch, not acoustic output latency; already-started sound tails finish naturally after Stop. Main/production and existing Git history remain preserved.
+
+This turn ends after the isolated Step 4 commit. HW2 now has its four separate implementation milestones. The next package is HW3 contract/milestone planning in a separate turn, followed by its required atomic steps; portfolio integration/final merge remain later work.

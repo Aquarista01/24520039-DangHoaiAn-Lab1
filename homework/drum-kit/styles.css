@@ -53,7 +53,7 @@ h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
 .panel-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .6rem; margin-bottom: 1.5rem; }
 h2 { font-size: 1.5rem; }
 .pad-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; list-style: none; padding: 0; margin: 0; }
-.drum-pad { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .35rem; width: 100%; min-height: 108px; padding: .6rem .3rem; border: 1px solid var(--control-line); border-radius: .5rem; background: var(--soft); color: var(--ink); transition: transform 100ms ease, background-color 100ms ease; }
+.drum-pad { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .35rem; width: 100%; min-height: 108px; padding: .6rem .3rem; border: 1px solid var(--control-line); border-radius: .5rem; background: var(--soft); color: var(--ink); transition: transform 100ms ease; }
 .drum-pad:hover { background: var(--surface); }
 .drum-pad:active, .drum-pad.is-hit { transform: translateY(2px); background: var(--button); color: var(--button-text); }
 .drum-pad kbd { font: 800 1.7rem/1.1 system-ui, sans-serif; }
@@ -71,6 +71,9 @@ h2 { font-size: 1.5rem; }
 .tape-controls button:disabled { cursor: default; color: var(--muted); background: var(--soft); border-style: dashed; }
 .beat-list { margin: 1rem 0 0; padding-left: 1.8rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .beat-list:empty { margin: 0; }
+.tape-panel[data-state="recording"] #tape-state,
+.tape-panel[data-state="replaying"] #tape-state { color: var(--accent); }
+.tape-panel[data-state] .beat-list:not(:empty) { max-height: 16rem; overflow-y: auto; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; margin-top: 2.5rem; padding-block: 1.3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
 .site-footer span { margin-inline: .5rem; }
 
