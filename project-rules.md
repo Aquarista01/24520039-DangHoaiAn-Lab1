@@ -24,3 +24,8 @@
 - Instructor rule relayed by the student on 7 October 2026: same repository is allowed, but homework must use a different branch or directory.
 - Submit HW1's root portfolio from hw-atomic-rebuild; HW2/HW3 additionally live in homework/drum-kit and homework/event-hub.
 - Keep this homework branch separate for assessment and preserve the original Lab baseline/main history. Earlier prospective merge plans are superseded by this user constraint.
+
+## Repository scope
+
+- Keep assignment source, required specification/audit files and directly relevant verification evidence in Git.
+- Give submission/capture instructions in chat; do not add submission guides or duplicate administrative documents unless the student explicitly asks for them.

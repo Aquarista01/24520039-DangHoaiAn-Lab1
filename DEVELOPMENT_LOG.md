@@ -454,6 +454,13 @@ Actions actually performed by the assistant:
 - Created HOMEWORK_SUBMISSION.md with exact branch and HW1/HW2/HW3/Lab links, actual workflow/evidence references, student review/rebinding steps and missing submission artifacts. Updated root/homework README and WBS status with the new public-access evidence. Kept product pages/assets and main/production source unchanged; no merge/history rewrite.
 - Reviewed the focused documentation/evidence diff and whitespace before the isolated publication/handoff commit.
 
-Evidence: verification/publication/README.md, check-host.py and result.json; HOMEWORK_SUBMISSION.md. The anonymous delivery/CSP blocker is resolved in this measured run. Local performance/interactivity evidence stays in verification/final-review with its actual dates/methods.
+Evidence: verification/publication/README.md, check-host.py and result.json; HOMEWORK_SUBMISSION.md was an administrative guide later removed in the cleanup below. The anonymous delivery/CSP blocker is resolved in this measured run. Local performance/interactivity evidence stays in verification/final-review with its actual dates/methods.
 
 WBS 11 publication checks and handoff documentation are prepared. The final submission package still needs the actual student shared AI conversation URL and required screenshots/report captures. No placeholder chat link, student-run Lighthouse, timed defense or unperformed check is marked complete.
+
+
+## Repository documentation cleanup
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh). Starting commit: 43558fc.
+
+The student requested that unrequested submission guides and documents unrelated to Homework not be uploaded. Re-read slide pages 5, 24 and 25: task decomposition, atomic milestones/verification and AI failure audit remain relevant to the assignment. Removed HOMEWORK_SUBMISSION.md and the duplicate homework/README.md, shortened the root README to run/source/demo links, and removed active guide links and administrative handoff requirements from the current WBS/publication notes. Added the student's repository-scope preference to project-rules.md. Code, milestone test evidence and main remain unchanged. Checked the focused diff, local documentation links and whitespace; no application test rerun is claimed for this documentation-only cleanup.
