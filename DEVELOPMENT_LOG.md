@@ -434,3 +434,26 @@ Actions actually performed by the assistant:
 Evidence: verification/final-review/README.md, summary.json, run-manifest.json, suite-sources.json, original/derived scripts, full Lighthouse JSON, all fresh result JSON and preserved failed QA attempts. Native waits, virtual clocks, injected transports and synthetic lifecycle events keep their actual provenance. No real BFCache/background suspension or laptop measurement is claimed.
 
 This isolated review commit ends WBS 10. WBS 11 publication/handoff remains separate: accessible Homework deployment and actual application headers, shared AI conversation URL and required submission captures. Keep main and Homework separate; preserve real history.
+
+
+## Task 11 - Public Homework delivery and submission handoff
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: a0396d4. Scope: anonymous deployed source/header evidence and submission/status documentation only.
+
+Student-provided update:
+- At 19:15 the user supplied the specific Homework Preview index.html URL. A fresh anonymous request still returned HTTP 302 to Vercel SSO at that time. Explained Production/main versus Preview/Homework and instructed the student to disable Vercel Authentication for direct assessor access.
+- At 19:25 the student reported “Ok, mình tắt rồi, mở xem được rồi”. This is their report of changing the setting/opening the page; the assistant did not modify Vercel account/project settings, and no raw student capture was supplied.
+
+Actions actually performed by the assistant:
+- Read project rules and the publication/handoff contract. Started from a clean a0396d4 worktree, with remote Homework at a0396d4 and main at 712f494.
+- Confirmed the portfolio, drum kit and event page returned HTTP 200 without authentication or redirects, with exact HTML source and actual strict CSP response headers.
+- Added verification/publication/check-host.py and ran fresh anonymous HTTPS GET checks with system TLS verification, no session/cookies/authentication and no redirect following. All 98 assertions passed over 31 responses covering all 28 runtime HTML/CSS/JS/SVG/WAV files and explicit portfolio/directory routes. Each response was HTTP 200, byte-identical to reviewed source and had the exact repository CSP header, including frame-ancestors none. Saved response MIME types, sizes, source/body SHA-256 and actual request dates.
+- Retrieved public GitHub deployment/status metadata: deployment 6908126262 successfully published the supplied Preview URL from application commit 7ac14ab at 10:59:08Z. Confirmed its runtime files are identical at final-review commit a0396d4 and the current local source. This specific-deployment URL does not promise to follow future branch commits.
+- Preserved earlier historical SSO-blocked reports and local Lighthouse/browser results. HTTP/header/source/provenance checks are not relabeled as hosted interactive browser, axe, Lighthouse or audio-listening tests.
+- Created HOMEWORK_SUBMISSION.md with exact branch and HW1/HW2/HW3/Lab links, actual workflow/evidence references, student review/rebinding steps and missing submission artifacts. Updated root/homework README and WBS status with the new public-access evidence. Kept product pages/assets and main/production source unchanged; no merge/history rewrite.
+- Reviewed the focused documentation/evidence diff and whitespace before the isolated publication/handoff commit.
+
+Evidence: verification/publication/README.md, check-host.py and result.json; HOMEWORK_SUBMISSION.md. The anonymous delivery/CSP blocker is resolved in this measured run. Local performance/interactivity evidence stays in verification/final-review with its actual dates/methods.
+
+WBS 11 publication checks and handoff documentation are prepared. The final submission package still needs the actual student shared AI conversation URL and required screenshots/report captures. No placeholder chat link, student-run Lighthouse, timed defense or unperformed check is marked complete.

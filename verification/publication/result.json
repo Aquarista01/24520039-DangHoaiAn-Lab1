@@ -1,0 +1,1039 @@
+{
+  "date": "2026-10-07T12:30:15.813809+00:00",
+  "tester": "Assistant: fresh anonymous HTTPS GET checks using system TLS verification, no session/cookies/authentication and no redirects followed",
+  "deploymentBase": "https://24520039-8lc11t8jq-aquarista.vercel.app",
+  "deployedApplicationCommit": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+  "finalReviewCommit": "a0396d4dd5111595e593f14c4a3e994f653bcc4d",
+  "startingRemoteHeads": {
+    "refs/heads/hw-atomic-rebuild": "a0396d4dd5111595e593f14c4a3e994f653bcc4d",
+    "refs/heads/main": "712f4945faabd38e42f24bc50c7002baeadae47a"
+  },
+  "expectedCsp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+  "runtimeFiles": [
+    "app.js",
+    "assets/favicon.svg",
+    "assets/portrait.svg",
+    "events.js",
+    "homework/drum-kit/app.js",
+    "homework/drum-kit/audio.js",
+    "homework/drum-kit/index.html",
+    "homework/drum-kit/keyboard.js",
+    "homework/drum-kit/recorder.js",
+    "homework/drum-kit/sounds/clap.wav",
+    "homework/drum-kit/sounds/crash.wav",
+    "homework/drum-kit/sounds/hat.wav",
+    "homework/drum-kit/sounds/kick.wav",
+    "homework/drum-kit/sounds/open-hat.wav",
+    "homework/drum-kit/sounds/rim.wav",
+    "homework/drum-kit/sounds/shaker.wav",
+    "homework/drum-kit/sounds/snare.wav",
+    "homework/drum-kit/sounds/tom.wav",
+    "homework/drum-kit/styles.css",
+    "homework/event-hub/app.js",
+    "homework/event-hub/countdown.js",
+    "homework/event-hub/index.html",
+    "homework/event-hub/registration-service.js",
+    "homework/event-hub/registration.js",
+    "homework/event-hub/styles.css",
+    "homework/event-hub/validation.js",
+    "index.html",
+    "styles.css"
+  ],
+  "responses": [
+    {
+      "route": "/app.js",
+      "source": "app.js",
+      "requestedAt": "2026-10-07T12:28:54.971906+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 1737,
+      "bodySha256": "615fdecf0b4ecddad157e7908c1a0fa99adc36472db1e4c5ed81a7c12a0dbd52",
+      "sourceSha256": "615fdecf0b4ecddad157e7908c1a0fa99adc36472db1e4c5ed81a7c12a0dbd52",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/assets/favicon.svg",
+      "source": "assets/favicon.svg",
+      "requestedAt": "2026-10-07T12:28:54.972740+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "image/svg+xml",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 297,
+      "bodySha256": "c26867bfce0370d6e4cba8e5ffa9919b963b47ddbef1e32c9eeb5eeb42c95a44",
+      "sourceSha256": "c26867bfce0370d6e4cba8e5ffa9919b963b47ddbef1e32c9eeb5eeb42c95a44",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/assets/portrait.svg",
+      "source": "assets/portrait.svg",
+      "requestedAt": "2026-10-07T12:28:54.973485+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "image/svg+xml",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 1777,
+      "bodySha256": "014dd4cfababf899e1eafb34ae326b05761f19d1753a0906abb8c6ca170bb3ac",
+      "sourceSha256": "014dd4cfababf899e1eafb34ae326b05761f19d1753a0906abb8c6ca170bb3ac",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/events.js",
+      "source": "events.js",
+      "requestedAt": "2026-10-07T12:28:54.973893+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 3176,
+      "bodySha256": "4f4465de686e96ebf9f10d71ef9bfb41b6315741eba5023872ab9ecd5afbaff5",
+      "sourceSha256": "4f4465de686e96ebf9f10d71ef9bfb41b6315741eba5023872ab9ecd5afbaff5",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/app.js",
+      "source": "homework/drum-kit/app.js",
+      "requestedAt": "2026-10-07T12:28:54.974995+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 2684,
+      "bodySha256": "4d5caf8e54ff605977e6334254989fbee2f1fb169701764fd19b8dcd484d0a50",
+      "sourceSha256": "4d5caf8e54ff605977e6334254989fbee2f1fb169701764fd19b8dcd484d0a50",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/audio.js",
+      "source": "homework/drum-kit/audio.js",
+      "requestedAt": "2026-10-07T12:28:54.976405+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 1550,
+      "bodySha256": "0d1a86467f9b344870326e2375aa6800492668187d963fcce6e47348c19095e4",
+      "sourceSha256": "0d1a86467f9b344870326e2375aa6800492668187d963fcce6e47348c19095e4",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/index.html",
+      "source": "homework/drum-kit/index.html",
+      "requestedAt": "2026-10-07T12:29:03.762107+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 4639,
+      "bodySha256": "962419bb834d38c9a95b1c78eac860721542700b9b54504958d9c2083d67034d",
+      "sourceSha256": "962419bb834d38c9a95b1c78eac860721542700b9b54504958d9c2083d67034d",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/keyboard.js",
+      "source": "homework/drum-kit/keyboard.js",
+      "requestedAt": "2026-10-07T12:29:03.775155+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 818,
+      "bodySha256": "657e34b3ab297f2584d0f0a2d1999c3eaccb8dfbca27dd49976097a5202e9c9c",
+      "sourceSha256": "657e34b3ab297f2584d0f0a2d1999c3eaccb8dfbca27dd49976097a5202e9c9c",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/recorder.js",
+      "source": "homework/drum-kit/recorder.js",
+      "requestedAt": "2026-10-07T12:29:03.900339+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 2977,
+      "bodySha256": "825473edb26161c033d8614437582d1537a15a5b5f5bab18c616b222b4ec0b31",
+      "sourceSha256": "825473edb26161c033d8614437582d1537a15a5b5f5bab18c616b222b4ec0b31",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/clap.wav",
+      "source": "homework/drum-kit/sounds/clap.wav",
+      "requestedAt": "2026-10-07T12:29:03.906461+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 10186,
+      "bodySha256": "54e02e3c27757f5bb9d803b134a8dad7b0ecd9335ab1084c5d336fcbde9b5a06",
+      "sourceSha256": "54e02e3c27757f5bb9d803b134a8dad7b0ecd9335ab1084c5d336fcbde9b5a06",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/crash.wav",
+      "source": "homework/drum-kit/sounds/crash.wav",
+      "requestedAt": "2026-10-07T12:29:04.011553+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 39734,
+      "bodySha256": "3bcd97ab015054dbb9761d8775fbf77cfa986e89b6bdea9aa4b93a8c9d320d9f",
+      "sourceSha256": "3bcd97ab015054dbb9761d8775fbf77cfa986e89b6bdea9aa4b93a8c9d320d9f",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/hat.wav",
+      "source": "homework/drum-kit/sounds/hat.wav",
+      "requestedAt": "2026-10-07T12:29:04.409332+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 4454,
+      "bodySha256": "51dccefefaddac2f13e5476f7aca77b7a292272599e46a98a21c08c1831bb173",
+      "sourceSha256": "51dccefefaddac2f13e5476f7aca77b7a292272599e46a98a21c08c1831bb173",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/kick.wav",
+      "source": "homework/drum-kit/sounds/kick.wav",
+      "requestedAt": "2026-10-07T12:29:13.021029+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 18566,
+      "bodySha256": "97c6e1efcea4d2ac9d20b29663953a7424fbbb512dc5a777bfee6f726382e715",
+      "sourceSha256": "97c6e1efcea4d2ac9d20b29663953a7424fbbb512dc5a777bfee6f726382e715",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/open-hat.wav",
+      "source": "homework/drum-kit/sounds/open-hat.wav",
+      "requestedAt": "2026-10-07T12:29:13.033478+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 19888,
+      "bodySha256": "d70f8ca1e4d3c1f71c8d5777e2ef31e5bc2e88055c85ad6b633d4ecd36b377fe",
+      "sourceSha256": "d70f8ca1e4d3c1f71c8d5777e2ef31e5bc2e88055c85ad6b633d4ecd36b377fe",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/rim.wav",
+      "source": "homework/drum-kit/sounds/rim.wav",
+      "requestedAt": "2026-10-07T12:29:13.090760+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 5776,
+      "bodySha256": "9cbf012b84f82693681c41760e9bb25f619a5ca78191f6789ac3768a08bd1449",
+      "sourceSha256": "9cbf012b84f82693681c41760e9bb25f619a5ca78191f6789ac3768a08bd1449",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/shaker.wav",
+      "source": "homework/drum-kit/sounds/shaker.wav",
+      "requestedAt": "2026-10-07T12:29:13.148839+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 7982,
+      "bodySha256": "23712d8087fbaa94910f4842ac6e8579b793c450cf422186b4fc241c557775ff",
+      "sourceSha256": "23712d8087fbaa94910f4842ac6e8579b793c450cf422186b4fc241c557775ff",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/snare.wav",
+      "source": "homework/drum-kit/sounds/snare.wav",
+      "requestedAt": "2026-10-07T12:29:13.152368+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 13274,
+      "bodySha256": "85586498ecf63d07a5a2b5509bcd3c0e82dcccfd1572bf20a89dfd50ec6efe79",
+      "sourceSha256": "85586498ecf63d07a5a2b5509bcd3c0e82dcccfd1572bf20a89dfd50ec6efe79",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/sounds/tom.wav",
+      "source": "homework/drum-kit/sounds/tom.wav",
+      "requestedAt": "2026-10-07T12:29:13.158248+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "audio/wave",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 17684,
+      "bodySha256": "27a4690684a1c8259d2073c3eb91ce9e9cff0e96d224112e937eca914d0237ed",
+      "sourceSha256": "27a4690684a1c8259d2073c3eb91ce9e9cff0e96d224112e937eca914d0237ed",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/styles.css",
+      "source": "homework/drum-kit/styles.css",
+      "requestedAt": "2026-10-07T12:29:21.685862+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/css; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 5101,
+      "bodySha256": "4e8eeb3ea4d325e377fb56777aab72804c309b7da52b28ca3aee69a0702c9870",
+      "sourceSha256": "4e8eeb3ea4d325e377fb56777aab72804c309b7da52b28ca3aee69a0702c9870",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/app.js",
+      "source": "homework/event-hub/app.js",
+      "requestedAt": "2026-10-07T12:29:21.693554+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 2077,
+      "bodySha256": "6b83630998bd52bcad37cfcdbacd642aa7270099b7170699d5120d1c6227df12",
+      "sourceSha256": "6b83630998bd52bcad37cfcdbacd642aa7270099b7170699d5120d1c6227df12",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/countdown.js",
+      "source": "homework/event-hub/countdown.js",
+      "requestedAt": "2026-10-07T12:29:21.727485+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 1964,
+      "bodySha256": "b119e0edc89bbd69107646f6aa9fbba19c43e9f9ac6890010d997c1c6dbe9afe",
+      "sourceSha256": "b119e0edc89bbd69107646f6aa9fbba19c43e9f9ac6890010d997c1c6dbe9afe",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/index.html",
+      "source": "homework/event-hub/index.html",
+      "requestedAt": "2026-10-07T12:29:21.733774+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 7373,
+      "bodySha256": "b6756f9115d3d0d21855ff4eaa858fb69daf27d02a949c660474de78cb532457",
+      "sourceSha256": "b6756f9115d3d0d21855ff4eaa858fb69daf27d02a949c660474de78cb532457",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/registration-service.js",
+      "source": "homework/event-hub/registration-service.js",
+      "requestedAt": "2026-10-07T12:29:21.760860+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 1012,
+      "bodySha256": "b922ee835662eb62b499b078dcc9bf2b9f1415572887f97fd095e933f3b4c946",
+      "sourceSha256": "b922ee835662eb62b499b078dcc9bf2b9f1415572887f97fd095e933f3b4c946",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/registration.js",
+      "source": "homework/event-hub/registration.js",
+      "requestedAt": "2026-10-07T12:29:21.783480+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 9078,
+      "bodySha256": "e0ef00f529f382cbe1f64d4e19e3ced94a68a081e0404c5e44ac2db20e746de1",
+      "sourceSha256": "e0ef00f529f382cbe1f64d4e19e3ced94a68a081e0404c5e44ac2db20e746de1",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/styles.css",
+      "source": "homework/event-hub/styles.css",
+      "requestedAt": "2026-10-07T12:29:30.910981+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/css; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 7175,
+      "bodySha256": "de8cfbf1484dadf21de5549da4b29f30e2cae18c3f05c086e8db18cec2031cb7",
+      "sourceSha256": "de8cfbf1484dadf21de5549da4b29f30e2cae18c3f05c086e8db18cec2031cb7",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/validation.js",
+      "source": "homework/event-hub/validation.js",
+      "requestedAt": "2026-10-07T12:29:30.931513+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "application/javascript; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 2004,
+      "bodySha256": "0c9657af0c7c692a4102cc46e0db3387df39f8b912c735e2e3d67e306017f594",
+      "sourceSha256": "0c9657af0c7c692a4102cc46e0db3387df39f8b912c735e2e3d67e306017f594",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/",
+      "source": "index.html",
+      "requestedAt": "2026-10-07T12:29:30.971031+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 9499,
+      "bodySha256": "ffaf9779d3bfcf726a83a43215801883318b296a6dad119198efc7fcee3488ca",
+      "sourceSha256": "ffaf9779d3bfcf726a83a43215801883318b296a6dad119198efc7fcee3488ca",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/styles.css",
+      "source": "styles.css",
+      "requestedAt": "2026-10-07T12:29:30.996697+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/css; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 10715,
+      "bodySha256": "73fe8007151306da1539ad9e9503de914a3ccd0b5b591c98b18aa9f2ce476d22",
+      "sourceSha256": "73fe8007151306da1539ad9e9503de914a3ccd0b5b591c98b18aa9f2ce476d22",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/index.html",
+      "source": "index.html",
+      "requestedAt": "2026-10-07T12:29:31.021389+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 9499,
+      "bodySha256": "ffaf9779d3bfcf726a83a43215801883318b296a6dad119198efc7fcee3488ca",
+      "sourceSha256": "ffaf9779d3bfcf726a83a43215801883318b296a6dad119198efc7fcee3488ca",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/drum-kit/",
+      "source": "homework/drum-kit/index.html",
+      "requestedAt": "2026-10-07T12:29:31.062811+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 4639,
+      "bodySha256": "962419bb834d38c9a95b1c78eac860721542700b9b54504958d9c2083d67034d",
+      "sourceSha256": "962419bb834d38c9a95b1c78eac860721542700b9b54504958d9c2083d67034d",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    },
+    {
+      "route": "/homework/event-hub/",
+      "source": "homework/event-hub/index.html",
+      "requestedAt": "2026-10-07T12:29:40.639648+00:00",
+      "status": 200,
+      "redirectOriginAndPath": null,
+      "contentType": "text/html; charset=utf-8",
+      "csp": "default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+      "xContentTypeOptions": null,
+      "bodyBytes": 7373,
+      "bodySha256": "b6756f9115d3d0d21855ff4eaa858fb69daf27d02a949c660474de78cb532457",
+      "sourceSha256": "b6756f9115d3d0d21855ff4eaa858fb69daf27d02a949c660474de78cb532457",
+      "matchesSource": true,
+      "cookieOrAuthenticationSent": false
+    }
+  ],
+  "deploymentMetadata": [
+    {
+      "deploymentId": 6908126262,
+      "sha": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+      "ref": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+      "environment": "Preview",
+      "deploymentCreatedAt": "2026-10-07T10:59:08Z",
+      "status": "success",
+      "statusCreatedAt": "2026-10-07T10:59:08Z",
+      "environmentUrl": "https://24520039-8lc11t8jq-aquarista.vercel.app"
+    }
+  ],
+  "checks": [
+    {
+      "name": "/app.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/app.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/app.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/favicon.svg: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/favicon.svg: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/favicon.svg: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/portrait.svg: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/portrait.svg: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/assets/portrait.svg: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/events.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/events.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/events.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/app.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/app.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/app.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/audio.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/audio.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/audio.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/index.html: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/index.html: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/index.html: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/keyboard.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/keyboard.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/keyboard.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/recorder.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/recorder.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/recorder.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/clap.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/clap.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/clap.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/crash.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/crash.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/crash.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/hat.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/hat.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/hat.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/kick.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/kick.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/kick.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/open-hat.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/open-hat.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/open-hat.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/rim.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/rim.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/rim.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/shaker.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/shaker.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/shaker.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/snare.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/snare.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/snare.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/tom.wav: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/tom.wav: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/sounds/tom.wav: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/styles.css: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/styles.css: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/styles.css: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/app.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/app.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/app.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/countdown.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/countdown.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/countdown.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/index.html: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/index.html: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/index.html: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration-service.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration-service.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration-service.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/registration.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/styles.css: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/styles.css: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/styles.css: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/validation.js: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/validation.js: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/validation.js: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/styles.css: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/styles.css: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/styles.css: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/index.html: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/index.html: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/index.html: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/drum-kit/: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/: HTTP 200 without sign-in redirect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/: exact application CSP response header",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/homework/event-hub/: deployed bytes match reviewed application",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "runtime source unchanged between deployment and final review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current local application matches final review source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GitHub deployment metadata identifies this Preview at reviewed app commit",
+      "passed": true,
+      "detail": [
+        {
+          "deploymentId": 6908126262,
+          "sha": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+          "ref": "7ac14abdd9be04d2fa80b0ac4b65a5fbf37a8e00",
+          "environment": "Preview",
+          "deploymentCreatedAt": "2026-10-07T10:59:08Z",
+          "status": "success",
+          "statusCreatedAt": "2026-10-07T10:59:08Z",
+          "environmentUrl": "https://24520039-8lc11t8jq-aquarista.vercel.app"
+        }
+      ]
+    },
+    {
+      "name": "Homework starting remote head is final review commit",
+      "passed": true,
+      "detail": {
+        "refs/heads/hw-atomic-rebuild": "a0396d4dd5111595e593f14c4a3e994f653bcc4d",
+        "refs/heads/main": "712f4945faabd38e42f24bc50c7002baeadae47a"
+      }
+    },
+    {
+      "name": "main still retains separate Lab cleanup head",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": true,
+  "studentReported": {
+    "time": "2026-10-07 19:25 Asia/Ho_Chi_Minh",
+    "message": "Ok, mình tắt rồi, mở xem được rồi",
+    "scope": "Student reports disabling protection and opening the page; no raw screenshot/header artifact supplied."
+  },
+  "limits": [
+    "This is HTTP source/header and deployment-provenance verification, not a fresh hosted browser interaction, Lighthouse, axe or audio-listening run.",
+    "Final local application tests remain separately timestamped in verification/final-review; no previous result is relabeled as a hosted test.",
+    "This URL is a specific deployment, not a promise that it automatically tracks future branch commits.",
+    "Shared AI conversation URL and required student submission captures are still missing."
+  ]
+}
