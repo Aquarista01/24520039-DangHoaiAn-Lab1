@@ -182,3 +182,26 @@ Evidence: verification/hw2-step2/README.md, assets.py, assets.json, initial-asse
 Not performed: student laptop listening, authenticated Vercel audio testing, letter-key adapter or recorder implementation. The student Kick/Low tom listening check is explicitly pending; headless events do not prove speaker audibility. Main/production remain preserved.
 
 This turn ends after the isolated Step 2 commit. Step 3 adds the repeat-safe letter-key adapter in a separate turn.
+
+## Task 7.3 - HW2 Step 3: repeat-safe keyboard adapter
+
+Date: 7 October 2026 (Asia/Ho_Chi_Minh).
+Starting commit: c7d1abc. Scope: keyboard.js and its integration in app.js only.
+
+Actions actually performed by the assistant:
+- Re-read rules and the Step 3 contract. Confirmed remote rebuild at c7d1abc and main at 66fe05a.
+- Added a keydown adapter with HTML-derived key→pad bindings and event.key lowercase normalization. Repeat/composing/already-prevented and Control/Alt/Meta events are ignored; native inputs, textarea/select, inherited contenteditable and custom textbox targets are protected.
+- Shared the same pad collection and activatePad entry point between click and keyboard. Shift remains allowed for uppercase input. No audio-path map, keyCode/keypress/switch mapping or recorder behavior was added.
+- Verified that Step 1 HTML/CSS, Step 2 audio.js/WAVs and all earlier verification files remain byte-for-byte unchanged.
+- Ran a fresh native Chromium keyboard audit at 375/1440px, light/dark, under enforced CSP. The first run's uppercase assertions used Shift+a, which actually emitted key=a, shift=true in the test environment. Preserved initial-check.json and corrected the injected input to Shift+A plus an actual uppercase event assertion. The first select typeahead assertion also assumed a choice change that Chromium did not perform; the adapter had left the event uncancelled. Added a native ArrowDown selection check and retained the direct no-hit/default-preservation guard checks. No application change was needed for these test-tool assumptions.
+- Re-ran the corrected full audit: 180/180 assertions passed, axe had zero violations in every configuration and no normal page/console/network/CSP error or unhandled rejection occurred.
+- Tested all nine lowercase and uppercase bindings with real trusted keyboard events/native Audio voices; one voice for held a with two repeat events; another hit after release; unknown/navigation/modifier keys; temporary native/editable fixtures; and explicitly labeled synthetic IME/default-prevented branch probes.
+- Verified rapid A-S-A overlap through shared activation, focused-button Enter/Space, native help Enter/Space, both Tab directions/visible focus and skip-link main focus. Recorder state stayed static; semantic structure and width were preserved.
+- Ran two temporary HTTP HTML-only a→q/A→Q rebindings with reload, unchanged modules, actual q/Q activation and restoration to a/A. Automated elapsed times including restoration: 361.56ms at 375px and 291.76ms at 1440px. These are not student/live-defense times.
+- Added a concrete student rehearsal procedure and reviewed the focused application diff before committing.
+
+Evidence: verification/hw2-step3/README.md, audit.mjs, initial-check.json and result.json; actual timestamp/tester/browser and detailed assertions are recorded in the reports.
+
+Not performed: student timed key-rebinding defense, real OS IME composition, authenticated Vercel keyboard testing, student laptop listening or recorder implementation. The Step 2 Kick/Low tom listening result remains pending; the user's latest continuation instruction is not treated as a hearing-test result. Main/production and existing history remain preserved.
+
+This turn ends after the isolated Step 3 commit. Step 4 implements the FIFO beat recorder in a separate turn.

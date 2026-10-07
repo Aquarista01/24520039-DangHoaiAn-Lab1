@@ -132,5 +132,5 @@ Recorder DOM contract: `#record-btn`, `#stop-btn`, `#replay-btn`, `#clear-btn`; 
 | Planning | Documented before implementation | This WBS and documentation-only diff |
 | Step 1 | Implemented and locally checked | HTML/CSS only; verification/hw2-step1/result.json: 112/112 checks, four configurations, zero axe violations |
 | Step 2 | Implemented; assistant checks passed; student listening pending | verification/hw2-step2: 9/9 assets, 84/84 normal browser checks, 6/6 fault/recovery cases; laptop Kick/Low tom check still required |
-| Step 3 | Not started | Pending keyboard adapter and rebinding test |
+| Step 3 | Implemented and locally checked | verification/hw2-step3/result.json: 180/180 checks and two HTML-only reload/rebinding checks; student live defense not timed |
 | Step 4 | Not started | Pending FIFO/state/cancellation tests |

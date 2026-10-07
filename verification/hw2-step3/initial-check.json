@@ -1,0 +1,3906 @@
+{
+  "date": "2026-10-07T07:38:07.835Z",
+  "tester": "Assistant: fresh local keyboard adapter checks with native Chromium audio",
+  "browser": "153.0.8010.0",
+  "baseline": "c7d1abc1b59d23d5149a29316ed556f28e63592e",
+  "delivery": "Local HTTP with repository CSP response header and page meta",
+  "instrumentation": "Normal keys are trusted Playwright keyboard input and return real native Audio objects. Composition/default-prevented branch probes and editable fixtures are explicitly test-only.",
+  "limits": [
+    "Headless audio does not establish laptop audibility; Step 2 student Kick/Low tom listening remains pending.",
+    "Automated HTML-response rebinding time is not a timed student/live instructor defense.",
+    "No recorder behavior is implemented."
+  ],
+  "cases": [
+    {
+      "width": 375,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "lowercase a creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 1,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase a creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 2,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase s creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 3,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase s creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 4,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase d creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 5,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase d creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 6,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase f creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 7,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase f creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 8,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase g creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 9,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase g creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 10,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase h creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 11,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase h creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 12,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase j creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 13,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase j creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 14,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase k creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 15,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase k creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 16,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase l creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 17,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase l creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 18,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "held mapped key: one voice, two real repeat keydowns ignored",
+          "passed": true,
+          "detail": {
+            "count": 19,
+            "events": [
+              {
+                "key": "a",
+                "repeat": false,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": true,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              }
+            ]
+          }
+        },
+        {
+          "name": "release then press creates a new voice",
+          "passed": true
+        },
+        {
+          "name": "q: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "q",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "ArrowLeft: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "ArrowLeft",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Escape: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "Escape",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Meta+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": true,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "composition: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": false,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": true,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "already-prevented: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": true,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "qa-input: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-input"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-textarea: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-textarea"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-select: letter preserved for editable/native control",
+          "passed": false,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-select"
+            },
+            "value": "beta"
+          }
+        },
+        {
+          "name": "qa-nested-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-nested-editor"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "qa-custom-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-custom-editor"
+            },
+            "value": "Custom editor"
+          }
+        },
+        {
+          "name": "rapid A-S-A uses shared polyphonic activation",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              }
+            ],
+            "events": [
+              {
+                "id": 21,
+                "type": "playing",
+                "at": 2617.5,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "active": 3
+              },
+              {
+                "id": 20,
+                "type": "playing",
+                "at": 2617.600000000559,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 22,
+                "type": "playing",
+                "at": 2627,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "focused pad Enter/Space still produce exactly one click hit each",
+          "passed": true
+        },
+        {
+          "name": "Enter still opens native help",
+          "passed": true
+        },
+        {
+          "name": "Space still closes native help",
+          "passed": true
+        },
+        {
+          "name": "Tab in both directions preserves native order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "Tab navigation triggers no voices",
+          "passed": true
+        },
+        {
+          "name": "skip link still focuses main",
+          "passed": true
+        },
+        {
+          "name": "recorder is still static; semantic structure and width preserved",
+          "passed": true,
+          "detail": {
+            "tape": "Idle",
+            "hits": "0",
+            "list": 0,
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "no runtime/network/CSP errors or unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "axe has zero violations",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "lowercase a creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 1,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase a creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 2,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase s creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 3,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase s creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 4,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase d creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 5,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase d creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 6,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase f creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 7,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase f creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 8,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase g creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 9,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase g creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 10,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase h creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 11,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase h creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 12,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase j creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 13,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase j creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 14,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase k creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 15,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase k creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 16,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase l creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 17,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase l creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 18,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "held mapped key: one voice, two real repeat keydowns ignored",
+          "passed": true,
+          "detail": {
+            "count": 19,
+            "events": [
+              {
+                "key": "a",
+                "repeat": false,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": true,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              }
+            ]
+          }
+        },
+        {
+          "name": "release then press creates a new voice",
+          "passed": true
+        },
+        {
+          "name": "q: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "q",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "ArrowLeft: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "ArrowLeft",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Escape: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "Escape",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Meta+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": true,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "composition: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": false,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": true,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "already-prevented: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": true,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "qa-input: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-input"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-textarea: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-textarea"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-select: letter preserved for editable/native control",
+          "passed": false,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-select"
+            },
+            "value": "beta"
+          }
+        },
+        {
+          "name": "qa-nested-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-nested-editor"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "qa-custom-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-custom-editor"
+            },
+            "value": "Custom editor"
+          }
+        },
+        {
+          "name": "rapid A-S-A uses shared polyphonic activation",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              }
+            ],
+            "events": [
+              {
+                "id": 21,
+                "type": "playing",
+                "at": 2795.9000000003725,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "active": 3
+              },
+              {
+                "id": 20,
+                "type": "playing",
+                "at": 2796,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 22,
+                "type": "playing",
+                "at": 2797.4000000003725,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "focused pad Enter/Space still produce exactly one click hit each",
+          "passed": true
+        },
+        {
+          "name": "Enter still opens native help",
+          "passed": true
+        },
+        {
+          "name": "Space still closes native help",
+          "passed": true
+        },
+        {
+          "name": "Tab in both directions preserves native order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "Tab navigation triggers no voices",
+          "passed": true
+        },
+        {
+          "name": "skip link still focuses main",
+          "passed": true
+        },
+        {
+          "name": "recorder is still static; semantic structure and width preserved",
+          "passed": true,
+          "detail": {
+            "tape": "Idle",
+            "hits": "0",
+            "list": 0,
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "no runtime/network/CSP errors or unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "axe has zero violations",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "lowercase a creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 1,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase a creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 2,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase s creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 3,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase s creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 4,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase d creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 5,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase d creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 6,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase f creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 7,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase f creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 8,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase g creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 9,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase g creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 10,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase h creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 11,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase h creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 12,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase j creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 13,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase j creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 14,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase k creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 15,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase k creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 16,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase l creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 17,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase l creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 18,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "held mapped key: one voice, two real repeat keydowns ignored",
+          "passed": true,
+          "detail": {
+            "count": 19,
+            "events": [
+              {
+                "key": "a",
+                "repeat": false,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": true,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              }
+            ]
+          }
+        },
+        {
+          "name": "release then press creates a new voice",
+          "passed": true
+        },
+        {
+          "name": "q: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "q",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "ArrowLeft: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "ArrowLeft",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Escape: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "Escape",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Meta+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": true,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "composition: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": false,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": true,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "already-prevented: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": true,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "qa-input: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-input"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-textarea: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-textarea"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-select: letter preserved for editable/native control",
+          "passed": false,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-select"
+            },
+            "value": "beta"
+          }
+        },
+        {
+          "name": "qa-nested-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-nested-editor"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "qa-custom-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-custom-editor"
+            },
+            "value": "Custom editor"
+          }
+        },
+        {
+          "name": "rapid A-S-A uses shared polyphonic activation",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              }
+            ],
+            "events": [
+              {
+                "id": 20,
+                "type": "playing",
+                "at": 2442.7999999998137,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 21,
+                "type": "playing",
+                "at": 2442.7999999998137,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "active": 3
+              },
+              {
+                "id": 22,
+                "type": "playing",
+                "at": 2447.2000000001863,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "focused pad Enter/Space still produce exactly one click hit each",
+          "passed": true
+        },
+        {
+          "name": "Enter still opens native help",
+          "passed": true
+        },
+        {
+          "name": "Space still closes native help",
+          "passed": true
+        },
+        {
+          "name": "Tab in both directions preserves native order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "Tab navigation triggers no voices",
+          "passed": true
+        },
+        {
+          "name": "skip link still focuses main",
+          "passed": true
+        },
+        {
+          "name": "recorder is still static; semantic structure and width preserved",
+          "passed": true,
+          "detail": {
+            "tape": "Idle",
+            "hits": "0",
+            "list": 0,
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "no runtime/network/CSP errors or unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "axe has zero violations",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "passed": false
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "lowercase a creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 1,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase a creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 2,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase s creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 3,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase s creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 4,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+            "event": {
+              "key": "s",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase d creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 5,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase d creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 6,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/clap.wav",
+            "event": {
+              "key": "d",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase f creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 7,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase f creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 8,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/hat.wav",
+            "event": {
+              "key": "f",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase g creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 9,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase g creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 10,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/open-hat.wav",
+            "event": {
+              "key": "g",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase h creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 11,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase h creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 12,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/tom.wav",
+            "event": {
+              "key": "h",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase j creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 13,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase j creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 14,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/rim.wav",
+            "event": {
+              "key": "j",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase k creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 15,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase k creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 16,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/shaker.wav",
+            "event": {
+              "key": "k",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "lowercase l creates exactly one native voice from HTML",
+          "passed": true,
+          "detail": {
+            "count": 17,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "uppercase l creates exactly one native voice from HTML",
+          "passed": false,
+          "detail": {
+            "count": 18,
+            "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/crash.wav",
+            "event": {
+              "key": "l",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": true,
+              "prevented": true,
+              "trusted": true,
+              "target": "main"
+            },
+            "native": true
+          }
+        },
+        {
+          "name": "held mapped key: one voice, two real repeat keydowns ignored",
+          "passed": true,
+          "detail": {
+            "count": 19,
+            "events": [
+              {
+                "key": "a",
+                "repeat": false,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": true,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              },
+              {
+                "key": "a",
+                "repeat": true,
+                "composing": false,
+                "ctrl": false,
+                "alt": false,
+                "meta": false,
+                "shift": false,
+                "prevented": false,
+                "trusted": true,
+                "target": "main"
+              }
+            ]
+          }
+        },
+        {
+          "name": "release then press creates a new voice",
+          "passed": true
+        },
+        {
+          "name": "q: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "q",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "ArrowLeft: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "ArrowLeft",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Escape: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "Escape",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": false,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Meta+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": false,
+            "alt": false,
+            "meta": true,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "Control+Alt+a: no voice and no default prevented",
+          "passed": true,
+          "detail": {
+            "key": "a",
+            "repeat": false,
+            "composing": false,
+            "ctrl": true,
+            "alt": true,
+            "meta": false,
+            "shift": false,
+            "prevented": false,
+            "trusted": true,
+            "target": "main"
+          }
+        },
+        {
+          "name": "composition: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": false,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": true,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "already-prevented: synthetic guard event creates no voice",
+          "passed": true,
+          "detail": {
+            "prevented": true,
+            "last": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": true,
+              "trusted": false,
+              "target": "BODY"
+            }
+          }
+        },
+        {
+          "name": "qa-input: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-input"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-textarea: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-textarea"
+            },
+            "value": "a"
+          }
+        },
+        {
+          "name": "qa-select: letter preserved for editable/native control",
+          "passed": false,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-select"
+            },
+            "value": "beta"
+          }
+        },
+        {
+          "name": "qa-nested-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-nested-editor"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "qa-custom-editor: letter preserved for editable/native control",
+          "passed": true,
+          "detail": {
+            "event": {
+              "key": "a",
+              "repeat": false,
+              "composing": false,
+              "ctrl": false,
+              "alt": false,
+              "meta": false,
+              "shift": false,
+              "prevented": false,
+              "trusted": true,
+              "target": "qa-custom-editor"
+            },
+            "value": "Custom editor"
+          }
+        },
+        {
+          "name": "rapid A-S-A uses shared polyphonic activation",
+          "passed": true,
+          "detail": {
+            "voices": [
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "paused": false,
+                "ended": false
+              },
+              {
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "paused": false,
+                "ended": false
+              }
+            ],
+            "events": [
+              {
+                "id": 21,
+                "type": "playing",
+                "at": 2372.899999999441,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/snare.wav",
+                "active": 3
+              },
+              {
+                "id": 20,
+                "type": "playing",
+                "at": 2373.2999999998137,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              },
+              {
+                "id": 22,
+                "type": "playing",
+                "at": 2375.7999999998137,
+                "source": "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+                "active": 3
+              }
+            ]
+          }
+        },
+        {
+          "name": "focused pad Enter/Space still produce exactly one click hit each",
+          "passed": true
+        },
+        {
+          "name": "Enter still opens native help",
+          "passed": true
+        },
+        {
+          "name": "Space still closes native help",
+          "passed": true
+        },
+        {
+          "name": "Tab in both directions preserves native order and visible focus",
+          "passed": true,
+          "detail": [
+            {
+              "direction": "forward",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "forward",
+              "selector": "#record-btn",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".help summary",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"l\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"k\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"j\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"h\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"g\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"f\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"d\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"s\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": "[data-key=\"a\"]",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".back-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            },
+            {
+              "direction": "reverse",
+              "selector": ".skip-link",
+              "focused": true,
+              "outline": "solid",
+              "width": "3px"
+            }
+          ]
+        },
+        {
+          "name": "Tab navigation triggers no voices",
+          "passed": true
+        },
+        {
+          "name": "skip link still focuses main",
+          "passed": true
+        },
+        {
+          "name": "recorder is still static; semantic structure and width preserved",
+          "passed": true,
+          "detail": {
+            "tape": "Idle",
+            "hits": "0",
+            "list": 0,
+            "h1": 1,
+            "divs": 0,
+            "overflow": false,
+            "violations": [],
+            "unhandled": []
+          }
+        },
+        {
+          "name": "no runtime/network/CSP errors or unhandled rejection",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "badResponses": []
+          }
+        },
+        {
+          "name": "axe has zero violations",
+          "passed": true,
+          "detail": {
+            "violations": [],
+            "incomplete": []
+          }
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "rebindings": [
+    {
+      "width": 375,
+      "method": "Temporary HTTP HTML response changes only data-key a→q and kbd A→Q; reload unchanged JS, test both cases, restore original HTML and reload",
+      "elapsedMs": 291.0363019999968,
+      "label": "Q",
+      "observations": [
+        {
+          "key": "a",
+          "count": 0
+        },
+        {
+          "key": "q",
+          "count": 1
+        },
+        {
+          "key": "Q",
+          "count": 2
+        }
+      ],
+      "sources": [
+        "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+        "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav"
+      ],
+      "modulesIdentical": true,
+      "restoredQCount": 0,
+      "restoredACount": 1,
+      "runtime": {
+        "errors": [],
+        "badResponses": []
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "method": "Temporary HTTP HTML response changes only data-key a→q and kbd A→Q; reload unchanged JS, test both cases, restore original HTML and reload",
+      "elapsedMs": 248.27149199999985,
+      "label": "Q",
+      "observations": [
+        {
+          "key": "a",
+          "count": 0
+        },
+        {
+          "key": "q",
+          "count": 1
+        },
+        {
+          "key": "Q",
+          "count": 2
+        }
+      ],
+      "sources": [
+        "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav",
+        "http://127.0.0.1:39629/homework/drum-kit/sounds/kick.wav"
+      ],
+      "modulesIdentical": true,
+      "restoredQCount": 0,
+      "restoredACount": 1,
+      "runtime": {
+        "errors": [],
+        "badResponses": []
+      },
+      "passed": true
+    }
+  ],
+  "passed": false
+}

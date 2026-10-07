@@ -1,6 +1,8 @@
 import {playPad} from './audio.js';
+import {bindKeyboard} from './keyboard.js';
 
 const feedbackTimers = new WeakMap();
+const pads = document.querySelectorAll('.drum-pad');
 
 export function activatePad(pad) {
   clearTimeout(feedbackTimers.get(pad));
@@ -12,6 +14,8 @@ export function activatePad(pad) {
   return playPad(pad);
 }
 
-for (const pad of document.querySelectorAll('.drum-pad')) {
+for (const pad of pads) {
   pad.addEventListener('click', () => { void activatePad(pad); });
 }
+
+bindKeyboard(pads, activatePad);
