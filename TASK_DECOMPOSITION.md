@@ -36,4 +36,26 @@ Run `python3 -m http.server 5500` from this directory; open `http://localhost:55
 
 ## Homework extension
 
-The new HW1-HW3 WBS and subsystem contracts are in `homework/TASK_DECOMPOSITION.md`. The homework branch starts from the completed Lab 1 baseline and keeps the original exercise history.
+The initial homework plan was committed at `528ed46` before implementation. Its full subsystem contract remains in `homework/TASK_DECOMPOSITION.md`.
+
+| WBS | Work package | Contract / output | Verification |
+| --- | --- | --- | --- |
+| 1 | Planning | This WBS, project rules, recorded baseline | Planning commit precedes homework code |
+| 2 | HW1: Production portfolio | Root `index.html` | Four focused improvement milestones |
+| 2.1 | Contrast and landmarks | One h1, zero divs, named regions; AA text contrast; control boundaries | Contrast calculation and accessibility audit |
+| 2.2 | Keyboard navigation | Skip link moves focus; no keyboard trap; theme survives unavailable storage | Tab/Enter traversal, storage failure test |
+| 2.3 | Content Security Policy | Self-hosted scripts/styles/assets; no inline handlers; Vercel response headers | Review CSP, load all pages without CSP errors |
+| 2.4 | Performance | Sized local artwork, lightweight assets | Actual Lighthouse reports; no invented scores |
+| 3 | HW2: Drum kit | `homework/drum-kit/index.html` | Four separate subsystem contracts |
+| 3.1 | HTML data contract | Nine native buttons; data-key and data-sound; unique local WAV paths | Each key resolves one button and one audio source |
+| 3.2 | Polyphonic audio | `createAudioEngine`: play(src), stopAll(), activeCount | Overlapping voices; blocked-play errors handled |
+| 3.3 | Input binding | keydown / event.key / event.repeat; ignore input fields and modifiers | Click, keyboard, uppercase, held keys, Space to stop |
+| 3.4 | FIFO recorder | Queue of {key, at}; elapsed monotonic ms; record/stop/replay/clear | FIFO order, timing, bounded queue, replay cancellation |
+| 4 | HW3: Event landing page | `homework/event-hub/index.html` | Minimum five focused commits |
+| 4.1 | Event contract | Explicit UTC ISO timestamp; visible local timezone; labelled demo | Verify UTC/local equivalence |
+| 4.2 | Countdown | Remaining = max(0, target - Date.now()); no incremental subtraction | Delayed timer, elapsed date, visibility resume |
+| 4.3 | Form state machine | idle -> submitting -> success/error; request service isolated | All states including retry |
+| 4.4 | Duplicate prevention | Lock before the first await; immutable submitted snapshot | Burst submits produce one request |
+| 4.5 | Input safety | Trim/NFC/length checks; native validation; textContent-only feedback | Whitespace and hostile markup remain inert |
+| 5 | Review and handoff | AI_FAILURE_AUDIT.md, CHECKS.md, evidence, Git bundle | Report real findings and remaining deployment checks |
+

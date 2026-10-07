@@ -1,19 +1,29 @@
-# Lab 1 - Web Application Development
+# Lab 1 and Homework 1-3
 
 **Đặng Hoài An · 24520039 · MSIS207.R11.CTTT**
 
-Exercises 1-3 share a single developer portfolio. Exercise 1 supplies the semantic HTML tree. Exercise 2 adds design tokens, responsive Grid and persistent theme. Exercise 3 adds a four-state event component.
+The original Lab 1 exercise commits are preserved. The homework extension builds on baseline `8aa4676` and uses only native HTML5, CSS and JavaScript modules.
 
-## Run
+| Work | Entry point | Main features |
+| --- | --- | --- |
+| HW1 | `/` | Portfolio, theme persistence, accessible keyboard flow, self-hosted CSP |
+| HW2 | `/homework/drum-kit/` | Nine drum pads, polyphony, key repeat guard, FIFO beat recording and replay |
+| HW3 | `/homework/event-hub/` | UTC countdown, registration state machine, duplicate prevention, safe text output |
 
-From this directory: `python3 -m http.server 5500`; visit `http://localhost:5500/`. VS Code Live Server works too. Avoid opening `file://` URLs.
+## Run locally
 
-## Review
+Open this folder in VS Code. Right-click `index.html` and select **Open with Live Server**. Alternatively run `python3 -m http.server 5500` and visit `http://localhost:5500/`. Do not open HTML through file://.
 
-- Press Tab once to see the skip link, then Enter to jump to main.
-- Try every navigation link, the theme toggle and contact form using only keyboard.
-- In Event hub, inspect Loading, Live, Empty and Error, then Retry.
-- Resize the viewport to 375px and check no horizontal scrollbar.
-- `git log --oneline` shows the task-specific commits.
+No npm installation or build step is needed for the website. All sounds and artwork are local. The event and forms are disclosed as coursework previews; submissions are not sent or saved.
 
-The contact form is a local demo: it validates inputs, reports success on this page and does not transmit messages. The event data is also local so every assessor can reproduce all states without network access. The GitHub repository URL and shared AI conversation URL must be inserted in the final PDF after publishing/sharing; local files cannot create these public links by themselves.
+## Review documents
+
+- `TASK_DECOMPOSITION.md`: original Lab 1 WBS and homework pointer.
+- `homework/TASK_DECOMPOSITION.md`: detailed homework contracts and atomic stages.
+- `AI_FAILURE_AUDIT.md`: three observed AI-assisted defects, diagnoses and fixes.
+- `homework/CHECKS.md`: actual verification results and remaining deployed checks.
+- `homework/HUONG_DAN.md`: Vietnamese run, submission and oral-defense guide.
+- `homework/evidence/`: browser screenshots, functional results, and Lighthouse reports.
+- `vercel.json`: strict CSP and security headers for the deployed website.
+
+Use `git log --oneline` to inspect the focused homework history. The first homework commit defines the WBS before implementation; the HW2 HTML contract precedes its JavaScript engine.

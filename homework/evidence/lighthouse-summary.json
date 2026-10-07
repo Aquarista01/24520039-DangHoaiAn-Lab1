@@ -1,0 +1,724 @@
+[
+  {
+    "name": "hw1-mobile",
+    "score": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": 910.488,
+    "cls": 0,
+    "failed": [
+      {
+        "id": "cache-insight",
+        "score": 0.5,
+        "title": "Use efficient cache lifetimes",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/styles.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 11176,
+            "wastedBytes": 11176
+          },
+          {
+            "url": "http://127.0.0.1:5510/events.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 3350,
+            "wastedBytes": 3350
+          },
+          {
+            "url": "http://127.0.0.1:5510/app.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 2633,
+            "wastedBytes": 2633
+          },
+          {
+            "url": "http://127.0.0.1:5510/assets/portrait.svg",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1949,
+            "wastedBytes": 1949
+          }
+        ]
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "details": {
+          "noRedirects": {
+            "label": "Avoids redirects",
+            "value": true
+          },
+          "serverResponseIsFast": {
+            "label": "Server responds quickly (observed 2 ms)",
+            "value": true
+          },
+          "usesCompression": {
+            "label": "No compression applied",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "details": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "F060A5739C0B804D65525C09D2A65CFD": {
+                  "url": "http://127.0.0.1:5510/",
+                  "navStartToEndTime": 14,
+                  "transferSize": 8314,
+                  "isLongest": true,
+                  "children": {
+                    "81.4": {
+                      "url": "http://127.0.0.1:5510/app.js",
+                      "navStartToEndTime": 38,
+                      "transferSize": 2633,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "81.3": {
+                      "url": "http://127.0.0.1:5510/events.js",
+                      "navStartToEndTime": 38,
+                      "transferSize": 3350,
+                      "children": {}
+                    },
+                    "81.2": {
+                      "url": "http://127.0.0.1:5510/styles.css",
+                      "navStartToEndTime": 18,
+                      "transferSize": 11176,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 38
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "title": "Render-blocking requests",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/styles.css",
+            "totalBytes": 11176,
+            "wastedMs": 152
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hw1-desktop",
+    "score": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": 250.29840000000002,
+    "cls": 0,
+    "failed": [
+      {
+        "id": "cache-insight",
+        "score": 0.5,
+        "title": "Use efficient cache lifetimes",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/styles.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 11176,
+            "wastedBytes": 11176
+          },
+          {
+            "url": "http://127.0.0.1:5510/events.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 3350,
+            "wastedBytes": 3350
+          },
+          {
+            "url": "http://127.0.0.1:5510/app.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 2633,
+            "wastedBytes": 2633
+          },
+          {
+            "url": "http://127.0.0.1:5510/assets/portrait.svg",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1949,
+            "wastedBytes": 1949
+          }
+        ]
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "details": {
+          "noRedirects": {
+            "label": "Avoids redirects",
+            "value": true
+          },
+          "serverResponseIsFast": {
+            "label": "Server responds quickly (observed 1 ms)",
+            "value": true
+          },
+          "usesCompression": {
+            "label": "No compression applied",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "details": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "11A97C235965F697DEE6130410F6784D": {
+                  "url": "http://127.0.0.1:5510/",
+                  "navStartToEndTime": 10,
+                  "transferSize": 8314,
+                  "isLongest": true,
+                  "children": {
+                    "133.4": {
+                      "url": "http://127.0.0.1:5510/app.js",
+                      "navStartToEndTime": 17,
+                      "transferSize": 2633,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "133.2": {
+                      "url": "http://127.0.0.1:5510/styles.css",
+                      "navStartToEndTime": 16,
+                      "transferSize": 11176,
+                      "children": {}
+                    },
+                    "133.3": {
+                      "url": "http://127.0.0.1:5510/events.js",
+                      "navStartToEndTime": 15,
+                      "transferSize": 3350,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 17
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0.5,
+        "title": "Render-blocking requests",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/styles.css",
+            "totalBytes": 11176
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hw2-mobile",
+    "score": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": 1212.95555,
+    "cls": 0,
+    "failed": [
+      {
+        "id": "cache-insight",
+        "score": 0.5,
+        "title": "Use efficient cache lifetimes",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/crash.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 39903,
+            "wastedBytes": 39903
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/open-hat.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 20057,
+            "wastedBytes": 20057
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/kick.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 18735,
+            "wastedBytes": 18735
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/tom.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 17853,
+            "wastedBytes": 17853
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/snare.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 13443,
+            "wastedBytes": 13443
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/clap.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 10355,
+            "wastedBytes": 10355
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/shaker.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 8151,
+            "wastedBytes": 8151
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/rim.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 5945,
+            "wastedBytes": 5945
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 4947,
+            "wastedBytes": 4947
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/sounds/hat.wav",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 4623,
+            "wastedBytes": 4623
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/drum.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 4385,
+            "wastedBytes": 4385
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/drum.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1881,
+            "wastedBytes": 1881
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/audio-engine.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1618,
+            "wastedBytes": 1618
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/recorder.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1617,
+            "wastedBytes": 1617
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/theme.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1226,
+            "wastedBytes": 1226
+          }
+        ]
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "details": {
+          "noRedirects": {
+            "label": "Avoids redirects",
+            "value": true
+          },
+          "serverResponseIsFast": {
+            "label": "Server responds quickly (observed 1 ms)",
+            "value": true
+          },
+          "usesCompression": {
+            "label": "No compression applied",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "details": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "64F83FEE89D9B2A5AD2DA02ABB6E7AB2": {
+                  "url": "http://127.0.0.1:5510/homework/drum-kit/",
+                  "navStartToEndTime": 8,
+                  "transferSize": 4847,
+                  "isLongest": true,
+                  "children": {
+                    "173.4": {
+                      "url": "http://127.0.0.1:5510/homework/drum-kit/drum.js",
+                      "navStartToEndTime": 14,
+                      "transferSize": 4385,
+                      "isLongest": true,
+                      "children": {
+                        "173.5": {
+                          "url": "http://127.0.0.1:5510/homework/shared/theme.js",
+                          "navStartToEndTime": 36,
+                          "transferSize": 1226,
+                          "isLongest": true,
+                          "children": {}
+                        },
+                        "173.7": {
+                          "url": "http://127.0.0.1:5510/homework/drum-kit/recorder.js",
+                          "navStartToEndTime": 35,
+                          "transferSize": 1617,
+                          "children": {}
+                        },
+                        "173.6": {
+                          "url": "http://127.0.0.1:5510/homework/drum-kit/audio-engine.js",
+                          "navStartToEndTime": 35,
+                          "transferSize": 1618,
+                          "children": {}
+                        }
+                      }
+                    },
+                    "173.2": {
+                      "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+                      "navStartToEndTime": 14,
+                      "transferSize": 4947,
+                      "children": {}
+                    },
+                    "173.3": {
+                      "url": "http://127.0.0.1:5510/homework/drum-kit/drum.css",
+                      "navStartToEndTime": 14,
+                      "transferSize": 1881,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 36
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "title": "Render-blocking requests",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+            "totalBytes": 4947,
+            "wastedMs": 153
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/drum-kit/drum.css",
+            "totalBytes": 1881,
+            "wastedMs": 303
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hw3-mobile",
+    "score": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcp": 1243.8495,
+    "cls": 0,
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.99,
+        "title": "First Contentful Paint"
+      },
+      {
+        "id": "cache-insight",
+        "score": 0.5,
+        "title": "Use efficient cache lifetimes",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 4947,
+            "wastedBytes": 4947
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/event.css",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 2867,
+            "wastedBytes": 2867
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/registration.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 2549,
+            "wastedBytes": 2549
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/countdown.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1380,
+            "wastedBytes": 1380
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/validation.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1357,
+            "wastedBytes": 1357
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/theme.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1226,
+            "wastedBytes": 1226
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/event.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 1155,
+            "wastedBytes": 1155
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/registration-service.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 889,
+            "wastedBytes": 889
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/event-data.js",
+            "cacheLifetimeMs": 0,
+            "totalBytes": 351,
+            "wastedBytes": 351
+          }
+        ]
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "details": {
+          "noRedirects": {
+            "label": "Avoids redirects",
+            "value": true
+          },
+          "serverResponseIsFast": {
+            "label": "Server responds quickly (observed 2 ms)",
+            "value": true
+          },
+          "usesCompression": {
+            "label": "No compression applied",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "details": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "361166037E5DA1E2D83004A1A2F3226D": {
+                  "url": "http://127.0.0.1:5510/homework/event-hub/",
+                  "navStartToEndTime": 11,
+                  "transferSize": 6174,
+                  "isLongest": true,
+                  "children": {
+                    "229.4": {
+                      "url": "http://127.0.0.1:5510/homework/event-hub/event.js",
+                      "navStartToEndTime": 14,
+                      "transferSize": 1155,
+                      "isLongest": true,
+                      "children": {
+                        "229.8": {
+                          "url": "http://127.0.0.1:5510/homework/event-hub/registration.js",
+                          "navStartToEndTime": 18,
+                          "transferSize": 2549,
+                          "isLongest": true,
+                          "children": {
+                            "229.10": {
+                              "url": "http://127.0.0.1:5510/homework/event-hub/validation.js",
+                              "navStartToEndTime": 23,
+                              "transferSize": 1357,
+                              "isLongest": true,
+                              "children": {}
+                            },
+                            "229.9": {
+                              "url": "http://127.0.0.1:5510/homework/event-hub/registration-service.js",
+                              "navStartToEndTime": 23,
+                              "transferSize": 889,
+                              "children": {}
+                            }
+                          }
+                        },
+                        "229.7": {
+                          "url": "http://127.0.0.1:5510/homework/event-hub/countdown.js",
+                          "navStartToEndTime": 18,
+                          "transferSize": 1380,
+                          "children": {}
+                        },
+                        "229.6": {
+                          "url": "http://127.0.0.1:5510/homework/event-hub/event-data.js",
+                          "navStartToEndTime": 18,
+                          "transferSize": 351,
+                          "children": {}
+                        },
+                        "229.5": {
+                          "url": "http://127.0.0.1:5510/homework/shared/theme.js",
+                          "navStartToEndTime": 18,
+                          "transferSize": 1226,
+                          "children": {}
+                        }
+                      }
+                    },
+                    "229.3": {
+                      "url": "http://127.0.0.1:5510/homework/event-hub/event.css",
+                      "navStartToEndTime": 13,
+                      "transferSize": 2867,
+                      "children": {}
+                    },
+                    "229.2": {
+                      "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+                      "navStartToEndTime": 12,
+                      "transferSize": 4947,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 23
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "title": "Render-blocking requests",
+        "details": [
+          {
+            "url": "http://127.0.0.1:5510/homework/event-hub/event.css",
+            "totalBytes": 2867,
+            "wastedMs": 302
+          },
+          {
+            "url": "http://127.0.0.1:5510/homework/shared/studio.css",
+            "totalBytes": 4947,
+            "wastedMs": 152
+          }
+        ]
+      }
+    ]
+  }
+]
