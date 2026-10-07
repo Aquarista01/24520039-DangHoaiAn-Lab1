@@ -8,3 +8,8 @@
 - Mobile first: verify 375px before desktop.
 - Preserve keyboard access and visible focus.
 - Keep changes focused and inspect the Git diff before committing.
+- Read homework/TASK_DECOMPOSITION.md for HW1-HW3 contracts.
+- Keep audio, recording, countdown, submission service, and DOM binding separate.
+- Clean up timers and audio on lifecycle exits.
+- State clearly when a form uses simulated submission; never claim a real registration.
+- Record actual checks and scores; do not invent AI defects or audit evidence.

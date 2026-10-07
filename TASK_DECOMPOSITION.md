@@ -33,3 +33,7 @@ The page uses only semantic HTML containers. Nav links target existing section I
 ## Verification log
 
 Run `python3 -m http.server 5500` from this directory; open `http://localhost:5500`. Verify narrow and desktop screens, Tab and Enter, theme persistence, and all four event states. Exact measurements and screenshots are recorded in the submission PDF.
+
+## Homework extension
+
+The new HW1-HW3 WBS and subsystem contracts are in `homework/TASK_DECOMPOSITION.md`. The homework branch starts from the completed Lab 1 baseline and keeps the original exercise history.
